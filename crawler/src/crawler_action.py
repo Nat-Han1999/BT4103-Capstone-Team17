@@ -1,1 +1,0 @@
-# Configuration settings like base URLs, headers, timeouts, etc.
