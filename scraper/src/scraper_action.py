@@ -42,7 +42,19 @@ def parse_content(html, url):
 
     # Extract text from paragraphs, divs, and spans
     logger.info("Extracting text from paragraphs, divs, and spans")
-    texts = [tag.get_text(strip=True) for tag in soup.find_all(['p', 'div', 'span']) if tag.get_text(strip=True)]
+    texts = [] 
+    div_tag = soup.find('div')
+    tags = soup.find_all(['p', 'div', 'span'])
+
+    # Check whether current tag is nested within any other tags
+    for tag in tags:
+        if not any(parent in tag.parents for parent in tags): # condition is true only if current tag is not a child of other tags
+            for string in tag.stripped_strings:  # extracts text node by node
+                text = ' '.join(string.split())
+                if text:  # check if the text is not empty
+                    texts.append(text)  
+
+    texts_ls_length = len(texts)  
     logger.info("Texts found: " + ', '.join(texts[:5]))  # Only log the first 5 for brevity
 
     # Extract images
