@@ -5,6 +5,10 @@ import requests
 from bs4 import BeautifulSoup
 from utils import setup_logging
 from selenium import webdriver
+import pdfplumber
+from PIL import Image
+import pytesseract
+from io import BytesIO
 
 logger = setup_logging()
 
@@ -19,8 +23,7 @@ def fetch_page(url):
         return response.text
     except requests.RequestException as e:
         logger.error(f"Error fetching {url}: {str(e)}")
-        return None
-
+       
 def fetch_page_with_selenium(url):
     options = webdriver.ChromeOptions()
     options.add_argument('--headless')
@@ -73,13 +76,25 @@ def parse_content(html, url):
     else:
         logger.info("No PDF links found")
 
+    # Extract text from PDF links
+    pdf_extracted = {}
+    for pdf_link in pdf_links: 
+        if pdf_link:
+            pdf_file = download_pdf(pdf_link)
+            logger.info(f"Downloading file from PDF link: {pdf_file}")
+            extracted_text = extract_pdf_text(pdf_file)
+            pdf_extracted[pdf_link] = extracted_text
+        else:
+            logger.info(f"Failed to retrieve or extract the PDF: {pdf_link}")
+
     # Collect data into a dictionary
     data = {
         "url": url,
         "title": page_title,
         "texts": texts,
         "images": images,
-        "pdf_links": pdf_links
+        "pdf_links": pdf_links,
+        "pdf_extracted": pdf_extracted
     }
     return data
 
@@ -104,3 +119,38 @@ def extract_pdf_links(soup):
                 href = 'https://www.svf.gov.lk' + href
             pdf_links.append(href)
     return pdf_links
+
+def download_pdf(url):
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+    try:
+        response = requests.get(url, headers=headers)
+        response.raise_for_status()  # check for errors
+        return BytesIO(response.content)  # file-like object
+    except Exception as e:
+        logger.error(f"Failed to download PDF: {e}")
+        return None
+
+def extract_pdf_text(pdf_file): 
+    text = ""
+    if not pdf_file:
+        logger.error("No PDF file to extract text from.")
+        return text
+    try:
+        with pdfplumber.open(pdf_file) as pdf:
+            for page_num, page in enumerate(pdf.pages):
+                try:
+                    # extract text directly
+                    extracted_text = page.extract_text()
+                    if extracted_text:
+                        text += extracted_text
+                    else:
+                        # If no text found, attempt OCR
+                        logger.info(f"Extracting pdf text... Performing OCR on page {page_num + 1}")
+                        page_image = page.to_image(resolution=300)
+                        ocr_text = pytesseract.image_to_string(page_image.original)
+                        text += ocr_text
+                except Exception as e:
+                    logger.error(f"Extracting pdf text... Error on page {page_num + 1}: {e}")
+    except Exception as e: 
+        logger.error(f"Failed to open PDF: {e}")
+    return text
