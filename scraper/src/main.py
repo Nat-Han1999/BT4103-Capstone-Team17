@@ -1,9 +1,12 @@
 from scraper_action import fetch_page, parse_content, fetch_page_with_selenium
 from utils import setup_logging, save_to_json
+import time
 
 logger = setup_logging()
 
 def main():
+    print("Starting webscraper...")
+    start = time.time()
     urls = [
     "https://www.svf.gov.lk/index.php?lang=en",  # home
     "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=1&Itemid=115&lang=en",  # about us
@@ -43,6 +46,8 @@ def main():
             all_data_selenium.append(data)
 
     save_to_json(all_data_selenium, 'scraped_data/data_selenium.json')
+    end = time.time()
+    print(f"Done with webs scraping, time taken: {end-start}.")
 
 if __name__ == "__main__":
     main()

@@ -9,6 +9,7 @@ import pdfplumber
 from PIL import Image
 import pytesseract
 from io import BytesIO
+from urllib.request import Request, urlopen
 
 logger = setup_logging()
 
@@ -85,7 +86,16 @@ def parse_content(html, url):
             extracted_text = extract_pdf_text(pdf_file)
             pdf_extracted[pdf_link] = extracted_text
         else:
-            logger.info(f"Failed to retrieve or extract the PDF: {pdf_link}")
+            logger.info(f"Failed to retrieve or extract the PDF text: {pdf_link}")
+
+    # Extract text from images
+    image_extracted = {}
+    for image in images: 
+        if image: 
+            text = extract_image_text(image)
+            image_extracted[image] = text
+        else:
+            logger.info(f"Failed to retrieve or extract the image text: {image}")
 
     # Collect data into a dictionary
     data = {
@@ -94,7 +104,8 @@ def parse_content(html, url):
         "texts": texts,
         "images": images,
         "pdf_links": pdf_links,
-        "pdf_extracted": pdf_extracted
+        "pdf_extracted": pdf_extracted,
+        "image_extracted": image_extracted
     }
     return data
 
@@ -154,3 +165,19 @@ def extract_pdf_text(pdf_file):
     except Exception as e: 
         logger.error(f"Failed to open PDF: {e}")
     return text
+
+def extract_image_text(image): 
+    try:
+        req = Request(image, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'})  # accepts any image type
+        response = urlopen(req)
+        # load image data
+        image_data = response.read()
+        # open image
+        image = Image.open(BytesIO(image_data))
+        # extract text from image url using pytesseract
+        text = pytesseract.image_to_string(image)
+        logger.info(f"Extracting text from image using OCR: , {text}")
+        return text
+    except Exception as e:
+        logger.error(f"Failed to extract text from image: {e}")
+        return ""
