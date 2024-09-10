@@ -45,6 +45,7 @@
             "Eye Clinic",
             "Empowerment",
             "News & Events",
+            "New",
             "Vacancies extended till 2024.04.26",
             "Our Services",
             "Promotion of the",
@@ -65,17 +66,17 @@
             "Contribution",
             "is Appreciated",
             "Latest Lottery Results",
-            "Draw: 409",
+            "Draw: 416",
             "Date: Sunday,",
-            "September 01, 2024",
+            "September 08, 2024",
             "More Results - Lucky 7",
             "H",
-            "3",
-            "3",
+            "6",
             "4",
-            "1",
             "0",
+            "3",
             "5",
+            "7",
             "View all",
             "VIDEO ARCHIVES",
             "Click here",
@@ -105,7 +106,7 @@
             "Procons Infotech",
             "Old Web",
             "Last Update:",
-            "03 September 2024."
+            "09 September 2024."
         ],
         "images": [
             "https://www.svf.gov.lk/images/homeicon.png",
@@ -142,13 +143,49 @@
             "https://www.svf.gov.lk/images/gic_en.gif",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png"
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/9.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png"
         ],
         "pdf_links": [],
-        "pdf_extracted": {}
+        "pdf_extracted": {},
+        "image_extracted": {
+            "https://www.svf.gov.lk/images/homeicon.png": "",
+            "https://www.svf.gov.lk/templates/svf-poora/images/new/logo.png": "SHRAMA VASANA FUND\n\nMinistry of Labour and Foreign Employment\n\n",
+            "https://www.svf.gov.lk/images/gov.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontincrease.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontreset.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontdecrease.png": "",
+            "https://www.svf.gov.lk/images/sliders/Slider-new-1.jpg": "",
+            "https://www.svf.gov.lk/images/sliders/sliders_2802018_eye001.jpg": "",
+            "https://www.svf.gov.lk/images/sliders/sliders_2802018_empr001.jpg": "",
+            "https://www.svf.gov.lk/images/sliders/Slider-English.jpg": "Mission\nTo facilitate in creating a work\nenvironment enriched with\nwelfare and assisted with relief,\nby carefully assessing\nthe gaps and filling the same\n\nVision\nContended\nSri Lankan work force\n\n",
+            "https://www.svf.gov.lk/cache/mod_news_show_sp2/nssp2_thumbs/94/Vacncies_Page_1_350x150.jpg": "",
+            "https://www.svf.gov.lk/images/services/service001.png": "",
+            "https://www.svf.gov.lk/images/services/service002.png": "",
+            "https://www.svf.gov.lk/images/services/service003.png": "",
+            "https://www.svf.gov.lk/images/services/service004.png": "",
+            "https://www.svf.gov.lk/images/services/service005.png": "",
+            "https://www.svf.gov.lk/images/services/service006.png": "",
+            "https://www.svf.gov.lk/images/needsup.png": "",
+            "https://www.svf.gov.lk/images/contribution.png": "",
+            "https://www.svf.gov.lk/images/zodiac/Lotteries/sat.jpg": "NATIONAL LOTTERY\n\nof\n\n828 D6\n\n\u201craex!| 2023/00/00 \u201c1 5=| 0000\n\nUL\n\n060009673045432\n\n[75:18]\n6QOTB OsIAQE AM. 40 /- \u201c\n\nju Goordat somu th.\nNATIONAL LOTTERIES BOARD Rs.\n\n",
+            "https://www.svf.gov.lk/images/phocagallery/World_Health_Day/thumbs/phoca_thumb_l_phoca_thumb_l_p4280015.jpg": "",
+            "https://www.svf.gov.lk/images/phocagallery/World_Health_Day/thumbs/phoca_thumb_l_phoca_thumb_l_p5030042.jpg": "",
+            "https://www.svf.gov.lk/images/phocagallery/World_Health_Day/thumbs/phoca_thumb_l_phoca_thumb_l_p4280024.jpg": "",
+            "https://www.svf.gov.lk/images/related/rel-gov.png": "",
+            "https://www.svf.gov.lk/images/related/rel-dol.png": "",
+            "https://www.svf.gov.lk/images/related/rel-nlb.png": "",
+            "https://www.svf.gov.lk/images/related/rel-nils.png": "",
+            "https://www.svf.gov.lk/images/related/rel-niosh.png": "",
+            "https://www.svf.gov.lk/images/01.jpg": "=>\n\nDIGITAL\nRECORDING SYSTEM\n",
+            "https://www.svf.gov.lk/images/gic_en.gif": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/9.png": ""
+        }
     },
     {
         "url": "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=1&Itemid=115&lang=en",
@@ -221,7 +258,7 @@
             "Procons Infotech",
             "Old Web",
             "Last Update:",
-            "03 September 2024."
+            "09 September 2024."
         ],
         "images": [
             "https://www.svf.gov.lk/images/homeicon.png",
@@ -237,13 +274,29 @@
             "https://www.svf.gov.lk/images/gic_en.gif",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png"
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/9.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png"
         ],
         "pdf_links": [],
-        "pdf_extracted": {}
+        "pdf_extracted": {},
+        "image_extracted": {
+            "https://www.svf.gov.lk/images/homeicon.png": "",
+            "https://www.svf.gov.lk/templates/svf-poora/images/new/logo.png": "SHRAMA VASANA FUND\n\nMinistry of Labour and Foreign Employment\n\n",
+            "https://www.svf.gov.lk/images/gov.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontincrease.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontreset.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontdecrease.png": "",
+            "https://www.svf.gov.lk/media/system/images/arrow.png": "",
+            "https://www.svf.gov.lk/images/01.jpg": "=>\n\nDIGITAL\nRECORDING SYSTEM\n",
+            "https://www.svf.gov.lk/images/gic_en.gif": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/9.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png": ""
+        }
     },
     {
         "url": "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=6&Itemid=109&lang=en",
@@ -310,7 +363,7 @@
             "Procons Infotech",
             "Old Web",
             "Last Update:",
-            "03 September 2024."
+            "09 September 2024."
         ],
         "images": [
             "https://www.svf.gov.lk/images/homeicon.png",
@@ -327,13 +380,30 @@
             "https://www.svf.gov.lk/images/gic_en.gif",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png"
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/9.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png"
         ],
         "pdf_links": [],
-        "pdf_extracted": {}
+        "pdf_extracted": {},
+        "image_extracted": {
+            "https://www.svf.gov.lk/images/homeicon.png": "",
+            "https://www.svf.gov.lk/templates/svf-poora/images/new/logo.png": "SHRAMA VASANA FUND\n\nMinistry of Labour and Foreign Employment\n\n",
+            "https://www.svf.gov.lk/images/gov.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontincrease.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontreset.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontdecrease.png": "",
+            "https://www.svf.gov.lk/media/system/images/arrow.png": "",
+            "https://www.svf.gov.lk/images/disaster.jpg": "",
+            "https://www.svf.gov.lk/images/floods.jpg": "",
+            "https://www.svf.gov.lk/images/01.jpg": "=>\n\nDIGITAL\nRECORDING SYSTEM\n",
+            "https://www.svf.gov.lk/images/gic_en.gif": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/9.png": ""
+        }
     },
     {
         "url": "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=7&Itemid=110&lang=en#promotion-of-the-welfare-of-the-workers",
@@ -432,7 +502,7 @@
             "Procons Infotech",
             "Old Web",
             "Last Update:",
-            "03 September 2024."
+            "09 September 2024."
         ],
         "images": [
             "https://www.svf.gov.lk/images/homeicon.png",
@@ -460,13 +530,42 @@
             "https://www.svf.gov.lk/images/gic_en.gif",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png"
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/9.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/8.png"
         ],
         "pdf_links": [],
-        "pdf_extracted": {}
+        "pdf_extracted": {},
+        "image_extracted": {
+            "https://www.svf.gov.lk/images/homeicon.png": "",
+            "https://www.svf.gov.lk/templates/svf-poora/images/new/logo.png": "SHRAMA VASANA FUND\n\nMinistry of Labour and Foreign Employment\n\n",
+            "https://www.svf.gov.lk/images/gov.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontincrease.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontreset.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontdecrease.png": "",
+            "https://www.svf.gov.lk/media/system/images/arrow.png": "",
+            "https://www.svf.gov.lk/images/eye.jpg": "",
+            "https://www.svf.gov.lk/images/motivation.jpg": "",
+            "https://www.svf.gov.lk/images/knoledge.jpg": "",
+            "https://www.svf.gov.lk/images/edu.jpg": "",
+            "https://www.svf.gov.lk/images/professional.jpg": "",
+            "https://www.svf.gov.lk/images/doc1.jpg": "",
+            "https://www.svf.gov.lk/images/doc2.jpg": "",
+            "https://www.svf.gov.lk/images/doc3.jpg": "",
+            "https://www.svf.gov.lk/images/fund.jpg": "",
+            "https://www.svf.gov.lk/images/stu1.jpg": "u\n\n",
+            "https://www.svf.gov.lk/images/st3.jpg": "",
+            "https://www.svf.gov.lk/images/st2.jpg": "",
+            "https://www.svf.gov.lk/images/evaluate.jpg": "",
+            "https://www.svf.gov.lk/images/01.jpg": "=>\n\nDIGITAL\nRECORDING SYSTEM\n",
+            "https://www.svf.gov.lk/images/gic_en.gif": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/9.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/8.png": ""
+        }
     },
     {
         "url": "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=8&Itemid=111&lang=en",
@@ -571,7 +670,7 @@
             "Procons Infotech",
             "Old Web",
             "Last Update:",
-            "03 September 2024."
+            "09 September 2024."
         ],
         "images": [
             "https://www.svf.gov.lk/images/homeicon.png",
@@ -586,10 +685,10 @@
             "https://www.svf.gov.lk/images/gic_en.gif",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/8.png"
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/9.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/9.png"
         ],
         "pdf_links": [
             "https://www.svf.gov.lk/images/pdfs/act_en.pdf",
@@ -609,7 +708,7 @@
             "https://www.svf.gov.lk/images/pdfs/program_contribution_application_07.pdf"
         ],
         "pdf_extracted": {
-            "https://www.svf.gov.lk/images/pdfs/act_en.pdf": "",
+            "https://www.svf.gov.lk/images/pdfs/act_en.pdf": "PARLIAMENT OF THE DEMOCRATIC\nSOCIALIST REPUBLIC OF\nSRI LANKA\n\nSHRAMA VASANA FUND ACT, No. 12 OF 1998\n\n[Certified on 31st March, 1998]\n\nPrinted on the Order of Government\n\nPublished as a Supplement to Part II of the Gazette of the Democratic Socialist\nRepublic of Sri Lanka of April 03, 1998\n\nPRINTED AT THE DEPARTMENT OF COWERAMENS PRINTING SRI LANKA\n\nTOBE PURCHASED AT THE GOVERNMENT PUBLICATIONS BUREAD, COLOR |\n\nPrice: Rs, 8.00 Postage : Rs. 2.50\nShrama Vasana Fund Act, No. 12 of 1998\n\n[Certified on 31st March, 1998]\nL. D.\u2014O. 38/96.\n\nAn ACT TO PROVIDE FOR THE ESTABLISHMENT OF A FUND CALLED\nAND KNOWN AS \u201cSHRAMA VASANA FUND\u201d FOR THE PROVISION\nOF MONEYS FOR THE WELFARE OF EMPLOYEES ; AND TO PROVIDE\nFOR MATTERS CONNECTED THEREWITH OR INCIDENTAL THERETO.\n\nBE it enacted by the Parliament of the Democratic Socialist\nRepublic of Sri Lanka as follows :\u2014\n\n1. This Act may be cited as the Shrama Vasana Fund\nAct, No. 12 of 1998.\n\n2. (1) There shall be established a Fund which shall be\ncalled the Shrama Vasana Fund (hereinafter referred to as\n\u201cthe Fund\u201d).\n\n(2) The Fund shall by the name assigned to it by subsection\n(1) be a body corporate, and shall have perpetual succession\nand a common seal and may sue and be sued in such name,\n\n3. (1) The administration, management and control of\nthe Fund shall be vested in a Board of Trustees (hereinafter\nreferred to as the \u201cBoard\u201d) constituted as hereinafter provided.\n\n(2) The Board shall, for the purposes of administering the\naffairs of the Fund, exercise, discharge and perform, the\npowers, and functions conferred on or assigned to the Fund\nby this Act.\n\n(3) Subject to the provisions of the Act, the Board shall\nhave the power to make rules to regulate the procedure relating\nto its meetings and the transaction of business at such\nmeetings.\n\n4. (1) The Board shall consist of the following :\u2014\n\n(a) Secretary to the Ministry of the Minister in\ncharge of the subject of Labour who shall\nbe the Chairman of the Board (hereinafter\nreferred to as the \u201cChairman\u201d) ;\n\n2\u2014D 047288\u20148,550 (01/98)\n\nShort Title.\n\nEstablishment of\nShrama Vasana\nFund,\n\nBoard of Trustees\nof the Fund,\n\nConstitution of the\nBoard.\n2 Shrama Vasana Fund Act, No, 12 of 1998\n\n(b) a representative of the Ministry of the\nMinister in charge of the subject of Finance,\nnominated by the Minister, in consultation\nwith the Minister in charge of the subject of\nFinance ; and\n\n(c) four persons appointed by the Minister,\n(hereinafter referred to as \u201cappointed\nmembers\u201d).\n\n(2) (a) every appointed member shall unless he vacates\noffice earlier by death, resignation or removal, hold office for\na period of three years from the date of his appointment to\nsuch office.\n\n(b).every appointed member may resign his office by a\nletter in that behalf addressed to the Minister and such\nresignation shall take effect upon it being accepted by the\nMinister.\n\n(c) the Minister may, without assigning any reason\ntherefor, remove any appointed member from office.\n\n(d) where any appointed member is, by reason of illness\nor other infirmity or absence from Sri Lanka, temporarily\nunable to perform the duties of his office, the Minister may\nappoint another person to act in his place.\n\n(e) where any appointed member dies or resigns or is\nremoved from office, the Minister shall appoint another person\nin his place and the person so appointed shall hold office for\nthe unexpired period of the term of office of the member whom\nhe succeeds.\n\n(f) an appointed, member vacating office by effluxion of\ntime shall be eligible for reappointment,\n\n(3) (a) the Chairman shall preside at every meeting of the\nBoard. In the absence of the Chairman from any meeting of\nthe Board, a member chosen by the majority of the members\nptesent at such-meeting shall preside at such meeting.\n\n(b) the quorum for any meeting of the Board shall be three\nmembers.\nShrama Vasana Fund Act, No. 12 of 1998 3\n\n(c) the Board shall have the power to act notwithstanding\nany vacancy in its membership. Any act or proceeding of the\nBoard shall not be deemed to be invalid by reason only of\nsuch vacancy or any defect in the appointment of member.\n\n(4) A person shall be disqualified from being appointed\nor from continuing, in office as a member of the Board if\nhe\u2014\n\n(a) is or becomes a member of Parliament or a member\nof Provincial Council ora local authority ; or\n\n(b) is under any law in force in Sri Lanka or in any other\ncountry found or declared to be of unsound mind ; or\n\n(c) is a person haying been declared an insolvent or a\nbankrupt, under any law in force in Sri Lanka or any\nother country, is an undischarged insolvent or\nbankrupt ; or\n\n(d) is serving or has served, a sentence of imprisonment\nimposed by any court in Sri Lanka or any other\ncountry.\n\n5. (1) The seal of the Fund (hereinafter referred to as the\n\u201cseal\u2019\u2019) shall be in the custody of such persons as the Board\nmay from time to time determine.\n\n(2) The seal shall not be affixed to any instrument or\ndocument except with the sanction of the Board and in the\npresence of two members of the Board who shall sign the\ninstrument or documents in token of their presence.\n\n(3) The seal] may be altered in such manner as may be\ndetermined by the Board.\n\nSeal of the Fund.\nObjects of the\nFund,\n\nPowers and\nfunctions of the\nBoard,\n\n4\n\nShrama Vasana Fund Act, No. 12 of 1998\n\n(4) The Board shall maintain a register of the instruments\nor documents to which the seal has been affixed.\n\n6.\n\nThe objects of the Fund shall be\u2014\n\n_{a@) to promote the welfare of employees ;\n\n(b)\n\n(d)\n\n(e)\n\n()\n\nza\n\nto provide financial and other assistance to employees\nwhen the institutions they were working in, are closed\ndown without prior notice ;\n\nto provide medical and other facilities to employees\nin times of emergency ;\n\nto provide temporary assistance to employees when\ninquiries are instituted against them ;\n\nto provide financial and other benefits to employees\nor their dependants, in times of distress ,\n\nto give awards to persons who have rendered out\nstanding service to employee welfare.\n\n(1) The Board shall, in the name of the Fund, have the\n\npower to do all things necessary for or conducive or incidental\nto the carrying out the objects of the Fund.\n\n(2) Without prejudice to the generality of the powers\nconferred by subsection (1), the Board shall have following\npowers :\u2014\n\n(a)\n\n(6)\n\n(c)\n\nto arrange for the conduct of a Lottery called and\nknown as \u201cShrama Vasana\u201d by the National Lotteries\nBoard, to raise moneys for the purpose of carrying\nout the objects of the Fund ;\n\nto receive grants, gifts or donations in cash or kind,\nwhether from local or foreign sources ;\n\nto acquire and hold any property, movable or\nimmovable, by way of purchase, grant, gift, donation,\nbequest, or otherwise ;\nShrama Vasana Fund Act, No. 12 of 1998 5\n\n(d) to sell, mortgage, lease, grant, convey, devise, assign,\nexchange or otherwise dispose of, any such property ;\n\n(e) to enter into and perform, any such contracts as may\nbe necessary for the proper exercise of its powers and\nthe discharge of its functions or for carrying out the\nobjects of the Fund ; .\n\n(f) to appoint, terminate the appointment of, remunerate,\nand exercise disciplinary control over, and its officers\nand servants :\n\n(g) to errect, or cause to be erected, any building or\nstructure on any land belonging to or held by the\nFund ;\n\n(2) to invest money belonging to the Fund at the discretion\nof the Board and to collect the income accruing from\nsuch investment ; .\n\n(i) to open, operate and close bank accounts and to borrow\nor raise money, with or without security, for the\npurposes of the Fund ;\n\n(7) todoall such other acts and things as are incidental or\nconducive to the carrying out of the objects of the\nFund.\n\n8. The Minister may give such general directions in\nwriting to the Board as to the exercise of powers and the\ndischarge of the functions of the Board and the Board shall\ngive effect to every such direction.\n\n9, The Minister may from time to time order in writing\nall or any of the activities of the Fund to be investigated or\ninquired into and reported upon by such person or persons as\nhe may specify within such time specified in such order and\nupon such order being made, the Board shall afford all such\nfacilities and furnish all such information as such person or\npersons may require to give effect to such direction.\n\nDirections of the\nMinister to the\nBoard.\n\nPower of the\nMinister to\ninvestigate in to\nactivities of the\nFund.\nPayment to\nthe Fund.\n\nPayments out of\nthe Fund.\n\nAccounts and\nAudit,\n\n6\n\n10.\n\n(a)\n\n(b)\n\n{c)\n\n(d)\n\n(a)\n\n(b)\n\n(c)\n\n12.\n\nShrama Vasana Fund Act, No. 12 of 1998\nThere shall be paid into the Fund\u2014\n\nall such sums of money as may be voted from time to\ntime by Parliament for the purpose of carrying out the\nobjects of the Fund ;\n\nall sums of money received as grants, gifts or\ndonations, from local or foreign sources ;\n\nall sums of money received as income from\ninvestments made by the Fund ; and\n\nall sums of money derived by the Fund in the exercise\nof its powers, and the discharge of its functions, under\nthis Act, including the proceeds of the lotteries referred\nto in section 13.\n\nThere shall be paid out of the Fund\u2014 _\n\nall such sums as are necessary for meeting expenses,\nincurred in the working, establishment and-\nmaintenance of the Fund ;\n\nall such sums as ate necessary for the payment of\nsalaries to officers and servants of the Pund ,\n\nall such sums as are necessary for meeting such\npayments as are approved by the Board as being\nnecessary for the purpose of carrying out the objects,\nof the Fund.\n\n(1) The Board shall cause proper books of accounts\n\nto be kept of the income and expenditure, assets and liabilities\nand all other transactions of the Fund. \u2018\n\n(2) The income and expenditure accounts and the balance\n\nsheet shall be signed by two members of the Board authorised\nto do so by a resolution passed by the Board.\nShrama Vasana Fund Act, No. 12 of 1998 7\n\n(3) The financial year of the Board shall be the calender\nyear.\n\n(4) The provisions of Article 154 of the Constitution shall\napply to the audit of the accounts of the Fund.\n\n13. (1) The National Lotteries Board established by the\nFinance Act, No. 11 of 1963 (hereinafter referred to as \u201cthe\nLotteries Board\u201d) shall conduct for the Fund such number of\nand any type of lotteries in each year as may be agreed between\nthe Fund and the Lotteries Board.\n\n(2) Every such lottery shall be called a Shrma Vasana and\nshall be conducted in such manner as may be agreed between\nthe Fund and the Lotteries Board. The agreement between\nthe Fund and the Lotteries Board shall include provision, inter\nalia, as regards the prizes to be awarded in the lotteries so\nconducted and the manner in which unclaimed prizes at such\nlotteries are to be dealt with.\n\n(3) The proceeds of every lottery conducted by the\nLotteries Board for the Fund shall be paid by the Lotteries\nBoard to the Consolidated Fund, after deducting therefrom,\nsuch sums as may be agreed between the Lotteries Board and\nthe Fund in consultation with the Minister in Charge of the\nsubject of Finance as expenses for conducting such lottery,\nincluding the value of the prizes to be awarded at such lottery.\n\n(4) The Fund shall be exempt from the payment of any\ntax under the Inland Revenue Act, No. 28 of 1979 on any\nincome or profit received by it from any lottery conducted by\nthe Lotteries Board for the Fund.\n\n(5) The Lotteries Ordinance shall not apply to any lottery\nconducted by the Lotteries Board for the Fund. - -\n\n14, The Board may make such rules as it may consider\nnecessary in relation to any matter affecting or connected with\nor incidental to, the exercise, discharge and performances of\nits powers, duties and functions.\n\nLotteries to be\nconducted for the\nFund by the\nLottenes Board.\n\nPower of the\nBoard to make\nrules.\nExemption of\nthe Fund from\ncertain taxes.\n\nProtection of\nmembers of the\nBoard for action\nunder the Act.\n\nNo writ to issue\nagainst person or\nproperty of a\nmember of the\nBoard.\n\n8 Shrama Vasana Fund Act, No. 12 of 1998\n\n15. (1) A donation made in money or otherwise by any\nperson to the Fund shal! be deemed, for the purposes of\nparagraph (b) of subsections 2 of section 31 of the Inland\nRevenue Act, No. 28 of 1979, to be a donation made in money\nor otherwise to a Fund established by the Government.\n\n(2) From and after the inclusion of the Fund under section\n8 of the Inland Revenue Act, No. 28 of 1979, the profits and\nincome of the Fund shall be exempt from income tax payable\nunder Inland Revenue Act, No. 28 of 1979.\n\n(3) The provisions of this section shall have effect\nnotwithstanding anything to the contrary in the Inland Revenue\nAct, No. 28 of 1978.\n\n16. (1) No suit or prosecution shall be instituted against\nany member of the Board or officer or servant of the Fund for\nany act which in good faith is done, or purported to be done\nby him under this Act or on the direction of the Board.\n\n(2) Any expense incurred by the Fund in any suit or\nprosecution brought by or against the Fund before any court\nshall be paid out of the Fund, and any costs paid to or received\nby, the Fund in any such suit or prosecution shall be credited\nto the Fund.\n\n(3) Any expense incurred by any such person as is referred\nto in subsection (1) in any suit or prosecution brought against\nhim before any court in respect of any act which is done or\npurported to be, done, by him under this Act, or on the\ndirection of the Board shall, if the court hold that such act,\nwas done in good faith, be paid out of the Fund, unless such\nexpense is recovered by him in such suit or prosecution.\n\n17. No writ against person or property shall be issued\nagainst any member of the Board in any action brought against\nthe Fund.\nShrania Vasana Fund Act, No. 12 of 1998 g\n\n18. The Fund shall be deemed to be a Scheduled\nInstitution within the meaning of the Bribery Act and the\nprovisions of that Act shall be construed accordingly.\n\n19. All officers and servants of the Fund shall be deemed\nto be public servants within the meaning, and for the purposes,\nof the Penal Code,\n\nIn the event of any inconsistency between the Sinhala\n\nand Tamil texts of this Act, the Sinhala text shall prevail.\n\nIn this Act, unless the context otherwise requires\u2014\n\n\u201cemployee\u201d means any person who has entered into or\n\nworks under a contract with an employer in any\ncapacity, whether the contract is in writing or\notherwise or whether it is a contract of service or of\napprenticeship or a contract personally to execute\nany work of labour and includes any person\nemployed under any such contract whether such\nperson Is or is not in employment at any particular\ntime ;\n\n\u201cLocal Authority\u201d means any Municipal Council, Urban\n\nCouncil or Pradeshiya Sabha and includes any\nAuthority created or established by or under any law\nto exercise, perform, or discharge, powers, duties and\nfunctions corresponding to or similar to the powers,\nduties and functions exercised, performed and\ndischarged by any such Council or Sabha ;\n\n\u201cProvincial Council\u201d means a Provincial Council\n\nestablished by Chapter XVIIA of the Constitution.\n\nFund dectned to\nhe a Scheduled\nInstitution within\nthe incaning of the\nBribery Act,\n\nOfficers and,\nservants of the\nFund deemed to\nbe public servants.\n\nSinhala text to\nprevail in case of\ninconsistency,\n\nInterpretation,\n",
             "https://www.svf.gov.lk/images/Act Amend/15-2019_E.pdf": "",
             "https://www.svf.gov.lk/images/pdfs/supplier_2019/Artificial_Legs_and_Limbs_application.pdf": "\u0dc0\u0dc6\u0db4\u0dba\u0dd4\u0db8\u0dca\u0d9a\u0dbb\u0dd4\u0dbd\u0d9a\u0dd4/\u0d9a\u0d9a\u0ddc\u0db1\u0dca\u0dad\u0dca\u200d\u0dbb\u0dc5\u0dad\u0dca\u0d9a\u0dbb\u0d9a\u0dbb\u0dd4\u0dbd\u0d9a\u0dd4\u0dd9\u0d9a\u0dbc\u0dc0\u0dd9\u0dba\u0dcf\u0dba\u0dc5\u0db4\u0d82\u0da0\u0dd2 \u0dc0\u0dd9\u0db8 \u0db8\u0dd9\u0dc0\u0dcf\u0dc1\u0dc5\u0dd9\u0daf\u0dba\u0db8\u0dca\u0db8\u0dca\u0db4\u0dad\u0dca\u200d\u0dbb\u0dba\n(\u0dbd\u0dba\u0dc5\u0db4\u0dc5\u0dbb\u0dd9\u0dad\u0dba\u0dba\u0dda\u0d9a\u0dbd\u0dd9\u0dba\u0dcf \u0dc1\u0dd9\u0dbb\u0dca\u0dc2\u0dba\u0dbf\u0dba\u0d9a\u0dd9\u0dd2\u0d82\u0db4\u0dad\u0db4\u0dad\u0dca\u0d9a\u0dbb\u0dd9\u0d9a\u0dbb\u0db1\u0dca\u0dda)\n1. \u0daf\u0dba\u0db8\u0dca\u0db8\u0dca\u0d9a\u0dbb\u0dd4\u0d9a\u0dda\u0dd9\u0dda\u0db8\u0dd9:-\u0dd9\n.......................................................................................................................\n2. \u0dbd\u0dba\u0dc5\u0db4\u0dc5\u0dbb\u0dd9\u0dad\u0dba\u0dba\u0dda\u0d9a\u0dbd/\u0dc0\u0db8\u0dc5\u0d9c\u0d9a\u0db8\u0dca/\u0dbd\u0dba\u0dc5\u0db4\u0dc5\u0dbb\u0d9a\u0dbd\u0dd9\u0dda\u0db8\u0dd9:-\u0dd9\n.............................................................................\n3. \u0daf\u0dba\u0db8\u0dca\u0db8\u0dca\u0d9a\u0dbb\u0dd4\u0d9a\u0dda\u0dd9\u0dbd\u0dba\u0dc5\u0db4\u0dc5\u0db4\u0dad\u0d9a\u0dd9\u0dba\u0dcf \u0dc1\u0dda\u0dba\u0dd9:-\u0dd9\n....................................................................................................\n4. \u0db8\u0dca\u0dbb\u0d9a\u0dae\u0dda\u0dd9\u0daf\u0da0\u0dd2\u0d9a\u0dba\u0dd9:-\u0dd9............................................\n5. \u0dc3\u0dc6\u0d9a\u0dca\u0dc0\u0dc4\u0dd9\u0daf\u0da0\u0dd2\u0d9a\u0dba\u0dd9:-\u0dd9................................................\n6. \u0dc0\u0dd2\u0daf\u0dca\u200d\u0dba\u0dd4\u0dad\u0dca\u0d9a\u0dbb\u0dd9\u0dba\u0dc6\u0db4\u0dc6 \u0dbd\u0dd9\u0dba\u0dcf \u0dc1\u0dda\u0dba\u0dd9:-\u0dd9.....................................................\n7. \u0dbd\u0dba\u0dc5\u0db4\u0dc5\u0dbb\u0dba\u0dd9\u0dba\u0dcf\u0dba\u0dc5\u0db4\u0d82\u0da0\u0dd2 \u0dc0\u0dd9\u0dbb\u0dd3\u0db8\u0dda\u0d9a\u0db8\u0dca\u0dd9\u0dc0\u0dc1\u0d9a\u0dba\u0d9a\u0d9a\u0dbd\u0dd9\u0daf\u0da0\u0dd2\u0d9a\u0dba\u0dd9\u0dc0\u0dc1\u0dd9\u0d82\u0dda\u0dba\u0dd9:-\u0dd9\n...............................................................\n(\u0d9a\u0dbb\u0dd4\u0dab\u0dc5\u0d9a\u0dc5\u0dbb\u0dd9\u0dc0\u0dc1\u0d9a\u0dba\u0d9a\u0d9a\u0dbd\u0dd9\u0da1\u0dc5\u0dba\u0dc5\u0dd9 \u0dc1\u0da7\u0db4\u0dba\u0d9a\u0dca\u0dd9\u0daf\u0db8\u0dd4\u0dab\u0dc5\u0dd9\u0d91\u0dbd\u0db1\u0dca\u0dda)\n8. \u0dba\u0dcf\u0dba\u0dc5\u0db4\u0d82\u0da0\u0dd2 \u0dc0\u0dba\u0dd9\u0dd2\u0d9a\u0dd4\u0dad\u0dca\u0d9a\u0dbb\u0dd9\u0dbd\u0dda\u0dd9\u0d82\u0dda\u0dba\u0dd9:-\u0dd9........\n9. \u0daf\u0daf\u0dca\u200d\u0dba\u0dc5\u0dc2\u0dd9\u0dbd\u0dd8\u0dad\u0dca\u0d9a\u0dbb\u0dad\u0dd3\u0d9a\u0dbd\u0dd9\u0db4\u0dc2\u0db4\u0dd4\u0dbb\u0dd4\u0daf\u0dca\u0daf\u0dca\u200d\u0dba\u0dd9\u0dbd\u0dc2\u0dba\u0dbf\u0dd9\u0dbd\u0dba\u0dcf\u0db1\u0dca\u0dd9:-\u0dd9.....................................................\n10. \u0db6\u0dc6\u0da0\u0dd2\u0d9a\u0dd4\u0d9a\u0dbb\u0dd4\u0dbd\u0db1\u0dca\u0d9a\u0dda\u0dd9\u0dda\u0db8\u0dd9:-\u0dd9................................................\n11. \u0dbd\u0dc6\u0da7\u0dca\u0dd9\u0daf\u0da0\u0dd2\u0d9a\u0dba\u0dd9:-\u0dd9............................\n12. \u0dad\u0daf\u0dca\u200d\u0dba\u0dc5\u0dba\u0db8\u0dca\u0dd9\u0db6\u0db8\u0dca\u0dd9\u0dba\u0dcf \u0dc1\u0dd9\u0d9a\u0d9c\u0ddc\u0db1\u0dd4\u0dd9\u0daf\u0da0\u0dd2\u0d9a\u0dba\u0dd9:-\u0dd9..............................\n(\u0dbb\u0dcf\u0dbd\u0dc5\u0dd9\u0d9c\u0dc6\u0db1\u0dd3\u0db8\u0dd9\u0dc0\u0db8\u0dca\u0db6\u0db1\u0dca\u0db0\u0d9a\u0dba\u0db1\u0dca\u0dd9\u0d9a\u0daf\u0dca\u0dbb\u0dca\u0dba\u0dd9\u0dad\u0daf\u0dca\u200d\u0dba\u0dc5\u0dba\u0db8\u0dca\u0dd9\u0d9a\u0d9a\u0ddc\u0db8\u0dc0\u0dc5\u0db4\u0dad\u0dc0\u0dc4\u0dd9\u0da2\u0dda\u0dbb\u0dc5 \u0dbd\u0dd9\u0dc0\u0dd2\u0dc3\u0dd2\u0db1\u0dca\u0dd9\u0db1\u0dd2\u0d9a\u0dd4\u0dad\u0dca\u0d9a\u0dbb\u0dd9\u0d9a\u0dbb\u0dd9\u0d87\u0d9a\u0dba\u0dd9\n\u0db1\u0dd2\u0d9a\u0dba\u0ddd\u0d9c\u0dd9\u0dbb\u0dd3\u0dc3\u0dd2\u0dbd\u0d9a\u0dca\u0dd9\u0d9a\u0dba\u0d9a\u0dda\u0dd9\u0dda\u0db8\u0dca\u0dd9\u0daf\u0dba\u0db8\u0dca\u0db8\u0dca\u0dd9\u0db4\u0dad\u0dca\u200d\u0dbb\u0dba\u0dd9\u0dc0\u0db8 \u0dd9\u0daf\u0db8\u0dd4\u0dab\u0dc5\u0dd9\u0d91\u0dc0\u0dd2\u0dba\u0dd9\u0dba\u0dd4\u0dd4\u0dba.)\n\u0db8\u0db8/\u0daf \u0dc1 \u0dc1\u0dca\u200d\u0dbb\u0db8\u0dd9\u0dbd\u0dc5\u0dc0\u0dda\u0dc5\u0dd9\u0daf\u0dbb\u0db8\u0dd4\u0daf\u0dca\u200d\u0dba\u0dbc\u0dd9\u0dc0\u0dd2\u0dc3\u0dd2\u0db1\u0dca\u0dd9\u0daf\u0dca\u200d\u0dba\u0d9a\u0dca\u0dbd\u0dc5\u0dd9\u0d87\u0d9a\u0dba\u0dd9\u0d9a\u0d9a\u0ddc\u0db1\u0dca\u0d9a\u0daf\u0dca\u0dc3\u0dd2\u0dbd\u0dbc\u0da7\u0dd9\u0d91\u0d9a \u0dbd\u0dd9\u0dba\u0dcf\u0dba\u0dc5\u0db4\u0d82\u0da0\u0dd2 \u0dc0\u0dba\u0dd9\u0dc0\u0dcf\u0dc1\u0dc5\u0dd9\u0dd2 \u0dbd\u0dbd\u0dd4\u0db8\u0dca\u0dd9\n\u0d9a\u0dbb\u0db8\u0dd2/\u0d9a\u0dbb\u0db8\u0dd4\n\u0d82\u0dda\u0dba\u0dd9:-\u0dd9.................................. \u0dd9\u0dd9.............................\n\u0daf\u0dba\u0db8\u0dca\u0db8\u0dca\u0d9a\u0dbb\u0dd4\u0d9a\u0dda\u0dd9\u0daf\u0dad\u0dca\u0d9a\u0dbb\u0dc0\u0dda\n\u0dd9\u0dd9\u0dd9\u0dd9\u0dd9\u0dd9\u0dd9\u0dd9\u0db1\u0dd2\u0dbc\u0dd9\u0db8\u0dd4\u0daf\u0dca\u200d\u0dbb\u0dc5\u0dbd\n\u0dd2\u0dc1\u0dba\u0dd9\u0dad\u0daf\u0dca\u200d\u0dba\u0dc2\u0dba\u0dbe\u0dd9\u0daf\u0dba\u0db8\u0dca\u0db8\u0dca\u0db4\u0dad\u0dca\u0d9a\u0dbb\u0dd9\u0dd9www.svf.gov.lk \u0dba\u0dda\u0dd9\u0dc1\u0dca\u200d\u0dbb\u0db8\u0dd9\u0dbd\u0dc5\u0dc0\u0dda\u0dc5\u0dd9\u0daf\u0dbb\u0db8\u0dd4\u0daf\u0dca\u200d\u0dba\u0d9a \u0dbd\u0dd9\u0d9a\u0dbd\u0dd2 \u0dd9\u0daf\u0dc0\u0dc0\u0dd2\u0d9a\u0dba\u0db1\u0dca\u0dd9\u0dbc\u0db6\u0dc5\u0dd9\u0d9c\u0dba\u0dd9\u0dc1\u0dc6\u0dbb\u0dd3\u0dd9\n\u0daf\u0dba\u0dbb,\u0dd9\u0d92\u0dd9\u0dd9\u0daf\u0db1\u0dd4\u0dbd\u0dd9\u0dc0\u0d9a\u0dc0\u0dd9\u0dc4 \u0d9a\u0dbb\u0dd9\u0d9c\u0db1\u0dca\u0dda\u0dc5\u0dd9\u0dbc\u0daf\u0dca\u200d\u0dba\u0dd9\u0daf\u0dba\u0db8\u0dca\u0db8\u0dca\u0db4\u0dad\u0dca\u0d9a\u0dbb\u0dd9\u0dd9\u0d94\u0db6\u0d9a\u0dda\u0dd9\u0dba\u0dcf \u0dc1\u0dd9\u0dbb\u0dca\u0dc2\u0dba\u0dbf\u0dba\u0d9a\u0dca\u0dd9\u0db8\u0d9f\u0dd2\u0db1\u0dca\u0dd9\u0dd2\u0d82\u0db4\u0dad\u0db4\u0dad\u0dca\u0d9a\u0dbb\u0dd9\u0d9a\u0dbb\u0db1\u0dca\u0dda.\u0dd9\u0d94\u0db6\u0dda\u0dd9\n\u0daf\u0dba\u0db8\u0dca\u0db8\u0dca\u0db4\u0dba\u0dd92019.01.24 \u0d82\u0dda\u0da7\u0dd9\u0db4\u0dca\u200d\u0dbb\u0dae\u0db8\u0dd9\u0dc0\u0db7\u0dc5\u0db4\u0d9a\u0dba,\u0dd9\u0dc1\u0dca\u200d\u0dbb\u0db8\u0dd9\u0dbd\u0dc5\u0dc0\u0dda\u0dc5\u0dd9\u0daf\u0dbb\u0db8\u0dd4\u0daf\u0dca\u200d\u0dba\u0dbc,\u0dd9\u0d9a\u0db8\u0dca\u0d9a\u0dbb\u0dd4\u0dd9\u0daf\u0db8\u0dc5\u0dba\u0dba\u0dc5\u0da0\u0dd2\u0dbe\u0dba,\u0dd9\u0daf\u0da0\u0dd2\u0d9a\u0dd997,\u0dd9\n\u0da2\u0dc5\u0dbd\u0dad\u0dca\u0d9a\u0dbb\u0dba\u0dd9\u0db4\u0dc5\u0dbb,\u0dd9\u0d9a\u0d9a\u0ddc\u0dc2\u0db9\u0dd905\u0dd9\u0dba\u0dda\u0dd9\u0dba\u0dcf \u0dc1\u0dda\u0dba\u0da7\u0dd9\u0dba\u0dcf\u0dba\u0dc5\u0db4\u0d82\u0da0\u0dd2 \u0dc0\u0dd9\u0dba\u0dc6\u0db4\u0dc7\u0dbc\u0dd9\u0db8\u0d9f\u0dd2\u0db1\u0dca\u0dd9\u0dbc\u0dc6\u0db6\u0dd3\u0db8\u0da7\u0dd9\u0dc0\u0dbc\u0dc0\u0dc4\u0dbd\u0dda\u0dd9\u0d9a\u0db8\u0db1\u0dca\u0dd9\u0dd2 \u0dbd\u0dbc\u0dc5\u0dd9\n\u0dc3\u0dd2\u0da7\u0dd2\u0db8\u0dd2.\n\u0dc0\u0db7\u0dc5\u0db4\u0d9a\u0dba,\n\u0dc1\u0dca\u200d\u0dbb\u0db8\u0dd9\u0dbd\u0dc5\u0dc0\u0dda\u0dc5\u0dd9\u0daf\u0dbb\u0db8\u0dd4\u0daf\u0dca\u200d\u0dba\u0dbc,\n\u0d9a\u0db8\u0dca\u0d9a\u0dbb\u0dd4\u0dd9\u0daf\u0db8\u0dc5\u0dba\u0dba\u0dc5\u0da0\u0dd2\u0dbe\u0dba,\n\u0daf\u0da0\u0dd2\u0d9a.97,\u0dd9\u0da2\u0dc5\u0dbd\u0dad\u0dca\u0d9a\u0dbb\u0dba\u0dd9\u0db4\u0dc5\u0dbb,\n\u0d9a\u0d9a\u0ddc\u0dc2\u0db9\u0dd905.\u0dd9\u0dd9\u0dd9(\u0db8\u0dca.\u0d9a.\u0dd9\u0daf\u0da0\u0dd2\u0d9a\u0dd9:\u0dd9011\u20132588936\u0dd9/\u0dd9\u0dc3\u0dc6\u0d9a\u0dca\u0dc0\u0dd9\u0dc4\u0daf\u0da0\u0dd2\u0d9a\u0dba\u0dd9:\u0dd9\u0dd9011\u20132588937)",
             "https://www.svf.gov.lk/images/pdfs/Medical_Aid_Application_Re-02.pdf": "\u0dc1\u0dca\u200d\u0dbb\u0db8 \u0dc0\u0dcf\u0dc3\u0db1\u0dcf \u0dc0\u0dc0\u0daf\u0dca\u200d\u0dba \u0dc3\u0dc4\u0db1 \u0d89\u0dbd\u0dca\u0dbd\u0dd4\u0db8\u0dca \u0db4\u0dad\u0dca\u200d\u0dbb\u0dba \u0da2\u0dcf\u0dba\u0dcf\u0dbb\u0dd6\u0db4\u0dba\nSVF \u2013 FO \u2013 009\n\u0d94\u0d9c\u0dda \u0dad\u0dcf\u0dc0\u0d9a\u0dcf\u0dbd\u0dd2\u0d9a \u0d85\u0d82\u0d9a\u0dba :- \u0dc1\u0dca\u200d\u0dbb/\u0dc0\u0dcf/\u0dc0\u0dc0\u0daf\u0dca\u200d\u0dba/\nfiajdkshqla;jisgshoS ush.sh fiajlhkaf.amjqf,ahefmkakkai|yd\n01. \u0d9c \u0ddd\u0d9c\u0dd2\u0dba\u0dcf \u0db4\u0dd2\u0dbd\u0dd2\u0db6\u0db3 \u0d9c\u0dad\u0dcf \u0dad\u0dd4\u0dbb\u0dd4\n.\n\u20181 .1 \u0dc3\u0db8\u0dca\u0db4\u0dd4\u0dbb\u0dca\u0dab \u0db1\u0db8 : ................................................................................................................\n................................................................................................................\n1.2 \u0dc3\u0dae\u0dd2\u0dbb \u0dbd\u0dd2\u0db4\u0dd2\u0db1\u0dba :................................................................................................................\n..................................................................................................................\n1.3 \u0da2\u0dcf\u0dad\u0dd2\u0d9a \u0dc4\u0dd0\u0daf\u0dd4\u0db1\u0dd4\u0db8\u0dca\u0db4\u0db4\u0dad\u0dca \u0d85\u0d82\u0d9a\u0dba : ...............................................................................................\n1.4 \u0db4\u0dc5\u0dcf\u0dad/\u0d9a\u0dbd\u0dcf\u0db4 \u0d9a\u0db8\u0dca\u0db4\u0d9a\u0dbb\u0dd4 \u0d9a\u0dcf\u0dbb\u0dca\u0dba\u0dcf\u0dbd\u0dba :........................................................................................\n1.5 \u0db4\u0dca\u200d\u0dbb\u0dcf\u0daf\u0dda\u0dc1\u0dd2\u0dba \u0daf\u0dda\u0d9a\u0db8\u0dca\u0db4 \u0daf\u0d9a\u0dcf\u0da7\u0dca\u0da8\u0dcf\u0dc1\u0dba : ............................................................................................\n1.6 \u0daf\u0dd2\u0dc3\u0dae\u0dd2\u0d9a\u0dca\u0d9a\u0dba : ...........................................................\n1.7 \u0daf\u0dc3\u0dae\u0dc0\u0daf\u0dda \u0daf\u0dba\u0daf\u0dd3 \u0dc3\u0dd2\u0da7\u0dd2 \u0dad\u0db1\u0dad\u0dd4\u0dbb :.............................................................................................\n1.8 \u0dbb\u0dd0\u0d9a\u0dd2\u0dba\u0dcf\u0daf\u0dc0\u0dc4\u0dd2 \u0db1\u0dd2\u0dbb\u0dad \u0dc0\u0dd6 \u0d9a\u0dcf\u0dbd \u0dc3\u0dd3\u0db8\u0dcf\u0dc0 :...............................................\n1.9 \u0dbb\u0dd0\u0d9a\u0dd2\u0dba\u0dcf\u0daf\u0dc0\u0dc4\u0dd2 \u0dc3\u0dae\u0dc0\u0db7\u0dcf\u0dc0\u0dba :...................................................................................................\n1.10 \u0daf\u0dc3\u0dae\u0dc0\u0dcf \u0daf\u0dba\u0ddd\u0da2\u0d9a\u0dba\u0dcf\u0daf\u0dda \u0db1\u0db8 :....................................................................................................\n1.11 \u0daf\u0dc3\u0dae\u0dc0\u0dcf \u0daf\u0dba\u0ddd\u0da2\u0d9a\u0dba\u0dcf\u0daf\u0dda (\u0d86\u0dba\u0dad\u0db1\u0daf\u0dda) \u0dbd\u0dd2\u0db4\u0dd2\u0db1\u0dba :.............................................................................\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.\n1.12 \u0daf\u0dbb\u0ddd\u0d9c\u0dd3 \u0dc0\u0dd6 \u0daf\u0dd2\u0db1\u0dba/ \u0d85\u0db1\u0dad\u0dd4\u0dbb \u0dc0\u0dd6 \u0daf\u0dd2\u0db1\u0dba :.........................................................\n1.13 \u0daf\u0dbb\u0ddd\u0d9c\u0dd3 \u0dad\u0dad\u0dca\u0dc0\u0dba \u0d87\u0dad\u0dd2 \u0dc0\u0dd3\u0db8\u0da7/\u0d85\u0db1\u0dad\u0dd4\u0dbb \u0dc3\u0dd2\u0daf\u0dd4\u0dc0\u0dd3\u0db8\u0da7 \u0daf\u0dc4\u0dae\u0dad\u0dd4\u0dc0 :......................................................................\n\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026\u2026.\n1.14 \u0d87\u0dad\u0dd2 \u0dc0\u0dd6 \u0daf\u0dbb\u0ddd\u0d9c\u0dd3 \u0dad\u0dad\u0dca\u0dc0\u0dba/ \u0dc3\u0dd2\u0daf\u0dd4 \u0dc0\u0dd6 \u0d85\u0db1\u0dad\u0dd4\u0dbb :........................................................................................\n1.15 \u0d85\u0dba\u0db3\u0dd4\u0db8\u0dca\u0db4\u0d9a\u0dbb\u0dd4 \u0dc3\u0db8\u0dca\u0db4\u0db6\u0db1\u0dca\u0db0 \u0d9a\u0dbb\u0d9c\u0dad \u0dc4\u0dd0\u0d9a\u0dd2 \u0daf\u0dd4\u0dbb\u0d9a\u0dae\u0db1 \u0d85\u0d82\u0d9a :.......................................................................\n02. \u0d85\u0dba\u0daf\u0dd4\u0db8\u0dca\u0d9a\u0dbb\u0dd4\u0d9c\u0dda \u0db4\u0dca\u200d\u0dbb\u0d9a\u0dcf\u0dc1\u0dba :-\n\u0d89\u0dc4\u0dad \u0db8\u0dcf \u0dc0\u0dd2\u0dc3\u0dd2\u0db1\u0dca \u0dc3\u0db3\u0dc4\u0db1\u0dca \u0d9a\u0dbb \u0d87\u0dad\u0dd2 \u0dc3\u0dd2\u0dba\u0dbd\u0dd4\u0db8 \u0daf\u0dad\u0dcf\u0dbb\u0dad\u0dd4\u0dbb\u0dd4 \u0dc3\u0dad\u0dba \u0dc4\u0dcf \u0db1\u0dd2\u0dc0\u0dd0\u0dbb\u0daf\u0dd2 \u0db6\u0dc0\u0dad\u0dca \u0daf\u0db8\u0db8 \u0d9a\u0dcf\u0dbb\u0dab\u0dba \u0dc3\u0db8\u0dca\u0db4\u0db6\u0db1\u0dca\u0db0\u0daf\u0dba\u0db1\u0dca\n\u0dc1\u0dca\u200d\u0dbb\u0db8 \u0dc0\u0dcf\u0dc3\u0db1\u0dcf \u0d85\u0dbb\u0db8\u0dd4\u0daf\u0dbd \u0dc0\u0dd2\u0dc3\u0dd2\u0db1\u0dca \u0dbd\u0db6\u0dcf \u0d9c\u0db1\u0dca\u0db1\u0dcf \u0daf\u0dad\u0dcf\u0dbb\u0dad\u0dd4\u0dbb\u0dd4 \u0daf\u0dc4\u0ddd \u0dc1\u0dca\u200d\u0dbb\u0db8 \u0dc0\u0dcf\u0dc3\u0db1\u0dcf \u0d85\u0dbb\u0db8\u0dd4\u0daf\u0dbd \u0dc0\u0dd2\u0dc3\u0dd2\u0db1\u0dca \u0db8 \u0daf\u0dc0\u0dad \u0dbd\u0db6\u0dcf \u0daf\u0daf\u0db1\u0dd4 \u0dbd\u0db6\u0db1\n\u0db4\u0dca\u200d\u0dbb\u0dad\u0dd2\u0dbd\u0dcf\u0db7 \u0dc3\u0db8\u0dca\u0db4\u0db6\u0db1\u0dca\u0db0 \u0daf\u0dad\u0dcf\u0dbb\u0dad\u0dd4\u0dbb\u0dd4 \u0daf\u0dc0\u0db1\u0dad\u0dca \u0d9a\u0dd2\u0dc3\u0dd2\u0db3\u0dd4 \u0d86\u0dba\u0dad\u0db1\u0dba\u0d9a\u0da7 \u0daf\u0dc4\u0ddd \u0db1\u0dd3\u0dad\u0dd2\u0db8\u0dba \u0d9a\u0da7\u0dba\u0dd4\u0dad\u0dca\u0dad\u0d9a\u0da7 \u0daf\u0dba\u0dcf\u0daf\u0dcf \u0d9c\u0dd0\u0db1\u0dd3\u0db8\u0da7 \u0dc3\u0dd4\u0daf\u0dd4\u0dc3\u0dd4\u0d9a\u0db8\u0d9a\u0dca\n\u0daf\u0db1\u0dcf\u0db8\u0dd0\u0dad\u0dd2 \u0db6\u0dc0\u0dad\u0dca, \u0d91\u0db8 \u0daf\u0dad\u0dcf\u0dbb\u0dad\u0dd4\u0dbb\u0dd4 \u0dc4\u0dd4\u0daf\u0daf\u0d9a\u0dca \u0daf\u0db8\u0db8 \u0d9a\u0dcf\u0dbb\u0dca\u0dba \u0dc3\u0db3\u0dc4\u0dcf \u0db4\u0db8\u0dab\u0d9a\u0dca \u0daf\u0dba\u0dcf\u0daf\u0dcf \u0d9c\u0db1\u0dca\u0db1\u0dcf \u0db6\u0dc0\u0dad\u0dca \u0daf\u0db8\u0dba\u0dd2\u0db1\u0dca \u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0d9a\u0dbb\u0db1\n\u0d85\u0dad\u0dbb \u0dc1\u0dca\u200d\u0dbb\u0db8 \u0dc0\u0dcf\u0dc3\u0db1\u0dcf \u0d85\u0dbb\u0db8\u0dd4\u0daf\u0daf\u0dda \u0dc0\u0dc0\u0daf\u0dba \u0dc3\u0dc4\u0db1 \u0daf\u0dba\u0ddd\u0da2\u0db1\u0dcf \u0d9a\u0dca\u200d\u0dbb\u0db8\u0dba \u0dba\u0da7\u0daf\u0dad\u0dca \u0dc0\u0dc0\u0daf\u0dba \u0dc3\u0dc4\u0db1 \u0dbd\u0db6\u0dcf \u0daf\u0dd3\u0db8\u0da7 \u0d9a\u0da7\u0dba\u0dd4\u0dad\u0dd4 \u0d9a\u0dbb\u0db1 \u0daf\u0db8\u0db1\u0dca\n\u0d9a\u0dcf\u0dbb\u0dd4\u0dab\u0dd2\u0d9a\u0dc0 \u0d89\u0dda\u0dbd\u0dcf \u0dc3\u0dd2\u0da7\u0dd2\u0db8\u0dd3.\n...................................... ...................................................\n\u0daf\u0dd2\u0db1\u0dba \u0d85\u0dba\u0daf\u0dd4\u0db8\u0dca\u0d9a\u0dbb\u0dd4\u0d9c\u0dda \u0d85\u0dad\u0dca\u0dc3\u0db1\n\u0dc0\u0dd0\u0da9\u0dd2\u0daf\u0dd4 \u0dc0\u0dd2\u0db8\u0dc3\u0dd3\u0db8 \u0dc3\u0db3\u0dc4\u0dcf 0112588936 \u0daf\u0dd4 \u0d9a\u0dae\u0db1\u0dba \u0d94\u0dc3\u0dda\u0d9c\u0dc3\u0dda \u0dc3\u0db8\u0dca\u0db6\u0db1\u0dca\u0db0 \u0dc0\u0dd2\u0dba \u0dc4\u0dd0\u0d9a.\nREVISION NO: 02 REVISION DATE: 2022.11.02SVF \u2013 FO \u2013 009\n03. \u0d9c\u0dca\u200d\u0dbb\u0dcf\u0db8 \u0db1\u0dd2\u0dbd\u0db0\u0dcf\u0dbb\u0dd2\u0daf\u0dda \u0db1\u0dd2\u0dbb\u0dca\u0daf\u0dda\u0dc1\u0dba :-\n\u0d89\u0dc4\u0dad 01 \u0dc4\u0dd2 \u0dc3\u0daf\u0dca\u200d\u0dc4\u0db1\u0dca \u0d9a \u0d87\u0dad\u0dd2 1.1 \u0dc3\u0dd2\u0da7 1.6 \u0daf\u0dca\u200d\u0d9a\u0dca\u0dc0\u0dcf \u0dc0\u0dd6 \u0dc3\u0dd2\u0dba\u0dd4\u0db8 \u0d9c\u0dad\u0dcf \u0dad\u0dd4\u0dbb\u0dd4 \u0dc3\u0dad\u0dba \u0dc4\u0dcf \u0db1\u0dd2\u0dc0\u0dd0 \u0daf\u0dd2 \u0db6\u0dc0\u0dad\u0dca \u0d85\u0dba\u0daf\u0dd4\u0db8\u0dca\u0db4\u0dad \u0d89\u0daf\u0dd2\u0dbb\u0dd2\u0db4\u0dad\u0dca\n\u0d9a \u0db1 \u0d85\u0dba \u0db8\u0dcf \u0d9c\u0dc4\u0dcf\u0db3\u0dd2\u0db1\u0dca \u0daf\u0dca\u200d\u0db1\u0dca\u0db1\u0dcf \u0db6\u0dc0\u0dad\u0dca \u0db8\u0dcf\u0d9c\u0dda \u0d9c\u0dca\u200d\u0dbb\u0dcf\u0db8 \u0db1\u0dd2\u0dc5\u0db0\u0dcf\u0dbb\u0dd2 \u0dc0\u0dc3\u0db8 \u0dad\u0dd4\u0dc5 \u0d9c\u0dc0\u0d9c\u0dc3\u0db1 \u0db6\u0dc0\u0dad\u0dca \u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0d9a \u0db8\u0dd3.\n........... .............S.V.F. ....................\n....................................\n\u0daf\u0dd2\u0db1\u0dba \u0db4\u0dca\u200d\u0dbb\u0d9c\u0daf\u0dca\u0dc1\u0d9c\u0dda \u0d9c\u0dca\u200d\u0dbb\u0dcf\u0db8 \u0db1\u0dd2\u0dc5\u0db0\u0dcf\u0dbb\u0dd3 \u0d85\u0dad\u0dca\u0dc3\u0db1\n(\u0db1\u0db8/\u0dad\u0db1\u0dad\u0dd4 \u0db1\u0dd2\u0dbd \u0db8\u0dd4\u0daf\u0dca\u200d\u0dbb\u0dcf\u0dc0 \u0dad\u0db6\u0dcf \u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0d9a\u0dbd \u0dba\u0dd4\u0dad\u0dd4\u0dba.)\n...................................... ................................................\n\u0db4\u0dca\u200d\u0dbb\u0dcf\u0d9c\u0daf\u0dca\u0dc1\u0dd2\u0dba \u0d9c\u0dbd\u0dca\u0dbd\u0d9a\u0db8\u0dca \u0d85\u0dad\u0dca\u0dc3\u0db1\n\u0daf\u0dd2\u0db1\u0dba\n(\u0db1\u0dd2\u0dbd \u0db8\u0dd4\u0daf\u0dca\u200d\u0dbb\u0dcf\u0dc0)\n04. \u0d85\u0dba\u0db3\u0dd4\u0db8\u0dca\u0d9a\u0dbb\u0dd4 \u0dc0\u0dd0\u0da9 \u0d9a\u0dbd \u0d86\u0dba\u0dad\u0db1\u0dba \u0db4\u0dd2\u0dbd\u0dd2\u0db6\u0db3 \u0d9c\u0dad\u0dcf \u0dad\u0dd4\u0dbb\u0dd4 :-\n4.1 \u0d9c\u0dc3\u0dda\u0dc0\u0dba\u0dba\u0dcf\u0d9c\u0dda / \u0d86\u0dba\u0dad\u0db1\u0d9c\u0dda \u0db1\u0db8 :................................................................................................\n4.2 \u0d9c\u0dc3\u0dda\u0dc0\u0dba\u0dba\u0dcf\u0d9c\u0dda / \u0d86\u0dba\u0dad\u0db1\u0d9c\u0dda \u0dbd\u0dd2\u0db4\u0dd2\u0db1\u0dba:.................................................................................................\n...........\u0dca.\u0dda\u0dca..\u0dda .(.). .............................................................................................................................\n()\n................................................................................................................................................................\n4.3 \u0d85\u0dba\u0db3\u0dd4\u0db8\u0dca\u0d9a\u0dbb\u0dd4 \u0d9c\u0dc3\u0dda\u0dc0\u0dba\u0da7 \u0db6\u0dd0\u0daf\u0dd4\u0db1\u0dd4 \u0daf\u0dd2\u0db1\u0dba :....................................................\n4.4 \u0d91\u0daf\u0dd2\u0db1\u0da7 \u0d85\u0daf\u0dca\u200d\u0dcf\u0dc5\u0dc0 \u0dbd\u0db6\u0dcf\u0d9c\u0dad\u0dca \u0dc0\u0dc0\u0daf\u0dca\u200d\u0dba \u0dc0\u0dcf\u0dbb\u0dca\u0dad\u0dcf\u0dc0\u0d9a\u0dca \u0dad\u0dd2\u0d9c\u0dda\u0daf\u0dca\u200d? :\u0d94 \u0dc0\u0dca \u0db1/ \u0dd0\u0dad\n4.5 \u0dbb\u0dd0\u0d9a\u0dd2\u0dba\u0dcf\u0d9c\u0dc0\u0dc4\u0dd2 \u0db1\u0dd2 \u0dad \u0dc0\u0dd6 \u0d9a\u0dcf\u0dbd\u0dc3\u0dd3\u0db8\u0dcf\u0dc0 :...................................................\n4.6 \u0d9c \u0ddd\u0d9c\u0dd3 \u0dc0\u0dd4/ \u0d85\u0db1\u0dad\u0dd4 \u0dc0\u0dd6 \u0daf\u0dd2\u0db1\u0dba :...................................................\n4.7 \u0dbb\u0dd0\u0d9a\u0dd2\u0dba\u0dcf\u0d9c\u0dc0\u0dc4\u0dd2 \u0db1\u0dd2 \u0dad \u0dc0\u0dd6 \u0dc3\u0dda\u0dae\u0dcf\u0db1\u0d9c\u0dba\u0dc4\u0dd2 \u0dc3\u0db8\u0dca\u0db6\u0db1\u0dca\u0dd3\u0d9a \u0dab\u0dba \u0d9a\u0dbd \u0dc4\u0dd0\u0d9a\u0dd2 \u0db4\u0dd4\u0daf\u0dca\u0d9c\u0dbd\u0d9c\u0dba\u0d9a\u0dd4\u0d9c\u0dda \u0daf\u0dd4 \u0d9a\u0dae\u0db1 \u0d85\u0d82\u0d9a\u0dba/ \u0db1\u0db8 \u0dc4\u0dcf\n\u0dad\u0db1\u0dad\u0dd4 :..................................................................................................................................\n4.8 \u0dbb\u0dd0\u0d9a\u0dd2\u0dba\u0dcf\u0d9c\u0dc0\u0dc4\u0dd2 \u0dc3\u0dda\u0dc0\u0db7\u0dcf\u0dc0\u0dba :...............................................................................................................\n4.9 \u0d85\u0dba\u0db3\u0dd4\u0db8\u0dca\u0d9a\u0dbb\u0dd4 \u0d86\u0dba\u0dad\u0db1\u0d9c\u0dda \u0daf\u0dca\u200d \u0dab \u0dbd\u0daf\u0dca\u200d \u0dad\u0db1\u0dad\u0dd4 :....................................................................................\n4.10 \u0d85\u0dba\u0db3\u0dd4\u0db8\u0dca\u0d9a\u0dbb\u0dd4 \u0d86\u0dba\u0dad\u0db1\u0d9c\u0dda\u0daf\u0dd3 \u0dbd\u0dd0\u0db6\u0dd6 \u0db8\u0dd4\u0dbd\u0dd2\u0d9a \u0dc0\u0dd0\u0da7\u0dd4\u0db4 :....................................................................................\n............................. ............................\n\u0daf\u0dd2\u0db1\u0dba \u0d9c\u0dc3\u0dda\u0dc0\u0dba\u0dcf\u0d9c\u0dda \u0d85\u0dad\u0dca\u0dc3\u0db1\n(\u0db1\u0db8/\u0dad\u0db1\u0dad\u0dd4 \u0dc3\u0dc4 \u0db1\u0dd2\u0dbd\u0db8\u0dd4\u0daf\u0dca\u200d\u0dbb\u0dcf\u0dc0 \u0dad\u0db6\u0db1\u0dca\u0db1.)\n\u0dc0\u0dd0\u0da9\u0dd2\u0daf\u0dd4 \u0dc0\u0dd2\u0db8\u0dc3\u0dd3\u0db8 \u0dc3\u0db3\u0dc4\u0dcf 0112588936 \u0daf\u0dd4 \u0d9a\u0dae\u0db1\u0dba \u0d94\u0dc3\u0dda\u0d9c\u0dc3\u0dda \u0dc3\u0db8\u0dca\u0db6\u0db1\u0dca\u0db0 \u0dc0\u0dd2\u0dba \u0dc4\u0dd0\u0d9a.\nREVISION NO: 02 REVISION DATE: 2022.11.02SVF \u2013 FO \u2013 009\n05 . \u0d9c \u0ddd\u0d9c\u0dd3 \u0dad\u0dad\u0dca\u0dc0\u0dba/ \u0d85\u0db1\u0dad\u0dd4 \u0db4\u0dd2\u0dbd\u0dd2\u0db6\u0db3 \u0db1\u0dd2\u0dbb\u0dca\u0d9c\u0daf\u0dca\u0dc1\u0dba\n:-\n5.1 \u0d9c \u0ddd\u0d9c\u0dba \u0d87\u0dad\u0dd2\u0dc0\u0dd2\u0db8\u0da7/ \u0d85\u0db1\u0dad\u0dd4 \u0dc3\u0dd2\u0daf\u0dd4\u0dc0\u0dd3\u0db8\u0da7 \u0d9c\u0dc4\u0dda\u0dad\u0dd4\u0dc0\n.................................................................................................................................................\n...........................................................................................................................................\n5.2 \u0d9c \u0ddd\u0d9c\u0dba \u0d87\u0dad\u0dd2 \u0dc0\u0dd6 / \u0dc0\u0dd8\u0dad\u0dca\u0dd3\u0dba \u0d85\u0db1\u0dad\u0dd4 \u0dc3\u0dd2\u0daf\u0dd4 \u0dc0\u0dd6 \u0d9a\u0dcf\u0dbd \u0dc3\u0dd3\u0db8\u0dcf\u0dc0 :......................................................................\n5.3 \u0dc0\u0dc0\u0daf\u0dca\u200d\u0dba \u0db1\u0dd2\u0dbb\u0dca\u0d9c\u0daf\u0dca\u0dc1\u0dba :...................................................................................................................\n.............................................................................................................................................\n...............................................................................................................................................................\n......................................... ...........................................\n\u0d9c\u0dc3\u0dda\u0dc0\u0dcf \u0d9c\u0dba\u0ddd\u0da2\u0d9a\u0dba\u0dcf/ \u0d9a\u0dbb\u0dca\u0db8\u0dcf\u0db1\u0dca\u0dad\u0dc1\u0dcf\u0dbd\u0dcf \u0db4\u0dbb\u0dd3\u0d9a\u0dca\u0dc2\u0d9a \u0d89\u0d82\u0da2\u0dd2\u0d9c\u0db1\u0dca\u0dbb\u0dd4\u0dc0 \u0dba\u0dcf/\n\u0daf\u0dd2\u0db1\u0dba\n\u0d9a\u0db8\u0dca\u0d9a\u0dbb\u0dd4 \u0dc0\u0db1\u0dca\u0daf\u0dd2 \u0d9c\u0d9a\u0dcf\u0db8\u0dc3\u0dcf\u0dbb\u0dd2\u0dc3\u0dc0\u0dda \u0dba\u0dcf/ \u0db1\u0dd2\u0d9c\u0dba\u0ddd\u0da2\u0dba \u0d9c\u0dc4\u0ddd \u0dc3\u0dc4\u0d9a\u0dcf\n\u0d9a \u0db8\u0dca \u0d9a \u0dbb\u0dd4 \u0d9c \u0d9a \u0dcf \u0db8 \u0dc3 (\u0dcf\u0db1\u0dbb\u0dd2\u0dc3\u0db8\u0dda\u0dc0 /\u0dad\u0d9c\u0db1\u0dba\u0d9a\u0dd4\u0dad\u0dd4/ \u0d9a \u0dc3\u0db8\u0dca\u0dc4\u0d9a \u0db1\u0dd2\u0dbb\u0dd4 \u0dbd\u0d9c\u0db8\u0dd4\u0daf\u0dca\u200d\u0db4\u0daf\u0dca\u200d\u0dbb\u0dcf\u0dcf\u0dbb\u0dca\u0dc0\u0dad \u0dad\u0d9c\u0db6\u0db8\u0dca\u0db1\u0dca\u0db1\u0dca\u0dad\u0dd4\u0db1\u0d9c.\u0dda)\n\u0dc0\u0dd8\u0dad\u0dca\u0dd3\u0dba \u0dc3\u0dc0\u0dda \u0dc3\u0dda\u0dae\u0dad\u0dcf \u0d85\u0d82\u0dc1\u0d9c\u0dda \u0dc0\u0dd2\u0d9c\u0dc1\u0dda\u0dc2\u0da5 \u0dc0\u0dc0\u0daf\u0dca\u200d\u0dba\u0dc0 \u0dba\u0dcf\n(\u0db1\u0db8/\u0dad\u0db1\u0dad\u0dd4 \u0dc3\u0dc4 \u0db1\u0dd2\u0dbd\u0db8\u0dd4\u0daf\u0dca\u200d\u0dbb\u0dcf\u0dc0 \u0dad\u0db6\u0db1\u0dca\u0db1.)\n(\u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0d9a \u0db1 \u0dbd\u0daf\u0dca\u200d \u0dc0\u0dc0\u0daf\u0dca\u200d\u0dba \u0dc0\u0dcf\u0dbb\u0dca\u0dad\u0dcf\u0d9c\u0dda \u0db4\u0dd2\u0da7\u0db4\u0dad \u0d87\u0db8\u0dd2\u0dab\u0dd3\u0db8 \u0d85\u0db1\u0dd2\u0dc0\u0dcf\u0dbb\u0dca\u0dba \u0d9c\u0dda.)\n\u0dc0\u0dd0\u0da9\u0dd2\u0daf\u0dd4 \u0dc0\u0dd2\u0db8\u0dc3\u0dd3\u0db8 \u0dc3\u0db3\u0dc4\u0dcf 0112588936 \u0daf\u0dd4 \u0d9a\u0dae\u0db1\u0dba \u0d94\u0dc3\u0dda\u0d9c\u0dc3\u0dda \u0dc3\u0db8\u0dca\u0db6\u0db1\u0dca\u0db0 \u0dc0\u0dd2\u0dba \u0dc4\u0dd0\u0d9a.\nREVISION NO: 02 REVISION DATE: 2022.11.02SVF \u2013 FO \u2013 0.9.1\n\u0dc0\u0dc0\u0daf\u0dba \u0dc3\u0dc4\u0db1 \u0dbd\u0db6\u0dcf \u0daf\u0dd3\u0db8 - \u0d8b\u0db4\u0daf\u0daf\u0dc3\u0dae \u0db4\u0dd2\u0d9a\u0dcf\u0dc0\n\uf046\n\u0d85\u0db1\u0db1\u0dba\u0dad\u0dcf\u0dc0\u0dba \u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0d9a\u0dd2\u0dbb\u0dd3\u0db8\u0da7 \u0d85\u0daf\u0dca\u200d\u0dcf\u0dc5 \u0dbd\u0dd2\u0dba\u0d9a\u0dd2\u0dba\u0dc0\u0dd2\u0dbd\u0dd2\n\u2756 \u0da2\u0dcf\u0dad\u0dd2\u0d9a \u0dc4\u0dd0\u0daf\u0dd4\u0db1\u0dd4\u0db8\u0dca\u0db4\u0db4\u0dad, \u0dbb\u0dd2\u0dba\u0daf\u0dd4\u0dbb\u0dd4 \u0db6\u0dbd\u0db4\u0dad\u0dca\u200d\u0dbb, \u0dc0\u0dd2\u0daf\u0dda\u0dc1 \u0d9c\u0db8\u0db1\u0dca \u0db6\u0dbd\u0db4\u0dad\u0dca\u200d\u0dbb\u0dba \u0daf\u0dc4\u0ddd \u0d85\u0db1\u0db1\u0dba\u0dad\u0dcf\u0dc0\u0dba \u0dad\u0dc4\u0dc0\u0dd4\u0dbb\u0dd4 \u0daf\u0d9a\u0daf\u0dbb\u0db1 \u0daf\u0dc0\u0db1\u0dad\u0dca\n\u0dbd\u0dd2\u0dba\u0d9a\u0dd2\u0dba\u0dc0\u0dd2\u0dda\u0dbd\u0d9a \u0db4\u0dca\u200d\u0dbb\u0daf\u0dda\u0dc1\u0daf\u0dda \u0d9c\u0dca\u200d\u0dbb\u0dcf\u0db8 \u0db1\u0dd2\u0dbd\u0db0\u0dcf\u0dbb\u0dd3 \u0dc0\u0dd2\u0dc3\u0dd2\u0db1\u0dca \u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0d9a\u0dbd \u0db4\u0dd2\u0da7\u0db4\u0dad\u0d9a\u0dca.\n\uf046\n\u0d9c\u0dc3\u0dda\u0dc0\u0d9c\u0dda \u0d9c\u0dba\u0daf\u0dd3 \u0dc3\u0dd2\u0da7\u0dd2\u0dba\u0daf\u0dd3 \u0d8b\u0daf\u0dca\u0d9c\u0dad \u0dc0\u0dd6 \u0dc0\u0dd8\u0dad\u0dca\u0dd3\u0dba \u0d9c \u0ddd\u0d9c\u0dba\u0d9a\u0dd2\u0db1\u0dca / \u0d9a\u0dcf\u0dbb\u0dca\u0db8\u0dd2\u0d9a \u0d9c \u0ddd\u0d9c\u0dba\u0d9a\u0dd2\u0db1\u0dca \u0d9c\u0db4\u0d9c\u0dc5\u0db1 \u0db6\u0dc0\n\u0d9c\u0dc4\u0ddd \u0dc0\u0dd8\u0dad\u0dca\u0dd3\u0dba \u0d85\u0db1\u0dad\u0dd4 \u0d9a\u0dca \u0dc3\u0dd2\u0daf\u0dd4 \u0dc0\u0dd6 \u0db6\u0dc0 \u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0d9a\u0dd2\u0dbb\u0dd3\u0db8.\n\u2756 \u0daf\u0dc3\u0dae\u0dc0\u0dcf \u0db1\u0dd2\u0dba\u0dd4\u0d9a\u0dca\u0dad\u0dba\u0dcf \u0daf\u0dc3\u0dae\u0dc0\u0daf\u0dda \u0daf\u0dba\u0daf\u0dd3 \u0dc3\u0dd2\u0da7\u0dd2\u0dba\u0daf\u0dd3 \u0d8b\u0dda\u0d9c\u0dad \u0dc0\u0dd6 \u0dc0\u0dd8\u0dad\u0dca\u0dd3\u0dba \u0daf\u0dbb\u0ddd\u0d9c\u0dba\u0d9a\u0dd2\u0db1\u0dca / \u0d9a\u0dcf\u0dbb\u0dca\u0dd2\u0d9a \u0daf\u0dbb\u0ddd\u0d9c\u0dba\u0d9a\u0dd2\u0db1\u0dca \u0daf\u0db4\u0daf\u0dc5\u0db1\n\u0db6\u0dc0\u0da7 \u0daf\u0dd2\u0dc3\u0dae\u0dd2\u0d9a\u0dca \u0dc0\u0dc0\u0daf\u0dba \u0db1\u0dd2\u0dbd\u0db0\u0dcf\u0dbb\u0dd3/ \u0dc0\u0dd8\u0dad\u0dca\u0dd3\u0dba \u0daf\u0dbb\u0ddd\u0d9c \u0db4\u0dd2\u0dbd\u0dd2\u0db6\u0db3 \u0dc0\u0dc0\u0daf\u0dba \u0db1\u0dd2\u0dbd\u0db0\u0dcf\u0dbb\u0dd3/ \u0d9a\u0db8\u0dca\u0db4\u0d9a\u0dbb\u0dd4 \u0daf\u0daf\u0db4\u0dcf\u0dbb\u0dca\u0dad\u0daf\u0db8\u0dca\u0db4\u0db1\u0dca\u0dad\u0dd4\u0daf\u0dc0\u0dca\n\u0dc0\u0dd8\u0dad\u0dca\u0dd3\u0dba \u0dc3\u0dae\u0dc0\u0dc3\u0dae\u0dae\u0dad\u0dcf \u0d85\u0d82\u0dc1\u0daf\u0dda \u0dc0\u0dd2\u0daf\u0dc1\u0dae\u0dc2\u0da5 \u0dc0\u0dc0\u0daf\u0dba\u0dc0\u0dbb\u0dba\u0dcf\u0daf\u0dda \u0dc3\u0dc4\u0dad\u0dd2\u0d9a\u0dba\n\u0daf\u0dc4\u0ddd\n\u2756 \u0daf\u0dc3\u0dae\u0dc0\u0dcf \u0db1\u0dd2\u0dba\u0dd4\u0d9a\u0dca\u0dad\u0dba\u0dcf \u0daf\u0dc3\u0dae\u0dc0\u0daf\u0dda \u0daf\u0dd3 \u0dc3\u0dd2\u0da7\u0dd2\u0dba\u0daf\u0dd3 \u0dc3\u0dd2\u0daf\u0dd4 \u0dc0\u0dd6 \u0d85\u0db1\u0dad\u0dd4\u0dbb\u0d9a\u0dca \u0db6\u0dc0\u0da7 \u0daf\u0dc3\u0dae\u0dc0\u0dcf \u0daf\u0dba\u0ddd\u0da2\u0d9a\u0dba\u0dcf/ \u0d9a\u0dbb\u0dca\u0db8\u0dcf\u0db1\u0dca\u0dad\u0dc1\u0dcf\u0dbd\u0dcf \u0db4\u0dbb\u0dd3\u0d9a\u0dca\u0dc2\u0d9a\n\u0d89\u0d82\u0da2\u0dd2\u0daf\u0db1\u0dca\u0dbb\u0dd4\u0dc0\u0dbb\u0dba\u0dcf/ \u0d9a\u0db8\u0dca\u0db4\u0d9a\u0dbb\u0dd4 \u0dc0\u0db1\u0dca\u0daf\u0dd2 \u0daf\u0d9a\u0dcf\u0db8\u0dc3\u0dcf\u0dbb\u0dd2\u0dc3\u0dae\u0dc0\u0dbb\u0dba\u0dcf/ \u0db1\u0dd2\u0daf\u0dba\u0ddd\u0da2\u0dba \u0daf\u0dc4\u0ddd \u0dc3\u0dc4\u0d9a\u0dcf\u0dbb \u0d9a\u0db8\u0dca\u0db4\u0d9a\u0dbb\u0dd4 \u0daf\u0d9a\u0dcf\u0db8\u0dc3\u0dcf\u0dbb\u0dd2\u0dc3\u0dae\u0dc0\u0dbb\u0daf\u0dba\u0d9a\u0dd4/\n\u0d9a\u0db8\u0dca\u0db4\u0d9a\u0dbb\u0dd4 \u0daf\u0daf\u0db4\u0dcf\u0dbb\u0dca\u0dad\u0daf\u0db8\u0dca\u0db4\u0db1\u0dca\u0dad\u0dd4\u0daf\u0dc0\u0dca \u0dc0\u0dd8\u0dad\u0dca\u0dd3\u0dba \u0dc3\u0dae\u0dc0\u0dc3\u0dae\u0dae\u0dad\u0dcf \u0d85\u0d82\u0dc1\u0daf\u0dda \u0dc0\u0dd2\u0daf\u0dc1\u0dae\u0dc2\u0da5 \u0dc0\u0dc0\u0daf\u0dba\u0dc0\u0dbb\u0dba\u0dcf\u0daf\u0dda \u0dc3\u0dc4\u0dad\u0dd2\u0d9a\u0dba\n\uf046\n\u0db4\u0daf\u0dd2\u0d82\u0da0\u0dd2\u0dba / \u0dbd\u0dd2\u0db4\u0dd2\u0db1\u0dba \u0dad\u0dc4\u0dc0\u0dd4\u0dbb\u0dd4 \u0d9a \u0d9c\u0dd0\u0db1\u0dd3\u0db8\u0da7 \u0d85\u0daf\u0dca\u200d\u0dcf\u0dbd \u0dbd\u0dd2\u0dba\u0d9a\u0dd2\u0dba\u0dc0\u0dd2\u0dbd\u0dd2 \u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0d9a \u0dc0\u0dd3\u0db8.\n\u2756 \u0db4\u0daf\u0dd2\u0d82\u0da0\u0dd2\u0dba \u0dc3\u0dc4 \u0dbd\u0dd2\u0db4\u0dd2\u0db1\u0dba \u0dc3\u0db1\u0dcf\u0dae \u0d9a\u0dd2\u0dbb\u0dd3\u0db8\u0da7 \u0db4\u0dca\u200d\u0dbb\u0daf\u0dda\u0dc1\u0daf\u0dda \u0d9c\u0dca\u200d\u0dbb\u0dcf\u0db8 \u0db1\u0dd2\u0dbd\u0db0\u0dcf\u0dbb\u0dd3 \u0dc0\u0dd2\u0dc3\u0dd2\u0db1\u0dca \u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0d9a\u0dbd \u0db4\u0dd2\u0da7\u0db4\u0dad\u0d9a\u0dca \u0db4\u0dca\u200d\u0dbb\u0dcf\u0daf\u0dda\u0dc1\u0dd3\u0dba \u0daf\u0dda\u0d9a\u0db8\u0dca\u0db4\n\u0d85\u0db1\u0dd4\u0db8\u0dad \u0d9a\u0dc5 \u0dba\u0dd4\u0dad\u0dd4\u0dba.\n\uf046\n\u0d85\u0dc0\u0dc3\u0db1\u0dca \u0dc0 \u0da7 \u0dbd\u0dd0\u0db6\u0dd6 \u0db8\u0dcf\u0dc3\u0dd2\u0d9a \u0dc0\u0dd0\u0da7\u0dd4\u0db4 (\u0db8\u0dd6\u0dbd\u0dd2\u0d9a \u0dc0\u0dd0\u0da7\u0dd4\u0db4) \u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0d9a\u0dd2\u0dbb\u0dd3\u0db8.\n\u2756 \u0daf\u0dc3\u0dae\u0dc0\u0dba \u0d86\u0dba\u0dad\u0db1\u0dba \u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0d9a\u0dbb \u0dbd\u0db6\u0dcf \u0daf\u0dd3 \u0d87\u0dad\u0dd2 \u0dc0\u0dd0\u0da7\u0dd4\u0db4\u0dca \u0db4\u0dd2\u0d9a\u0dcf\u0dc0\u0d9a / \u0dc0\u0dd0\u0da7\u0dd4\u0db4 \u0daf\u0dd0\u0d9a\u0dca\u0daf\u0dc0\u0db1 \u0db4\u0dad\u0dca\u0dc0\u0dd3\u0daf\u0db8\u0dca\u0db4 \u0dbd\u0dd2\u0db4\u0dd2\u0dba\u0d9a \u0da1\u0dcf\u0dba\u0dcf\n\u0db4\u0dd2\u0da7\u0db4\u0dad\u0d9a\u0dca \u0dc3\u0dad\u0dba \u0db4\u0dd2\u0da7\u0db4\u0dad\u0d9a\u0dca \u0db6\u0dc0\u0da7 \u0d86\u0dba\u0dad\u0db1\u0daf\u0dda \u0db6\u0dbd\u0db0\u0dcf\u0dbb\u0dd2\u0daf\u0dba\u0d9a\u0dd4 \u0daf\u0dc4\u0ddd \u0dc3\u0dc4\u0d9a\u0dcf\u0dbb \u0d9a\u0db8\u0dca\u0db4\u0d9a\u0dbb\u0dd4 \u0daf\u0d9a\u0dcf\u0db8\u0dc3\u0dcf\u0dbb\u0dd2\u0dc3\u0dae\u0dc0\u0dbb\u0daf\u0dba\u0d9a\u0dd4\n\u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0d9a\u0dbd \u0dba\u0dd4\u0dad\u0dd4 \u0daf\u0dc0\u0dca.\n\uf046\n\u0dc3\u0dd0\u0dbd\u0d9a\u0dd2\u0dba \u0dba\u0dd4\u0dad\u0dd4\u0dba\u0dd2 :-\n\u2756 \u0daf\u0db8\u0dca\u0db4 \u0dc3\u0db8\u0dca\u0db4\u0db6\u0db1\u0dca\u0db0\u0dc0 \u0dbd\u0db6\u0dcf\u0daf\u0d9c\u0db1 \u0d87\u0dad\u0dd2 \u0daf\u0dc0\u0db1\u0dad\u0dca \u0dc0\u0dc0\u0daf\u0dba \u0dc0\u0dcf\u0dbb\u0dca\u0dad\u0dcf \u0d85\u0dba\u0db3\u0dd4\u0db8\u0dca\u0db4\u0db4\u0dad\u0dca\u200d\u0dbb\u0dba \u0dc3\u0db8\u0d9f \u0d89\u0daf\u0dd2\u0dbb\u0dd2\u0db4\u0dad\u0dca \u0d9a\u0dc5 \u0dba\u0dd4\u0dad\u0dd4\u0dba.\n\u2756 \u0dc1\u0dca\u200d\u0dbb\u0db8 \u0dc0\u0dcf\u0dc3\u0db1\u0dcf \u0d85\u0dbb\u0db8\u0dd4\u0daf\u0dbd \u0dc0\u0dd2\u0dc3\u0dd2\u0db1\u0dca \u0daf\u0dad\u0dcf\u0dbb\u0dad\u0dd4\u0dbb\u0dd4 \u0d89\u0dda\u0dbd\u0dcf \u0dba\u0dc0\u0db1\u0dd4 \u0dbd\u0db6\u0db1 \u0daf\u0dad\u0dcf\u0dbb\u0dad\u0dd4\u0dbb\u0dd4 \u0db4\u0dd2\u0d9a\u0dcf\u0dc0\u0da7 \u0d85\u0db1\u0dd4\u0dc0\u0db8 \u0daf\u0dad\u0dcf\u0dbb\u0dad\u0dd4\u0dbb\u0dd4 \u0d87\u0dad\u0dd4\u0dc5\u0dad\u0dca\n\u0d9a\u0dbb \u0dad\u0dd2\u0db6\u0dd3\u0db8 \u0dc4\u0dcf \u0dbd\u0db6\u0dcf \u0daf\u0dd3\u0db8 \u0d85\u0db1\u0dd2\u0dc0\u0dcf\u0dbb\u0dca\u0dba \u0daf\u0dc0\u0dca.\n\u2756 \u0d89\u0dc4\u0dad \u0dc3\u0db3\u0dc4\u0db1\u0dca \u0dc3\u0dd2\u0dba\u0dbd\u0dd4\u0db8 \u0dbd\u0dd2\u0dba\u0d9a\u0dd2\u0dba\u0dc0\u0dd2\u0dbd\u0dd2 \u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0d9a\u0dd2\u0dbb\u0dd3\u0daf\u0db8\u0dca\u0db4\u0daf\u0dd3 \u0d85\u0daf\u0dcf\u0dc5 \u0db1\u0dd2\u0dbd\u0db0\u0dcf\u0dbb\u0dd2\u0dba\u0dcf\u0daf\u0dda \u0db1\u0db8, \u0dad\u0db1\u0dad\u0dd4\u0dbb \u0dc3\u0db3\u0dc4\u0db1\u0dca \u0d9a\u0dbb \u0db1\u0dd2\u0dbd \u0db8\u0dd4\u0daf\u0dca\u200d\u0dbb\u0dcf\u0dc0\n\u0dad\u0db6\u0dcf \u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0d9a\u0dc5 \u0dba\u0dd4\u0dad\u0dd4 \u0d85\u0dad\u0dbb \u0dc3\u0dd2\u0dba\u0dd4\u0db8 \u0dc0\u0dc0\u0daf\u0dca\u200d\u0dba \u0dc0\u0dcf\u0dbb\u0dca\u0dad\u0dcf \u0daf\u0dd2\u0dc3\u0dda\u0dd2\u0d9a\u0dca \u0dc0\u0dc0\u0daf\u0dca\u200d\u0dba \u0db1\u0dd2\u0dbd\u0db0\u0dcf\u0dbb\u0dd3\u0dc0 \u0d9c\u0dba\u0d9a\u0dca (DMO) \u0d9c\u0dc4\u0ddd \u0dc0\u0dd8\u0dad\u0dca\u0dd3\u0dba\n\u0d9c \u0ddd\u0d9c \u0db4\u0dd2\u0dc5\u0dd2\u0db6\u0db3 \u0dc0\u0dc0\u0daf\u0dca\u200d\u0dba \u0db1\u0dd2\u0dbd\u0db0\u0dcf\u0dbb\u0dd3\u0dc0 \u0d9c\u0dba\u0d9a\u0dca \u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0d9a\u0dc5 \u0dba\u0dd4\u0dad\u0dd4\u0dba.\n\uf046\n\u0dc0\u0dd0\u0da9\u0dd2\u0daf\u0dd4 \u0dc0\u0dd2\u0db8\u0dc3\u0dd3\u0db8\u0dca :-\n\u2756 \u0dc1\u0dca\u200d\u0dbb\u0db8 \u0dc0\u0dcf\u0dc3\u0db1\u0dcf \u0d85\u0dbb\u0db8\u0dd4\u0daf\u0dbd, \u0d85\u0d82\u0d9a 97, \u0da2\u0dcf\u0dc0\u0dad\u0dca\u0dad \u0db4\u0dcf\u0dbb, \u0daf\u0d9a\u0dcf\u0dc5\u0db9 05.\n\u2756 \u0daf\u0dd4\u0dbb\u0d9a\u0dae\u0db1 \u0d85\u0d82\u0d9a\u0dba:- 011-2588936\n\u2756 \u0dc6\u0dd0\u0d9a\u0dca\u0dc3\u0dae \u0d85\u0d82\u0d9a\u0dba:- 011-2588937\n\u0dc0\u0dd0\u0da9\u0dd2\u0daf\u0dd4 \u0dc0\u0dd2\u0db8\u0dc3\u0dd3\u0db8 \u0dc3\u0db3\u0dc4\u0dcf 0112588936 \u0daf\u0dd4 \u0d9a\u0dae\u0db1\u0dba \u0d94\u0dc3\u0dda\u0d9c\u0dc3\u0dda \u0dc3\u0db8\u0dca\u0db6\u0db1\u0dca\u0db0 \u0dc0\u0dd2\u0dba \u0dc4\u0dd0\u0d9a.\nREVISION NO: 02 REVISION DATE: 2022.11.02",
@@ -624,6 +723,21 @@
             "https://www.svf.gov.lk/images/pdfs/Instruction_Form/scholarship/New-Tick-Form---English.pdf": "SVF \u2013 FO \u2013 0.3.1\nInstruction Sheet - Granting of Shrama Vasana Fatal Accident Scholarships\nThe Shrama Vasana Fund coming under the purview of the Ministry of Finance implements a\nscholarship programme for the children engaged in education of employees who deceased in an\naccident or became completely disabled due to an accident while employed.\nI kindly inform you to submit the duly completed application form which we have sent for the\nscholarship according to the information we have received, before \u2026\u2026\u2026\u2026\u2026. (Please refer to the\nparagraph NB below). Further inform you to submit the following documents certified as true\ncopies by the Grama Niladhari or the Divisional Secretary, along with the application.\n1) 1 * 1 \u00bc size photo of the scholar\n2) 1 * 1 \u00bc size photograph of the deceased person\n3) 1 * 1 \u00bc size photograph of the guardian\n4) Certificate of Residence issued by Grama Niladhari\n5) Letter from the institution certifying that person deceased / became disabled while engaged in\nservice\n6) If disabled, all medical reports certifying the percentage of disability\n7) Copies of the National Identity Cards or certified photographs of the deceased person, the\nguardian and the scholar\n8) A copy of the marriage certificate\n9) A copy of the death certificate\n10) Birth certificate of the scholar\n11) Affidavit stating that person deceased while engage in service (If the letter certified by the\ninstitution is not available)\n12) Letter confirming the studentship from the school or institution where the scholar is studying\n13) A copy of the People's Bank Pass Book (Guardian\u2019s, if the scholar is under 18 years of age /\nScholar\u2019s, if he is over 18 years of age)\nNB: I kindly inform you that you cannot apply for natural diseases such as heart disease,\ndiabetes, pneumonia, dengue and if you have been faced a car accident or other accident\noutside of the time of service (on the way to service from home or on the way to home after\nservice)\nAll the above documents should be certified by the official seal with the name and designation of the\nrelevant officer.\n\u27a2 Further Clarification -\nShrama Vasana Fund, No. 97, Jawatta Road, Colombo 05.\nTelephone No 011 - 2588936\nFax No 011 - 2588937\nWeb Site www.svf.gov.lk\nEmail Address info@svf.gov.lk\nREVISION NO: 01 REVISION DATE: 2022.02.07",
             "https://www.svf.gov.lk/images/pdfs/vacational_trainning_application_11.pdf": "SVF/Fo: No. 007\n\u0dc1\u0dca\u200d\u0dbb\u0db8 \u0dc0\u0dcf\u0dc3\u0db1\u0dcf\u0dc3\u0dc0\u0dcf\u0dad\u0dca\u0dad\u0dd3\u0dba \u0dc0\u0dd4\u0dc4\u0dd4\u0dab\u0dd4 \u0dc0\u0dbd\u0dca\u0dbd\u0dd4\u0db8\u0dca \u0dc0\u0dad\u0dca\u200d\u0dbb\n\uf076 \u0d85 \u0daf\u0dd4\u0dca \u0d9a\u0dbb\u0dd4\u0dc0\u0db4\u0dd2\u0dc5\u0dd2\u0db6\u0db3\u0dc0\u0db4\u0dad\u0dde\u0daf\u0dca\u0d9c\u0dbd\u0dd2\u0d9a\u0dc0\u0db4 \u0dc3\u0dbb\u0dad\u0dd4\u0dbb\u0dd4 \u0da1\u0dcf\u0dba\u0dcf \u0dbb\u0dd6\u0db4\u0dba\n1. \u0dc3\u0db8\u0dca\u0db4\u0dd6\u0dbb\u0dca\u0dab \u0db1\u0db8 : .....................................................................................................\n2. \u0dc3\u0dae\u0dd3\u0dbb \u0dbd\u0dd2\u0db4\u0dd2\u0db1\u0dba : .....................................................................................................\n3. \u0d8b\u0db4\u0db1\u0dca \u0daf\u0dd2\u0db1\u0dba : .....................................................................................................\n4. \u0da2\u0dcf\u0dad\u0dd2\u0d9a \u0dc4\u0dd0\u0db3\u0dd4\u0db1\u0dd4\u0db8\u0dca\u0db4\u0db4\u0dad\u0dca \u0d85\u0d82\u0d9a\u0dba : .................................. \u0dbb\u0dd2\u0dba\u0daf\u0dd4\u0dbb\u0dd4 \u0db6\u0dbd\u0db4\u0dad\u0dca\u200d\u0dbb \u0d85\u0d82\u0d9a\u0dba: ................................\n5. \u0dc3\u0dae\u0dae\u0dcf\u0dc0\u0dbb \u0daf\u0dd4\u0dbb\u0d9a\u0dae\u0db1 \u0d85\u0d82\u0d9a : ................................. \u0da2\u0d82\u0d9c\u0db8 \u0daf\u0dd4\u0dbb\u0d9a\u0dae\u0db1 \u0d85\u0d82\u0d9a\u0dba : ...............................\n6. \u0d85\u0dba\u0daf\u0dd4\u0db8\u0dca\u0db4\u0d9a\u0dbb\u0dd4 \u0db4\u0daf\u0dd2\u0d82\u0da0\u0dd2 \u0db4\u0dc5\u0dcf\u0dad : ................................. \u0d85\u0dba\u0daf\u0dd4\u0db8\u0dca\u0db4\u0d9a\u0dbb\u0dd4 \u0db4\u0daf\u0dd2\u0d82\u0da0\u0dd2 \u0daf\u0dd2\u0dc3\u0dae\u0dd2\u0d9a\u0dca\u0d9a\u0dba\u0d9a\u0dba : ......................\n7. \u0db4\u0dca\u200d\u0dbb\u0dcf\u0daf\u0dda\u0dc1\u0dd3\u0dba \u0dba \u0daf\u0dda\u0dc1\u0db8\u0d9a\u0db8\u0dca\u0db4 \u0daf\u0dda\u0dc1\u0d9a\u0dcf\u0da8\u0dcf\u0dc3\u0dcf\u0dc3\u0dba: ............................... \u0d9c\u0dca\u200d\u0dbb\u0dcf\u0db8 \u0dbd\u0db0\u0dbd\u0dbb\u0dcf \u0dc0 \u0dc0\u0dc3\u0db8\u0d82\u0d85\u0d82\u0d9a\u0dba: ..........................\n\uf076 \u0d85 \u0daf\u0dd4\u0dca \u0d9a\u0dbb\u0dd4\u0dc0\u0db4\u0db1\u0dda\u0dcf\u0dc3\u0dc0\u0db1\u0dd2\u0dba\u0dd4\u0d9a\u0dca \u0dcf\u0dc0\u0dc3\u0dd2\u0da7\u0dd2\u0dc0\u0d86 \u0dcf \u0dc0\u0db4\u0dd2\u0dc5\u0dd2\u0db6\u0db3\u0dc0\u0dc0\u0dd2\u0db1\u0dda \u0dbb\n1. \u0daf\u0dda\u0dc1\u0dc3\u0dae\u0dc0\u0dba\u0dcf\u0daf\u0dda\u0dc1 \u0d82 \u0dad\u0dba\u0dad\u0db1\u0daf\u0dda\u0dc1\u0db1 \u0db1\u0db8 : .................................................................................\n2. \u0daf\u0dda\u0dc1\u0dc3\u0dae\u0dc0\u0dba\u0dcf\u0daf\u0dda\u0dc1 \u0d82 \u0dad\u0dba\u0dad\u0db1\u0daf\u0dda\u0dc1\u0db1 \u0dbd\u0dd2\u0db4\u0dd2\u0db1\u0dba : .................................................................................\n3. \u0d85\u0dba\u0daf\u0dd4\u0db8\u0dca\u0db4\u0d9a\u0dbb\u0dd4 \u0daf\u0dda\u0dc1\u0dc3\u0dae\u0dc0\u0dba\u0da7 \u0db6\u0dd0\u0db3\u0dd4\u0db1\u0dd4 \u0daf\u0dd2\u0db1\u0dba : .................................................................................\n4. \u0dad\u0dba\u0dad\u0db1\u0daf\u0dda\u0dc1\u0db1 \u0daf\u0dd0\u0dbb\u0dd6 \u0dad\u0db1\u0dad\u0dd4\u0dbb : .................................................................................\n5. \u0daf\u0dda\u0dc1\u0dc3\u0dae\u0dc0\u0dba\u0dcf\u0daf\u0dda\u0dc1 \u0d82 \u0dad\u0dba\u0dad\u0db1\u0daf\u0dda\u0dc1\u0db1 \u0d85\u0d82\u0d9a\u0dba: EPF) : ............................ \u0dc3\u0dcf\u0db8\u0dcf\u0da2\u0dd2\u0d9a \u0d85\u0d82\u0d9a\u0dba : ........................\n6. \u0daf\u0dda\u0dc1\u0dc3\u0dae\u0dc0\u0dba \u0d85\u0dc0\u0dc3\u0db1\u0dca \u0dc0\u0dd6 \u0dad\u0dba\u0dad\u0db1\u0dba \u0dc0\u0dc3\u0dcf \u0daf\u0dd0\u0db8\u0dd6 \u0daf\u0dd2\u0db1\u0dba :.............................................\n\u0daf\u0dd2\u0dc3\u0dae\u0dd2\u0d9a\u0dca\u0d9a\u0dba \u0d9a\u0db8\u0dca\u0db4\u0d9a\u0dbb\u0dd4 \u0daf\u0dda\u0dc1\u0d9a\u0dcf\u0db8\u0dc3\u0dcf\u0dbb\u0dd2\u0dc3\u0dae \u0dc3\u0dd2\u0db1\u0dca\u0db1\u0dca \u0dad\u0dba\u0dad\u0db1\u0dba \u0dc0\u0dc3\u0dcf \u0daf\u0db8\u0dcf\u0d82\u0daf\u0dda\u0dc1\u0dc3\u0dae\u0dc0\u0dba \u0d85\u0dc0\u0dc3\u0db1\u0dca \u0d9a\u0dbb \u0dd2\u0dad\u0dd2 \u0db6\u0dc0\u0da7 \u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0dbb\u0dd3 \u0dc0\u0db8 \u0d85\u0dbd\u0db0\u0dc0\u0dcf\u0dbb\u0dca\u0dba \u0daf\u0dda\u0dc1 .)\n7. \u0dad\u0dba\u0dad\u0db1\u0dba \u0dc0\u0dc3\u0dcf \u0daf\u0dd0\u0db8\u0dd3\u0db8\u0da7 \u0d82 \u0d89\u0dc0\u0dad\u0dca \u0dbb\u0dd3 \u0dc0\u0db8\u0da7 \u0daf\u0dda\u0dc1\u0dc4\u0dae\u0dad\u0dd4\n...................................................................................................................................................\n...................................................................................................................................................\n8. \u0daf\u0dda\u0dc1\u0dc3\u0dae\u0dc0\u0dba \u0d85\u0dc0\u0dc3\u0db1\u0dca \u0dc0\u0db1 \u0d85\u0dc0\u0dc3\u0dae\u0dae\u0dcf\u0daf\u0dda\u0dc1 \u0daf\u0dd3 \u0dbd\u0dd0\u0db6\u0dd6 \u0db8\u0dd6\u0dbd\u0dd2\u0d9a \u0dc0\u0dd0\u0da7\u0dd4\u0db4 : ............................................\n\u0dc0\u0dd0\u0da7\u0dd4\u0db4\u0dca \u0daf\u0dda\u0dc1\u0db8\u0d9b\u0db1\u0daf\u0dda\u0dc1\u0db1 \u0da1\u0dcf\u0dba\u0dcf \u0db4\u0dd2\u0da7\u0db4\u0dad\u0d9a\u0dca\u0d9a\u0dba \u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0d9a\u0dbb \u0d91\u0dc3\u0dd2\u0dba \u0dba\u0dd4\u0dad\u0dd4\u0dba.)\n\uf076 \u0d85 \u0daf\u0dd4\u0dca \u0d9a\u0dbb\u0dd4\u0db4\u0dda\u0dc0\u0d85\u0db0\u0dca\u200d\u0dba\u0dc3\u0dad\u0dcf\u0dc0\u0daf\u0dd4\u0daf\u0dd4\u0daf\u0dd4\u0d9a\u0dca \u0dc0 \u0dc0\n1. \u0d85.\u0daf\u0dda\u0dc1\u0db4\u0dcf.\u0dc3. \u0dc3\u0dcf.\u0daf\u0dda\u0dc1\u0db4\u0dc5) :\n2. \u0d85.\u0daf\u0dda\u0dc1\u0db4\u0dcf.\u0dc3. \u0d8b.\u0daf\u0dda\u0dc1\u0db4\u0dc5) :\n3. \u0daf\u0dda\u0dc1\u0dc0\u0db1\u0dad\u0dca \u0dc0\u0dd8\u0dad\u0dca\u0dd3\u0dba \u0dc3\u0dd4\u0daf\u0dd4\u0dc3\u0dae\u0d9a\u0db8\u0dca\u0db4 :\n\u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0db4\u0dad\u0dca\u200d\u0dbb\u0dc0\u0dbd \u0db4\u0dd2\u0da7\u0db4\u0dad\u0dca \u0d85\u0dd4\u0dab\u0dab\u0db1\u0dca\u0db1)\n[1]\uf076 \u0d85 \u0daf\u0dd4\u0dca \u0d9a\u0dbb\u0dd4\u0dc0\u0dbb\u0dd0\u0d9a\u0dd2 \u0dc3\u0db4\u0dda\u0dc0\u0db1\u0dd2 \u0dd0\u0dbd\u0dd3\u0dc0\u0dc3\u0dd2\u0da7\u0dd2\u0dc0\u0d9a\u0dca\u0db4\u0dc2\u0dda\u0dca\u200d\u0dbb :- \u0d85\u0dc0\u0dc3\u0db1\u0dca \u0dc0\u0dc3\u0dbb 10 \u0dc3\u0db3\u0dc4\u0dcf)\n\u0dad\u0dba\u0dad\u0db1\u0dba \u0dbd\u0db0\u0dba\u0dd0\u0dbd\u0dd3 \u0db1\u0dca\u0da7\u0dd2 \u0d9a\u0dca\u0d9a\u0dba\u0daf\u0dda\u0dc1\u0dc2\u0dae\u0dad\u0dca\u200d\u0dbb \u0dc0\u0dc3\u0dbb \u0d9c\u0dab\u0db1\n........................................ ............................................. .........................\n........................................ .............................................. .........................\n........................................ .............................................. .........................\n\uf076 \u0d85 \u0daf\u0dd4\u0dca \u0d9a\u0dbb\u0dd4\u0dc0\u0d85\u0db4\u0dda\u0d9a\u0dca\u0dc2\u0dc3\u0dc0\u0d9a\u0dbb\u0dcf\u0dc0\u0dcf\u0dad\u0dca\u0dad\u0dd3\u0dba \u0dc0\u0dad\u0dc3\u0da8\u0db8 \u0dc3\u0dbd\u0dc3\u0dcf\u0dc0\u0db1\u0db3\u0dc4\u0dc3\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\uf0fc\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dbd\u0d9a\u0dd4\u0dab\u0dc0\u0db4 \u0dc3\u0daf\u0db1\u0dca\u0dcf.\n1. \u0d89\u0daf\u0dd2\u0dbb\u0dd3 \u0dc0\u0db8\u0dca\u0db4 \u0d9a\u0dca\u0d9a\u0dba\u0daf\u0dda\u0dc1\u0dc2\u0dae\u0dad\u0dca\u200d\u0dbb\u0dba \u0daf\u0dda\u0dc1\u0dbd\u0ddd\u0dc4 \u0dad\u0dc1\u0dca\u200d\u0dbb\u0dd2\u0dad \u0d9a\u0dca\u0d9a\u0dba\u0daf\u0dda\u0dc1\u0dc2\u0dae\u0dad\u0dca\u200d\u0dbb\u0dba\n2. \u0daf\u0dd0\u0dc0 \u0dad\u0dc1\u0dca\u200d\u0dbb\u0dd2\u0dad \u0d9a\u0dca\u0d9a\u0dba\u0daf\u0dda\u0dc1\u0dc2\u0dae\u0dad\u0dca\u200d\u0dbb\u0dba \u0db8\u0dd0\u0dab\u0dd2\u0d9a\u0dca\u0d9a\u0dba \u0dc4\u0dcf \u0dc3\u0dae\u0dc0\u0dbb\u0dca\u0dab\u0dcf\u0db7\u0dbb\u0dab\n3. \u0daf\u0dda\u0dc1\u0db8\u0ddd\u0da7\u0dbb\u0dca \u0dba\u0dcf\u0db1\u0dca\u0dd2\u0d9a \u0dc3\u0dd2\u0daf\u0dba\u0dcf\u0dc0 \u0dd4\u0dab\u0daf\u0dca\u200d\u0dbb\u0dab\n4. \u0dc3\u0dd2\u0daf\u0dd4\u0dbd\u0dd2 \u0dc4\u0dcf \u0dc3\u0dd2\u0daf\u0dd4\u0dad\u0dca \u0d9a\u0dca\u0d9a\u0dba\u0daf\u0dda\u0dc1\u0dc2\u0dae\u0dad\u0dca\u200d\u0dbb\u0dba \u0dad\u0dc4\u0dcf\u0dbb \u0dad\u0dcf\u0d9a\u0dca\u0d9a\u0dba\u0dc2\u0dab\u0dba\n5. \u0d9a\u0dcf\u0dbb\u0dca\u0dba\u0dcf\u0dbd \u0d9a\u0dc5\u0db8\u0db1\u0dcf\u0d9a\u0dbb\u0dab\u0dba \u0daf\u0dda\u0dc1\u0dbb\u0daf\u0dd2 \u0db4\u0dd2\u0dc5\u0dd2 \u0dc4\u0dcf \u0dd2\u0d9f\u0dc5\u0dd4\u0db8\u0dca\u0db4\n6. \u0daf\u0dda\u0dc1\u0dc4\u0ddd\u0da7\u0db8 \u0dc4\u0dcf \u0dc3\u0d82\u0da0\u0dcf\u0dbb\u0d9a \u0db0\u0dd3\u0dc0\u0dbb\n7. \u0dc3\u0db8\u0dca\u0db4 \u0dad\u0dc1\u0dca\u200d\u0dbb\u0dd2\u0dad \u0dbd\u0db0\u0dc2\u0dae\u0db4\u0dcf\u0daf\u0db1 \u0dbb\u0dd6\u0db4\u0dbd\u0dcf\u0dc0\u0db1\u0dba \u0dd2\u0dbd\u0db8\u0db4\u0dd3\n\uf076 \u0dbd\u0dc4\u0dad\u0dd2\u0db1\u0dca\u0dc0\u0daf\u0d9a\u0dca\u0dcf\u0dc3\u0dc0\u0db4\u0dcf\u0dc3\u0db8 \u0dd0\u0dad\u0dd2\u0dc0\u0dc0\u0d94\u0db6\u0dc0\u0dc4\u0dd0\u0daf\u0dd1\u0dbb\u0dd3\u0db8 \u0da7\u0dc0\u0db6\u0dbd\u0dc3\u0db4\u0dad\u0dc3\u0db4\u0dbb\u0dc3\u0dca\u0dad\u0dd4\u0dc0\u0dcf\u0dcf\u0dc0\u0db4\u0dcf\u0dcf\u0dca\u0dc0\u0dad\u0dc3\u0da8\u0db8 \u0dc3\u0dbd\u0dc3\u0dc0 -\n.................................................................................................................\n..................................................................................................................\n............................... ........................................\n\u0daf\u0dd2\u0db1\u0dba \u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dbd\u0dca\u0dbd\u0dd4\u0db8\u0dca \u0d9a\u0dbb\u0dd4\u0db4\u0dda\u0dc0\u0d85\u0dca\u0db1\u0dcf\n\u0d9c\u0dca\u200d\u0dbb\u0dcf\u0db8 \u0dbd\u0db0\u0dbd\u0dbb\u0dcf \u0dc0 \u0dbd\u0db0\u0dbb\u0dca\u0daf\u0dda\u0dc1\u0dd3 \u0dba :-\n............................................................................................................................................................\n............................................................................................................................................................\n............................... ........................................\n\u0daf\u0dd2\u0db1\u0dba \u0d9c\u0dca\u200d\u0dbb\u0dc3\u0db8 \u0dc0\u0db1\u0dd2\u0dbd\u0db0\u0dca\u200d\u0dc3\u0d9c\u0dda\u0db4\u0dda\u0dc0\u0d85\u0dca\u0db1\u0dcf\n\u0db1\u0db8\u0d82\u0dad\u0db1\u0dad\u0dd4\u0dbb \u0dc3\u0dc4\u0dd2\u0dad \u0dd4\u0dab\u0daf\u0dca\u200d\u0dbb\u0dcf\u0dc0 \u0dad\u0db6\u0dcf \u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0dbb\u0dd3 \u0dc0\u0db8)\n\u0db4\u0dca\u200d\u0dbb\u0dcf\u0daf\u0dda\u0dc1\u0dd3\u0dba \u0dba \u0daf\u0dda\u0dc1\u0db8\u0d9a\u0db8\u0dca\u0db4\u0dad\u0dd4\u0db8\u0dcf\u0daf\u0dda\u0dc1 \u0dbd\u0db0\u0dbb\u0dca\u0daf\u0dda\u0dc1\u0dd3 \u0dba :- .................................................................................................\n............................... ........................................\n\u0daf\u0dd2\u0db1\u0dba \u0db4\u0dca\u200d\u0dbb\u0dc3\u0db4\u0daf\u0dca\u0dba  \u0dc0\u0db4\u0dca\u0d9a\u0dca \u0db4\u0dda\u0dc0\u0d85\u0dca\u0db1\u0dcf\n\u0db1\u0db8\u0d82\u0dad\u0db1\u0dad\u0dd4\u0dbb \u0dc3\u0dc4\u0dd2\u0dad \u0dd4\u0dab\u0daf\u0dca\u200d\u0dbb\u0dcf\u0dc0 \u0dad\u0db6\u0dcf \u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0dbb\u0dd3 \u0dc0\u0db8)\n[2]\u0dc1\u0dca\u200d\u0dbb\u0db8 \u0dc0\u0dcf\u0dc3\u0db1\u0dcf\u0dc3\u0dc0\u0dcf\u0dad\u0dca\u0dad\u0dd3\u0dba \u0dc0\u0dd4\u0dc4\u0dd4\u0dab\u0dd4 \u0dc0\u0dbd\u0dca\u0dbd\u0dd4\u0db8\u0dca \u0dc0\u0d9a\u0dd2\u0dbb\u0dd3\u0db8 \u0dc0\u0db1\u0db3\u0dc4\u0dc3\u0dc0\u0db4\u0dad\u0db4\u0daf\u0db1\u0dda\u0dc0\u0dad\u0dca\u200d\u0dbb\u0dd2\u0d9a\u0dc3\u0dcf\n\uf0fc \u0d85\u0dcf\u0dcf\u0dba \u0dc3\u0dcf \u0dc0 \u0dc4\u0dd4\u0dbb\u0dbb\u0dd4\u0dc0\u0db4\u0d9a\u0db4\u0dbb\u0dcf\u0dc0\u0dbd\u0dd2 \u0dc0\u0dd2\u0dbd\u0dd2\u0dc0\u0db1\u0dc4\u0dad\u0dd2\u0d9a\u0dc0\u0d9a\u0dbb\u0dd3\u0db8\u0db8 .\n\u0da2\u0dcf\u0dad\u0dd2\u0d9a \u0dc4\u0dd0\u0db3\u0dd4\u0db1\u0dd4\u0db8\u0dca\u0db4\u0db4\u0dad, \u0dbb\u0dd2\u0dba\u0daf\u0dd4\u0dbb\u0dd4 \u0db6\u0dbd\u0db4\u0dad\u0dca\u200d\u0dbb\u0dba, \u0dc3\u0dd2\u0daf\u0dda\u0dc1\u0dd3 \u0d9c\u0db8\u0db1\u0dca \u0db6\u0dbd\u0db4\u0dad\u0dca\u200d\u0dbb\u0dba \u0dba\u0db1 \u0d85\u0db1\u0db1\u0dba\u0dad\u0dcf\u0dc0\u0dba \u0dad\u0dc4\u0dd4\u0dbb\u0dbb\u0dd4 \u0daf\u0dda\u0dc1\u0d9a\u0daf\u0dda\u0dc1\u0dbb\u0db1\n\u0dbd\u0dd2\u0dba\u0dbb\u0dd3\u0dba\u0dc3\u0dd2\u0dbd\u0dd2\u0dc0\u0dbd\u0dd2\u0db1\u0dca \u0d91\u0d9a\u0d9a \u0da1\u0dcf\u0dba\u0dcf \u0db4\u0dd2\u0da7\u0db4\u0dad\u0d9a\u0dca\u0d9a\u0dba \u0dc3\u0dad\u0dba \u0db4\u0dd2\u0da7\u0db4\u0dad\u0d9a\u0dca\u0d9a\u0dba \u0db6\u0dc0\u0da7 \u0d9c\u0dca\u200d\u0dbb\u0dcf\u0db8 \u0dbd\u0db0\u0dbd\u0dbb\u0dcf\u0dbb\u0dd2 \u0dc4\u0dcf \u0db4\u0dca\u200d\u0dbb\u0dcf\u0daf\u0dda\u0dc1\u0daf\u0dca\u0dd3\u0dba \u0dba \u0daf\u0dda\u0dc1\u0db8\u0d9a\u0db8\u0dca\u0db4\n\u0dc3\u0dd2\u0db1\u0dca\u0db1\u0dca \u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0d9a\u0dc5 \u0dba\u0dd4\u0dad\u0dd4\u0dba\u0dd2.\n\uf0fc \u0dad\u0daf\u0dd2\u0d82\u0da0\u0dd2 /\u0dbd\u0dd2\u0db4\u0dd2\u0dcf \u0dc0 \u0dc4\u0dd4\u0dbb\u0dbb\u0dd4\u0dc0\u0d9a\u0dbb\u0dc0\u0d9c\u0dd0\u0db1\u0dd3\u0db8 \u0da7\u0dc0\u0d85\u0daf\u0dc3\u0dc5\u0dc0\u0dbd\u0dd2 \u0d9a\u0dd2 \u0dc0\u0dd2\u0dbd\u0dd2\u0dc0\u0db1\u0dc4\u0dad\u0dd2\u0d9a\u0dc0\u0d9a\u0dbb\u0dd3\u0db8\u0db8 .\n\u0db4\u0daf\u0dd2\u0d82\u0da0\u0dd2\u0dba \u0dc3\u0dc4 \u0dbd\u0dd2\u0db4\u0dd2\u0db1\u0dba \u0dc3\u0db1\u0dcf\u0dae \u0dbb\u0dd3 \u0dc0\u0db8\u0da7 \u0d85\u0daf\u0dcf\u0dc5\u0dc0 \u0db4\u0dc5\u0dcf\u0dad\u0d82 \u0daf\u0dd2\u0dc3\u0dae\u0dd2\u0d9a\u0dca\u0d9a\u0dba\u0d9a\u0dba\u0d82 \u0db4\u0dca\u200d\u0dbb\u0dcf\u0daf\u0dda\u0dc1\u0dd3\u0dba \u0dba \u0daf\u0dda\u0dc1\u0db8\u0d9a\u0db8\u0dca\u0db4 \u0daf\u0dda\u0dc1\u0d9a\u0dcf\u0da8\u0dcf\u0dc3\u0dcf\u0dc3\u0dba \u0dc3\u0dc4\n\u0daf\u0dda\u0dc1\u0d9a\u0dcf\u0da8\u0dcf\u0dc3\u0dcf\u0dc3 \u0d85\u0d82\u0d9a\u0dba\u0d82 \u0d9c\u0dca\u200d\u0dbb\u0dcf\u0db8 \u0dbd\u0db0\u0dbd\u0dbb\u0dcf \u0dc0 \u0dc0\u0dc3\u0db8 \u0dc3\u0dc4 \u0dc0\u0dc3\u0daf\u0dda\u0dc1\u0db8\u0dca\u0db4 \u0d85\u0d82\u0d9a\u0dba \u0dba\u0db1 \u0daf\u0dda\u0dc1\u0dad\u0dcf\u0dbb\u0dad\u0dd4\u0dbb\u0dd4 \u0dc3\u0db3\u0dc4\u0db1\u0dca \u0d9a\u0dbb \u0d9c\u0dca\u200d\u0dbb\u0dcf\u0db8\n\u0dbd\u0db0\u0dbd\u0dbb\u0dcf\u0dbb\u0dd2\u0daf\u0dda\u0dc1\u0d9c\u0db1\u0dca \u0dbd\u0db6\u0dcf \u0d9c\u0dad\u0dca \u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0db4\u0dca\u200d\u0dbb\u0dcf\u0daf\u0dda\u0dc1\u0dd3\u0dba \u0dba \u0daf\u0dda\u0dc1\u0db8\u0d9a\u0db8\u0dca\u0db4 \u0d85\u0db1\u0dd4\u0db8\u0dad \u0d9a\u0dbd \u0dba\u0dd4\u0dad\u0dd4\u0dba. (DS -4)\n\uf0fc \u0db4\u0db1\u0dda\u0dcf \u0dc0\u0d85\u0dcf\u0db1\u0db1\u0dca\u0dc0\u0d9a\u0dbb\u0dcf\u0dc0\u0d85\u0dcf\u0db1\u0dda\u0dae\u0dc3\u0db4\u0dda\u0dc0\u0dad\u0dd2\u0db6\u0dd6\u0dc0\u0db8 \u0dc3\u0dc3\u0dd2\u0d9a\u0dc0\u0dcf\u0dd0\u0da7\u0dd4\u0dad\u0dc0(\u0db8\u0dd6\u0dbd\u0dd2\u0d9a\u0dc0\u0dcf\u0dd0\u0da7\u0dd4\u0dad)\u0dc0\u0db1\u0dc4\u0dad\u0dd2\u0d9a\u0dc0\u0d9a\u0dd2\u0dbb\u0dd3\u0db8 .\n\u0daf\u0dda\u0dc1\u0dc3\u0dae\u0dc0\u0dba \u0dad\u0dba\u0dad\u0db1\u0dba \u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0d9a\u0dbb \u0dbd\u0db6\u0dcf \u0daf\u0dd3 \u0dd2\u0dad\u0dd2 \u0dc0\u0dd0\u0da7\u0dd4\u0db4\u0dca \u0db4\u0dd2\u0d9a\u0dcf\u0dc0\u0d9a\u0dca\u0d9a\u0dba\u0d82 \u0dc0\u0dd0\u0da7\u0dd4\u0db4 \u0daf\u0dd0\u0d9a\u0dca\u0d9a\u0dba\u0daf\u0dda\u0dc1\u0dc0\u0db1 \u0db4\u0dad\u0dca\u0dda\u0daf\u0dda\u0dc1\u0db8\u0dca\u0db4 \u0dbd\u0dd2\u0db4\u0dd2\u0dba\u0d9a \u0da1\u0dcf\u0dba\u0dcf\n\u0db4\u0dd2\u0da7\u0db4\u0dad\u0d9a\u0dca\u0d9a\u0dba \u0dc3\u0dad\u0dba \u0da1\u0dcf\u0dba\u0dcf \u0db4\u0dd2\u0da7\u0db4\u0dad\u0d9a\u0dca\u0d9a\u0dba \u0db6\u0dc0\u0da7,\u0db1\u0dd4  \u0daf\u0dda\u0dc1\u0d9c\u0dcf\u0db1\u0dd4 \u0d9a\u0dbb \u0dd2\u0dad\u0dd2 \u0dad\u0dba\u0dad\u0db1\u0daf\u0dda\u0dc1\u0db1 \u0dbd\u0db0\u0db1\u0dca \u0db6\u0dbd\u0dbb\u0dcf\u0dbb\u0dd2\u0daf\u0dda\u0dc1\u0dba\u0dd4  \u0daf\u0dda\u0dc1\u0dc4\u0ddd\n\u0d9a\u0db8\u0dca\u0db4\u0d9a\u0dbb\u0dd4 \u0dc3\u0dd2\u0dbd\u0db0 \u0dae\u0da0\u0dba \u0dc3\u0db7\u0dcf\u0daf\u0dda\u0dc1 \u0dc3\u0dc4\u0d9a\u0dcf\u0dbb \u0daf\u0dda\u0dc1\u0db8\u0d9a\u0db8\u0dca\u0db4 \u0dc3\u0dd2\u0db1\u0dca\u0db1\u0dca \u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0d9a\u0dc5 \u0dba\u0dd4\u0dad\u0dd4\u0dba.\n\u0d94\u0daf\u0dda\u0dc1\u0dda \u0dc0\u0dd0\u0da7\u0dd4\u0db4 \u0dad\u0dc4\u0dd4\u0dbb\u0dbb\u0dd4 \u0dbb\u0dd3 \u0dc0\u0db8\u0da7 \u0d85\u0daf\u0dcf\u0dc5 \u0dbd\u0dd2\u0dba\u0dbb\u0dd3\u0dba\u0dc3\u0dd2\u0dbd\u0dd2 \u0daf\u0dda\u0dc1\u0db1\u0dcf\u0db8\u0dd0\u0dad\u0dd2 \u0dc3\u0dd2\u0da7\u0d9a\u0daf\u0dd3 \u0db4\u0dd0\u0db8\u0dd2\u0dab\u0dd2\u0db8\u0dbd \u0dc3\u0db3\u0dc4\u0dcf \u0d89\u0daf\u0dd2\u0dbb\u0dd2\u0db4\u0dad\u0dca \u0d9a\u0dbb \u0dd2\u0dad\u0dd2\n\u0dc0\u0dd0\u0da7\u0dd4\u0db4 \u0dc0\u0d9c\u0d8b\u0dad\u0dca\u0dad\u0dbb\u0d9a\u0dcf\u0dbb \u0db4\u0dcf\u0dbb\u0dca \u0dc0\u0dba \u0db4\u0dd2\u0dc5\u0dd2\u0daf\u0dda\u0dc1\u0d9c\u0db1 \u0dd2\u0dad\u0dca\u0db1\u0db8\u0dca\u0db4 \u0d8a\u0da7 \u0d85\u0daf\u0dcf\u0dc5 \u0dbd\u0dd2\u0dba\u0dbb\u0dd3\u0dba\u0dc3\u0dd2\u0dbd\u0dd2 \u0db1\u0dd4 \u0dc0 \u0daf\u0dda\u0dc1\u0d9c\u0dcf\u0db1\u0dd4\u0d9a\u0dbb \u0dd2\u0dad\u0dd2\n\u0dad\u0dba\u0dad\u0db1\u0daf\u0dda\u0dc1\u0db1 \u0dbd\u0db0\u0db1\u0dca \u0db6\u0dbd\u0dbb\u0dcf\u0dbb\u0dd2\u0daf\u0dda\u0dc1\u0dba\u0dd4  \u0daf\u0dda\u0dc1\u0dc4\u0ddd \u0d9a\u0db8\u0dca\u0db4\u0d9a\u0dbb\u0dd4 \u0dc3\u0dd2\u0dbd\u0db0 \u0dae\u0da0\u0dba \u0dc3\u0db7\u0dcf\u0daf\u0dda\u0dc1 \u0dc3\u0dc4\u0d9a\u0dcf\u0dbb \u0daf\u0dda\u0dc1\u0db8\u0d9a\u0db8\u0dca\u0db4 \u0dc3\u0dd2\u0db1\u0dca\u0db1\u0dca \u0d85\u0daf\u0dcf\u0dc5 \u0db1\u0dd4 \n\u0d85\u0d82\u0d9a\u0dba \u0daf\u0dda\u0dc1\u0dba\u0dcf\u0daf\u0dcf \u0dc3\u0dc4\u0dad\u0dd2\u0d9a\u0dba \u0d89\u0daf\u0dd2\u0dbb\u0dd2\u0db4\u0dad\u0dca \u0d9a\u0dc5 \u0dba\u0dd4\u0dad\u0dd4\u0dba\u0dd2.\n\uf0fc \u0d85 \u0daf\u0dd4\u0dca \u0d9a\u0dbb\u0dd4\u0dc0\u0dcf\u0dad\u0dca\u0dad\u0dd3\u0dba \u0dc0\u0dad\u0dc3\u0da8\u0db8 \u0dc3\u0dbd\u0dc3\u0dc0\u0d85\u0db4\u0dda\u0d9a\u0dca\u0dd2 \u0dc0\u0d9a\u0dca\u0db4\u0dc2\u0dda\u0dca\u200d\u0dbb\u0dc0\u0db1\u0db3\u0dc4\u0db1\u0dca\u0dc0\u0d9a\u0dbb\u0dd3\u0db8\u0db8 .\n\u0d89\u0dc4\u0dad \u0dd2\u0dad\u0dd2 \u0dc0\u0dd8\u0dad\u0dca\u0dd3\u0dba \u0db4\u0dcf\u0dc3\u0db8\u0dcf\u0dbd\u0dcf \u0d9a\u0dca\u0d9a\u0dba\u0daf\u0dda\u0dc1\u0dc2\u0dae\u0dad\u0dca\u200d\u0dbb\u0dba\u0db1\u0dca \u0dad\u0dd4\u0dbd\u0dd2\u0db1\u0dca 0\u0d9a\u0d9a\u0da7 \u0db4\u0db8\u0dab\u0d9a\u0dca\u0d9a\u0dba \uf0fc \u0daf\u0dda\u0dc1\u0dba\u0daf\u0dd2\u0dba \u0dba\u0dd4\u0dad\u0dd4\u0dba.\n\uf0fc\u0dc0\u0dc0\u0db1\u0dd0\u0dbd\u0d9a\u0dd2 \u0dc0\u0dba\u0dd4\u0dad\u0dd4\u0dba\u0dd2 :-\n\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0 \u0d89\u0dc4\u0dad \u0dc3\u0db3\u0dc4\u0db1\u0dca \u0db1\u0dca\u0dba\u0dbd\u0dd4\u0db8 \u0dbd\u0dd2\u0dba\u0dc3\u0dd2\u0dbd\u0dd2 \u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0dbb\u0dd3 \u0dc0\u0daf\u0dda\u0dc1\u0db8\u0dca\u0db4\u0daf\u0dd3 \u0d85\u0daf\u0dcf\u0dbd \u0dbd\u0db0\u0dbd\u0dbb\u0dcf\u0dbb\u0dd2\u0dba\u0dcf\u0daf\u0dda\u0dc1 \u0db1\u0db8 \u0dad\u0db1\u0dad\u0dd4\u0dbb \u0dc3\u0db3\u0dc4\u0db1\u0dca \u0d9a\u0dbb \u0dbd\u0db0\u0dbd\n\u0dd4\u0dab\u0daf\u0dca\u200d\u0dbb\u0dcf\u0dc0 \u0dad\u0db6\u0dcf \u0dc3\u0dc4\u0dad\u0dd2\u0d9a \u0d9a\u0dbd \u0dba\u0dd4\u0dad\u0dd4\u0dba\u0dd2.\n\uf0fc \u0daf\u0db1\u0dda\u0dca\u200d\u0dbb\u0dd2\u0d9a\u0dca\u0dc0\u0d9a\u0dca \u0d9a\u0dbb\u0dd4\u0dc0\u0db4\u0d9a\u0dc3\u0db8 \u0db1\u0dc3\u0d9c\u0dda\u0db1\u0dda\u0dc0\u0dc0\u0dd2\u0dc3\u0dd2\u0db1\u0dca\u0dc0\u0d86 \u0dcf \u0dc0\u0dcf\u0db1\u0dc3\u0dc0\u0daf\u0db8 \u0dc3\u0dc0\u0db4\u0db1\u0dda\u0dcf \u0dc0\u0d85\u0dcf\u0db1\u0db1\u0dca\u0dc0\u0d9a\u0dbb\u0dc0\u0d87\u0dad\u0dd2\u0dc0\u0db6\u0dcf\u0dc0\u0db1\u0dc4\u0dad\u0dd2\u0d9a\u0dc0\u0d9a\u0dd2\u0dbb\u0dd3\u0db8 \u0dc0\n\u0d85\u0db1\u0dd2\u0dcf\u0dc3\u0dbb\u0dca \u0dc0\u0db4\u0dda.\n\uf0fc\u0dc0\u0dc0\u0db4\u0db1\u0dda\u0dcf\u0d9a\u0dc0\u0d85\u0dbb\u0dca\u0dae\u0dc0\u0db1\u0dc3\u0db0\u0dca\u200d\u0d9a\u0dc0B\u0dc0\u0d9a\u0dc3\u0da9\u0dca\u0dad\u0db4 \u0dc4\u0dd2\u0dc0\u0da1\u0dc3 \u0dc3\u0dc0\u0db4\u0dd2\u0da7\u0dad \u0d9a\u0dca\u0dc0\u0db1\u0dc4\u0dad\u0dd2\u0d9a\u0dc0\u0d9a\u0dbb\u0dc0\u0d91\u0dc0\u0dd2 \u0dc0\u0dba\u0dd4\u0dad\u0dd4 .\n\u0dc3\u0dd2\u0db8\u0dc3\u0dd3\u0db8\u0dca\u0db4 :\n\u0dc1\u0dca\u200d\u0dbb\u0db8 \u0dc0\u0dcf\u0dc3\u0db1\u0dcf \u0d85\u0dbb\u0dd4\u0dab\u0daf\u0dbd, \u0d85\u0d82\u0d9a. 7,, \u0da2\u0dcf\u0dc0\u0dad\u0dca\u0dad \u0db4\u0dcf\u0dbb, \u0daf\u0dda\u0dc1\u0d9a\u0dcf\u0dc5 0..\n\u0daf\u0dd4\u0dbb\u0d9a\u0dae\u0db1 \u0d85\u0d82\u0d9a\u0dba :- 011 2.887\u0d9a6 \u0dc6\u0dd0\u0d9a\u0dca\u0d9a\u0dba\u0dc3\u0dae \u0d85\u0d82\u0d9a\u0dba :- 011 2.887\u0d9a,\n[3]",
             "https://www.svf.gov.lk/images/pdfs/program_contribution_application_07.pdf": "SVF/Fi.As-0013\n\u0dc1\u0dca\u200d\u0dbb\u0db8 \u0dc0\u0dcf\u0dc3\u0db1\u0dcf\u0dc3\u0dc0\u0dbb\u0db8\u0dd4\u0daf\u0dbd\u0dda \u0dc0\u0dbd\u0dc3\u0d9a\u0dad\u0dca\u0dcf\u0d9a\u0dc0\u0db6\u0dcf\u0dc3\u0dc0\u0dd3\u0db8 .\n\u0dcf\u0dd0\u0da9\u0db1\u0da7\u0dc4\u0dda\u0dda\u0dc0\u0dcf\u0db8 \u0dc0-:\n\u0db4\u0dca\u200d\u0dbb\u0dad\u0dd2\u0db6\u0dc3\u0db7\u0dd3\u0dda\u0dc0\u0dc0\u0db1\u0d82\u0d9b\u0dca\u200d\u0dba\u0dc3\u0dcf\u0dc0-:\n\u0db4\u0dca\u200d\u0dbb\u0dad\u0dd2\u0db6\u0dc3\u0db7\u0dd3\u0dda\u0dc0\u0dda\u0dbb \u0db8\u0dc3\u0dc0\u0db1\u0dda\u0dcf\u0dc3\u0dc0\u0d9a\u0dad\u0dc3\u0db8\u0d9a\u0dc0\u0dc0-:\n\u0db4\u0dca\u200d\u0dbb\u0dad\u0dd2\u0db6\u0dc3\u0db7\u0dd3\u0dda\u0dda\u0dda \u0dc0\u0dda\u0dbb\u0dc3\u0db8\u0dd4\u0dbb\u0dd4\u0dc0\u0dc0-:\u0dcf\u0db8 \u0dc0\u0daf\u0dd4\u0db8\u0dad\u0dae\u0dcf\u0dc0\u0dc0\u0dbb\u0d82\u0dad\u0d9a\u0dc0,\u0dcf\u0dd0\u0da9\u0dc0\u0dad\u0db8\u0dcf\u0dc0\u0d9a\u0d9a\u0dbb\u0dcf\u0d9a\u0dc0,\u0da2\u0dc3\u0dad\u0dd2\u0dad\u0dc0\u0dc4\u0dd0\u0daf\u0dd4\u0db1\u0dd4\u0db8\u0dca\u0db4\u0dca\u0dc0\u0dbb\u0d82\u0dad\u0d9a\u0dc0,\u0dbd\u0dd2\u0db4\u0dd2\u0dcf\u0d9a\u0dc0,\n\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0d9a\u0dd3\u0dc0\u0dc0\u0dd2\u0db1\u0dca\u0dbb\u0db8\u0dc0\u0dda\u0dcf\u0dcf\u0db8 \u0db8 \u0dc0\u0d87\u0db8\u0dd2\u0dab\u0dd2\u0d9a\u0dc0\u0dba\u0dd4\u0dd4\u0dbb\u0dba\u0dd2\u0dc0.\n\u0dcf\u0dd0\u0da9\u0db1\u0da7\u0dc4\u0dcf\u0dc0\u0dda\u0db8 \u0dda\u0dc4\u0d9a\u0dc0\u0dcf\u0dcf\u0dc0\u0dda\u0dbd\u0db4\u0dc3\u0dbb\u0dca\u0dbb\u0dda\u0db8\u0dca\u0dda\u0dd4\u0dbb\u0dcf-:\u0dc0\u0dbb\u0d82\u0dc1\u0d9a\u0dc0/\n\u0dcf\u0dd0\u0da9\u0db1\u0da7\u0dc4\u0dda\u0dda\u0dc0\u0dcf\u0db6\u0dc3\u0dda\u0db4\u0dc3\u0dda\u0db8\u0dc3\u0dca\u0dd4\u0dbb\u0dc0\u0dcf\u0dcf\u0dc0\u0dbb\u0db8\u0dd4\u0daf\u0dab\u0dd4\u0dc0............................................................................................\u0dc0-:\n..............................................................................................\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\n.............................................................................................\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\n\u0db1\u0db8\u0dca\u0dcf\u0dda\u0dd3\u0dad\u0db8\u0dab\u0dc0\u0db1\u0dd2\u0db6\u0db0\u0dc3\u0dbb\u0dd2\u0d9a\u0dc3\u0dda\u0dda \u0dc0\n\uf0b7 \u0dcf\u0db8 \u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0:-\u0dc0.....................................................................................\n\uf0b7 \u0dbb\u0dcf\u0dd4\u0dbb\u0db8\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0:-\u0dc0.....................................................................................\n\uf0b7 \u0daf\u0dd4\u0db8\u0dad\u0dae\u0dcf\u0dc0\u0dbb\u0d82\u0dad\u0d9a\u0dc0:-\u0dc0.....................................................................................\n\uf0b7 \u0dbb\u0dca\u0db1\u0dcf\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0:-\u0dc0.....................................................................................\n\u0dcf\u0db1\u0d9a\u0dd2\u0dcf\u0dba\u0dd4\u0dd4\u0dbb\u0dc0\u0db1\u0dd2\u0db6\u0db0\u0dc3\u0dbb\u0dd2\u0d9a\u0dc3\u0dda\u0dda \u0dc0\n\uf0b7 \u0dcf\u0db8 \u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0:-\u0dc0.....................................................................................\n\uf0b7 \u0dbb\u0dcf\u0dd4\u0dbb\u0db8\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0:-\u0dc0.....................................................................................\n\uf0b7 \u0daf\u0dd4\u0db8\u0dad\u0dae\u0dcf\u0dc0\u0dbb\u0d82\u0dad\u0d9a\u0dc0:-\u0dc0.....................................................................................\n\uf0b7 \u0dbb\u0dca\u0db1\u0dcf\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0:-\u0dc0.....................................................................................\n\u0d9a\u0d9a\u0dbb\u0dcf\u0dc0\u0db4\u0dca\u200d\u0dbb\u0db0\u0dc3\u0db1\u0dd2\u0d9a\u0dc3\u0dda\u0dda \u0dc0\u0db1\u0dd2\u0dbb\u0dca\u0dda\u0dc1\u0dc1\u0d9a.............................................................................................................\u0dc0-:\u0dc0\n.............................................................................................................\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dd4\u0daf\u0dc5\u0dd4\u0dc0\u0dc0\u0dd2\u0d9a\u0dbd\u0db8\u0dca\u0dc0\u0d87\u0db1\u0dca\u0dbb\u0dda\u0db8\u0dca\u0dda\u0dd4\u0dbb\u0dcf)\u0dc0\u0dd2\u0d9a\u0dbd\u0db8\u0dca\u0dc0\u0dcf\u0dcf\u0dc0\u0d9a\u0dad\u0dc3\u0db8\u0d9a\u0dc0\u0dc0\u0dd2\u0db1\u0dca\u0dbb\u0db8\u0dc3\u0dca\u0db8 \u0dad\u0dcf\u0dc0\u0dbd\u0d9a\u0dca\u0dcf\u0dda\u0dcf(\n\uf0b7 \u0dbb\u0dbd\u0dc3\u0dc5\u0dc0\u0dbb\u0d82\u0dc1\u0dda\u0dda\u0dc0\u0dbd\u0dc3\u0d9a\u0dad\u0dca\u0dcf\u0d9a\u0dc0:-\u0dc0.................................................................................\n\uf0b7 \u0dc1\u0dca\u200d\u0dbb/\u0dcf\u0dc3/\u0dbb\u0dc0\u0dbd\u0dc3\u0d9a\u0dad\u0dca\u0dcf\u0d9a\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0\u0dc0:-\u0dc0.................................................................................\n\u0dbb\u0dbd\u0dc3\u0dc5\u0dc0\u0dcf\u0dd0\u0da9\u0db1\u0da7\u0dc4\u0dcf\u0dc0\u0db4\u0dd2\u0dc5\u0dd2\u0dcf\u0db3\u0dc0\u0db4\u0dc3\u0dd4\u0dc0\u0dd2\u0db4\u0db8\u0db8 \u0d9a\u0dca\u0dc0\u0dc3\u0dd2\u0daf\u0dd4\u0dc0\u0dad\u0db8\u0dda\u0dda\u0dda\u0dc0\u0dbd\u0dc0\u0d9a\u0dcf\u0dc0\u0dcf\u0db1\u0dc0\n\u0dda\u0dcf\u0dcf\u0dca\u0dc0\u0dad\u0dd4\u0dab\u0dd4\u0dc0\u0d87\u0dca\u0dcf\u0db8\u0dca\u0dc0\u0dad\u0dd4\u0dab\u0dc3\u0dad\u0db8\u0dc0\u0dbd\u0dda\u0dcf\u0dc3\u0dc0\u0d91\u0dcf\u0dda\u0dcf.\n\u0d89\u0dc4\u0dbb\u0dc0\u0dcf\u0dd0\u0da9\u0db1\u0da7\u0dc4\u0dcf\u0dc0\u0db1\u0dd2\u0db8 \u0dc0\u0dd6\u0dc0\u0db4\u0dc3\u0dd4\u0dc0\u0dbb\u0dbd\u0dc3\u0dc5\u0dc0\u0db4\u0dd2\u0dda\u0dd6\u0db8\u0dc0\u0db1\u0db8 \u0d9f\u0dc0\u0db1\u0dc0\u0dd2\u0db1\u0dca\u0dbb\u0db8\u0dc0\u0dcf\u0dc3\u0dbb\u0dca\u0dbb\u0dc3\u0dcf\u0d9a\u0dca\u0dc0\u0db8 \u0dc3\u0db1\u0d9a\u0d9a\u0dca\u0dc0\u0d87\u0dd4\u0dbb\u0db6\u0dbb\u0dc0\u0dc1\u0dca\u200d\u0dbb\u0db8 \u0dc0\u0dcf\u0dc3\u0db1\u0dcf\u0dc3\u0dc0\u0dbb\u0db8\u0dd4\u0daf\u0dbd\u0db6\u0dc0\u0dda\u0dcf\u0dbb\u0dc0\u0db6\u0dcf\u0dc3\u0dc0\n\u0dd3\u0db8 \u0da7\u0dc0\u0dad\u0da7\u0dba\u0dd4\u0dd4\u0dbb\u0dc0\u0dad\u0db8\u0dda\u0dcf.\n\u0db1\u0db8\u0dca\u0dcf\u0dda\u0dd3\u0dad\u0db8\u0dab\u0dc0\u0db1\u0dd2\u0db6\u0db0\u0dc3\u0dbb\u0dd3\u0dc0\u0dbb\u0dca\u0db1\u0dcf....................................................-:\n.......................................................-:\u0daf\u0dd2\u0dcf\u0d9a"
+        },
+        "image_extracted": {
+            "https://www.svf.gov.lk/images/homeicon.png": "",
+            "https://www.svf.gov.lk/templates/svf-poora/images/new/logo.png": "SHRAMA VASANA FUND\n\nMinistry of Labour and Foreign Employment\n\n",
+            "https://www.svf.gov.lk/images/gov.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontincrease.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontreset.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontdecrease.png": "",
+            "https://www.svf.gov.lk/media/system/images/arrow.png": "",
+            "https://www.svf.gov.lk/images/01.jpg": "=>\n\nDIGITAL\nRECORDING SYSTEM\n",
+            "https://www.svf.gov.lk/images/gic_en.gif": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/9.png": ""
         }
     },
     {
@@ -718,7 +832,7 @@
             "Procons Infotech",
             "Old Web",
             "Last Update:",
-            "03 September 2024."
+            "09 September 2024."
         ],
         "images": [
             "https://www.svf.gov.lk/images/homeicon.png",
@@ -751,13 +865,46 @@
             "https://www.svf.gov.lk/images/gic_en.gif",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/9.png"
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/0.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/0.png"
         ],
         "pdf_links": [],
-        "pdf_extracted": {}
+        "pdf_extracted": {},
+        "image_extracted": {
+            "https://www.svf.gov.lk/images/homeicon.png": "",
+            "https://www.svf.gov.lk/templates/svf-poora/images/new/logo.png": "SHRAMA VASANA FUND\n\nMinistry of Labour and Foreign Employment\n\n",
+            "https://www.svf.gov.lk/images/gov.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontincrease.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontreset.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontdecrease.png": "",
+            "https://www.svf.gov.lk/media/system/images/arrow.png": "",
+            "https://www.svf.gov.lk/media/com_phocagallery/images/icon-feed.png": "",
+            "https://www.svf.gov.lk/images/phocagallery/shramawasana_gallery/thumbs/phoca_thumb_m_phoca_thumb_l_pb170003.jpg": "",
+            "https://www.svf.gov.lk/images/phocagallery/International_Womens_Day/thumbs/phoca_thumb_m_phoca_thumb_l_p3080005.jpg": "",
+            "https://www.svf.gov.lk/images/phocagallery/World_Health_Day/thumbs/phoca_thumb_m_phoca_thumb_l_p4280015.jpg": "",
+            "https://www.svf.gov.lk/images/phocagallery/Kurunegala_awarness_programmes/thumbs/phoca_thumb_m_phoca_thumb_l_dsc00950.jpg": "",
+            "https://www.svf.gov.lk/images/phocagallery/Shrama_Vasana_Medical_Service/thumbs/phoca_thumb_m_phoca_thumb_l_p5090002.jpg": "",
+            "https://www.svf.gov.lk/images/phocagallery/Medical_Camp_2012/thumbs/phoca_thumb_m_phoca_thumb_l_p3030001.jpg": "",
+            "https://www.svf.gov.lk/images/phocagallery/Artificial_leg_Donation/thumbs/phoca_thumb_m_artificial_legs.jpg": "Pe atiow?\n\n",
+            "https://www.svf.gov.lk/images/phocagallery/Disaster_Relief/thumbs/phoca_thumb_m_disaster_releif1.jpg": "",
+            "https://www.svf.gov.lk/images/phocagallery/Womens_empowerment_workshop/thumbs/phoca_thumb_m_womens_empowerment_workshop.jpg": "",
+            "https://www.svf.gov.lk/images/phocagallery/Eye_clinics/thumbs/phoca_thumb_m_eye-camp.jpg": "",
+            "https://www.svf.gov.lk/images/phocagallery/Special_Lottery/thumbs/phoca_thumb_m_Special_lottery4.jpg": "",
+            "https://www.svf.gov.lk/images/phocagallery/workers_welfare/thumbs/phoca_thumb_m_welfare-2.jpg": "",
+            "https://www.svf.gov.lk/images/phocagallery/awareness_programme/thumbs/phoca_thumb_m_awareness-programme1.jpg": "",
+            "https://www.svf.gov.lk/images/phocagallery/welfare_programs/thumbs/phoca_thumb_m_welfare_programs1.jpg": "",
+            "https://www.svf.gov.lk/images/phocagallery/svf-home/thumbs/phoca_thumb_m_capture.jpg": "",
+            "https://www.svf.gov.lk/images/phocagallery/thumbs/phoca_thumb_m_img_0604.jpg": "",
+            "https://www.svf.gov.lk/images/01.jpg": "=>\n\nDIGITAL\nRECORDING SYSTEM\n",
+            "https://www.svf.gov.lk/images/gic_en.gif": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/0.png": ""
+        }
     },
     {
         "url": "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=12&Itemid=138&lang=en",
@@ -817,7 +964,7 @@
             "Procons Infotech",
             "Old Web",
             "Last Update:",
-            "03 September 2024."
+            "09 September 2024."
         ],
         "images": [
             "https://www.svf.gov.lk/images/homeicon.png",
@@ -835,13 +982,32 @@
             "https://www.svf.gov.lk/images/gic_en.gif",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/0.png"
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/0.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/1.png"
         ],
         "pdf_links": [],
-        "pdf_extracted": {}
+        "pdf_extracted": {},
+        "image_extracted": {
+            "https://www.svf.gov.lk/images/homeicon.png": "",
+            "https://www.svf.gov.lk/templates/svf-poora/images/new/logo.png": "SHRAMA VASANA FUND\n\nMinistry of Labour and Foreign Employment\n\n",
+            "https://www.svf.gov.lk/images/gov.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontincrease.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontreset.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontdecrease.png": "",
+            "https://www.svf.gov.lk/media/system/images/arrow.png": "",
+            "https://www.svf.gov.lk/images/YoutubeThum/1st_Slide.jpg": "Sess azeze: info@svf.gov.|k\n088 GSaa: www.svf.gov.|k\n",
+            "https://www.svf.gov.lk/images/YoutubeThum/Screenshot_78.jpg": "",
+            "https://www.svf.gov.lk/images/01.jpg": "=>\n\nDIGITAL\nRECORDING SYSTEM\n",
+            "https://www.svf.gov.lk/images/gic_en.gif": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/0.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/1.png": ""
+        }
     },
     {
         "url": "https://www.svf.gov.lk/index.php?option=com_content&view=category&layout=blog&id=8&Itemid=139&lang=en",
@@ -900,7 +1066,7 @@
             "Procons Infotech",
             "Old Web",
             "Last Update:",
-            "03 September 2024."
+            "09 September 2024."
         ],
         "images": [
             "https://www.svf.gov.lk/images/homeicon.png",
@@ -915,13 +1081,30 @@
             "https://www.svf.gov.lk/images/gic_en.gif",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/1.png"
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/0.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/2.png"
         ],
         "pdf_links": [],
-        "pdf_extracted": {}
+        "pdf_extracted": {},
+        "image_extracted": {
+            "https://www.svf.gov.lk/images/homeicon.png": "",
+            "https://www.svf.gov.lk/templates/svf-poora/images/new/logo.png": "SHRAMA VASANA FUND\n\nMinistry of Labour and Foreign Employment\n\n",
+            "https://www.svf.gov.lk/images/gov.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontincrease.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontreset.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontdecrease.png": "",
+            "https://www.svf.gov.lk/media/system/images/arrow.png": "",
+            "https://www.svf.gov.lk/images/01.jpg": "=>\n\nDIGITAL\nRECORDING SYSTEM\n",
+            "https://www.svf.gov.lk/images/gic_en.gif": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/0.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/2.png": ""
+        }
     },
     {
         "url": "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=13&Itemid=140&lang=en",
@@ -981,7 +1164,7 @@
             "Procons Infotech",
             "Old Web",
             "Last Update:",
-            "03 September 2024."
+            "09 September 2024."
         ],
         "images": [
             "https://www.svf.gov.lk/images/homeicon.png",
@@ -996,13 +1179,30 @@
             "https://www.svf.gov.lk/images/gic_en.gif",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/2.png"
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/0.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/3.png"
         ],
         "pdf_links": [],
-        "pdf_extracted": {}
+        "pdf_extracted": {},
+        "image_extracted": {
+            "https://www.svf.gov.lk/images/homeicon.png": "",
+            "https://www.svf.gov.lk/templates/svf-poora/images/new/logo.png": "SHRAMA VASANA FUND\n\nMinistry of Labour and Foreign Employment\n\n",
+            "https://www.svf.gov.lk/images/gov.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontincrease.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontreset.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontdecrease.png": "",
+            "https://www.svf.gov.lk/media/system/images/arrow.png": "",
+            "https://www.svf.gov.lk/images/01.jpg": "=>\n\nDIGITAL\nRECORDING SYSTEM\n",
+            "https://www.svf.gov.lk/images/gic_en.gif": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/0.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/3.png": ""
+        }
     },
     {
         "url": "https://www.svf.gov.lk/index.php?option=com_content&view=category&id=9&Itemid=114&lang=en",
@@ -1076,7 +1276,7 @@
             "Procons Infotech",
             "Old Web",
             "Last Update:",
-            "03 September 2024."
+            "09 September 2024."
         ],
         "images": [
             "https://www.svf.gov.lk/images/homeicon.png",
@@ -1091,13 +1291,29 @@
             "https://www.svf.gov.lk/images/gic_en.gif",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/3.png"
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/0.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png"
         ],
         "pdf_links": [],
-        "pdf_extracted": {}
+        "pdf_extracted": {},
+        "image_extracted": {
+            "https://www.svf.gov.lk/images/homeicon.png": "",
+            "https://www.svf.gov.lk/templates/svf-poora/images/new/logo.png": "SHRAMA VASANA FUND\n\nMinistry of Labour and Foreign Employment\n\n",
+            "https://www.svf.gov.lk/images/gov.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontincrease.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontreset.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontdecrease.png": "",
+            "https://www.svf.gov.lk/media/system/images/arrow.png": "",
+            "https://www.svf.gov.lk/images/01.jpg": "=>\n\nDIGITAL\nRECORDING SYSTEM\n",
+            "https://www.svf.gov.lk/images/gic_en.gif": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/0.png": ""
+        }
     },
     {
         "url": "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=14&Itemid=141&lang=en",
@@ -1269,7 +1485,7 @@
             "Procons Infotech",
             "Old Web",
             "Last Update:",
-            "03 September 2024."
+            "09 September 2024."
         ],
         "images": [
             "https://www.svf.gov.lk/images/homeicon.png",
@@ -1284,13 +1500,29 @@
             "https://www.svf.gov.lk/images/gic_en.gif",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png"
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/0.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png"
         ],
         "pdf_links": [],
-        "pdf_extracted": {}
+        "pdf_extracted": {},
+        "image_extracted": {
+            "https://www.svf.gov.lk/images/homeicon.png": "",
+            "https://www.svf.gov.lk/templates/svf-poora/images/new/logo.png": "SHRAMA VASANA FUND\n\nMinistry of Labour and Foreign Employment\n\n",
+            "https://www.svf.gov.lk/images/gov.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontincrease.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontreset.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontdecrease.png": "",
+            "https://www.svf.gov.lk/media/system/images/arrow.png": "",
+            "https://www.svf.gov.lk/images/01.jpg": "=>\n\nDIGITAL\nRECORDING SYSTEM\n",
+            "https://www.svf.gov.lk/images/gic_en.gif": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/0.png": ""
+        }
     },
     {
         "url": "https://www.svf.gov.lk/index.php?option=com_contact&view=contact&id=1&Itemid=135&lang=en#",
@@ -1357,7 +1589,7 @@
             "*",
             "Message",
             "*",
-            "Spam Check: 16 minus 5 equals",
+            "Spam Check: 14 plus 16 equals",
             "Protected by EasyCalcCheck Plus",
             "Send Email",
             "FaLang translation system by Faboba",
@@ -1370,7 +1602,7 @@
             "Procons Infotech",
             "Old Web",
             "Last Update:",
-            "03 September 2024."
+            "09 September 2024."
         ],
         "images": [
             "https://www.svf.gov.lk/images/homeicon.png",
@@ -1389,13 +1621,32 @@
             "https://www.svf.gov.lk/images/gic_en.gif",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png"
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/0.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png"
         ],
         "pdf_links": [],
-        "pdf_extracted": {}
+        "pdf_extracted": {},
+        "image_extracted": {
+            "https://www.svf.gov.lk/images/homeicon.png": "",
+            "https://www.svf.gov.lk/templates/svf-poora/images/new/logo.png": "SHRAMA VASANA FUND\n\nMinistry of Labour and Foreign Employment\n\n",
+            "https://www.svf.gov.lk/images/gov.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontincrease.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontreset.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontdecrease.png": "",
+            "https://www.svf.gov.lk/media/system/images/arrow.png": "",
+            "https://www.svf.gov.lk/media/contacts/images/con_address.png": "",
+            "https://www.svf.gov.lk/media/contacts/images/con_tel.png": "",
+            "https://www.svf.gov.lk/media/contacts/images/con_fax.png": "",
+            "https://www.svf.gov.lk/images/01.jpg": "=>\n\nDIGITAL\nRECORDING SYSTEM\n",
+            "https://www.svf.gov.lk/images/gic_en.gif": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/0.png": ""
+        }
     },
     {
         "url": "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=18&Itemid=147&lang=en",
@@ -1499,7 +1750,7 @@
             "Procons Infotech",
             "Old Web",
             "Last Update:",
-            "03 September 2024."
+            "09 September 2024."
         ],
         "images": [
             "https://www.svf.gov.lk/images/homeicon.png",
@@ -1515,13 +1766,29 @@
             "https://www.svf.gov.lk/images/gic_en.gif",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png"
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/0.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png"
         ],
         "pdf_links": [],
-        "pdf_extracted": {}
+        "pdf_extracted": {},
+        "image_extracted": {
+            "https://www.svf.gov.lk/images/homeicon.png": "",
+            "https://www.svf.gov.lk/templates/svf-poora/images/new/logo.png": "SHRAMA VASANA FUND\n\nMinistry of Labour and Foreign Employment\n\n",
+            "https://www.svf.gov.lk/images/gov.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontincrease.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontreset.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontdecrease.png": "",
+            "https://www.svf.gov.lk/media/system/images/arrow.png": "",
+            "https://www.svf.gov.lk/images/01.jpg": "=>\n\nDIGITAL\nRECORDING SYSTEM\n",
+            "https://www.svf.gov.lk/images/gic_en.gif": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/0.png": ""
+        }
     },
     {
         "url": "https://www.svf.gov.lk/index.php?option=com_xmap&view=html&id=1&Itemid=142&lang=en",
@@ -1600,7 +1867,7 @@
             "Procons Infotech",
             "Old Web",
             "Last Update:",
-            "03 September 2024."
+            "09 September 2024."
         ],
         "images": [
             "https://www.svf.gov.lk/images/homeicon.png",
@@ -1615,12 +1882,29 @@
             "https://www.svf.gov.lk/images/gic_en.gif",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png",
             "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png",
-            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png"
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/0.png",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/8.png"
         ],
         "pdf_links": [],
-        "pdf_extracted": {}
+        "pdf_extracted": {},
+        "image_extracted": {
+            "https://www.svf.gov.lk/images/homeicon.png": "",
+            "https://www.svf.gov.lk/templates/svf-poora/images/new/logo.png": "SHRAMA VASANA FUND\n\nMinistry of Labour and Foreign Employment\n\n",
+            "https://www.svf.gov.lk/images/gov.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontincrease.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontreset.png": "",
+            "https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontdecrease.png": "",
+            "https://www.svf.gov.lk/media/system/images/arrow.png": "",
+            "https://www.svf.gov.lk/images/01.jpg": "=>\n\nDIGITAL\nRECORDING SYSTEM\n",
+            "https://www.svf.gov.lk/images/gic_en.gif": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/0.png": "",
+            "https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/8.png": ""
+        }
     }
 ]
