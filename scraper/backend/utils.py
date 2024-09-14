@@ -18,7 +18,7 @@ def get_database(db_name, collection_name, username, password, ca_file):
         password: MongoDB password for authentication.
         ca_file: Path to the CA file for SSL connection.
     """
-    uri = f"mongodb+srv://{username}:{password}@bt4103cluster.cnngw.mongodb.net/{db_name}?retryWrites=true&w=majority&tlsCAFile={ca_file}"
+    uri = f"mongodb+srv://{username}:{password}@bt4103.cnngw.mongodb.net/?retryWrites=true&w=majority&appName=BT4103&tlsCAFile={ca_file}"
     client = MongoClient(uri, server_api=ServerApi("1"))
     db = client[db_name]
     return db[collection_name]

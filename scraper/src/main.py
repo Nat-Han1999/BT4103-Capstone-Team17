@@ -1,11 +1,11 @@
 import time
 import os
 
-from scraper_action import fetch_page, parse_content, fetch_page_with_selenium
-from utils import setup_logging, save_to_json
+from scraper.src.scraper_action import fetch_page, parse_content, fetch_page_with_selenium
+from scraper.src.utils import setup_logging, save_to_json
 from dotenv import load_dotenv
 
-from ..backend.utils import get_database, insert_many_documents
+from scraper.backend.utils import get_database, insert_many_documents
 
 logger = setup_logging()
 
@@ -51,7 +51,7 @@ def main():
             data = parse_content(html_content, url)
             all_data_requests.append(data)
 
-    save_to_json(all_data_requests, 'scraped_data/data_requests.json')
+    # save_to_json(all_data_requests, '../scraped_data/data_requests.json')
 
     logger.info("Fetching page content using Selenium...")
     for url in urls:

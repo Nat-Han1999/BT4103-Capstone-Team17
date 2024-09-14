@@ -3,7 +3,7 @@ Configuration settings like base URLs, headers, timeouts, etc.import requests
 '''
 import requests
 from bs4 import BeautifulSoup
-from utils import setup_logging
+from scraper.src.utils import setup_logging
 from selenium import webdriver
 import pdfplumber
 from PIL import Image
