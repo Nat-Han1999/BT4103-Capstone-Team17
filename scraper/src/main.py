@@ -1,12 +1,27 @@
+import time
+import os
+
 from scraper_action import fetch_page, parse_content, fetch_page_with_selenium
 from utils import setup_logging, save_to_json
-import time
+from dotenv import load_dotenv
+
+from ..backend.utils import get_database, insert_many_documents
 
 logger = setup_logging()
+
+# Load environment variables from the .env file
+load_dotenv()
+
+# Global Variables
+username = os.getenv("MONGO_DB_USERNAME")
+password = os.getenv("MONGO_DB_PASSWORD")
+ca_file = os.getenv("CA_FILE_PATH")
 
 def main():
     print("Starting webscraper...")
     start = time.time()
+
+    #TODO: Need to upupgrade to crawler to get all relevant websites
     urls = [
     "https://www.svf.gov.lk/index.php?lang=en",  # home
     "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=1&Itemid=115&lang=en",  # about us
@@ -28,6 +43,7 @@ def main():
     all_data_requests = []  # to hold all scraped data using requests
     all_data_selenium = []  # to hold all scraped data using Selenium
 
+    logger.info("Fetching page content using requests...")
     for url in urls:
         logger.info(f"Fetching page content from {url} using requests...")
         html_content = fetch_page(url)
@@ -45,7 +61,12 @@ def main():
             data = parse_content(html_content, url)
             all_data_selenium.append(data)
 
-    save_to_json(all_data_selenium, 'scraped_data/data_selenium.json')
+    # Insert the scraped data into MongoDB
+    collection = get_database("shrama_vasana_fund_uat", "scraped_data", username, password, ca_file)
+    inserted_ids = insert_many_documents(collection, all_data_selenium)
+
+    logger.info(f"Inserted {len(inserted_ids)} documents into MongoDB.")
+        
     end = time.time()
     print(f"Done with webs scraping, time taken: {end-start}.")
 

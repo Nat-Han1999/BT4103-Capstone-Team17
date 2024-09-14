@@ -3365,3 +3365,154 @@ RECORDING SYSTEM
 2024-09-10 20:52:20,022:INFO:Extracting text from image using OCR: , 
 2024-09-10 20:52:20,970:INFO:Extracting text from image using OCR: , 
 2024-09-10 20:52:21,804:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:51:50,097:INFO:Fetching page content using requests...
+2024-09-14 15:51:50,099:INFO:Fetching page content using requests...
+2024-09-14 15:51:50,099:INFO:Fetching page content from https://www.svf.gov.lk/index.php?lang=en using requests...
+2024-09-14 15:52:00,840:ERROR:Error fetching https://www.svf.gov.lk/index.php?lang=en: HTTPSConnectionPool(host='www.svf.gov.lk', port=443): Read timed out. (read timeout=10)
+2024-09-14 15:52:00,842:INFO:Fetching page content from https://www.svf.gov.lk/index.php?option=com_content&view=article&id=1&Itemid=115&lang=en using requests...
+2024-09-14 15:52:05,762:INFO:Page Title: Shrama Vasana Fund - Overview
+2024-09-14 15:52:05,762:INFO:Extracting text from paragraphs, divs, and spans
+2024-09-14 15:52:05,766:INFO:Texts found: About Us, Overview, Our Team, Organisation Structure, Contributions
+2024-09-14 15:52:05,766:INFO:Extracting images from the page
+2024-09-14 15:52:05,766:INFO:Images found: https://www.svf.gov.lk/images/homeicon.png, https://www.svf.gov.lk/templates/svf-poora/images/new/logo.png, https://www.svf.gov.lk/images/gov.png, https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontincrease.png, https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontreset.png, https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontdecrease.png, https://www.svf.gov.lk/images/homeicon.png, https://www.svf.gov.lk/media/system/images/arrow.png, https://www.svf.gov.lk/media/system/images/arrow.png, https://www.svf.gov.lk/images/01.jpg, https://www.svf.gov.lk/images/gic_en.gif, https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png, https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png, https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png, https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png, https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png, https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/3.png
+2024-09-14 15:52:05,766:INFO:Extracting PDF links from the page
+2024-09-14 15:52:05,767:INFO:No PDF links found
+2024-09-14 15:52:07,300:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:08,327:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:09,898:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:11,840:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:13,514:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:15,692:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:17,698:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:18,429:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:19,286:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:20,514:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:21,248:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:21,939:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:22,657:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:23,382:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:24,128:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:24,852:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:25,564:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:25,564:INFO:Fetching page content from https://www.svf.gov.lk/index.php?option=com_content&view=article&id=6&Itemid=109&lang=en using requests...
+2024-09-14 15:52:30,013:INFO:Page Title: Shrama Vasana Fund - Contributions
+2024-09-14 15:52:30,013:INFO:Extracting text from paragraphs, divs, and spans
+2024-09-14 15:52:30,015:INFO:Texts found: About Us, Overview, Our Team, Organisation Structure, Contributions
+2024-09-14 15:52:30,015:INFO:Extracting images from the page
+2024-09-14 15:52:30,015:INFO:Images found: https://www.svf.gov.lk/images/homeicon.png, https://www.svf.gov.lk/templates/svf-poora/images/new/logo.png, https://www.svf.gov.lk/images/gov.png, https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontincrease.png, https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontreset.png, https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontdecrease.png, https://www.svf.gov.lk/images/homeicon.png, https://www.svf.gov.lk/media/system/images/arrow.png, https://www.svf.gov.lk/images/disaster.jpg, https://www.svf.gov.lk/images/floods.jpg, https://www.svf.gov.lk/images/01.jpg, https://www.svf.gov.lk/images/gic_en.gif, https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png, https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png, https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png, https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png, https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png, https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/5.png
+2024-09-14 15:52:30,015:INFO:Extracting PDF links from the page
+2024-09-14 15:52:30,015:INFO:No PDF links found
+2024-09-14 15:52:31,757:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:32,711:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:34,096:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:35,662:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:37,607:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:39,250:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:40,713:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:41,520:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:42,843:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:44,171:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:45,535:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:46,347:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:47,066:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:47,989:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:48,751:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:49,554:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:50,343:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:51,264:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:51,265:INFO:Fetching page content from https://www.svf.gov.lk/index.php?option=com_content&view=article&id=7&Itemid=110&lang=en#promotion-of-the-welfare-of-the-workers using requests...
+2024-09-14 15:52:55,501:INFO:Page Title: Shrama Vasana Fund - Services
+2024-09-14 15:52:55,501:INFO:Extracting text from paragraphs, divs, and spans
+2024-09-14 15:52:55,503:INFO:Texts found: About Us, Overview, Our Team, Organisation Structure, Contributions
+2024-09-14 15:52:55,503:INFO:Extracting images from the page
+2024-09-14 15:52:55,503:INFO:Images found: https://www.svf.gov.lk/images/homeicon.png, https://www.svf.gov.lk/templates/svf-poora/images/new/logo.png, https://www.svf.gov.lk/images/gov.png, https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontincrease.png, https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontreset.png, https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontdecrease.png, https://www.svf.gov.lk/images/homeicon.png, https://www.svf.gov.lk/media/system/images/arrow.png, https://www.svf.gov.lk/images/eye.jpg, https://www.svf.gov.lk/images/motivation.jpg, https://www.svf.gov.lk/images/knoledge.jpg, https://www.svf.gov.lk/images/edu.jpg, https://www.svf.gov.lk/images/professional.jpg, https://www.svf.gov.lk/images/doc1.jpg, https://www.svf.gov.lk/images/doc2.jpg, https://www.svf.gov.lk/images/doc3.jpg, https://www.svf.gov.lk/images/fund.jpg, https://www.svf.gov.lk/images/stu1.jpg, https://www.svf.gov.lk/images/st3.jpg, https://www.svf.gov.lk/images/st2.jpg, https://www.svf.gov.lk/images/evaluate.jpg, https://www.svf.gov.lk/images/01.jpg, https://www.svf.gov.lk/images/gic_en.gif, https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png, https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png, https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png, https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png, https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png, https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png
+2024-09-14 15:52:55,503:INFO:Extracting PDF links from the page
+2024-09-14 15:52:55,504:INFO:No PDF links found
+2024-09-14 15:52:57,084:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:52:58,386:ERROR:Failed to extract text from image: tesseract is not installed or it's not in your PATH. See README file for more information.
+2024-09-14 15:54:56,352:INFO:Fetching page content using requests...
+2024-09-14 15:54:56,353:INFO:Fetching page content using requests...
+2024-09-14 15:54:56,353:INFO:Fetching page content from https://www.svf.gov.lk/index.php?lang=en using requests...
+2024-09-14 15:55:01,229:INFO:Page Title: Shrama Vasana Fund - Home
+2024-09-14 15:55:01,229:INFO:Extracting text from paragraphs, divs, and spans
+2024-09-14 15:55:01,234:INFO:Texts found: About Us, Overview, Our Team, Organisation Structure, Contributions
+2024-09-14 15:55:01,234:INFO:Extracting images from the page
+2024-09-14 15:55:01,235:INFO:Images found: https://www.svf.gov.lk/images/homeicon.png, https://www.svf.gov.lk/templates/svf-poora/images/new/logo.png, https://www.svf.gov.lk/images/gov.png, https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontincrease.png, https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontreset.png, https://www.svf.gov.lk/modules/mod_ppc_fastfont/img/20fontdecrease.png, https://www.svf.gov.lk/images/homeicon.png, https://www.svf.gov.lk/images/sliders/Slider-new-1.jpg, https://www.svf.gov.lk/images/sliders/sliders_2802018_eye001.jpg, https://www.svf.gov.lk/images/sliders/sliders_2802018_empr001.jpg, https://www.svf.gov.lk/images/sliders/Slider-English.jpg, https://www.svf.gov.lk/cache/mod_news_show_sp2/nssp2_thumbs/94/Vacncies_Page_1_350x150.jpg, https://www.svf.gov.lk/images/services/service001.png, https://www.svf.gov.lk/images/services/service002.png, https://www.svf.gov.lk/images/services/service003.png, https://www.svf.gov.lk/images/services/service004.png, https://www.svf.gov.lk/images/services/service005.png, https://www.svf.gov.lk/images/services/service006.png, https://www.svf.gov.lk/images/needsup.png, https://www.svf.gov.lk/images/contribution.png, https://www.svf.gov.lk/images/zodiac/Lotteries/sat.jpg, https://www.svf.gov.lk/images/phocagallery/World_Health_Day/thumbs/phoca_thumb_l_phoca_thumb_l_p4280015.jpg, https://www.svf.gov.lk/images/phocagallery/World_Health_Day/thumbs/phoca_thumb_l_phoca_thumb_l_p5030042.jpg, https://www.svf.gov.lk/images/phocagallery/World_Health_Day/thumbs/phoca_thumb_l_phoca_thumb_l_p4280024.jpg, https://www.svf.gov.lk/images/related/rel-gov.png, https://www.svf.gov.lk/images/related/rel-dol.png, https://www.svf.gov.lk/images/related/rel-nlb.png, https://www.svf.gov.lk/images/related/rel-gov.png, https://www.svf.gov.lk/images/related/rel-nils.png, https://www.svf.gov.lk/images/related/rel-niosh.png, https://www.svf.gov.lk/images/01.jpg, https://www.svf.gov.lk/images/gic_en.gif, https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png, https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png, https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/6.png, https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png, https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/4.png, https://www.svf.gov.lk/modules/mod_jvcounter/assets/images/digitstype/type1/7.png
+2024-09-14 15:55:01,235:INFO:Extracting PDF links from the page
+2024-09-14 15:55:01,235:INFO:No PDF links found
+2024-09-14 15:55:04,846:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:06,355:INFO:Extracting text from image using OCR: , SHRAMA VASANA FUND
+
+Ministry of Labour and Foreign Employment
+
+
+2024-09-14 15:55:08,324:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:10,275:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:12,342:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:14,056:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:15,851:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:17,660:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:20,480:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:22,601:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:24,763:INFO:Extracting text from image using OCR: , Mission
+To facilitate in creating a work
+environment enriched with
+welfare and assisted with relief,
+by carefully assessing
+the gaps and filling the same
+
+Vision
+Contended
+Sri Lankan work force
+
+
+2024-09-14 15:55:26,083:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:27,298:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:28,437:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:29,479:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:30,486:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:31,517:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:32,897:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:35,192:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:37,134:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:39,296:INFO:Extracting text from image using OCR: , NATIONAL LOTTERY
+
+of
+
+828 D6
+
+“raex!| 2023/00/00 “1 5=| 0000
+
+UL
+
+060009673045432
+
+[75:18]
+6QOTB OsIAQE AM. 40 /- “
+
+ju Goordat somu th.
+NATIONAL LOTTERIES BOARD Rs.
+
+
+2024-09-14 15:55:40,540:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:41,914:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:43,151:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:44,779:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:46,840:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:49,215:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:51,271:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:53,132:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:54,791:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:56,145:INFO:Extracting text from image using OCR: , =>
+
+DIGITAL
+RECORDING SYSTEM
+
+2024-09-14 15:55:56,945:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:57,825:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:58,789:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:55:59,667:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:56:00,720:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:56:01,768:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:56:02,881:INFO:Extracting text from image using OCR: , 
+2024-09-14 15:56:02,882:INFO:Fetching page content from https://www.svf.gov.lk/index.php?option=com_content&view=article&id=1&Itemid=115&lang=en using requests...
