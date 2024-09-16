@@ -2,10 +2,10 @@ import time
 import os
 
 from scraper.src.scraper_action import fetch_page, parse_content, fetch_page_with_selenium
-from scraper.src.utils import setup_logging, save_to_json
+from scraper.src.scraper_utils import setup_logging, save_to_json
 from dotenv import load_dotenv
 
-from scraper.backend.utils import get_database, insert_many_documents
+from scraper.backend.mongo_utils import get_database, insert_many_documents
 
 logger = setup_logging()
 
@@ -15,7 +15,7 @@ load_dotenv()
 # Global Variables
 username = os.getenv("MONGO_DB_USERNAME")
 password = os.getenv("MONGO_DB_PASSWORD")
-ca_file = os.getenv("CA_FILE_PATH")
+ca_file = os.path.join(os.path.dirname(__file__), '../backend/isrgrootx1.pem')
 
 def main():
     print("Starting webscraper...")
@@ -51,7 +51,9 @@ def main():
             data = parse_content(html_content, url)
             all_data_requests.append(data)
 
-    # save_to_json(all_data_requests, '../scraped_data/data_requests.json')
+    # Insert the scraped data into MongoDB
+    collection = get_database("shrama_vasana_fund_uat", "scraped_data", username, password, ca_file)
+    inserted_ids = insert_many_documents(collection, all_data_requests)
 
     logger.info("Fetching page content using Selenium...")
     for url in urls:

@@ -2,12 +2,15 @@
 Configuration settings like base URLs, headers, timeouts, etc.import requests
 '''
 import requests
-from bs4 import BeautifulSoup
-from scraper.src.utils import setup_logging
-from selenium import webdriver
+import time
+
 import pdfplumber
-from PIL import Image
 import pytesseract
+
+from bs4 import BeautifulSoup
+from scraper.src.scraper_utils import setup_logging
+from selenium import webdriver
+from PIL import Image
 from io import BytesIO
 from urllib.request import Request, urlopen
 
@@ -98,6 +101,8 @@ def parse_content(html, url):
             logger.info(f"Failed to retrieve or extract the image text: {image}")
 
     # Collect data into a dictionary
+    scraped_time = time.time()
+
     data = {
         "url": url,
         "title": page_title,
@@ -105,7 +110,8 @@ def parse_content(html, url):
         "images": images,
         "pdf_links": pdf_links,
         "pdf_extracted": pdf_extracted,
-        "image_extracted": image_extracted
+        "image_extracted": image_extracted,
+        "scraped_at": scraped_time
     }
     return data
 
