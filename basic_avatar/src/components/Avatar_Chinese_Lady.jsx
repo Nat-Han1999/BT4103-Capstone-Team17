@@ -24,7 +24,7 @@ const corresponding = {
   X: "viseme_PP",
 };
 
-export function Avatar(props) {
+export function Avatar_Chinese_Lady(props) {
   const { playAudio, script } = useControls({
     playAudio: false,
     script: {
@@ -104,10 +104,16 @@ export function Avatar(props) {
 
   // Call function when animation is changed
   useEffect(() => {
-    // Ensure that animations fade in and out smoothly
-    actions[animation].reset().fadeIn(0.5).play();
-    return () => actions[animation].fadeOut(0.5);
-  }, [animation]);
+    if (actions[animation]) {
+      // Ensure that animations fade in and out smoothly
+      actions[animation].reset().fadeIn(0.5).play();
+    }
+    return () => {
+      if (actions[animation]) {
+        actions[animation].fadeOut(0.5);
+      }
+    };
+  }, [animation, actions]);
 
   return (
     <group {...props} dispose={null} ref={group}>

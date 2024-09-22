@@ -1,15 +1,27 @@
 import { Environment, OrbitControls, useTexture } from "@react-three/drei";
-import { Avatar } from "./Avatar";
+import { Avatar_Chinese_Lady } from "./Avatar_Chinese_Lady";
+import { Indian } from "./Indian";
 import { useThree } from "@react-three/fiber";
 
-export function Experience({ chosen_bg }) {
+export function Experience({ chosen_bg, chosen_avatar }) {
   const texture = useTexture(`textures/${chosen_bg}.jpg`);
   const viewport = useThree((state) => state.viewport);
+
+  // Conditional for avatar output
+  let avatarOutput;
+
+  if (chosen_avatar == "avatar_chinese_lady") {
+    avatarOutput = <Avatar_Chinese_Lady position={[0, -3, 5]} scale={2} />;
+  } else if (chosen_avatar == "avatar_indian_man") {
+    avatarOutput = <Indian position={[0, -3, 5]} scale={2} />;
+  } else {
+    avatarOutput = <Avatar_Chinese_Lady position={[0, -3, 5]} scale={2} />;
+  }
 
   return (
     <>
       <OrbitControls />
-      <Avatar position={[0, -3, 5]} scale={2} />
+      {avatarOutput}
       <Environment preset="sunset" />
       <mesh>
         <planeGeometry args={[viewport.width, viewport.height]} />
