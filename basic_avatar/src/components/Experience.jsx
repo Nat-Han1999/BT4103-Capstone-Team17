@@ -28,7 +28,7 @@ export function Experience({ chosen_bg, chosen_avatar, chosen_script }) {
     );
   } else {
     avatarOutput = (
-      <Avatar_Chinese_Lady
+      <Avatar_Indian_Man
         position={[0, -3, 5]}
         chosen_script={chosen_script}
         scale={2}

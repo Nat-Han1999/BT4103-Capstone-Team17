@@ -39,7 +39,6 @@ export function Avatar_Chinese_Lady({ chosen_script, ...props }) {
   );
 
   useEffect(() => {
-    console.log(chosen_script);
     if (playAudio) {
       audio.play();
       setAnimation("Greeting");
