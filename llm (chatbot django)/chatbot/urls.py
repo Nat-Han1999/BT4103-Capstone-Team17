@@ -1,5 +1,5 @@
 """
-URL configuration for llm project.
+URL configuration for chatbot project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -15,10 +15,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from api.views import call_gemini_api
+from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('gemini-api/', call_gemini_api, name='call_gemini_api'),
+    path('chatbot/', include('chatbotapp.urls')), # Include the chatbot app's URL patterns
 ]
