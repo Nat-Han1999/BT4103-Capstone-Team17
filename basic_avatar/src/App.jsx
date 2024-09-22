@@ -41,6 +41,8 @@ function App() {
         >
           <option value="avatar_bg">Default</option>
           <option value="avatar_bg2">Seaside</option>
+          <option value="avatar_bg3">Desert</option>
+          <option value="avatar_bg4">Space</option>
         </select>
 
         <select
