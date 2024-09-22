@@ -17,6 +17,12 @@ function App() {
     setAvatarLook("avatar_chinese_lady");
   }, []);
 
+  // Hooks for voice change
+  const [avatarScript, setAvatarScript] = useState("hello");
+  useEffect(() => {
+    setAvatarScript("hello");
+  }, []);
+
   return (
     <Canvas shadows camera={{ position: [0, 0, 8], fov: 42 }}>
       <color attach="background" args={["#ececec"]} />
@@ -41,6 +47,13 @@ function App() {
           value={avatarLook}
           onChange={(e) => {
             setAvatarLook(e.target.value);
+            if (e.target.value == "avatar_chinese_lady") {
+              setAvatarScript("hello");
+            } else if (e.target.value == "avatar_indian_man") {
+              setAvatarScript("niraj");
+            } else {
+              setAvatarScript("hello");
+            }
           }}
         >
           <option value="avatar_chinese_lady">Chinese Lady</option>
@@ -48,7 +61,11 @@ function App() {
         </select>
       </Html>
       <color attach="background" args={["#ececec"]} />
-      <Experience chosen_bg={avatarBG} chosen_avatar={avatarLook} />
+      <Experience
+        chosen_bg={avatarBG}
+        chosen_avatar={avatarLook}
+        chosen_script={avatarScript}
+      />
     </Canvas>
   );
 }
