@@ -4,3 +4,4 @@
 *.pem
 scraper.log
 *.log
+.DS_Store
