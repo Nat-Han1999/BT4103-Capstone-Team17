@@ -1,21 +1,23 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-const backendUrl = "http://localhost:3000";
-
 const ChatContext = createContext();
 
 export const ChatProvider = ({ children }) => {
   const chat = async (message) => {
     setLoading(true);
-    const data = await fetch(`${backendUrl}/chat`, {
+    const data = await fetch("http://127.0.0.1:8000/api/chat/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({ message }),
     });
-    const resp = (await data.json()).messages;
-    setMessages((messages) => [...messages, ...resp]);
+    const resp = await data.json().then((json) => {
+      return json.messages;
+    });
+    setMessages((messages) => {
+      return [...messages, ...resp];
+    });
     setLoading(false);
   };
   const [messages, setMessages] = useState([]);
