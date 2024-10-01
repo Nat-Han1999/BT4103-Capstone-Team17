@@ -31,17 +31,17 @@ async def chat_output(request):
         response = {
             "messages": [
                 {
-                    "text": "Hey dear... How was your day?",
+                    "text": "Hi, I'm your professional AI assistant",
                     "audio": convert_wav_base64("../../client/app/audios/intro_0.wav"),
                     "lipsync": lipsync_intro_0,
                     "facialExpression": "smile",
-                    "animation": "Talking1",
+                    "animation": "Bow",
                     },
                 {
-                    "text": "I missed you so much... Please don't go for so long!",
+                    "text": "Please enter your question so that I can assist you",
                     "audio": convert_wav_base64("../../client/app/audios/intro_1.wav"),
                     "lipsync": lipsync_intro_1,
-                    "facialExpression": "sad",
+                    "facialExpression": "default",
                     "animation": "Talking0"
                     },
                 ]

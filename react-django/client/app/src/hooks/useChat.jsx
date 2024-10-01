@@ -1,6 +1,6 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-const ChatContext = createContext();
+const ChatContext = createContext(); 
 
 export const ChatProvider = ({ children }) => {
   const chat = async (message) => {
