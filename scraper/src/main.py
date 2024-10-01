@@ -1,5 +1,7 @@
 import time
+import sys
 import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 from scraper.src.scraper_action import get_urls, fetch_page, parse_content, fetch_page_with_selenium
 from scraper.src.scraper_utils import setup_logging, save_to_json
@@ -23,7 +25,8 @@ def main():
     start = time.time()
 
     # Get all relevant websites under mainMenu class (navigation bar)
-    urls = get_urls(url, "mainMenu")
+    # urls = get_urls(url, "mainMenu")
+    urls = ["https://www.svf.gov.lk"]
 
     logger.info("Fetching page content using requests...")
     all_data_requests = []  # to hold all scraped data using requests
