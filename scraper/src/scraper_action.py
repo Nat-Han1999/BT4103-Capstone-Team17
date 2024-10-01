@@ -8,13 +8,43 @@ import pdfplumber
 import pytesseract
 
 from bs4 import BeautifulSoup
-from scraper.src.scraper_utils import setup_logging
+from scraper_utils import setup_logging
 from selenium import webdriver
 from PIL import Image
 from io import BytesIO
 from urllib.request import Request, urlopen
 
 logger = setup_logging()
+
+def get_urls(url, menu_class = None): 
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    }
+    response = requests.get(url, headers = headers)
+
+    hrefs = []
+
+    if response.status_code != 200:
+        print(f"Error {response.status_code}: Unable to access URL {url}")
+        return []
+    
+    soup = BeautifulSoup(response.content, "html.parser")
+
+    # find all anchor tags within the specified menu class
+    if menu_class:
+        main_menu = soup.find(class_=menu_class)
+        if main_menu:
+            links = main_menu.find_all("a", href=True)  
+    else: # find all anchor tags within the specified menu class if menu class not specified
+        links = soup.find_all("a", href=True) 
+
+    for link in links: 
+        href = link['href']
+        if href.startswith("/index") and href not in hrefs:
+            hrefs.append(url + href)
+
+    return hrefs
 
 def fetch_page(url):
     headers = {
@@ -81,24 +111,24 @@ def parse_content(html, url):
         logger.info("No PDF links found")
 
     # Extract text from PDF links
-    pdf_extracted = {}
-    for pdf_link in pdf_links: 
-        if pdf_link:
-            pdf_file = download_pdf(pdf_link)
-            logger.info(f"Downloading file from PDF link: {pdf_file}")
-            extracted_text = extract_pdf_text(pdf_file)
-            pdf_extracted[pdf_link] = extracted_text
-        else:
-            logger.info(f"Failed to retrieve or extract the PDF text: {pdf_link}")
+    # pdf_extracted = {}
+    # for pdf_link in pdf_links: 
+    #     if pdf_link:
+    #         pdf_file = download_pdf(pdf_link)
+    #         logger.info(f"Downloading file from PDF link: {pdf_file}")
+    #         extracted_text = extract_pdf_text(pdf_file)
+    #         pdf_extracted[pdf_link] = extracted_text
+    #     else:
+    #         logger.info(f"Failed to retrieve or extract the PDF text: {pdf_link}")
 
     # Extract text from images
-    image_extracted = {}
-    for image in images: 
-        if image: 
-            text = extract_image_text(image)
-            image_extracted[image] = text
-        else:
-            logger.info(f"Failed to retrieve or extract the image text: {image}")
+    # image_extracted = {}
+    # for image in images: 
+    #     if image: 
+    #         text = extract_image_text(image)
+    #         image_extracted[image] = text
+    #     else:
+    #         logger.info(f"Failed to retrieve or extract the image text: {image}")
 
     # Collect data into a dictionary
     scraped_time = time.time()
@@ -109,8 +139,8 @@ def parse_content(html, url):
         "texts": texts,
         "images": images,
         "pdf_links": pdf_links,
-        "pdf_extracted": pdf_extracted,
-        "image_extracted": image_extracted,
+        # "pdf_extracted": pdf_extracted,
+        # "image_extracted": image_extracted,
         "scraped_at": scraped_time
     }
     return data
