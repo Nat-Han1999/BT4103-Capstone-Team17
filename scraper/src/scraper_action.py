@@ -8,13 +8,45 @@ import pdfplumber
 import pytesseract
 
 from bs4 import BeautifulSoup
-from scraper.src.scraper_utils import setup_logging
+from scraper_utils import setup_logging
 from selenium import webdriver
 from PIL import Image
 from io import BytesIO
 from urllib.request import Request, urlopen
 
+from scraper.src.processing import remove_duplicates, process_texts, process_extracted_texts
+
 logger = setup_logging()
+
+def get_urls(url, menu_class = None): 
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    }
+    response = requests.get(url, headers = headers)
+
+    hrefs = []
+
+    if response.status_code != 200:
+        logger.error(f"Error {response.status_code}: Unable to access URL {url}")
+    
+    soup = BeautifulSoup(response.content, "html.parser")
+
+    logger.info("Finding all anchor tags within webpage")
+    # find all anchor tags within the specified menu class
+    if menu_class:
+        main_menu = soup.find(class_=menu_class)
+        if main_menu:
+            links = main_menu.find_all("a", href=True)  
+    else: # find all anchor tags within the specified menu class if menu class not specified
+        links = soup.find_all("a", href=True) 
+
+    for link in links: 
+        href = link['href']
+        if href.startswith("/index") and href not in hrefs:
+            hrefs.append(url + href)
+
+    return hrefs
 
 def fetch_page(url):
     headers = {
@@ -40,17 +72,41 @@ def fetch_page_with_selenium(url):
     driver.quit()
     return html_content
 
+def remove_elements_by_classes(soup, classes, footers = None): 
+    """
+    Remove all elements from a BeautifulSoup object that contain any class in the classes list.
+    Removes footer if specified.
+    Args:
+        soup: BeautifulSoup object representing the parsed html.
+        classes: List of strings (class names) to be removed.
+        footer: Specified footer to be removed.
+    Returns:
+        A BeautifulSoup object representing the parsed html.
+    """
+    for class_ in classes:
+        elements = soup.find_all(class_= class_)
+        for element in elements: 
+            element.decompose() # remove element
+        # Remove all <footer> tags
+    
+    for footer in footers:
+        footer.decompose()  # remove footer tags
+
+    return soup
+
 def parse_content(html, url):
     soup = BeautifulSoup(html, 'html.parser')
-    
+    ignore_classes = ["twobannersLg", "nav menu", "mm-menu mm-offcanvas", "breadcrumb", "foot-1col commonFoot"] # lotteries, navBar, footer
+    footers = soup.find_all('footer') # ignore footers
+    soup = remove_elements_by_classes(soup, ignore_classes, footers)
+
     # Extract the page title
-    page_title = soup.title.text if soup.title else "No title found"
+    page_title = soup.title.text.replace("Shrama Vasana Fund - ", "").strip().lower() if soup.title else "No title found"
     logger.info("Page Title: " + page_title)
 
     # Extract text from paragraphs, divs, and spans
     logger.info("Extracting text from paragraphs, divs, and spans")
     texts = [] 
-    div_tag = soup.find('div')
     tags = soup.find_all(['p', 'div', 'span'])
 
     # Check whether current tag is nested within any other tags
@@ -59,10 +115,10 @@ def parse_content(html, url):
             for string in tag.stripped_strings:  # extracts text node by node
                 text = ' '.join(string.split())
                 if text:  # check if the text is not empty
-                    texts.append(text)  
+                    texts.append(text)
 
-    texts_ls_length = len(texts)  
-    logger.info("Texts found: " + ', '.join(texts[:5]))  # Only log the first 5 for brevity
+    logger.info("Processing texts")
+    texts = process_texts(remove_duplicates(texts)) # process texts
 
     # Extract images
     logger.info("Extracting images from the page")
@@ -79,7 +135,7 @@ def parse_content(html, url):
         logger.info("PDF Links found: " + ', '.join(pdf_links))
     else:
         logger.info("No PDF links found")
-
+    
     # Extract text from PDF links
     pdf_extracted = {}
     for pdf_link in pdf_links: 
@@ -90,6 +146,8 @@ def parse_content(html, url):
             pdf_extracted[pdf_link] = extracted_text
         else:
             logger.info(f"Failed to retrieve or extract the PDF text: {pdf_link}")
+    logger.info("Processing extracted pdf texts")
+    pdf_extracted = process_extracted_texts(pdf_extracted)
 
     # Extract text from images
     image_extracted = {}
@@ -99,6 +157,8 @@ def parse_content(html, url):
             image_extracted[image] = text
         else:
             logger.info(f"Failed to retrieve or extract the image text: {image}")
+    logger.info("Processing extracted pdf texts")
+    image_extracted = process_extracted_texts(image_extracted)
 
     # Collect data into a dictionary
     scraped_time = time.time()

@@ -1,7 +1,9 @@
 import time
+import sys
 import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-from scraper.src.scraper_action import fetch_page, parse_content, fetch_page_with_selenium
+from scraper.src.scraper_action import get_urls, fetch_page, parse_content, fetch_page_with_selenium
 from scraper.src.scraper_utils import setup_logging, save_to_json
 from dotenv import load_dotenv
 
@@ -18,26 +20,14 @@ password = os.getenv("MONGO_DB_PASSWORD")
 ca_file = os.path.join(os.path.dirname(__file__), '../backend/isrgrootx1.pem')
 
 def main():
-    print("Starting webscraper...")
+    print("Starting scraper...")
     start = time.time()
 
-    #TODO: Need to upupgrade to crawler to get all relevant websites
-    urls = [
-    "https://www.svf.gov.lk/index.php?lang=en",  # home
-    "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=1&Itemid=115&lang=en",  # about us
-    "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=6&Itemid=109&lang=en",  # contributions
-    "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=7&Itemid=110&lang=en#promotion-of-the-welfare-of-the-workers",  # services
-    "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=8&Itemid=111&lang=en",  # downloads
-    "https://www.svf.gov.lk/index.php?option=com_phocagallery&view=categories&Itemid=137&lang=en",  # gallery (image gallery)
-    "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=12&Itemid=138&lang=en",  # gallery (video gallery)
-    "https://www.svf.gov.lk/index.php?option=com_content&view=category&layout=blog&id=8&Itemid=139&lang=en",  # news and events
-    "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=13&Itemid=140&lang=en",  # donate us
-    "https://www.svf.gov.lk/index.php?option=com_content&view=category&id=9&Itemid=114&lang=en",  # vacancy
-    "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=14&Itemid=141&lang=en",  # faq
-    "https://www.svf.gov.lk/index.php?option=com_contact&view=contact&id=1&Itemid=135&lang=en#",  # contact us (inquiry)
-    "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=18&Itemid=147&lang=en",  # contact us (contact details)
-    "https://www.svf.gov.lk/index.php?option=com_xmap&view=html&id=1&Itemid=142&lang=en"  # site map
-    ]
+    # Website url
+    url = "https://www.svf.gov.lk"
+
+    # Get all relevant websites under mainMenu class (navigation bar)
+    urls = get_urls(url, "mainMenu")
 
     logger.info("Fetching page content using requests...")
     all_data_requests = []  # to hold all scraped data using requests
@@ -51,9 +41,12 @@ def main():
             data = parse_content(html_content, url)
             all_data_requests.append(data)
 
+    save_to_json(all_data_requests, 'scraper/scraped_data/data_requests.json') # to remove
     # Insert the scraped data into MongoDB
-    collection = get_database("shrama_vasana_fund_uat", "scraped_data", username, password, ca_file)
+    collection = get_database("shrama_vasana_fund_uat", "scraped_data_requests", username, password, ca_file)
     inserted_ids = insert_many_documents(collection, all_data_requests)
+
+    logger.info(f"Inserted requests data, {len(inserted_ids)} documents into MongoDB.")
 
     logger.info("Fetching page content using Selenium...")
     for url in urls:
@@ -62,12 +55,14 @@ def main():
         if html_content:
             data = parse_content(html_content, url)
             all_data_selenium.append(data)
+    
+    save_to_json(all_data_selenium, 'scraper/scraped_data/data_selenium.json') # to remove
 
     # Insert the scraped data into MongoDB
-    collection = get_database("shrama_vasana_fund_uat", "scraped_data", username, password, ca_file)
+    collection = get_database("shrama_vasana_fund_uat", "scraped_data_selenium", username, password, ca_file)
     inserted_ids = insert_many_documents(collection, all_data_selenium)
 
-    logger.info(f"Inserted {len(inserted_ids)} documents into MongoDB.")
+    logger.info(f"Inserted selenium data, {len(inserted_ids)} documents into MongoDB.")
         
     end = time.time()
     print(f"Done with webs scraping, time taken: {end-start}.")
