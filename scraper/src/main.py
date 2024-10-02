@@ -18,15 +18,16 @@ load_dotenv()
 username = os.getenv("MONGO_DB_USERNAME")
 password = os.getenv("MONGO_DB_PASSWORD")
 ca_file = os.path.join(os.path.dirname(__file__), '../backend/isrgrootx1.pem')
-url = "https://www.svf.gov.lk"
 
 def main():
-    print("Starting webscraper...")
+    print("Starting scraper...")
     start = time.time()
 
+    # Website url
+    url = "https://www.svf.gov.lk"
+
     # Get all relevant websites under mainMenu class (navigation bar)
-    # urls = get_urls(url, "mainMenu")
-    urls = ["https://www.svf.gov.lk"]
+    urls = get_urls(url, "mainMenu")
 
     logger.info("Fetching page content using requests...")
     all_data_requests = []  # to hold all scraped data using requests
@@ -40,11 +41,12 @@ def main():
             data = parse_content(html_content, url)
             all_data_requests.append(data)
 
-    # Insert the scraped data into MongoDB
-    # collection = get_database("shrama_vasana_fund_uat", "scraped_data", username, password, ca_file)
-    # inserted_ids = insert_many_documents(collection, all_data_requests)
-
     save_to_json(all_data_requests, 'scraper/scraped_data/data_requests.json') # to remove
+    # Insert the scraped data into MongoDB
+    collection = get_database("shrama_vasana_fund_uat", "scraped_data_requests", username, password, ca_file)
+    inserted_ids = insert_many_documents(collection, all_data_requests)
+
+    logger.info(f"Inserted requests data, {len(inserted_ids)} documents into MongoDB.")
 
     logger.info("Fetching page content using Selenium...")
     for url in urls:
@@ -53,14 +55,14 @@ def main():
         if html_content:
             data = parse_content(html_content, url)
             all_data_selenium.append(data)
-
-    # Insert the scraped data into MongoDB
-    # collection = get_database("shrama_vasana_fund_uat", "scraped_data", username, password, ca_file)
-    # inserted_ids = insert_many_documents(collection, all_data_selenium)
-
+    
     save_to_json(all_data_selenium, 'scraper/scraped_data/data_selenium.json') # to remove
 
-    # logger.info(f"Inserted {len(inserted_ids)} documents into MongoDB.")
+    # Insert the scraped data into MongoDB
+    collection = get_database("shrama_vasana_fund_uat", "scraped_data_selenium", username, password, ca_file)
+    inserted_ids = insert_many_documents(collection, all_data_selenium)
+
+    logger.info(f"Inserted selenium data, {len(inserted_ids)} documents into MongoDB.")
         
     end = time.time()
     print(f"Done with webs scraping, time taken: {end-start}.")

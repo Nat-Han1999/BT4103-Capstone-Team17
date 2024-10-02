@@ -142,4 +142,18 @@ def delete_many_documents(collection, query):
     result = collection.delete_many(query)
     return result.deleted_count
 
+def delete_all(collection):
+    """
+    Deletes all documents from the collection.
+
+    Inputs:
+        collection: The MongoDB collection object.
+
+    Returns:
+        The number of documents deleted.
+    """
+    result = collection.delete_many({})
+    return print(f'{result.deleted_count} documents deleted.')
+
+
 
