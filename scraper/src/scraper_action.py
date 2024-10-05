@@ -8,45 +8,51 @@ import pdfplumber
 import pytesseract
 
 from bs4 import BeautifulSoup
-from scraper_utils import setup_logging
+from scraper.src.processing import remove_duplicates, process_texts, process_extracted_texts
+from scraper.src.utils.scraper_utils import setup_logging, generate_hash
 from selenium import webdriver
 from PIL import Image
 from io import BytesIO
 from urllib.request import Request, urlopen
+from datetime import datetime, timedelta, timezone
+from scraper.backend.mongo_utils import insert_many_documents, update_one_document, insert_one_document
+from scraper.src.diff import render_diff
+from selenium.common.exceptions import TimeoutException, WebDriverException
 
-from scraper.src.processing import remove_duplicates, process_texts, process_extracted_texts
 
 logger = setup_logging()
 
-def get_urls(url, menu_class = None): 
-    headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
-    }
-    response = requests.get(url, headers = headers)
+# TODO: Should be generalized with a crawler
 
-    hrefs = []
+# def get_urls(url, menu_class = None): 
+#     headers = {
+#         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
+#         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+#     }
+#     response = requests.get(url, headers = headers)
 
-    if response.status_code != 200:
-        logger.error(f"Error {response.status_code}: Unable to access URL {url}")
+#     hrefs = []
+
+#     if response.status_code != 200:
+#         logger.error(f"Error {response.status_code}: Unable to access URL {url}")
     
-    soup = BeautifulSoup(response.content, "html.parser")
+#     soup = BeautifulSoup(response.content, "html.parser")
 
-    logger.info("Finding all anchor tags within webpage")
-    # find all anchor tags within the specified menu class
-    if menu_class:
-        main_menu = soup.find(class_=menu_class)
-        if main_menu:
-            links = main_menu.find_all("a", href=True)  
-    else: # find all anchor tags within the specified menu class if menu class not specified
-        links = soup.find_all("a", href=True) 
+#     logger.info("Finding all anchor tags within webpage")
+#     # find all anchor tags within the specified menu class
+#     if menu_class:
+#         main_menu = soup.find(class_=menu_class)
+#         if main_menu:
+#             links = main_menu.find_all("a", href=True)  
+#     else: # find all anchor tags within the specified menu class if menu class not specified
+#         links = soup.find_all("a", href=True) 
 
-    for link in links: 
-        href = link['href']
-        if href.startswith("/index") and href not in hrefs:
-            hrefs.append(url + href)
+#     for link in links: 
+#         href = link['href']
+#         if href.startswith("/index") and href not in hrefs:
+#             hrefs.append(url + href)
 
-    return hrefs
+#     return hrefs
 
 def fetch_page(url):
     headers = {
@@ -66,42 +72,74 @@ def fetch_page_with_selenium(url):
     options.add_argument('--no-sandbox')
     options.add_argument('--disable-dev-shm-usage')
 
-    driver = webdriver.Chrome(options=options)
-    driver.get(url)
-    html_content = driver.page_source
-    driver.quit()
+    driver = None
+    remote_webdriver = 'http://localhost:4444/wd/hub'  # Remote URL for ChromeDriver
+    try:
+        # Use remote Selenium ChromeDriver
+        driver = webdriver.Remote(remote_webdriver, options=options)
+        driver.set_page_load_timeout(30)  # Timeout after 30 seconds if the page doesn't load
+        driver.set_script_timeout(30)  # Timeout for script execution
+        
+        logger.info(f"Fetching {url} using Selenium...")
+        driver.get(url)
+        html_content = driver.page_source
+        logger.info(f"Successfully fetched content from {url}")
+    except TimeoutException:
+        logger.error(f"Timeout while loading page {url}")
+        html_content = None
+    except WebDriverException as e:
+        logger.error(f"WebDriver error occurred for {url}: {str(e)}")
+        html_content = None
+    except Exception as e:
+        if "Connection refused" in str(e):
+            logger.error(f"Failed to connect to Selenium: {str(e)}.")
+            logger.error("Ensure the Selenium Docker container is running.")
+            raise
+        else:
+            logger.error(f"Error fetching {url} with Selenium: {str(e)}")
+        html_content = None
+    finally:
+        if driver:
+            try:
+                driver.quit()  # Ensure that the driver quits to free up resources
+            except Exception as e:
+                logger.error(f"Error quitting Selenium driver: {str(e)}")
     return html_content
 
-def remove_elements_by_classes(soup, classes, footers = None): 
-    """
-    Remove all elements from a BeautifulSoup object that contain any class in the classes list.
-    Removes footer if specified.
-    Args:
-        soup: BeautifulSoup object representing the parsed html.
-        classes: List of strings (class names) to be removed.
-        footer: Specified footer to be removed.
-    Returns:
-        A BeautifulSoup object representing the parsed html.
-    """
-    for class_ in classes:
-        elements = soup.find_all(class_= class_)
-        for element in elements: 
-            element.decompose() # remove element
-        # Remove all <footer> tags
-    
-    for footer in footers:
-        footer.decompose()  # remove footer tags
+# TODO: Should remove using predefined xpaths
 
-    return soup
+# def remove_elements_by_classes(soup, classes, footers = None): 
+#     """
+#     Remove all elements from a BeautifulSoup object that contain any class in the classes list.
+#     Removes footer if specified.
+#     Args:
+#         soup: BeautifulSoup object representing the parsed html.
+#         classes: List of strings (class names) to be removed.
+#         footer: Specified footer to be removed.
+#     Returns:
+#         A BeautifulSoup object representing the parsed html.
+#     """
+#     for class_ in classes:
+#         elements = soup.find_all(class_= class_)
+#         for element in elements: 
+#             element.decompose() # remove element
+#         # Remove all <footer> tags
+    
+#     for footer in footers:
+#         footer.decompose()  # remove footer tags
+
+#     return soup
 
 def parse_content(html, url):
     soup = BeautifulSoup(html, 'html.parser')
-    ignore_classes = ["twobannersLg", "nav menu", "mm-menu mm-offcanvas", "breadcrumb", "foot-1col commonFoot"] # lotteries, navBar, footer
-    footers = soup.find_all('footer') # ignore footers
-    soup = remove_elements_by_classes(soup, ignore_classes, footers)
+
+    # TODO: Should not use own pre-defined classes
+    # ignore_classes = ["twobannersLg", "nav menu", "mm-menu mm-offcanvas", "breadcrumb", "foot-1col commonFoot"] # lotteries, navBar, footer
+    # footers = soup.find_all('footer') # ignore footers
+    # soup = remove_elements_by_classes(soup, ignore_classes, footers)
 
     # Extract the page title
-    page_title = soup.title.text.replace("Shrama Vasana Fund - ", "").strip().lower() if soup.title else "No title found"
+    page_title = soup.title.text if soup.title else "No title found"
     logger.info("Page Title: " + page_title)
 
     # Extract text from paragraphs, divs, and spans
@@ -161,7 +199,7 @@ def parse_content(html, url):
     image_extracted = process_extracted_texts(image_extracted)
 
     # Collect data into a dictionary
-    scraped_time = time.time()
+    scraped_time = datetime.now(timezone(timedelta(hours=8)))
 
     data = {
         "url": url,
@@ -233,17 +271,102 @@ def extract_pdf_text(pdf_file):
     return text
 
 def extract_image_text(image): 
-    try:
-        req = Request(image, headers={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'})  # accepts any image type
-        response = urlopen(req)
-        # load image data
-        image_data = response.read()
-        # open image
-        image = Image.open(BytesIO(image_data))
-        # extract text from image url using pytesseract
+    try:        
+        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'}
+        response = requests.get(image, headers=headers)
+        image_data = BytesIO(response.content)
+        image = Image.open(image_data)
         text = pytesseract.image_to_string(image)
         logger.info(f"Extracting text from image using OCR: , {text}")
         return text
     except Exception as e:
         logger.error(f"Failed to extract text from image: {e}")
-        return ""
+        return None
+
+def process_and_hash_text(data):
+    """
+    Concatenate and hash the text content from the scraped data.
+    """
+
+    if 'texts' in data and isinstance(data['texts'], list):
+        concatenated_text = ' '.join(data['texts'])
+        return generate_hash(concatenated_text)
+    return None
+
+def update_or_insert_document(collection_url_hashed, url, text_hash, current_time, new_text_content, collection_scraped_data):
+    """
+    Update or insert URL hash and metadata in MongoDB.
+    """
+
+    query = {"url": url}
+    existing_doc = collection_url_hashed.find_one(query)
+    content_scraped_previously = collection_scraped_data.find_one(query, sort=[('scraped_at', -1)])
+
+    if existing_doc:
+        last_hash = existing_doc.get("latest_hash", "")
+        last_text_content = content_scraped_previously.get("texts", [""]) # Get the previous text for comparison
+
+
+        if text_hash != last_hash:
+            new_text_list = new_text_content["texts"]
+            new_text = "\n".join(new_text_list)
+            last_text = "\n".join(last_text_content)
+
+            # TODO: need to update scraped_data collection too. Need to render difference and send notification
+            # diff = render_diff(
+            #     previous_version_file_contents=last_text, 
+            #     newest_version_file_contents=new_text,
+            #     include_equal=False  # Show only differences
+            # )
+            
+            print(url, "DIFFERENCE --------------------------")
+            # print(diff)
+
+        update_data = {
+            "last_updated_at": current_time,
+            "latest_hash": text_hash,
+            "scrape_count": existing_doc.get("scrape_count", 1) + 1
+        }
+        update_one_document(collection_url_hashed, query, update_data)
+    else:
+        new_data = {
+            "url": url,
+            "created_at": current_time,
+            "last_updated_at": current_time,
+            "first_hash": text_hash,
+            "latest_hash": text_hash,
+            "scrape_count": 1
+        }
+        insert_one_document(collection_url_hashed, new_data)
+
+def scrape_and_store_data(urls, collection_scraped_data, collection_url_hashed):
+    """
+    Fetch content for each URL, process it, and store or update in MongoDB.
+    """
+    
+    all_data_selenium = []
+    
+    for url in urls:
+        logger.info(f"Fetching page content from {url} using Selenium...")
+        html_content = fetch_page_with_selenium(url)
+        if not html_content:
+            logger.info(f"No content scraped from {url}")
+        else:
+            data = parse_content(html_content, url)
+            logger.info(data)
+            logger.info("Data scraped")
+            text_hash = process_and_hash_text(data)
+            logger.info(text_hash)
+            current_time = datetime.now(timezone(timedelta(hours=8)))
+            # Update or insert the hash and metadata in MongoDB
+            update_or_insert_document(collection_url_hashed, url, text_hash, current_time, data, collection_scraped_data)
+
+            all_data_selenium.append(data)
+
+    # Check if there's any data to insert
+    if not all_data_selenium:
+        logger.error("No data scraped, nothing to insert.")
+    else:
+        # Bulk insert the scraped data into 'scraped_data' collection
+        inserted_ids = insert_many_documents(collection_scraped_data, all_data_selenium)
+        logger.info(f"Inserted {len(inserted_ids)} documents into MongoDB.")
