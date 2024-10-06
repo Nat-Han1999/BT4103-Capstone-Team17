@@ -5,6 +5,7 @@ from chatbot.settings import GENERATIVE_AI_KEY
 from chatbotapp.models import ChatMessage
 from django.shortcuts import render, redirect
 from django.conf import settings
+from django.db.models import Max
 import os
 import textwrap
 import string
@@ -58,17 +59,13 @@ def generate_embeddings(training_data):
             # Split large texts and embed each chunk
             text_chunks = split_text(text)
             embeddings = [embed_fn(item['title'], chunk) for chunk in text_chunks]
-            item['embedding'] = embeddings  # Store all chunk embeddings
+            item['embedding'] = embeddings  # Store aggregated embedding
         else:
             # If the text is small enough, embed directly
             item['embedding'] = embed_fn(item['title'], text)
     return training_data
 
 cleaned_training_data = process_data(data)
-
-# Hard-coded removal of training sample that is too large - needs fixing
-#title_to_remove = 'Shrama Vasana Fund - FAQs'
-#cleaned_training_data = [item for item in cleaned_training_data if item['title'] != title_to_remove]
 training_data = generate_embeddings(cleaned_training_data)
 
 # Function to find the best passage based on embeddings
@@ -102,15 +99,17 @@ def find_best_passage(query, training_data):
     return best_passage
 
 # Function to create prompt based on query and relevant passage
-def make_prompt(query, relevant_passage):
+def make_prompt(query, relevant_passage, convo_history):
     escaped = relevant_passage.replace("'", "").replace('"', "").replace("\n", " ")
     prompt = textwrap.dedent(f"""\
     You are a helpful and informative bot that answers questions using text from the reference passage included below. 
+    You may also need to refer to contextual clues from the conversation history provided when crafting your answer.                       
     Be sure to respond in a complete sentence, being comprehensive, including all relevant background information. 
     However, you are talking to a non-technical audience, so be sure to break down complicated concepts and 
     strike a friendly and conversational tone. 
-    If the passage is irrelevant to the answer, you may ignore it.
+    If the passage and previous conversation history is irrelevant to the answer, you may ignore it.
     
+    PREVIOUS CONVERSATION: '{convo_history}'                         
     QUESTION: '{query}'
     PASSAGE: '{escaped}'
 
@@ -124,17 +123,38 @@ def send_message(request):
         genai.configure(api_key=GENERATIVE_AI_KEY)
         model = genai.GenerativeModel("gemini-1.5-pro")
 
+        # Get or create the conversation_id
+        conversation_id = request.session.get('conversation_id', None)
+        if not conversation_id:
+            # Check if ChatMessage table has any records
+            last_message = ChatMessage.objects.aggregate(Max('id'))
+            if last_message['id__max'] is None:
+                # No existing messages, start with conversation_id = 1
+                conversation_id = 1
+            else:
+                # Increment from the latest id
+                conversation_id = last_message['id__max'] + 1
+
+            request.session['conversation_id'] = conversation_id
+
         user_message = request.POST.get('user_message')
 
+        # Retrieve previous prompts and responses (limit to last 5 for brevity)
+        convo_history = ChatMessage.objects.filter(conversation_id=conversation_id).order_by('-id')[:5]
+        
          # Find the best passage based on embeddings
         relevant_passage = find_best_passage(user_message, training_data)
 
         # Create the prompt using the relevant passage
-        prompt = make_prompt(user_message, relevant_passage)
+        prompt = make_prompt(user_message, relevant_passage, convo_history)
 
         bot_response = model.generate_content(prompt)
 
-        ChatMessage.objects.create(user_message=user_message, bot_response=bot_response.text)
+        ChatMessage.objects.create(
+            conversation_id=conversation_id,
+            user_message=user_message, 
+            bot_response=bot_response.text
+        )
 
     return redirect('list_messages')
 
