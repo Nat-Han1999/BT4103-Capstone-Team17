@@ -6,3 +6,5 @@ scraper.log
 *.log
 .DS_Store
 venv/
+node_modules/
+types-registry/

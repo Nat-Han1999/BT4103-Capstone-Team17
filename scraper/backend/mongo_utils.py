@@ -7,6 +7,7 @@ The functions allow you to insert documents, read/query documents, update existi
 
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
+from pymongo.errors import PyMongoError
 
 
 def get_database(db_name, collection_name, username, password, ca_file):
@@ -18,10 +19,13 @@ def get_database(db_name, collection_name, username, password, ca_file):
         password: MongoDB password for authentication.
         ca_file: Path to the CA file for SSL connection.
     """
-    uri = f"mongodb+srv://{username}:{password}@bt4103.cnngw.mongodb.net/?retryWrites=true&w=majority&appName=BT4103&tlsCAFile={ca_file}"
-    client = MongoClient(uri, server_api=ServerApi("1"))
-    db = client[db_name]
-    return db[collection_name]
+    try:
+        uri = f"mongodb+srv://{username}:{password}@bt4103.cnngw.mongodb.net/?retryWrites=true&w=majority&appName=BT4103&tlsCAFile={ca_file}"
+        client = MongoClient(uri, server_api=ServerApi("1"), serverSelectionTimeoutMS=5000, connectTimeoutMS=5000)
+        db = client[db_name]
+        return db[collection_name]
+    except PyMongoError as e:
+        raise
 
 
 def insert_one_document(collection, data):
