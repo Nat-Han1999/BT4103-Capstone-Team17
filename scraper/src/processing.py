@@ -57,12 +57,15 @@ def process_extracted_texts(text_dictionary):
         String: A cleaned list of extracted pdf/image texts joined together as a string.
     """
     result = ""
+    
     for url, text in text_dictionary.items():
-        text = text.lower()
-        text = re.sub(r'&', 'and', text)  # replace & with 'and'
-        text = re.sub(r'[^A-Za-z0-9\s@+?]', '', text) # keep '+', '?' and '@' 
-        text = re.sub(r'\n+', ' ', text) # replace \n with space
+        if text is not None:
+            text = text.lower()
+            text = re.sub(r'&', 'and', text)  # replace & with 'and'
+            text = re.sub(r'[^A-Za-z0-9\s@+?]', '', text) # keep '+', '?' and '@' 
+            text = re.sub(r'\n+', ' ', text) # replace \n with space
 
-        if text != ' ' and  text != '.':
-            result += text
+            if text != ' ' and  text != '.':
+                result += text
+
     return result
