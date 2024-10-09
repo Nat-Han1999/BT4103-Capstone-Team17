@@ -19,16 +19,23 @@ with open(data_path, 'r') as file:
 def process_data(data):
     cleaned_data = {}
     for item in data:
-        cleaned_title = item.get('title', '')
-        cleaned_txt = [text.lower().translate(str.maketrans('', '', string.punctuation)) for text in item.get('texts', [])]
-        cleaned_data[cleaned_title] = {'texts': cleaned_txt}
+        cleaned_title = ''
+        for (key, value) in item.items():
+            if key == 'title':
+                cleaned_title = value
+                break
+        item['texts'] = item['texts'] + item['image_extracted']
+        cleaned_data[cleaned_title] = item
 
     # Combine cleaned texts
-    training_data = [{
-        'title': title,
-        'texts': ' '.join(data['texts']).removeprefix('about us overview our team organisation structure contributions services downloads gallery image gallery video gallery news  events donate us vacancy faqs contact us inquiry contact details sitemap සිංහල தமிழ் about us overview our team organisation structure contributions services downloads gallery image gallery video gallery news  events donate us vacancy faqs contact us inquiry contact details sitemap ')
-    } for title, data in cleaned_data.items()]
+    training_data = []
 
+    for page_title, data in cleaned_data.items():
+        training_data.append({
+            'title': page_title,
+            'texts': data['texts'],
+        })
+    
     return training_data
 
 
@@ -102,12 +109,12 @@ def find_best_passage(query, training_data):
 def make_prompt(query, relevant_passage, convo_history):
     escaped = relevant_passage.replace("'", "").replace('"', "").replace("\n", " ")
     prompt = textwrap.dedent(f"""\
-    You are a helpful and informative bot that answers questions using text from the reference passage included below. 
-    You may also need to refer to contextual clues from the conversation history provided when crafting your answer.                       
-    Be sure to respond in a complete sentence, being comprehensive, including all relevant background information. 
-    However, you are talking to a non-technical audience, so be sure to break down complicated concepts and 
-    strike a friendly and conversational tone. 
-    If the passage and previous conversation history is irrelevant to the answer, you may ignore it.
+    You are a helpful and informative bot that answers questions using text from the reference passage included below. \
+    The term 'the fund' in any question should refers to the Shrama Vasana Fund.\
+    Please answer to the best of your ability. Do not mention the context to your audience, just answer their questions.\
+    Be sure to respond in complete sentences and break them into succinct paragraphs and bulletpoints for readability.\
+    Please be comprehensive and include all relevant background information. \
+    If the passage is irrelevant to the answer, you may ignore it.
 
     PREVIOUS CONVERSATION: '{convo_history}'                         
     QUESTION: '{query}'
