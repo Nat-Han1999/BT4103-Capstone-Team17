@@ -293,51 +293,64 @@ def process_and_hash_text(data):
         return generate_hash(concatenated_text)
     return None
 
-def update_or_insert_document(collection_url_hashed, url, text_hash, current_time, new_text_content, collection_scraped_data):
+def update_or_insert_document(collection_url_hashed, collection_scraped_data, url, text_hash, newly_scraped_data):
     """
     Update or insert URL hash and metadata in MongoDB.
     """
+    current_time = datetime.now(timezone(timedelta(hours=0)))
 
     query = {"url": url}
     existing_doc = collection_url_hashed.find_one(query)
     content_scraped_previously = collection_scraped_data.find_one(query, sort=[('scraped_at', -1)])
 
-    if existing_doc:
+    if existing_doc !=  None and content_scraped_previously != None:
         last_hash = existing_doc.get("latest_hash", "")
         last_text_content = content_scraped_previously.get("texts", [""]) # Get the previous text for comparison
 
-
         if text_hash != last_hash:
-            new_text_list = new_text_content["texts"]
+            
+            new_text_list = newly_scraped_data["texts"]
             new_text = "\n".join(new_text_list)
             last_text = "\n".join(last_text_content)
 
             # TODO: need to update scraped_data collection too. Need to render difference and send notification
-            # diff = render_diff(
-            #     previous_version_file_contents=last_text, 
-            #     newest_version_file_contents=new_text,
-            #     include_equal=False  # Show only differences
-            # )
+            diff = render_diff(
+                previous_version_file_contents=last_text, 
+                newest_version_file_contents=new_text,
+                include_equal=False  # Show only differences
+            )
             
             print(url, "DIFFERENCE --------------------------")
-            # print(diff)
+            print(diff)
 
-        update_data = {
-            "last_updated_at": current_time,
-            "latest_hash": text_hash,
-            "scrape_count": existing_doc.get("scrape_count", 1) + 1
-        }
-        update_one_document(collection_url_hashed, query, update_data)
+            update_hash_data = {
+                "last_updated_at": current_time,
+                "latest_hash": text_hash,
+                "scrape_count": existing_doc.get("scrape_count", 1) + 1
+            }
+            update_one_document(collection_url_hashed, query, update_hash_data)
+            
+            update_scraped_data = newly_scraped_data
+            update_one_document(collection_scraped_data, query, update_scraped_data)
+
+        # need to update the content scraped previously also
     else:
-        new_data = {
-            "url": url,
-            "created_at": current_time,
-            "last_updated_at": current_time,
-            "first_hash": text_hash,
-            "latest_hash": text_hash,
-            "scrape_count": 1
-        }
-        insert_one_document(collection_url_hashed, new_data)
+        # Scraped data and hash does not exist in MongoDB. Load them in.
+        if existing_doc == None:
+            new_hash_data = {
+                "url": url,
+                "created_at": current_time,
+                "last_updated_at": current_time,
+                "first_hash": text_hash,
+                "latest_hash": text_hash,
+                "scrape_count": 1
+            }
+            insert_one_document(collection_url_hashed, new_hash_data)
+            logger.info(f"Inserted {url} into hash_url collection.")
+
+        if content_scraped_previously == None:
+            insert_one_document(collection_scraped_data, newly_scraped_data)
+            logger.info(f"Inserted {url} into scraped_data collection.")
 
 def scrape_and_store_data(urls, collection_scraped_data, collection_url_hashed):
     """
@@ -357,16 +370,11 @@ def scrape_and_store_data(urls, collection_scraped_data, collection_url_hashed):
             logger.info("Data scraped")
             text_hash = process_and_hash_text(data)
             logger.info(text_hash)
-            current_time = datetime.now(timezone(timedelta(hours=8)))
             # Update or insert the hash and metadata in MongoDB
-            update_or_insert_document(collection_url_hashed, url, text_hash, current_time, data, collection_scraped_data)
+            update_or_insert_document(collection_url_hashed, collection_scraped_data, url, text_hash, data)
 
             all_data_selenium.append(data)
 
     # Check if there's any data to insert
     if not all_data_selenium:
         logger.error("No data scraped, nothing to insert.")
-    else:
-        # Bulk insert the scraped data into 'scraped_data' collection
-        inserted_ids = insert_many_documents(collection_scraped_data, all_data_selenium)
-        logger.info(f"Inserted {len(inserted_ids)} documents into MongoDB.")
