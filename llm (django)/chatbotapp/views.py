@@ -45,7 +45,7 @@ def split_text(text, max_chars=9000):
 
 # Function to embed content
 def embed_fn(title, text):
-    model = 'models/embedding-001'
+    model = 'models/text-embedding-004'
     return genai.embed_content(model=model,
                                content=text,
                                task_type="retrieval_document",
@@ -70,7 +70,7 @@ training_data = generate_embeddings(cleaned_training_data)
 
 # Function to find the best passage based on embeddings
 def find_best_passage(query, training_data):
-    query_embedding = genai.embed_content(model='models/embedding-001',
+    query_embedding = genai.embed_content(model='models/text-embedding-004',
                                           content=query,
                                           task_type="retrieval_query")['embedding']
     
@@ -108,7 +108,7 @@ def make_prompt(query, relevant_passage, convo_history):
     However, you are talking to a non-technical audience, so be sure to break down complicated concepts and 
     strike a friendly and conversational tone. 
     If the passage and previous conversation history is irrelevant to the answer, you may ignore it.
-    
+
     PREVIOUS CONVERSATION: '{convo_history}'                         
     QUESTION: '{query}'
     PASSAGE: '{escaped}'
