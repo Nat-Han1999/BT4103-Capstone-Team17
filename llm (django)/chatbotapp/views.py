@@ -9,6 +9,8 @@ from django.db.models import Max
 import os
 import textwrap
 import string
+import re
+import markdown
 
 # Load data during app initialization or as cache
 data_path = '../scraper/scraped_data/data_requests.json'
@@ -110,12 +112,12 @@ def make_prompt(query, relevant_passage, convo_history):
     escaped = relevant_passage.replace("'", "").replace('"', "").replace("\n", " ")
     prompt = textwrap.dedent(f"""\
     You are a helpful and informative bot that answers questions using text from the reference passage included below. \
-    The term 'the fund' in any question should refers to the Shrama Vasana Fund.\
-    Please answer to the best of your ability. Do not mention the context to your audience, just answer their questions.\
-    Be sure to respond in complete sentences and break them into succinct paragraphs and bulletpoints for readability.\
-    Please be comprehensive and include all relevant background information. \
-    If the passage is irrelevant to the answer, you may ignore it.
-
+    You may also need to refer to contextual clues from the conversation history provided when crafting your answer. \
+    Do note that you are talking to a non-technical audience, so be sure to break down complicated concepts and \
+    strike a friendly and conversational tone. Please be comprehensive and include all relevant background information.    
+    Be sure to respond in complete sentences and break them into succinct paragraphs and bulletpoints for readability where appropriate.\
+    If the passage and previous conversation history is irrelevant to the answer, you may ignore it. \
+                             
     PREVIOUS CONVERSATION: '{convo_history}'                         
     QUESTION: '{query}'
     PASSAGE: '{escaped}'
@@ -156,11 +158,12 @@ def send_message(request):
         prompt = make_prompt(user_message, relevant_passage, convo_history)
 
         bot_response = model.generate_content(prompt)
+        formatted_response = markdown.markdown(bot_response.text)
 
         ChatMessage.objects.create(
             conversation_id=conversation_id,
             user_message=user_message, 
-            bot_response=bot_response.text
+            bot_response=formatted_response
         )
 
     return redirect('list_messages')
@@ -174,3 +177,19 @@ def clear_messages(request):
         # Delete all chat messages from the database
         ChatMessage.objects.all().delete()
     return redirect('list_messages')
+
+def format_response_text(text):
+    # Step 1: Convert bold text '**text**' to HTML <strong> tags
+    text = re.sub(r"\*\*(.*?)\*\*", r"<strong>\1</strong>", text)
+    
+    # Step 2: Convert bullet points '* item' to list items `<li>` but leave them outside <ul> for now
+    text = re.sub(r"\n\*\s+(.*?)(?=\n|$)", r"<li>\1</li>", text)
+    
+    # Step 3: Wrap list items in <ul> tags by identifying if any `<li>` tags exist
+    text = re.sub(r"(<li>.*?</li>)", r"<ul>\1</ul>", text, flags=re.DOTALL)
+    
+    # Step 4: Handle line breaks
+    text = re.sub(r"\n\n", r"<br><br>", text)  # Double newline as paragraph break
+    text = re.sub(r"\n", r"<br>", text)  # Single newline as a line break
+
+    return text

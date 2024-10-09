@@ -128,10 +128,10 @@
             {% for message in messages %}
                 <div class="message">
                     <div class="user-message">
-                        <strong>You:</strong> {{ message.user_message }}
+                        <strong>You:</strong> {{ message.user_message|linebreaksbr}}
                     </div>
                     <div class="bot-message">
-                        <strong>Bot:</strong> {{ message.bot_response }}
+                        <strong>Bot:</strong> {{ message.bot_response|safe }}
                     </div>
                 </div>
             {% endfor %}
