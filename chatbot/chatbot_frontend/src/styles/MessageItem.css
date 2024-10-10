@@ -1,0 +1,19 @@
+/* src/styles/MessageItem.css */
+
+.message-item {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    max-width: 70%;
+  }
+  
+  .user-message {
+    background-color: #dcf8c6;
+    align-self: flex-end;
+  }
+  
+  .bot-message {
+    background-color: #ececec;
+    align-self: flex-start;
+  }
+  

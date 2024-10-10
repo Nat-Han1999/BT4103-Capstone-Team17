@@ -1,0 +1,8 @@
+#!/Users/bryanlee/Desktop/Y4S1/Capstone/Code/BT4103-Capstone-Team17/chatbot/chatbot_env/bin/python3
+# -*- coding: utf-8 -*-
+import re
+import sys
+from torch.distributed.run import main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())
