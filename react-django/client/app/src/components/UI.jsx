@@ -60,6 +60,18 @@ export const UI = ({ hidden, ...props }) => {
               </svg>
             )}
           </button>
+          <div className="pointer-events-auto">
+            <select defaultValue="avatar_bg" onChange={(e) => {
+              const body = document.querySelector("body");
+              body.classList='';
+              body.classList.add(e.target.value);
+            }}>
+              <option value={"avatar_bg"}>Default</option>
+              <option value={"avatar_bg2"}>Seaside</option>
+              <option value={"avatar_bg3"}>Desert</option>
+              <option value={"avatar_bg4"}>Space</option>
+            </select>
+          </div>
           <button
             onClick={() => {
               const body = document.querySelector("body");
