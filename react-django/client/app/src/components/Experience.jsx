@@ -43,15 +43,25 @@ export function Experience({ avatarLook }) {
 
   // Conditional for avatar output
   let avatarOutput;
+  let xPosition;
+  let yPosition; // Set height of loading dot to be different for male and female, since males are taller 
 
   if (avatarLook == "Helen") {
     avatarOutput = <Helen />;
+    xPosition = -0.08;
+    yPosition = 1.75;
   } else if (avatarLook == "Aisha") {
     avatarOutput = <Aisha />;
+    xPosition = -0.02;
+    yPosition = 1.75;
   } else if (avatarLook == "Niraj") {
     avatarOutput = <Niraj />;
+    xPosition = -0.02;
+    yPosition = 1.88;
   } else {
     avatarOutput = <Carter />;
+    xPosition = -0.02;
+    yPosition = 1.88;
   }
 
   const cameraControls = useRef();
@@ -78,7 +88,7 @@ export function Experience({ avatarLook }) {
         <meshBasicMaterial attach="material" color="black" />
       </Text>
       <Suspense>
-        <Dots position-y={1.86} position-x={-0.02} />
+        <Dots position-y={yPosition} position-x={xPosition} />
       </Suspense>
       {avatarOutput}
       <ContactShadows opacity={0.7} />
