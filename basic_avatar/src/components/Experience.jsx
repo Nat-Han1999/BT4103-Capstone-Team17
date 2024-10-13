@@ -7,7 +7,7 @@ export function Experience({ chosen_bg, chosen_avatar, chosen_script }) {
   const texture = useTexture(`textures/${chosen_bg}.jpg`);
   const viewport = useThree((state) => state.viewport);
 
-  // Conditional for avatar output
+  // Conditional for avatar output 
   let avatarOutput;
 
   if (chosen_avatar == "avatar_chinese_lady") {

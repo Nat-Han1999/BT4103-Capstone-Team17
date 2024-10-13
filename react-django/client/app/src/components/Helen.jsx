@@ -107,9 +107,7 @@ const corresponding = {
 let setupMode = false;
 
 export function Helen(props) {
-  const { nodes, materials, scene } = useGLTF(
-    "/models/Helen.glb"
-  );
+  const { nodes, materials, scene } = useGLTF("/models/Helen.glb");
 
   const { message, onMessagePlayed, chat } = useChat();
 
@@ -142,7 +140,11 @@ export function Helen(props) {
       .reset()
       .fadeIn(mixer.stats.actions.inUse === 0 ? 0 : 0.5)
       .play();
-    return () => actions[animation].fadeOut(0.5);
+    return () => {
+      if (actions[animation]) {
+        actions[animation].fadeOut(0.5);
+      }
+    };
   }, [animation]);
 
   const lerpMorphTarget = (target, value, speed = 0.1) => {

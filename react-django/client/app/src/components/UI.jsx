@@ -1,11 +1,11 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useChat } from "../hooks/useChat";
 
-export const UI = ({ hidden, ...props }) => {
+export function UI ({ setAvatarLook, hidden, ...props }) {
   const input = useRef();
   const { chat, loading, cameraZoomed, setCameraZoomed, message } = useChat();
 
-  const sendMessage = () => {
+  const sendMessage = () => { 
     const text = input.current.value;
     if (!loading && !message) {
       chat(text);
@@ -61,17 +61,35 @@ export const UI = ({ hidden, ...props }) => {
             )}
           </button>
           <div className="pointer-events-auto">
-            <select defaultValue="avatar_bg" onChange={(e) => {
-              const body = document.querySelector("body");
-              body.classList='';
-              body.classList.add(e.target.value);
-            }}>
+            <select
+              defaultValue="avatar_bg"
+              onChange={(e) => {
+                const body = document.querySelector("body");
+                body.classList = "";
+                body.classList.add(e.target.value);
+              }}
+            >
               <option value={"avatar_bg"}>Default</option>
               <option value={"avatar_bg2"}>Seaside</option>
               <option value={"avatar_bg3"}>Desert</option>
               <option value={"avatar_bg4"}>Space</option>
             </select>
           </div>
+
+          <div className="pointer-events-auto">
+            <select
+              defaultValue="Helen"
+              onChange={(e) => {
+                setAvatarLook(e.target.value);
+              }}
+            >
+              <option value={"Helen"}>Helen</option>
+              <option value={"Aisha"}>Aisha</option>
+              <option value={"Niraj"}>Niraj</option>
+              <option value={"Carter"}>Carter</option>
+            </select>
+          </div>
+
           <button
             onClick={() => {
               const body = document.querySelector("body");
