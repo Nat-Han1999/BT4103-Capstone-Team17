@@ -77,14 +77,17 @@ def generate_embeddings(training_data):
 cleaned_training_data = process_data(data)
 training_data = generate_embeddings(cleaned_training_data)
 
+# Function to escape special characters from passages to be provided as context
+def clean_text(passage):
+    return passage.replace("'", "").replace('"', "").replace("\n", " ")
+
 # Function to find the best passage based on embeddings
-def find_best_passage(query, training_data):
+def find_best_passage(query, training_data, top_n):
     query_embedding = genai.embed_content(model='models/text-embedding-004',
                                           content=query,
                                           task_type="retrieval_query")['embedding']
     
-    best_score = -float('inf')  # Initialize best score as negative infinity
-    best_passage = None  # Variable to hold the best passage text
+    scored_passages = []
 
     # Iterate through each document's embeddings
     for item in training_data:
@@ -92,39 +95,44 @@ def find_best_passage(query, training_data):
 
         # If the document has multiple embeddings (from splitting)
         if len(embeddings) > 1:
-            # Compute the dot product for each chunk and find the best chunk
+            # Compute the dot product for each chunk and store the score and text
             for embedding in embeddings:
                 score = np.dot(embedding, query_embedding).sum()
-                if score > best_score:
-                    best_score = score
-                    best_passage = item['texts']  # Return the whole document's text
+                scored_passages.append((score, item['texts']))
         else:
             # If it's a single embedding
-            score = np.dot(embeddings, query_embedding)
-            if score > best_score:
-                best_score = score
-                best_passage = item['texts']
+            score = np.dot(embeddings, query_embedding).sum()
+            scored_passages.append((score, item['texts']))
 
-    return best_passage
+    # Sort passages by score in descending order and return the top_n passages
+    top_passages = sorted(scored_passages, key=lambda x: x[0], reverse=True)[:top_n]
+
+    # Extract the text for the top passages
+    top_texts = [clean_text(passage[1]) for passage in top_passages]
+
+    return top_texts
 
 # Function to create prompt based on query and relevant passage
-def make_prompt(query, relevant_passage, convo_history):
-    escaped = relevant_passage.replace("'", "").replace('"', "").replace("\n", " ")
+def make_prompt(query, relevant_passages, convo_history):
+    passages_text = "\n\n".join([f"PASSAGE {i+1}: '{passage}'" for i, passage in enumerate(relevant_passages)])
+
     prompt = textwrap.dedent(f"""\
-    You are a helpful and informative bot that answers questions using text from the reference passage included below. \
+    You are a helpful and informative customer representative that answers questions using text from the three reference passages included below. \
     You may also need to refer to contextual clues from the conversation history provided when crafting your answer. \
     Do note that you are talking to a non-technical audience, so be sure to break down complicated concepts and \
     strike a friendly and conversational tone. Please be comprehensive and include all relevant background information.    
     Be sure to respond in complete sentences and break them into succinct paragraphs and bulletpoints for readability where appropriate.\
-    If the passage and previous conversation history is irrelevant to the answer, you may ignore it. \
+    If the passages and previous conversation history are irrelevant to the answer, you may ignore it. \
                              
     PREVIOUS CONVERSATION: '{convo_history}'                         
     QUESTION: '{query}'
-    PASSAGE: '{escaped}'
+    {passages_text}
 
     ANSWER:
     """)
     
+    # Debug - print the prompt to see formatting
+    #print(prompt)
     return prompt
 
 def send_message(request):
@@ -151,11 +159,11 @@ def send_message(request):
         # Retrieve previous prompts and responses (limit to last 5 for brevity)
         convo_history = ChatMessage.objects.filter(conversation_id=conversation_id).order_by('-id')[:5]
         
-         # Find the best passage based on embeddings
-        relevant_passage = find_best_passage(user_message, training_data)
+         # Find the 3 most relevant passages based on embeddings
+        relevant_passages = find_best_passage(user_message, training_data, 3)
 
         # Create the prompt using the relevant passage
-        prompt = make_prompt(user_message, relevant_passage, convo_history)
+        prompt = make_prompt(user_message, relevant_passages, convo_history)
 
         bot_response = model.generate_content(prompt)
         formatted_response = markdown.markdown(bot_response.text)
