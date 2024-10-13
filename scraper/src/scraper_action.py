@@ -18,7 +18,8 @@ from datetime import datetime, timedelta, timezone
 from scraper.backend.mongo_utils import insert_many_documents, update_one_document, insert_one_document
 from scraper.src.diff import render_diff
 from selenium.common.exceptions import TimeoutException, WebDriverException
-
+import concurrent
+from concurrent.futures import ThreadPoolExecutor
 
 logger = setup_logging()
 
@@ -352,28 +353,42 @@ def update_or_insert_document(collection_url_hashed, collection_scraped_data, ur
             insert_one_document(collection_scraped_data, newly_scraped_data)
             logger.info(f"Inserted {url} into scraped_data collection.")
 
+def fetch_and_process(url):
+    """
+    Fetch page content using Selenium, process the html content, and return the processed data.
+    """
+    logger.info(f"Fetching page content from {url} using Selenium...")
+    html_content = fetch_page_with_selenium(url)
+    if not html_content:
+        logger.info(f"No content scraped from {url}")
+        return None
+
+    data = parse_content(html_content, url)
+    text_hash = process_and_hash_text(data)
+    return url, text_hash, data
+
 def scrape_and_store_data(urls, collection_scraped_data, collection_url_hashed):
     """
     Fetch content for each URL, process it, and store or update in MongoDB.
     """
     
     all_data_selenium = []
-    
-    for url in urls:
-        logger.info(f"Fetching page content from {url} using Selenium...")
-        html_content = fetch_page_with_selenium(url)
-        if not html_content:
-            logger.info(f"No content scraped from {url}")
-        else:
-            data = parse_content(html_content, url)
-            logger.info(data)
-            logger.info("Data scraped")
-            text_hash = process_and_hash_text(data)
-            logger.info(text_hash)
-            # Update or insert the hash and metadata in MongoDB
-            update_or_insert_document(collection_url_hashed, collection_scraped_data, url, text_hash, data)
 
-            all_data_selenium.append(data)
+    with ThreadPoolExecutor() as executor: 
+        futures = {executor.submit(fetch_and_process, url): url for url in urls}
+        
+        for future in concurrent.futures.as_completed(futures):
+            result = future.result()
+            if result:
+                url, text_hash, data = result 
+                logger.info(f"Data scraped: {data}")
+                logger.info(f"Text hashed: {text_hash}")
+
+                # Update or insert the hash and metadata in MongoDB
+                update_or_insert_document(collection_url_hashed, collection_scraped_data, url, text_hash, data)
+                all_data_selenium.append(data)
+
+        all_data_selenium.append(data)
 
     # Check if there's any data to insert
     if not all_data_selenium:
