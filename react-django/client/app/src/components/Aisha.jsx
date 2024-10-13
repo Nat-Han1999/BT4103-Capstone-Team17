@@ -128,7 +128,7 @@ export function Aisha(props) {
     audio.onended = onMessagePlayed;
   }, [message]);
 
-  const { animations } = useGLTF("/models/Aisha_Animations.glb");
+  const { animations } = useGLTF("/animations/Aisha_Animations.glb");
 
   const group = useRef();
   const { actions, mixer } = useAnimations(animations, group);
@@ -372,4 +372,4 @@ export function Aisha(props) {
 }
 
 useGLTF.preload("/models/Aisha.glb");
-useGLTF.preload("/models/Aisha_Animations.glb");
+useGLTF.preload("/animations/Aisha_Animations.glb");

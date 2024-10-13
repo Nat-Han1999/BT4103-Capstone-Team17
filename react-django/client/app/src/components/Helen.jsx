@@ -128,7 +128,7 @@ export function Helen(props) {
     audio.onended = onMessagePlayed;
   }, [message]);
 
-  const { animations } = useGLTF("/models/Helen_Animations.glb");
+  const { animations } = useGLTF("/animations/Helen_Animations.glb");
 
   const group = useRef();
   const { actions, mixer } = useAnimations(animations, group);
@@ -372,4 +372,4 @@ export function Helen(props) {
 }
 
 useGLTF.preload("/models/Helen.glb");
-useGLTF.preload("/models/Helen_Animations.glb");
+useGLTF.preload("/animations/Helen_Animations.glb");

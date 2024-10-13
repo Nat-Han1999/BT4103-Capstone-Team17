@@ -128,7 +128,7 @@ export function Carter(props) {
     audio.onended = onMessagePlayed;
   }, [message]);
 
-  const { animations } = useGLTF("/models/Carter_Animations.glb");
+  const { animations } = useGLTF("/animations/Carter_Animations.glb");
 
   const group = useRef();
   const { actions, mixer } = useAnimations(animations, group);
@@ -372,4 +372,4 @@ export function Carter(props) {
 }
 
 useGLTF.preload("/models/Carter.glb");
-useGLTF.preload("/models/Carter_Animations.glb");
+useGLTF.preload("/animations/Carter_Animations.glb");

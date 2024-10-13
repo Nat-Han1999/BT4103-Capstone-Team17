@@ -128,7 +128,7 @@ export function Niraj(props) {
     audio.onended = onMessagePlayed;
   }, [message]);
 
-  const { animations } = useGLTF("/models/Niraj_Animations.glb");
+  const { animations } = useGLTF("/animations/Niraj_Animations.glb");
 
   const group = useRef();
   const { actions, mixer } = useAnimations(animations, group);
@@ -377,4 +377,4 @@ export function Niraj(props) {
 }
 
 useGLTF.preload("/models/Niraj.glb");
-useGLTF.preload("/models/Niraj_Animations.glb");
+useGLTF.preload("/animations/Niraj_Animations.glb");
