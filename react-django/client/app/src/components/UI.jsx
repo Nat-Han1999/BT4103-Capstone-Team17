@@ -1,9 +1,9 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import { useChat } from "../hooks/useChat";
 
 export function UI({ setAvatarLook, hidden, ...props }) {
   const input = useRef();
-  const { chat, loading, cameraZoomed, setCameraZoomed, message } = useChat();
+  const { chat, loading, message } = useChat();
 
   const sendMessage = () => {
     const text = input.current.value;
@@ -27,98 +27,46 @@ export function UI({ setAvatarLook, hidden, ...props }) {
           <p>BZA Capstone Project</p>
         </div>
         <div className="w-full flex flex-col items-end justify-center gap-4">
-          <button
-            onClick={() => setCameraZoomed(!cameraZoomed)}
-            className="pointer-events-auto bg-pink-500 hover:bg-pink-600 text-white p-4 rounded-md"
-          >
-            {cameraZoomed ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6"
+          <div className="bg-white bg-opacity-80 shadow-lg rounded-lg p-6 max-w-md">
+            <h2 className="text-l font-semibold mb-2 text-center">Settings</h2>
+            <hr className="border-gray-500 mb-4" />
+            <div className="pointer-events-auto mb-4">
+              <label className="block text-gray-700 mb-2 text-sm">
+                Background
+              </label>
+              <select
+                defaultValue="avatar_bg"
+                onChange={(e) => {
+                  const body = document.querySelector("body");
+                  body.classList = "";
+                  body.classList.add(e.target.value);
+                }}
+                className="bg-blue-500 hover:bg-blue-600 text-white text-sm p-2 w-full rounded-md"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM13.5 10.5h-6"
-                />
-              </svg>
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-6 h-6"
+                <option value="avatar_bg">Default</option>
+                <option value="avatar_bg2">Seaside</option>
+                <option value="avatar_bg3">Desert</option>
+                <option value="avatar_bg4">Space</option>
+              </select>
+            </div>
+
+            <div className="pointer-events-auto mb-4">
+              <label className="block text-gray-700 text-sm mb-2">Avatar</label>
+              <select
+                defaultValue="Helen"
+                onChange={(e) => {
+                  setAvatarLook(e.target.value);
+                  setAvatarName(e.target.value); // Set avatar name locally in this file so that data can be passed to Django backend for correct voice to be generated
+                }}
+                className="bg-blue-500 hover:bg-blue-600 text-white text-sm p-2 w-full rounded-md"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607zM10.5 7.5v6m3-3h-6"
-                />
-              </svg>
-            )}
-          </button>
-          <div className="pointer-events-auto">
-            <select
-              defaultValue="avatar_bg"
-              onChange={(e) => {
-                const body = document.querySelector("body");
-                body.classList = "";
-                body.classList.add(e.target.value);
-              }}
-            >
-              <option value={"avatar_bg"}>Default</option>
-              <option value={"avatar_bg2"}>Seaside</option>
-              <option value={"avatar_bg3"}>Desert</option>
-              <option value={"avatar_bg4"}>Space</option>
-            </select>
+                <option value={"Helen"}>Helen</option>
+                <option value={"Aisha"}>Aisha</option>
+                <option value={"Niraj"}>Niraj</option>
+                <option value={"Carter"}>Carter</option>
+              </select>
+            </div>
           </div>
-
-          <div className="pointer-events-auto">
-            <select
-              defaultValue="Helen"
-              onChange={(e) => {
-                setAvatarLook(e.target.value);
-                setAvatarName(e.target.value); // Set avatar name locally in this file so that data can be passed to Django backend for correct voice to be generated
-              }}
-            >
-              <option value={"Helen"}>Helen</option>
-              <option value={"Aisha"}>Aisha</option>
-              <option value={"Niraj"}>Niraj</option>
-              <option value={"Carter"}>Carter</option>
-            </select>
-          </div>
-
-          <button
-            onClick={() => {
-              const body = document.querySelector("body");
-              if (body.classList.contains("greenScreen")) {
-                body.classList.remove("greenScreen");
-              } else {
-                body.classList.add("greenScreen");
-              }
-            }}
-            className="pointer-events-auto bg-pink-500 hover:bg-pink-600 text-white p-4 rounded-md"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth={1.5}
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              <path
-                strokeLinecap="round"
-                d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"
-              />
-            </svg>
-          </button>
         </div>
         <div className="flex items-center gap-2 pointer-events-auto max-w-screen-sm w-full mx-auto">
           <input
@@ -134,7 +82,7 @@ export function UI({ setAvatarLook, hidden, ...props }) {
           <button
             disabled={loading || message}
             onClick={sendMessage}
-            className={`bg-pink-500 hover:bg-pink-600 text-white p-4 px-10 font-semibold uppercase rounded-md ${
+            className={`bg-blue-500 hover:bg-blue-600 text-white p-4 px-10 font-semibold uppercase rounded-md ${
               loading || message ? "cursor-not-allowed opacity-30" : ""
             }`}
           >

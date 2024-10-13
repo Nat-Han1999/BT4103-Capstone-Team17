@@ -50,7 +50,7 @@ async def chat_output(request):
         return JsonResponse(response)
     else: 
         prompt=user_message
-        genai.configure(api_key=GEMINI_API_KEY)
+        genai.configure(api_key="AIzaSyAQtuIGGkpiQwGscgH0BoffZZHkQc9xFQg")
         system_instruction = """"
             You are a professional assistant.
             You will always reply with a JSON array of messages. With a maximum of 3 messages.
@@ -102,7 +102,7 @@ def convert_wav_base64(file_path):
     return base64.b64encode(open(file_path,"rb").read()).decode('utf-8')
 
 async def generate_mp3(input_text, file_path, avatar_name):
-    client = ElevenLabs(api_key=ELEVEN_LABS_API_KEY)
+    client = ElevenLabs(api_key="sk_8855cb53a1391e7fbf279195b69737b4d3fbb486946468cf")
     name_to_voice_id_mappings = {
     "Helen":"hmD4OXeLrQIVXXUdliAG",
     "Aisha":"pMsXgVXv3BLzUgSXRplE",

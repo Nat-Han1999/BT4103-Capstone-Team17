@@ -1,9 +1,9 @@
 {
   "metadata": {
     "soundFile": "/Users/shanicesng/BT4103-Capstone-Team17/react-django/server/newproject/../../client/app/audios/message_2.wav",
-    "duration": 0.26
+    "duration": 0.36
   },
   "mouthCues": [
-    { "start": 0.00, "end": 0.26, "value": "X" }
+    { "start": 0.00, "end": 0.36, "value": "X" }
   ]
 }

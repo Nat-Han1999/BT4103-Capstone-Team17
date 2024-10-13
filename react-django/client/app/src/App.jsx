@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Loader />
-      <Leva />
+      <Leva hidden/>
       <UI setAvatarLook = {setAvatarLook}/>
       <Canvas camera={{ position: [0, 0, 1], fov: 50 }}>
         <Experience avatarLook = {avatarLook}/>
