@@ -3,14 +3,14 @@ import { createContext, useContext, useEffect, useState } from "react";
 const ChatContext = createContext(); 
 
 export const ChatProvider = ({ children }) => {
-  const chat = async (message) => {
+  const chat = async (message, avatarName) => {
     setLoading(true);
     const data = await fetch("http://127.0.0.1:8000/api/chat/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ message }),
+      body: JSON.stringify({ message, avatarName }),
     });
     const resp = await data.json().then((json) => {
       return json.messages;

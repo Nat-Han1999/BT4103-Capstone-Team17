@@ -1,20 +1,23 @@
 import { useRef, useState, useEffect } from "react";
 import { useChat } from "../hooks/useChat";
 
-export function UI ({ setAvatarLook, hidden, ...props }) {
+export function UI({ setAvatarLook, hidden, ...props }) {
   const input = useRef();
   const { chat, loading, cameraZoomed, setCameraZoomed, message } = useChat();
 
-  const sendMessage = () => { 
+  const sendMessage = () => {
     const text = input.current.value;
     if (!loading && !message) {
-      chat(text);
+      chat(text, avatarName);
       input.current.value = "";
     }
   };
   if (hidden) {
     return null;
   }
+
+  // Hook that stores avatar name that is being selected
+  const [avatarName, setAvatarName] = useState("Helen");
 
   return (
     <>
@@ -81,6 +84,7 @@ export function UI ({ setAvatarLook, hidden, ...props }) {
               defaultValue="Helen"
               onChange={(e) => {
                 setAvatarLook(e.target.value);
+                setAvatarName(e.target.value); // Set avatar name locally in this file so that data can be passed to Django backend for correct voice to be generated
               }}
             >
               <option value={"Helen"}>Helen</option>
@@ -140,4 +144,4 @@ export function UI ({ setAvatarLook, hidden, ...props }) {
       </div>
     </>
   );
-};
+}

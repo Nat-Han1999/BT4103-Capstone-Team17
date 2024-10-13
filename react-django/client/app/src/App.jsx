@@ -6,11 +6,8 @@ import { UI } from "./components/UI";
 import {  useState, useEffect } from "react";
 
 function App() {
-  // Hooks for avatar change
+  // Hook for avatar change
   const [avatarLook, setAvatarLook] = useState("Helen");
-  // useEffect(() => {
-  //   setAvatarLook("Helen");
-  // }, []);
 
   return (
     <>

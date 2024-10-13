@@ -44,7 +44,7 @@ export function Experience({ avatarLook }) {
   // Conditional for avatar output
   let avatarOutput;
   let xPosition;
-  let yPosition; // Set height of loading dot to be different for male and female, since males are taller 
+  let yPosition; // Set height of loading dot to be different for male and female, since males are taller
 
   if (avatarLook == "Helen") {
     avatarOutput = <Helen />;

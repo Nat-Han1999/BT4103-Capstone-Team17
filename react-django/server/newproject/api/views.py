@@ -23,13 +23,14 @@ def hello_world(request):
 
 @api_view(['POST'])
 async def chat_output(request):
+    avatar_selected = request.data.get('avatarName')
     user_message = request.data.get('message')
     if not user_message: 
         lipsync_intro_0 = await read_json_transcript("../../client/app/audios/intro_0.json")
         lipsync_intro_1 = await read_json_transcript("../../client/app/audios/intro_1.json")
         
         response = {
-            "messages": [
+            "messages": [ 
                 {
                     "text": "Hi, I'm your professional AI assistant",
                     "audio": convert_wav_base64("../../client/app/audios/intro_0.wav"),
@@ -79,14 +80,14 @@ async def chat_output(request):
             current_dict = model_response[index]
             message_text = current_dict["text"]
             file_name = "../../client/app/audios/message_{}.mp3".format(index)
-            await generate_mp3(message_text, file_name)
+            await generate_mp3(message_text, file_name, avatar_selected)
             await generate_lip_sync(index)
             current_dict["audio"] = convert_wav_base64(file_name)
             current_dict["lipsync"] = await read_json_transcript("../../client/app/audios/message_{}.json".format(index))
         # convert model_response (list of nested dictionaries) into JSON string 
         model_response = {"messages": model_response}
         return JsonResponse(model_response)
-                    
+              
         
 async def read_json_transcript(file_path):
     try:
@@ -100,9 +101,15 @@ async def read_json_transcript(file_path):
 def convert_wav_base64(file_path):
     return base64.b64encode(open(file_path,"rb").read()).decode('utf-8')
 
-async def generate_mp3(input_text, file_path):
+async def generate_mp3(input_text, file_path, avatar_name):
     client = ElevenLabs(api_key=ELEVEN_LABS_API_KEY)
-    output_audio = client.generate(text=input_text, voice=Voice(voice_id="hmD4OXeLrQIVXXUdliAG"))
+    name_to_voice_id_mappings = {
+    "Helen":"hmD4OXeLrQIVXXUdliAG",
+    "Aisha":"pMsXgVXv3BLzUgSXRplE",
+    "Niraj":"zgqefOY5FPQ3bB7OZTVR", 
+    "Carter":"iP95p4xoKVk53GoZ742B" 
+    }
+    output_audio = client.generate(text=input_text, voice=Voice(voice_id=name_to_voice_id_mappings[avatar_name]))
     save(output_audio, file_path)
 
 async def generate_lip_sync(message_index):
@@ -110,3 +117,5 @@ async def generate_lip_sync(message_index):
     os.system("ffmpeg -y -i ../../client/app/audios/message_{}.mp3 ../../client/app/audios/message_{}.wav".format(message_index, message_index))
     # generate json file of lip movements using rhubarb lip sync
     os.system("../../client/app/rhubarb/rhubarb -f json -o ../../client/app/audios/message_{}.json ../../client/app/audios/message_{}.wav -r phonetic".format(message_index, message_index))
+    
+    
