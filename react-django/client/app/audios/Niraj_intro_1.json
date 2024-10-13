@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "soundFile": "/Users/shanicesng/BT4103-Capstone-Team17/react-django/client/app/rhubarb/../audios/Niraj_intro_1.wav",
+    "duration": 2.69
+  },
+  "mouthCues": [
+    { "start": 0.00, "end": 0.07, "value": "X" },
+    { "start": 0.07, "end": 0.34, "value": "B" },
+    { "start": 0.34, "end": 0.48, "value": "C" },
+    { "start": 0.48, "end": 0.62, "value": "B" },
+    { "start": 0.62, "end": 0.97, "value": "F" },
+    { "start": 0.97, "end": 1.18, "value": "B" },
+    { "start": 1.18, "end": 1.32, "value": "F" },
+    { "start": 1.32, "end": 1.42, "value": "A" },
+    { "start": 1.42, "end": 1.47, "value": "B" },
+    { "start": 1.47, "end": 1.52, "value": "C" },
+    { "start": 1.52, "end": 2.08, "value": "B" },
+    { "start": 2.08, "end": 2.36, "value": "F" },
+    { "start": 2.36, "end": 2.43, "value": "B" },
+    { "start": 2.43, "end": 2.69, "value": "X" }
+  ]
+}

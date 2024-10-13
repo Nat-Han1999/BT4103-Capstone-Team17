@@ -1,0 +1,24 @@
+{
+  "metadata": {
+    "soundFile": "/Users/shanicesng/BT4103-Capstone-Team17/react-django/client/app/rhubarb/../audios/Aisha_intro_1.wav",
+    "duration": 3.00
+  },
+  "mouthCues": [
+    { "start": 0.00, "end": 0.05, "value": "X" },
+    { "start": 0.05, "end": 0.45, "value": "B" },
+    { "start": 0.45, "end": 0.52, "value": "C" },
+    { "start": 0.52, "end": 0.73, "value": "B" },
+    { "start": 0.73, "end": 0.80, "value": "F" },
+    { "start": 0.80, "end": 0.94, "value": "B" },
+    { "start": 0.94, "end": 1.01, "value": "F" },
+    { "start": 1.01, "end": 1.08, "value": "C" },
+    { "start": 1.08, "end": 1.50, "value": "B" },
+    { "start": 1.50, "end": 1.57, "value": "C" },
+    { "start": 1.57, "end": 1.71, "value": "B" },
+    { "start": 1.71, "end": 1.78, "value": "C" },
+    { "start": 1.78, "end": 2.48, "value": "B" },
+    { "start": 2.48, "end": 2.69, "value": "F" },
+    { "start": 2.69, "end": 2.83, "value": "B" },
+    { "start": 2.83, "end": 3.00, "value": "X" }
+  ]
+}

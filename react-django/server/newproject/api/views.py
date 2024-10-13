@@ -26,21 +26,21 @@ async def chat_output(request):
     avatar_selected = request.data.get('avatarName')
     user_message = request.data.get('message')
     if not user_message: 
-        lipsync_intro_0 = await read_json_transcript("../../client/app/audios/intro_0.json")
-        lipsync_intro_1 = await read_json_transcript("../../client/app/audios/intro_1.json")
+        lipsync_intro_0 = await read_json_transcript("../../client/app/audios/{}_intro_0.json".format(avatar_selected))
+        lipsync_intro_1 = await read_json_transcript("../../client/app/audios/{}_intro_1.json".format(avatar_selected))
         
         response = {
             "messages": [ 
                 {
-                    "text": "Hi, I'm your professional AI assistant",
-                    "audio": convert_wav_base64("../../client/app/audios/intro_0.wav"),
+                    "text": "Hi, I'm {}, your professional AI assistant".format(avatar_selected),
+                    "audio": convert_wav_base64("../../client/app/audios/{}_intro_0.wav".format(avatar_selected)),
                     "lipsync": lipsync_intro_0,
                     "facialExpression": "smile",
                     "animation": "Bow",
                     },
                 {
                     "text": "Please enter your question so that I can assist you",
-                    "audio": convert_wav_base64("../../client/app/audios/intro_1.wav"),
+                    "audio": convert_wav_base64("../../client/app/audios/{}_intro_1.wav".format(avatar_selected)),
                     "lipsync": lipsync_intro_1,
                     "facialExpression": "default",
                     "animation": "Talking0"
