@@ -1,102 +1,109 @@
 /* src/styles/ChatContainer.css */
 
 .chat-container {
-  width: 90%;
-  max-width: 600px;
-  margin: 50px auto;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   flex-direction: column;
-  height: 80vh;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #343541;
+}
+
+.model-selector {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-bottom: 1px solid #ddd; /* Separate the dropdown visually */
+}
+
+.model-selector label {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.model-selector select {
+  padding: 5px;
+  font-size: 16px;
 }
 
 .message-list {
   flex-grow: 1;
   overflow-y: auto;
   padding: 20px;
-  background-color: #f9f9f9;
+  background-color: #444;
+}
+
+.typing-indicator {
+  font-style: italic;
+  color: #888;
+  margin-bottom: 10px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+.premade-prompts {
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #444;
+}
+
+.premade-prompts h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.prompt-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.prompt-button {
+  padding: 10px 15px;
+  background-color: #0b93f6;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 .input-area {
-  display: flex;
-  align-items: center;
   padding: 10px;
-  background-color: #fff;
+  background-color: #444654;
 }
-  
-  .input {
-    flex-grow: 1;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    margin-right: 10px;
-    outline: none;
-    font-size: 16px;
-  }
-  
-  .send-button {
-    padding: 15px 20px;
-    background-color: #0b93f6;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  .clear-button {
-    padding: 10px 15px;
-    background-color: #f44336;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 14px;
-    margin-top: 10px;
-  }
-  .typing-indicator {
-    font-style: italic;
-    color: #888;
-    margin-bottom: 10px;
-    text-align: left;
-    padding-left: 10px;
-  }
-  .model-selector {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .model-selector label {
-    margin-right: 10px;
-  }
-  
-  .model-selector select {
-    padding: 5px;
-    font-size: 16px;
-  }
-  .premade-prompts {
-    margin-bottom: 20px;
-  }
-  
-  .premade-prompts h4 {
-    margin-bottom: 10px;
-  }
-  
-  .prompt-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  
-  .prompt-button {
-    padding: 10px 15px;
-    background-color: #0b93f6;
-    color: white;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-size: 14px;
-  }
+
+.input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+  background-color: #40414F;
+  color: #fff;
+  resize: none;
+}
+
+.send-button {
+  padding: 15px 20px;
+  background-color: #0b93f6;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.clear-button {
+  padding: 10px 15px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  align-self: center;
+}

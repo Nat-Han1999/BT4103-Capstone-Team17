@@ -7,7 +7,7 @@ function MessageItem({ message }) {
 
   return (
     <div className={`message-item ${messageClass}`}>
-      {message.text}
+      <div className="message-content">{message.text}</div>
     </div>
   );
 }

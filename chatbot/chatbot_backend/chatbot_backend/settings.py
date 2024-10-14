@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
-    'api',
 ]
 
 MIDDLEWARE = [
@@ -77,12 +76,12 @@ WSGI_APPLICATION = 'chatbot_backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 
 
 # Password validation
@@ -127,3 +126,19 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOW_ALL_ORIGINS = True
+
+# settings.py
+
+import mongoengine
+from decouple import config  # For environment variables
+
+# Connect to MongoDB
+MONGODB_URI = config('MONGODB_URI')
+MONGODB_NAME = config('MONGODB_NAME')
+
+mongoengine.connect(
+    alias='default',
+    db=MONGODB_NAME,
+    host=MONGODB_URI,
+    ssl=True,
+)
