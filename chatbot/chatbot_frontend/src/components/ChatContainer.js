@@ -6,15 +6,16 @@ import '../styles/ChatContainer.css';
 
 function ChatContainer() {
 
-  const [selectedModel, setSelectedModel] = useState('distilgpt2');
+  const [selectedModel, setSelectedModel] = useState('gemni');
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
   const [conversationId, setConversationId] = useState(localStorage.getItem('conversationId') || null);
   const [isTyping, setIsTyping] = useState(false);
   const inputRef = useRef(null);
   const premadePrompts = [
-    "Summarise the website",
-    "Tell me more",
+    "Summarise this website",
+    "Can you guide me through the steps to file a claim or request assistance?",
+    "What services or options are available on this website?"
   ];
 
 
@@ -126,8 +127,9 @@ function ChatContainer() {
 
   return (
     <div className="chat-container">
-      {/* Model Selection Dropdown */}
-          <div className="model-selector">
+      
+      {/* Model Selection Section */}
+      <div className="model-selector">
         <label htmlFor="model-select">Choose a model:</label>
         <select
           id="model-select"
@@ -140,27 +142,31 @@ function ChatContainer() {
         </select>
       </div>
 
-      {/* Add the typing indicator here */}
-      {isTyping && <div className="typing-indicator">Chatbot is typing...</div>}
-
+  
       <div className="message-list">
         {messages.map((msg, idx) => (
           <MessageItem key={idx} message={msg} />
         ))}
+        {isTyping && <div className="typing-indicator">Assistant is typing...</div>}
       </div>
-      
-      {/* Premade Prompts */}
-            <div className="premade-prompts">
-        <h4>Try one of these prompts:</h4>
+
+
+      {/* Premade Prompts Section */}
+      <div className="premade-prompts">
         <div className="prompt-buttons">
           {premadePrompts.map((prompt, idx) => (
-            <button key={idx} onClick={() => handlePromptClick(prompt)} className="prompt-button">
+            <button 
+              key={idx} 
+              onClick={() => handlePromptClick(prompt)} 
+              className="prompt-button"
+            >
               {prompt}
             </button>
           ))}
         </div>
       </div>
-
+  
+      {/* Input Area Section */}
       <div className="input-area">
         <input
           type="text"
@@ -176,9 +182,12 @@ function ChatContainer() {
           Send
         </button>
       </div>
+  
+      {/* Clear Conversation Button */}
       <button onClick={clearConversation} className="clear-button">
         Clear Conversation
       </button>
+      
     </div>
   );
 }
