@@ -21,39 +21,111 @@ from selenium.common.exceptions import TimeoutException, WebDriverException
 import concurrent
 from concurrent.futures import ThreadPoolExecutor
 
+import aiohttp
+import asyncio
+import logging
+import hashlib
+from bs4 import BeautifulSoup
+from urllib.parse import urljoin, urlparse
+import urllib.robotparser
+import heapq
+from scraper.backend.mongo_utils import insert_many_documents, update_one_document, insert_one_document
+from selenium import webdriver
+from selenium.common.exceptions import TimeoutException, WebDriverException
+from datetime import datetime, timedelta, timezone
+import concurrent
+from concurrent.futures import ThreadPoolExecutor
+import requests
+from io import BytesIO
+from PIL import Image
+import pytesseract
+import pdfplumber
+
 logger = setup_logging()
 
-# TODO: Should be generalized with a crawler
+# Set up a robots.txt parser
+def can_fetch(url):
+    rp = urllib.robotparser.RobotFileParser()
+    parsed_url = urlparse(url)
+    robots_url = f"{parsed_url.scheme}://{parsed_url.netloc}/robots.txt"
+    rp.set_url(robots_url)
+    try:
+        rp.read()
+        return rp.can_fetch("*", url)
+    except:
+        return True  # If there's an issue with robots.txt, allow by default
 
-# def get_urls(url, menu_class = None): 
-#     headers = {
-#         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
-#         'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
-#     }
-#     response = requests.get(url, headers = headers)
+def normalize_url(url):
+    parsed_url = urlparse(url)
+    return parsed_url._replace(fragment="").geturl()
 
-#     hrefs = []
+# Fetch page asynchronously
+async def fetch_page_for_crawler(url, session):
+    headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    }
+    try:
+        async with session.get(url, headers=headers, timeout=10) as response:
+            response.raise_for_status()
+            return await response.text()
+    except Exception as e:
+        logger.error(f"Error fetching {url}: {str(e)}")
+        return None
 
-#     if response.status_code != 200:
-#         logger.error(f"Error {response.status_code}: Unable to access URL {url}")
+def is_valid_webpage(url, domain):
+    # Check for valid domain and valid URL format
+    parsed_url = urlparse(url)
+    if parsed_url.netloc != domain:
+        return False
     
-#     soup = BeautifulSoup(response.content, "html.parser")
+    # Skip non-webpage files (e.g., .pdf, .jpg, .png)
+    file_extensions = ['.pdf', '.jpg', '.jpeg', '.png', '.gif', '.doc', '.docx']
+    return not any(url.lower().endswith(ext) for ext in file_extensions)
 
-#     logger.info("Finding all anchor tags within webpage")
-#     # find all anchor tags within the specified menu class
-#     if menu_class:
-#         main_menu = soup.find(class_=menu_class)
-#         if main_menu:
-#             links = main_menu.find_all("a", href=True)  
-#     else: # find all anchor tags within the specified menu class if menu class not specified
-#         links = soup.find_all("a", href=True) 
+def hash_content(content):
+    """ Create a hash for the page content to avoid duplicates """
+    return hashlib.md5(content.encode()).hexdigest()
 
-#     for link in links: 
-#         href = link['href']
-#         if href.startswith("/index") and href not in hrefs:
-#             hrefs.append(url + href)
+async def get_all_links(base_url, max_depth=2, delay=1):
+    visited_links = set()
+    content_hashes = set()
+    priority_queue = []
+    heapq.heappush(priority_queue, (0, base_url))  # (priority, url)
+    base_domain = urlparse(base_url).netloc
 
-#     return hrefs
+    async with aiohttp.ClientSession() as session:
+        while priority_queue:
+            depth, current_url = heapq.heappop(priority_queue)
+            normalized_url = normalize_url(current_url)
+
+            if normalized_url in visited_links or depth > max_depth or not can_fetch(current_url):
+                continue
+
+            page_content = await fetch_page_for_crawler(current_url, session)
+            print(f"Fetching: {current_url}")
+            if page_content:
+                visited_links.add(normalized_url)
+
+                # Avoid duplicate content
+                content_hash = hash_content(page_content)
+                if content_hash in content_hashes:
+                    continue
+                content_hashes.add(content_hash)
+
+                soup = BeautifulSoup(page_content, 'html.parser')
+
+                # Extract all valid webpage links
+                for a_tag in soup.find_all('a', href=True):
+                    full_url = urljoin(base_url, a_tag['href'])
+                    normalized_full_url = normalize_url(full_url)
+                    if normalized_full_url not in visited_links and is_valid_webpage(normalized_full_url, base_domain):
+                        heapq.heappush(priority_queue, (depth + 1, normalized_full_url))  # Increase depth by 1
+            
+            # Respect politeness, add delay
+            await asyncio.sleep(delay)
+
+    return visited_links
 
 def fetch_page(url):
     headers = {
