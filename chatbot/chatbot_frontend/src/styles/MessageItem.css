@@ -29,3 +29,34 @@
   background-color: #444654;
   color: #fff;
 }
+/* Feedback Buttons */
+.feedback-buttons {
+  display: flex;
+  margin-top: 5px;
+}
+
+.feedback-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  margin-right: 10px;
+  padding: 5px;
+}
+
+.feedback-button:hover {
+  color: #007bff; /* Change color on hover */
+}
+
+.feedback-button.like-button:hover {
+  color: #28a745; /* Green for like */
+}
+
+.feedback-button.dislike-button:hover {
+  color: #dc3545; /* Red for dislike */
+}
+.feedback-thanks {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #555;
+}

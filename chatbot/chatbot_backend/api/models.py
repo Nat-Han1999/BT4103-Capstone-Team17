@@ -1,4 +1,5 @@
 # api/models.py
+# saves to SQLite3, can remove file
 
 # from django.db import models
 # import uuid
