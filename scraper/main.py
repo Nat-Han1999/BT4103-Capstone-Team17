@@ -31,7 +31,7 @@ async def main():
         max_depth = 2  # Set the max depth limit here
 
         # Fetch URLs asynchronously
-        urls = await get_all_links(base_url, 'scraper/scraped_data/config.json', max_depth, delay=1) 
+        urls = await get_all_links(base_url, 'scraper/config.json', max_depth, delay=1) 
 
         # MongoDB setup
         collection_scraped_data = get_database("shrama_vasana_fund", "scraped_data", username, password, ca_file)

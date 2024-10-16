@@ -220,8 +220,22 @@ def fetch_page_with_selenium(url):
 
 #     return soup
 
-
 def parse_content(html, url):
+    # tree = fromstring(html)
+    # ignore_xpaths = [
+    #     "//div[contains(@class, 'twobannersLg')]", 
+    #     "//*[@id='mm-0']/div[1]/div[8]",
+    #     "//nav[contains(@class, 'menu')]", 
+    #     "//div[contains(@class, 'mm-menu mm-offcanvas')]", 
+    #     "//div[contains(@class, 'breadcrumb')]", 
+    #     "//div[contains(@class, 'foot-1col commonFoot')]"
+    # ]
+    # tree = remove_elements_by_xpath(tree, ignore_xpaths)
+
+    # modified_html = tostring(tree, encoding='unicode') # convert tree back to HTML
+
+    # soup = BeautifulSoup(modified_html, 'lxml') # parse modified html with BeautifulSoup
+
     soup = BeautifulSoup(html, 'html.parser')
 
     # Extract the page title
@@ -294,8 +308,8 @@ def parse_content(html, url):
         "images": images,
         "pdf_links": pdf_links,
         "pdf_extracted": pdf_extracted,
-        "image_extracted": image_extracted
-        # "scraped_at": scraped_time
+        "image_extracted": image_extracted,
+        "scraped_at": scraped_time
     }
     return data
 
@@ -470,12 +484,12 @@ def scrape_and_store_data(urls, collection_scraped_data, collection_url_hashed):
                 logger.info(f"Text hashed: {text_hash}")
 
                 # Update or insert the hash and metadata in MongoDB
-                # update_or_insert_document(collection_url_hashed, collection_scraped_data, url, text_hash, data)
+                update_or_insert_document(collection_url_hashed, collection_scraped_data, url, text_hash, data)
                 
 
                 all_data_selenium.append(data)
 
-        save_to_json(all_data_selenium, 'scraper/scraped_data/scraped_data.json')
+        save_to_json(all_data_selenium, 'scraper/scraped_data/scraped_data.json') # do not remove, thanks 
 
     # Check if there's any data to insert
     if not all_data_selenium:
