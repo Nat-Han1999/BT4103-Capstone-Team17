@@ -9,13 +9,14 @@ import pytesseract
 
 from bs4 import BeautifulSoup
 from scraper.src.processing import remove_duplicates, process_texts, process_extracted_texts
-from scraper.src.utils.scraper_utils import setup_logging, generate_hash
+from scraper.src.utils.scraper_utils import setup_logging, generate_hash, get_website_conditions, load_json_file
 from selenium import webdriver
 from PIL import Image
 from io import BytesIO
 from urllib.request import Request, urlopen
 from datetime import datetime, timedelta, timezone
 from scraper.backend.mongo_utils import insert_many_documents, update_one_document, insert_one_document
+from scraper.src.utils.scraper_utils import save_to_json
 from scraper.src.diff import render_diff
 from selenium.common.exceptions import TimeoutException, WebDriverException
 import concurrent
@@ -40,6 +41,9 @@ from io import BytesIO
 from PIL import Image
 import pytesseract
 import pdfplumber
+
+from lxml import html, etree
+from lxml.html import fromstring, tostring
 
 logger = setup_logging()
 
@@ -87,7 +91,12 @@ def hash_content(content):
     """ Create a hash for the page content to avoid duplicates """
     return hashlib.md5(content.encode()).hexdigest()
 
-async def get_all_links(base_url, max_depth=2, delay=1):
+async def get_all_links(base_url, config_file, max_depth=2, delay=1):
+
+    # load config and get conditions for website (if any)
+    config = load_json_file(config_file)
+    conditions = get_website_conditions(base_url, config)
+
     visited_links = set()
     content_hashes = set()
     priority_queue = []
@@ -119,9 +128,17 @@ async def get_all_links(base_url, max_depth=2, delay=1):
                 for a_tag in soup.find_all('a', href=True):
                     full_url = urljoin(base_url, a_tag['href'])
                     normalized_full_url = normalize_url(full_url)
-                    if normalized_full_url not in visited_links and is_valid_webpage(normalized_full_url, base_domain):
-                        heapq.heappush(priority_queue, (depth + 1, normalized_full_url))  # Increase depth by 1
-            
+
+                    if conditions: 
+                        filter_url = conditions.get('filter_url', []) 
+
+                        # check if all patterns present in url, skip all urls that not match the url patterns
+                        if not all(pattern in normalized_full_url for pattern in filter_url):
+                                continue
+                    
+                        if normalized_full_url not in visited_links and is_valid_webpage(normalized_full_url, base_domain):
+                            heapq.heappush(priority_queue, (depth + 1, normalized_full_url))  # Increase depth by 1
+
             # Respect politeness, add delay
             await asyncio.sleep(delay)
 
@@ -203,16 +220,12 @@ def fetch_page_with_selenium(url):
 
 #     return soup
 
+
 def parse_content(html, url):
     soup = BeautifulSoup(html, 'html.parser')
 
-    # TODO: Should not use own pre-defined classes
-    # ignore_classes = ["twobannersLg", "nav menu", "mm-menu mm-offcanvas", "breadcrumb", "foot-1col commonFoot"] # lotteries, navBar, footer
-    # footers = soup.find_all('footer') # ignore footers
-    # soup = remove_elements_by_classes(soup, ignore_classes, footers)
-
     # Extract the page title
-    page_title = soup.title.text if soup.title else "No title found"
+    page_title = soup.title.text.lower() if soup.title else "No title found"
     logger.info("Page Title: " + page_title)
 
     # Extract text from paragraphs, divs, and spans
@@ -281,8 +294,8 @@ def parse_content(html, url):
         "images": images,
         "pdf_links": pdf_links,
         "pdf_extracted": pdf_extracted,
-        "image_extracted": image_extracted,
-        "scraped_at": scraped_time
+        "image_extracted": image_extracted
+        # "scraped_at": scraped_time
     }
     return data
 
@@ -457,10 +470,12 @@ def scrape_and_store_data(urls, collection_scraped_data, collection_url_hashed):
                 logger.info(f"Text hashed: {text_hash}")
 
                 # Update or insert the hash and metadata in MongoDB
-                update_or_insert_document(collection_url_hashed, collection_scraped_data, url, text_hash, data)
+                # update_or_insert_document(collection_url_hashed, collection_scraped_data, url, text_hash, data)
+                
+
                 all_data_selenium.append(data)
 
-        all_data_selenium.append(data)
+        save_to_json(all_data_selenium, 'scraper/scraped_data/scraped_data.json')
 
     # Check if there's any data to insert
     if not all_data_selenium:
