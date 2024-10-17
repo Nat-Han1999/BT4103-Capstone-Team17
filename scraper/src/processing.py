@@ -69,3 +69,5 @@ def process_extracted_texts(text_dictionary):
                 result += text
 
     return result
+
+

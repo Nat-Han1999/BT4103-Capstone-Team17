@@ -22,6 +22,13 @@ def get_website_conditions(base_url, config):
             return website['conditions']
     return None
 
+def get_ignore_xpaths(base_url, config):
+    for website in config['websites']:
+        if base_url == website['base_url']:
+            return website['conditions']['ignore_xpaths']
+        
+    return None
+
 def load_json_file(filename): 
     with open(filename, 'r') as f:
         return json.load(f)
