@@ -20,6 +20,7 @@ body {
   background-position:center center;   
 }
 
+
 body.avatar_bg {
   margin: 0;
   background-image: url('./backgrounds/avatar_bg.jpg');

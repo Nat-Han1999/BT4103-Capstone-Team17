@@ -1,0 +1,16 @@
+.avatar-pane {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 1rem;
+  background-image: url("../backgrounds/avatar_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media (min-width: 1000px) { 
+    .custom-div {
+      width: 65%; 
+      margin-bottom: 0; 
+    }
+  }
