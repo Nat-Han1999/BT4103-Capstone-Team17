@@ -20,9 +20,12 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path
-from api.views import generate_response
+from api.views import generate_response, submit_feedback, get_conversation
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('generate/', generate_response, name='generate'),
+    path('feedback/', submit_feedback, name='submit_feedback'),
+    path('conversation/<uuid:conversation_id>/', get_conversation, name='get_conversation'),
+
 ]

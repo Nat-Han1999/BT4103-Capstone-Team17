@@ -1,0 +1,18 @@
+{
+    "websites": [
+        {
+            "base_url": "https://www.svf.gov.lk/index.php?lang=en",
+            "conditions": {
+                "filter_url": ["/index", "lang=en"],
+                "title_text_to_remove": ["shrama vasana fund"],
+                "ignore_xpaths" : [
+                    "//*[@id='mm-0']/div[1]/div[8]", 
+                    "//*[@id='menumob']", 
+                    "//*[@id='header']/div/div[2]/div/div",
+                    "//*[@id='mm-0']/div[5]", 
+                    "//footer" 
+                ]
+            }
+        }
+    ]
+}

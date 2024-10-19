@@ -35,8 +35,8 @@ def process_texts(text_list):
         word = re.sub(r'&', 'and', word)  
 
         # remove special characters from text (this also removes Sinhala language)
-        # keep '+', '.', '?' and '@' 
-        word = re.sub(r'[^A-Za-z0-9\s@+.?]', '', word)
+        # keep '+', '.', '?', '!' and '@' to improve contextual understanding
+        word = re.sub(r'[^A-Za-z0-9\s@+.?!]', '', word)
 
         # replace \n with space
         word = re.sub(r'\n+', ' ', word) 
@@ -69,3 +69,5 @@ def process_extracted_texts(text_dictionary):
                 result += text
 
     return result
+
+

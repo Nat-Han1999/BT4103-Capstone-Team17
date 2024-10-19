@@ -1,82 +1,70 @@
-# api/views.py
-
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from transformers import AutoModelForCausalLM, AutoTokenizer
-from .models import Message, Conversation
+from .models_mongo import ChatSession, Message
 import torch
 import uuid
+from datetime import datetime, timezone
+from decouple import config
+import google.generativeai as genai
 
-# Device setup
-if torch.cuda.is_available():
-    device = torch.device('cuda')
-elif torch.backends.mps.is_available():
-    device = torch.device('mps')
-else:
-    device = torch.device('cpu')
+#Gemni setup
+GENERATIVE_AI_KEY = config('GOOGLE_GENERATIVE_AI_KEY')
+genai.configure(api_key=GENERATIVE_AI_KEY)
 
-# Preload models and tokenizers
-model_names = ['distilgpt2', 'gpt2']  # Add more model names if needed
-models = {}
-tokenizers = {}
-
-for name in model_names:
-    tokenizers[name] = AutoTokenizer.from_pretrained(name)
-    models[name] = AutoModelForCausalLM.from_pretrained(name)
-    models[name].to(device)
-    models[name].eval()
 
 @api_view(['POST'])
 def generate_response(request):
     try:
         prompt = request.data.get('prompt', '')
         conversation_id = request.data.get('conversation_id', None)
-        model_name = request.data.get('model_name', 'distilgpt2')
 
         if not prompt:
             return Response({'error': 'No prompt provided.'}, status=400)
 
-        if model_name not in models:
-            return Response({'error': f'Model "{model_name}" is not available.'}, status=400)
-
-        # Retrieve or create the conversation
+        # Retrieve or create the chat session
         if conversation_id:
             # Try to get the existing conversation
-            try:
-                conversation = Conversation.objects.get(conversation_id=conversation_id)
-            except Conversation.DoesNotExist:
-                # If not found, create a new conversation
-                conversation = Conversation.objects.create()
-                conversation_id = str(conversation.conversation_id)
+            chat_session = ChatSession.objects(session_id=uuid.UUID(conversation_id)).first()
+            if not chat_session:
+                # If not found, create a new session
+                chat_session = ChatSession(session_id=uuid.UUID(conversation_id))
         else:
             # Create a new conversation
-            conversation = Conversation.objects.create()
-            conversation_id = str(conversation.conversation_id)
+            chat_session = ChatSession()
+            conversation_id = str(chat_session.session_id)
 
         # Save user's message
-        Message.objects.create(sender='User', text=prompt, conversation=conversation)
-
-        tokenizer = tokenizers[model_name]
-        model = models[model_name]
-
-        inputs = tokenizer(prompt, return_tensors='pt').to(device)
-
-        # Generate text
-        outputs = model.generate(
-            **inputs,
-            max_length=150,
-            num_return_sequences=1,
-            no_repeat_ngram_size=2,
-            early_stopping=True,
-            pad_token_id=tokenizer.eos_token_id,
-            attention_mask=inputs['attention_mask'],
+        user_message = Message(
+            sender='User',
+            text=prompt,
+            timestamp=datetime.now(timezone.utc)
         )
+        chat_session.messages.append(user_message)
 
-        generated_text = tokenizer.decode(outputs[0], skip_special_tokens=True)
-        response_text = generated_text[len(prompt):].strip()
+        # Use Google's Gemini model
+        model = genai.GenerativeModel('gemini-1.5-pro-latest')
+
+        # Prepare the conversation history if needed
+        conversation_history = ''
+        for msg in chat_session.messages:
+            conversation_history += f"{msg.sender}: {msg.text}\n"
+
+        full_prompt = conversation_history + "Bot:"
+
+        # Generate the response
+        bot_response = model.generate_content(full_prompt)
+        response_text = bot_response.text.strip()
 
         # Save bot's response
-        Message.objects.create(sender='Bot', text=response_text, conversation=conversation)
+        bot_message = Message(
+            sender='Bot',
+            text=response_text,
+            timestamp=datetime.now(timezone.utc)
+        )
+        chat_session.messages.append(bot_message)
+
+        # Save the chat session
+        chat_session.save()
 
         return Response({
             'response': response_text,
@@ -85,10 +73,53 @@ def generate_response(request):
     except Exception as e:
         print(f"Error in generate_response: {e}")
         return Response({'error': 'An error occurred on the server.'}, status=500)
-    
-#Add a new view to fetch messages based on conversation_id.
+
+@api_view(['POST'])
+def submit_feedback(request):
+    try:
+        conversation_id = request.data.get('conversation_id', None)
+        message_id = request.data.get('message_id', None)
+        feedback = request.data.get('feedback', None)
+
+        if not all([conversation_id, message_id, feedback]):
+            return Response({'error': 'Missing parameters.'}, status=400)
+
+        chat_session = ChatSession.objects(session_id=uuid.UUID(conversation_id)).first()
+        if not chat_session:
+            return Response({'error': 'Conversation not found.'}, status=404)
+
+        # Find the message in the chat session
+        message = next((msg for msg in chat_session.messages if str(msg.id) == message_id), None)
+        if not message:
+            return Response({'error': 'Message not found.'}, status=404)
+
+        # Save feedback in the message
+        message.feedback = feedback
+        chat_session.save()
+
+        return Response({'status': 'Feedback received.'})
+    except Exception as e:
+        print(f"Error in submit_feedback: {e}")
+        return Response({'error': 'An error occurred on the server.'}, status=500)
+
 @api_view(['GET'])
 def get_conversation(request, conversation_id):
-    messages = Message.objects.filter(conversation_id=conversation_id).order_by('timestamp')
-    message_data = [{'sender': msg.sender, 'text': msg.text} for msg in messages]
-    return Response({'messages': message_data})
+    try:
+        chat_session = ChatSession.objects(session_id=uuid.UUID(str(conversation_id))).first()
+        if not chat_session:
+            return Response({'error': 'Conversation not found.'}, status=404)
+
+        messages = [
+            {
+                'id': str(msg.id),
+                'sender': msg.sender,
+                'text': msg.text,
+                'timestamp': msg.timestamp.isoformat(),
+                'feedback': msg.feedback,  # Include feedback
+            }
+            for msg in chat_session.messages
+        ]
+        return Response({'messages': messages})
+    except Exception as e:
+        print(f"Error in get_conversation: {e}")
+        return Response({'error': 'An error occurred on the server.'}, status=500)
