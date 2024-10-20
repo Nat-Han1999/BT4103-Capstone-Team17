@@ -28,18 +28,18 @@ export function UI({ hidden, ...props }) {
     <>
       <div className="fixed top-0 left-0 right-0 bottom-0 z-10 flex flex-col lg:flex-row pointer-events-none">
         <div className="flex flex-row w-screen h-screen lg:w-4/6">
-          <div className="w-2/6 h-full pt-10 pl-10">
-            <div className="self-start backdrop-blur-md bg-white bg-opacity-50 p-4 rounded-lg max-w-xs max-h-[200px] mx-auto">
+          <div className="w-1/6 h-full pt-10 pl-3">
+            <div className="self-start backdrop-blur-md bg-white bg-opacity-50 p-3 rounded-lg max-w-xs max-h-[150px] mx-auto">
               <h1 className="font-black text-xl">AI Chatbot</h1>
               <p>BZA Capstone Project</p>
             </div>
-          </div>
-          <div className="flex-grow w-4/6 h-full">
+          </div> 
+          <div className="flex-grow w-4/6 h-full flex items-center justify-center">
             <Canvas camera={{ position: [0, 0, 1], fov: 50 }}>
               <Experience avatarLook={avatarLook} />
             </Canvas>
           </div>
-          <div className="flex-grow w-2/6 h-full flex items-center justify-center">
+          <div className="flex-grow w-1/6 h-full flex items-center justify-center">
             <div className="flex flex-col items-end justify-start gap-4">
               <div className="bg-white bg-opacity-80 shadow-lg rounded-lg p-6 max-w-md">
                 <h2 className="text-l font-semibold mb-2 text-center">
