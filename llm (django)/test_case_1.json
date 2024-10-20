@@ -1,0 +1,165 @@
+[
+    {
+        "test_case": 1,
+        "replicate": 1,
+        "user": "I'm a 30 year old male that has recently been fired, I believe I've been wrongly dismissed and will need some help answering some questions regarding what the Shrama Vasana fund can do for me, can you help me if I provide some questions I have?",
+        "bot": "It sounds like you're going through a tough time, but I'm here to help you understand how the Shrama Vasana Fund can assist.  Let's see how the Shrama Vasana Fund might be able to help with your potential case:  They can connect you with a lawyer: If you're unsure about how to navigate the legal system, the fund can connect you with a lawyer specializing in employment law. They can guide you through the process and ensure your rights are protected. They can help with legal costs: Legal representation can be expensive. The Shrama Vasana Fund can provide financial assistance of up to Rs. 20,000 to help cover these costs, making legal support more accessible to you.   Before you get your hopes up, there are a few qualifications you need to meet to be eligible for this legal aid:  Salary limit: Your basic salary at the time you were let go should be less than Rs. 30,000. If you received allowances, your total salary, including those allowances, should be less than Rs. 15,000. Formal complaint: You must have filed a formal complaint about your dismissal with a recognized institution. These institutions include the Labor Tribunal, Industrial Court, Labor Compensation Commissioner, or the Service Termination Division of the Labor Department.  Legal representation: You'll need to have a lawyer officially representing you in this matter.   I hope this overview is helpful. Feel free to ask me any other questions you have about the process, and I'll do my best to answer them. "
+    },
+    {
+        "test_case": 1,
+        "replicate": 1,
+        "user": "What documents will I need to submit?",
+        "bot": "You'll need to gather several documents, and for clarity, let's break them down into categories:   Proof of Identity: This could be a photocopy of your National Identity Card, Passport, or Driving License. Remember, this copy needs to be recommended by the Grama Niladari and certified by the Divisional Secretary.    Proof of Residence: You will need a DS4 form to confirm where you live, and similar to the identity documents, this also needs to be recommended by the Grama Niladari and certified by the Divisional Secretary.   Proof of Salary: You have a few options for this:  A note from your past employer stating your final salary. Make sure it's certified by your past employer. If you have another document from your past employer showing your final salary, that works too. Just like the note, ensure it's certified by them.  If your past employer mentioned your salary during legal proceedings and you have a copy of this, that will work -  but it needs to be certified by an authorized officer of that institution (for example, the Labor Tribunal or Industrial Court).    Complaint Documents: You'll need to include a certified copy of the complaint you filed against your past employer. This copy should be certified by an authorized officer from the institution where you filed your complaint.   Legal Representation Confirmation: You need a letter from your lawyer confirming they are representing you in this matter. This letter should include their name and address, your case number, and a record of any court appearances. This needs to be certified by an authorized officer of the institution that filed the action.   "
+    },
+    {
+        "test_case": 1,
+        "replicate": 1,
+        "user": "How can I start the application process?",
+        "bot": "You can kick off the application process for legal aid from the Shrama Vasana Fund by obtaining their application form and advisory leaflet.   There are three ways to get these documents:  Download them online:  You can find them on the Shrama Vasana Fund website. Visit their office: You can pick up a copy of the application and leaflet directly from the Shrama Vasana office.  Check at labor offices:  The forms are also available at all labor offices, labor tribunals, and the office of the labor compensation officer.  "
+    },
+    {
+        "test_case": 1,
+        "replicate": 1,
+        "user": "Just to confirm that you're understanding, can you repeat back to me what my demographic is?",
+        "bot": "You stated that you are a 30-year-old male who was recently fired. "
+    },
+    {
+        "test_case": 1,
+        "replicate": 1,
+        "user": "If my salary was RS 40000, then I'm not eligible for legal aid?",
+        "bot": "You are absolutely right to be concerned about the salary limit.  You are unfortunately ineligible for legal aid from the Shrama Vasana Fund if your salary was RS 40000.  Here's why:  Salary Limit: To qualify for legal aid, your basic salary at the time you were let go needs to be less than Rs. 30,000. Even if other allowances brought your total earnings below Rs. 15,000, your basic salary exceeding that Rs. 30,000 threshold makes you ineligible.  "
+    },
+    {
+        "test_case": 1,
+        "replicate": 2,
+        "user": "I'm a 30 year old male that has recently been fired, I believe I've been wrongly dismissed and will need some help answering some questions regarding what the Shrama Vasana fund can do for me, can you help me if I provide some questions I have?",
+        "bot": "It sounds like you're going through a tough time, but I'm here to help you understand how the Shrama Vasana Fund can assist.  Let's see how the Shrama Vasana Fund might be able to help with your potential case:  They can connect you with a lawyer: If you're unsure about how to navigate the legal system, the fund can connect you with a lawyer specializing in employment law. They can guide you through the process and ensure your rights are protected. They can help with legal costs: Legal representation can be expensive. The Shrama Vasana Fund can provide financial assistance of up to Rs. 20,000 to help cover these costs, making legal support more accessible to you.   Before you get your hopes up, there are a few qualifications you need to meet to be eligible for this legal aid:  Salary limit: Your basic salary at the time you were let go should be less than Rs. 30,000. If you received allowances, your total salary, including those allowances, should be less than Rs. 15,000. Formal complaint: You must have filed a formal complaint about your dismissal with a recognized institution. These institutions include the Labor Tribunal, Industrial Court, Labor Compensation Commissioner, or the Service Termination Division of the Labor Department.  Legal representation: You'll need to have a lawyer officially representing you in this matter.   I hope this overview is helpful. Feel free to ask me any other questions you have about the process, and I'll do my best to answer them. "
+    },
+    {
+        "test_case": 1,
+        "replicate": 2,
+        "user": "What documents will I need to submit?",
+        "bot": "You will need to gather several documents to apply for legal aid from the Shrama Vasana Fund. To make it easier, let's break them down into categories:   Proof of Identity: You can submit a photocopy of your National Identity Card, Passport, or Driving License. This copy needs to be recommended by the Grama Niladari and certified by the Divisional Secretary.   Proof of Residence: You'll need a DS4 form to confirm your living place. Similar to the identity documents, this also needs to be recommended by the Grama Niladari and certified by the Divisional Secretary.   Proof of Salary: For this, you have a few options:  A note from your past employer stating your final salary, certified by them. Any other document from your past employer showing your final salary, certified by them. If your past employer mentioned your salary during legal proceedings, a certified copy of this by an authorized officer of that institution (like the Labor Tribunal or Industrial Court) will work. Complaint Documents: Include a certified copy of the complaint you filed against your past employer. An authorized officer from the institution where you filed your complaint should certify this copy.    Legal Representation Confirmation: You'll need a letter from your lawyer confirming they represent you in this matter. This letter should include their name and address, your case number, and a record of any court appearances. It needs to be certified by an authorized officer of the institution that filed the action.   "
+    },
+    {
+        "test_case": 1,
+        "replicate": 2,
+        "user": "How can I start the application process?",
+        "bot": "You can begin the application process for legal aid from the Shrama Vasana Fund by getting their application form and advisory leaflet. There are three ways to obtain these documents:  Download them online: You can find these documents on the Shrama Vasana Fund website. Visit their office: You can pick up physical copies of the application and leaflet directly from the Shrama Vasana office. Check at labor offices: The forms are also available at all labor offices, labor tribunals, and the office of the labor compensation officer.  "
+    },
+    {
+        "test_case": 1,
+        "replicate": 2,
+        "user": "Just to confirm that you're understanding, can you repeat back to me what my demographic is?",
+        "bot": "You mentioned that you are a 30-year-old male who was recently fired. "
+    },
+    {
+        "test_case": 1,
+        "replicate": 2,
+        "user": "If my salary was RS 40000, then I'm not eligible for legal aid?",
+        "bot": "You are absolutely right to be concerned about the salary limit. You are unfortunately ineligible for legal aid from the Shrama Vasana Fund if your salary was RS 40000.  Here's why:  Salary Limit: To qualify for legal aid, your basic salary at the time you were let go needs to be less than Rs. 30,000. Even if other allowances brought your total earnings below Rs. 15,000, your basic salary exceeding that Rs. 30,000 threshold makes you ineligible.  "
+    },
+    {
+        "test_case": 1,
+        "replicate": 3,
+        "user": "I'm a 30 year old male that has recently been fired, I believe I've been wrongly dismissed and will need some help answering some questions regarding what the Shrama Vasana fund can do for me, can you help me if I provide some questions I have?",
+        "bot": "It sounds like you're going through a tough time, but I'm here to help you understand how the Shrama Vasana Fund can assist.  Let's see how the Shrama Vasana Fund might be able to help with your potential case:  They can connect you with a lawyer: If you're unsure about how to navigate the legal system, the fund can connect you with a lawyer specializing in employment law. They can guide you through the process and ensure your rights are protected. They can help with legal costs: Legal representation can be expensive. The Shrama Vasana Fund can provide financial assistance of up to Rs. 20,000 to help cover these costs, making legal support more accessible to you.   Before you get your hopes up, there are a few qualifications you need to meet to be eligible for this legal aid:  Salary limit: Your basic salary at the time you were let go should be less than Rs. 30,000. If you received allowances, your total salary, including those allowances, should be less than Rs. 15,000. Formal complaint: You must have filed a formal complaint about your dismissal with a recognized institution. These institutions include the Labor Tribunal, Industrial Court, Labor Compensation Commissioner, or the Service Termination Division of the Labor Department.  Legal representation: You'll need to have a lawyer officially representing you in this matter.   I hope this overview is helpful. Feel free to ask me any other questions you have about the process, and I'll do my best to answer them. "
+    },
+    {
+        "test_case": 1,
+        "replicate": 3,
+        "user": "What documents will I need to submit?",
+        "bot": "You'll need to submit a few different types of documents to apply for legal aid from the Shrama Vasana Fund.  Think of these documents as falling into these categories:   Proof of Identity: This could be a photocopy of your National Identity Card, Passport, or Driving License.  Importantly, this copy needs to be recommended by the Grama Niladari and certified by the Divisional Secretary.   Proof of Residence: You'll need a DS4 form to confirm where you live. Like the identity documents, this also needs to be recommended by the Grama Niladari and certified by the Divisional Secretary.   Proof of Salary: This one has a few options:  A note from your past employer stating your final salary, certified by them. Any other document from your past employer showing your final salary, certified by them. If your past employer mentioned your salary during legal proceedings, a certified copy of this by an authorized officer of that institution (like the Labor Tribunal or Industrial Court) will work.    Complaint Documents:  Include a certified copy of the complaint you filed against your past employer.  An authorized officer from the institution where you filed your complaint should certify this copy.   Legal Representation Confirmation: You'll need a letter from your lawyer confirming they represent you in this matter. This letter should include their name and address, your case number, and a record of any court appearances. It needs to be certified by an authorized officer of the institution that filed the action.   "
+    },
+    {
+        "test_case": 1,
+        "replicate": 3,
+        "user": "How can I start the application process?",
+        "bot": "You can kick off the application process for legal aid from the Shrama Vasana Fund by getting their application form and advisory leaflet.  There are a few ways to do this:  Download the documents:  You can find the application form and leaflet on the Shrama Vasana Fund website. Visit their office: You can pick up physical copies of the application and leaflet directly from the Shrama Vasana office. Check at labor offices:  The forms are also available at all labor offices, labor tribunals, and the office of the labor compensation officer.  "
+    },
+    {
+        "test_case": 1,
+        "replicate": 3,
+        "user": "Just to confirm that you're understanding, can you repeat back to me what my demographic is?",
+        "bot": "You've told me that you are a 30-year-old male who was recently fired. "
+    },
+    {
+        "test_case": 1,
+        "replicate": 3,
+        "user": "If my salary was RS 40000, then I'm not eligible for legal aid?",
+        "bot": "You are right to be concerned about the salary limit. Unfortunately, with a salary of RS 40000, you would not be eligible for legal aid from the Shrama Vasana Fund.  Here's why:  The Shrama Vasana Fund has strict salary criteria for legal aid eligibility.  One of the main requirements is that your basic salary at the time of your dismissal must be less than Rs. 30,000.   Even if your total earnings, including allowances, were under Rs. 15,000, the fact that your basic salary exceeded Rs. 30,000 makes you ineligible for the Fund's assistance in this case. "
+    },
+    {
+        "test_case": 1,
+        "replicate": 4,
+        "user": "I'm a 30 year old male that has recently been fired, I believe I've been wrongly dismissed and will need some help answering some questions regarding what the Shrama Vasana fund can do for me, can you help me if I provide some questions I have?",
+        "bot": "It sounds like you're going through a tough time, but I'm here to help you understand how the Shrama Vasana Fund can assist.  Let's see how the Shrama Vasana Fund might be able to help with your potential case:  They can connect you with a lawyer: If you're unsure about how to navigate the legal system, the fund can connect you with a lawyer specializing in employment law. They can guide you through the process and ensure your rights are protected.  They can help with legal costs: Legal representation can be expensive. The Shrama Vasana Fund can provide financial assistance of up to Rs. 20,000 to help cover these costs, making legal support more accessible to you.   Before you get your hopes up, there are a few qualifications you need to meet to be eligible for this legal aid:  Salary limit: Your basic salary at the time you were let go should be less than Rs. 30,000. If you received allowances, your total salary, including those allowances, should be less than Rs. 15,000. Formal complaint: You must have filed a formal complaint about your dismissal with a recognized institution. These institutions include the Labor Tribunal, Industrial Court, Labor Compensation Commissioner, or the Service Termination Division of the Labor Department.  Legal representation: You'll need to have a lawyer officially representing you in this matter.   I hope this overview is helpful. Feel free to ask me any other questions you have about the process, and I'll do my best to answer them. "
+    },
+    {
+        "test_case": 1,
+        "replicate": 4,
+        "user": "What documents will I need to submit?",
+        "bot": "You will need to gather several documents to apply for legal aid from the Shrama Vasana Fund.  To make it easier, these documents are grouped into categories:   Proof of Identity:  Submit a photocopy of one of the following:  National Identity Card Passport Driving License Important: This copy must be recommended by the Grama Niladari and certified by the Divisional Secretary.    Proof of Residence:  You need a DS4 form to confirm your address.  Important: Like identity documents, this also needs to be recommended by the Grama Niladari and certified by the Divisional Secretary.    Proof of Salary:  Choose one of the following:  A note from your past employer stating your final salary, certified by them. Any other document from your past employer showing your final salary, certified by them. If your past employer mentioned your salary during legal proceedings, provide a certified copy of this by an authorized officer of that institution (like the Labor Tribunal or Industrial Court).    Complaint Documents:   Include a certified copy of the complaint you filed against your past employer.  Important: An authorized officer from the institution where you filed your complaint should certify this copy.    Legal Representation Confirmation:  Submit a letter from your lawyer confirming they represent you in this matter.  This letter should include their name and address, your case number, and a record of any court appearances.  Important: It needs to be certified by an authorized officer of the institution where the action was filed.    "
+    },
+    {
+        "test_case": 1,
+        "replicate": 4,
+        "user": "How can I start the application process?",
+        "bot": "To begin your application for legal aid from the Shrama Vasana Fund, you'll need to get their application form and advisory leaflet.  There are three ways to do this:  Download the documents: The application form and leaflet are available on the Shrama Vasana Fund website.  Visit their office:  You can pick up physical copies directly from the Shrama Vasana office. Check at labor offices: The forms are also available at all labor offices, labor tribunals, and the office of the labor compensation officer.  "
+    },
+    {
+        "test_case": 1,
+        "replicate": 4,
+        "user": "Just to confirm that you're understanding, can you repeat back to me what my demographic is?",
+        "bot": "You've told me that you are a 30-year-old male who was recently fired. "
+    },
+    {
+        "test_case": 1,
+        "replicate": 4,
+        "user": "If my salary was RS 40000, then I'm not eligible for legal aid?",
+        "bot": "You are absolutely right.  With a basic salary of RS 40000 at the time of your dismissal, you would be ineligible for legal aid from the Shrama Vasana Fund.  The Shrama Vasana Fund has a firm salary ceiling for eligibility, requiring your basic salary to be less than RS 30,000. Even if your total earnings with allowances were below RS 15,000, exceeding the basic salary limit disqualifies you from receiving aid in this instance. "
+    },
+    {
+        "test_case": 1,
+        "replicate": 5,
+        "user": "I'm a 30 year old male that has recently been fired, I believe I've been wrongly dismissed and will need some help answering some questions regarding what the Shrama Vasana fund can do for me, can you help me if I provide some questions I have?",
+        "bot": "It sounds like you're going through a tough time, but I'm here to help you understand how the Shrama Vasana Fund can assist.  Let's see how the Shrama Vasana Fund might be able to help with your potential case:  They can connect you with a lawyer: If you're unsure about how to navigate the legal system, the fund can connect you with a lawyer specializing in employment law. They can guide you through the process and ensure your rights are protected.  They can help with legal costs: Legal representation can be expensive.  The Shrama Vasana Fund can provide financial assistance of up to Rs. 20,000 to help cover these costs, making legal support more accessible to you.   Before you get your hopes up, there are a few qualifications you need to meet to be eligible for this legal aid:  Salary limit: Your basic salary at the time you were let go should be less than Rs. 30,000. If you received allowances, your total salary, including those allowances, should be less than Rs. 15,000. Formal complaint: You must have filed a formal complaint about your dismissal with a recognized institution. These institutions include the Labor Tribunal, Industrial Court, Labor Compensation Commissioner, or the Service Termination Division of the Labor Department.  Legal representation: You'll need to have a lawyer officially representing you in this matter.   I hope this overview is helpful. Feel free to ask me any other questions you have about the process, and I'll do my best to answer them. "
+    },
+    {
+        "test_case": 1,
+        "replicate": 5,
+        "user": "What documents will I need to submit?",
+        "bot": "You will need to gather several documents to apply for legal aid from the Shrama Vasana Fund. To make it easier, I've grouped these documents into categories:  Proof of Identity: Submit a photocopy of one of the following: National Identity Card Passport  Driving License Important: This copy must be recommended by the Grama Niladari and certified by the Divisional Secretary.    Proof of Residence:  You need a DS4 form to confirm your address.  Important:  Like identity documents, this also needs to be recommended by the Grama Niladari and certified by the Divisional Secretary.   Proof of Salary: Choose one of the following: A note from your past employer stating your final salary, certified by them. Any other document from your past employer showing your final salary, certified by them. If your past employer mentioned your salary during legal proceedings, provide a certified copy of this by an authorized officer of that institution (like the Labor Tribunal or Industrial Court).   Complaint Documents:  Include a certified copy of the complaint you filed against your past employer.  Important: An authorized officer from the institution where you filed your complaint should certify this copy.    Legal Representation Confirmation: Submit a letter from your lawyer confirming they represent you in this matter.  This letter should include their name and address, your case number, and a record of any court appearances.  Important: It needs to be certified by an authorized officer of the institution where the action was filed.    "
+    },
+    {
+        "test_case": 1,
+        "replicate": 5,
+        "user": "How can I start the application process?",
+        "bot": "To start your application for legal aid from the Shrama Vasana Fund, you will first need to obtain their application form and advisory leaflet.  There are three ways to get these documents:  Download them: You can find the application form and leaflet on the Shrama Vasana Fund website.  Visit their office: You can pick up physical copies of the documents directly from the Shrama Vasana office.  Check at labor offices:  The forms are also available at all labor offices, labor tribunals, and the office of the labor compensation officer.  "
+    },
+    {
+        "test_case": 1,
+        "replicate": 5,
+        "user": "Just to confirm that you're understanding, can you repeat back to me what my demographic is?",
+        "bot": "You've shared that you are a 30-year-old male who was recently fired. "
+    },
+    {
+        "test_case": 1,
+        "replicate": 5,
+        "user": "If my salary was RS 40000, then I'm not eligible for legal aid?",
+        "bot": "You are absolutely right! If your salary was RS 40,000 at the time of your dismissal, you would not be eligible for legal aid from the Shrama Vasana Fund.  To qualify for their legal aid program, your basic salary at the time you were let go must be less than RS 30,000.  Even if your total earnings, including allowances, were below RS 15,000, the fact that your basic salary exceeds the RS 30,000 limit means you wouldn't qualify for assistance in this particular case. "
+    },
+    {
+        "Flesch-Kincaid Scores": [
+            60.95,
+            61.56,
+            61.36,
+            60.24,
+            59.74
+        ],
+        "Flesch-Kincaid Mean": 60.77,
+        "Flesch-Kincaid Median": 60.95,
+        "Flesch-Kincaid Min": 59.74,
+        "Flesch-Kincaid Max": 61.56
+    }
+]

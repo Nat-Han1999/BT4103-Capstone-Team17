@@ -1,0 +1,165 @@
+[
+    {
+        "test_case": 4,
+        "replicate": 1,
+        "user": "What services are supported by donations to the Shrama Vasana Fund?",
+        "bot": "The Shrama Vasana Fund supports a variety of services that are beneficial to workers. These services are broken down into six main objectives:  Objective 1: Health and Empowerment  This includes health clinics, eye clinics, empowerment programs for workers, and awareness programs for workers.   Objective 2: Education and Guidance This includes directing workers to professional and tertiary education as well as providing professional guidance programs.    Objective 3: Occupational Health and Safety This encompasses medical aid for occupational diseases, disaster relief, and awareness programs on occupational health and safety.   Objective 4: Legal Aid This objective provides legal aid services to workers in need.   Objective 5: Financial Aid and Scholarships This includes financial aid and scholarships for dependents of workers who have died or become permanently disabled due to accidents while working. This objective also includes relief and financial aid in the event of natural disasters.   Objective 6: Appreciation of Exemplary Service This includes appreciation of exemplary service (Shrama Abimana) and medical aid in appreciation of exemplary service (Shrama Abumana Medical Aid).     As you can see, the Shrama Vasana Fund is designed to support workers in a variety of ways, from health and education to legal and financial aid. "
+    },
+    {
+        "test_case": 4,
+        "replicate": 1,
+        "user": "What kind of scholarships does the Shrama Vasana Fund provide?",
+        "bot": "The Shrama Vasana Fund provides scholarships to dependents of workers who have passed away or become permanently disabled in work-related accidents.  This scholarship, worth Rs. 50,000, aims to support the educational pursuits of these dependents.  In addition to the scholarship, a school educational kit worth Rs. 10,000 is also provided. "
+    },
+    {
+        "test_case": 4,
+        "replicate": 1,
+        "user": "How does the Shrama Vasana Fund help workers who lose their jobs without notice?",
+        "bot": "The Shrama Vasana Fund offers legal aid to workers who may find themselves in situations where they've been unfairly dismissed from their jobs.  Let's break down how this works:   Scenario:  Imagine a worker who is fired without a proper reason or is facing an unjustified investigation by their employer. This worker can turn to the Shrama Vasana Fund for help.   Legal Assistance: The fund can connect the worker with a lawyer or legal representative. They can help the worker file a complaint and navigate the legal process.   Financial Support:  The Shrama Vasana Fund can provide financial aid up to Rs. 20,000 to cover some of the legal expenses the worker might face. This helps ensure they have access to legal representation.   To qualify for this legal aid, there are a few conditions:   Salary Limit: The worker's basic salary at the time of dismissal shouldn't be more than Rs. 30,000.  If their salary, including allowances, was higher, it shouldn't exceed Rs. 15,000.   Formal Complaint:  The worker needs to have filed a formal complaint with a recognized legal body. These could include the Labour Tribunal, Industrial Court, Labour Compensation Commissioner, or the Service Termination Division of the Labour Department.    Does that answer your question about how the Shrama Vasana Fund assists workers who are let go from their jobs without notice?"
+    },
+    {
+        "test_case": 4,
+        "replicate": 1,
+        "user": "What legal aid does the Shrama Vasana Fund provide to terminated employees?",
+        "bot": "The Shrama Vasana Fund offers two key legal aid benefits to employees who believe they've been unfairly terminated:   Legal Representation: The fund can connect the worker with a lawyer or legal representative who can help them file a complaint and navigate the legal process. This ensures they have professional guidance when dealing with their former employer.    Financial Assistance: The fund can provide financial aid up to Rs. 20,000 to help cover the legal expenses the worker might face, such as lawyer fees. This helps make sure that legal representation is accessible even if the worker is facing financial difficulties after losing their job.  "
+    },
+    {
+        "test_case": 4,
+        "replicate": 1,
+        "user": "How can I contribute to the Shrama Vasana Fund?",
+        "bot": "While the provided passages don't mention how to make donations to the Shrama Vasana Fund, they do provide contact information for the organization.   You can reach out to them directly for details on how to contribute.  Their phone numbers are +94 112 588 936 and +94 112 588 937.  You can also email them at info@svf.gov.lk.   They would be happy to provide information on how your contribution can support workers. "
+    },
+    {
+        "test_case": 4,
+        "replicate": 2,
+        "user": "What services are supported by donations to the Shrama Vasana Fund?",
+        "bot": "The Shrama Vasana Fund uses donations to provide a wide range of services to workers. These services are grouped into six main objectives:   Objective 1: Health and Empowerment   This includes things like health clinics, eye clinics, and programs designed to empower and educate workers.   Objective 2: Education and Guidance   This focuses on helping workers access higher education (professional and tertiary) and providing guidance programs to further their careers.   Objective 3: Occupational Health and Safety   This covers areas like providing medical aid for diseases workers might encounter on the job, disaster relief, and programs that raise awareness about staying safe and healthy at work.   Objective 4: Legal Aid   This objective ensures workers have access to legal help when they need it.   Objective 5: Financial Aid and Scholarships   This includes financial assistance and scholarships to support the dependents of workers who have tragically died or become permanently disabled in work-related accidents. It also covers relief and financial help after natural disasters.   Objective 6: Appreciation of Exemplary Service    This objective recognizes and shows appreciation for workers who have demonstrated outstanding service (Shrama Abimana) and can include medical aid (Shrama Abumana Medical Aid).   In a nutshell, your donations to the Shrama Vasana Fund contribute to a range of programs that help workers with everything from their health and education to legal and financial support."
+    },
+    {
+        "test_case": 4,
+        "replicate": 2,
+        "user": "What kind of scholarships does the Shrama Vasana Fund provide?",
+        "bot": "The Shrama Vasana Fund provides a scholarship worth Rs. 50,000 to support the education of dependents of workers who have died in work-related accidents.  In addition to the scholarship, a school educational kit worth Rs. 10,000 is also given to the family."
+    },
+    {
+        "test_case": 4,
+        "replicate": 2,
+        "user": "How does the Shrama Vasana Fund help workers who lose their jobs without notice?",
+        "bot": "The Shrama Vasana Fund provides support to workers who are unfairly dismissed from their jobs, including those let go without proper notice. Here's how they help:   Legal Aid: The fund can connect the worker with legal professionals, like a lawyer, to help them understand their rights and navigate the legal process of filing a complaint against their former employer. This ensures they have expert guidance during a difficult time.   Financial Assistance:  In addition to legal representation, the fund can provide financial aid up to Rs. 20,000. This money can be used to cover legal expenses, such as lawyer fees, making it easier for workers to access legal support even if they are facing financial difficulties after losing their job.    However, there are some conditions to qualify for this assistance:   Salary Limit: The worker's basic salary at the time of dismissal shouldn't have been more than Rs. 30,000.  If their salary, including allowances, was higher, it shouldn't have exceeded Rs. 15,000.   Formal Complaint: The worker must have filed a formal complaint about their dismissal with a recognized legal body. These institutions can include the Labour Tribunal, Industrial Court, Labour Compensation Commissioner, or the Service Termination Division of the Labour Department.   "
+    },
+    {
+        "test_case": 4,
+        "replicate": 2,
+        "user": "What legal aid does the Shrama Vasana Fund provide to terminated employees?",
+        "bot": "The Shrama Vasana Fund provides two key legal aid benefits to employees who have been unfairly terminated:   Legal Representation: They can connect you with a lawyer or legal representative who can help you file a complaint and navigate the legal process. This ensures you have professional guidance when dealing with your former employer.    Financial Assistance: The fund can provide financial aid up to Rs. 20,000 to help cover the legal expenses you might face, such as lawyer fees.  This makes sure that legal representation is accessible even if you are facing financial difficulties after losing your job.   "
+    },
+    {
+        "test_case": 4,
+        "replicate": 2,
+        "user": "How can I contribute to the Shrama Vasana Fund?",
+        "bot": "The provided passages don't specifically explain how to make a donation to the Shrama Vasana Fund. However, they do list the contact information for the organization.  You can reach them by:  Phone:  +94 112 588 936 or +94 112 588 937 Email: info@svf.gov.lk   I'd recommend reaching out to them directly for the most up-to-date information on how to contribute. "
+    },
+    {
+        "test_case": 4,
+        "replicate": 3,
+        "user": "What services are supported by donations to the Shrama Vasana Fund?",
+        "bot": "The Shrama Vasana Fund uses donations to support a variety of services that help workers. These services are organized into six main goals:  Objective 1: Health and Empowerment  This includes things like:     * Health clinics     * Eye clinics     * Programs to empower workers     * Awareness programs for workers   Objective 2: Education and Guidance  This focuses on:     * Helping workers access higher education (professional and tertiary)      * Providing guidance programs to help workers advance in their careers  Objective 3: Occupational Health and Safety  This area covers:     * Providing medical aid for diseases workers might get on the job     * Disaster relief     * Programs that teach workers how to stay safe and healthy at work  Objective 4: Legal Aid  This objective makes sure workers can get legal help when they need it.   Objective 5: Financial Aid and Scholarships  This includes:     * Financial assistance      * Scholarships to support the families of workers who have died or become permanently disabled in accidents at work.      * Relief and financial help after natural disasters  Objective 6: Appreciation of Exemplary Service   This objective recognizes and thanks workers who have done outstanding work. This can include medical aid.  In short, donations to the Shrama Vasana Fund support many different programs that help workers with their health, education, legal needs, and finances. "
+    },
+    {
+        "test_case": 4,
+        "replicate": 3,
+        "user": "What kind of scholarships does the Shrama Vasana Fund provide?",
+        "bot": "The Shrama Vasana Fund provides a scholarship of Rs. 50,000 to help children who have lost a parent in a work-related accident. This scholarship is designed to help support the educational pursuits of these children. In addition to the scholarship, the family also receives a school educational kit worth Rs. 10,000. "
+    },
+    {
+        "test_case": 4,
+        "replicate": 3,
+        "user": "How does the Shrama Vasana Fund help workers who lose their jobs without notice?",
+        "bot": "The Shrama Vasana Fund provides support to workers who are unfairly dismissed from their jobs, including those let go without proper notice. Here's how they help:   Legal Aid: The fund can connect the worker with legal professionals, like a lawyer, to help them understand their rights and navigate the legal process of filing a complaint against their former employer. This ensures they have expert guidance during a difficult time.   Financial Assistance: In addition to legal representation, the fund can provide financial aid up to Rs. 20,000. This money can be used to cover legal expenses, such as lawyer fees, making it easier for workers to access legal support even if they are facing financial difficulties after losing their job.    However, there are some conditions to qualify for this assistance:   Salary Limit: The worker's basic salary at the time of dismissal shouldn't have been more than Rs. 30,000. If their salary, including allowances, was higher, it shouldn't have exceeded Rs. 15,000.   Formal Complaint: The worker must have filed a formal complaint about their dismissal with a recognized legal body. These institutions can include the Labour Tribunal, Industrial Court, Labour Compensation Commissioner, or the Service Termination Division of the Labour Department.   "
+    },
+    {
+        "test_case": 4,
+        "replicate": 3,
+        "user": "What legal aid does the Shrama Vasana Fund provide to terminated employees?",
+        "bot": "The Shrama Vasana Fund offers two main types of legal aid to employees who have been unfairly terminated:   Legal Representation: They can connect you with a lawyer who can help you understand your rights, file a complaint against your former employer, and navigate the often-complicated legal process. This ensures you have expert guidance during a stressful time.   Financial Assistance: The fund can provide up to Rs. 20,000 to help cover the legal costs you might incur, such as lawyer fees. This financial aid makes sure you can access legal representation even if you're facing financial difficulties after losing your job.   "
+    },
+    {
+        "test_case": 4,
+        "replicate": 3,
+        "user": "How can I contribute to the Shrama Vasana Fund?",
+        "bot": "The provided passages don't explain how to make a donation to the Shrama Vasana Fund. However, you can reach them at their office by phone or email for information:  Phone: +94 112 588 936 or +94 112 588 937 Email: info@svf.gov.lk  "
+    },
+    {
+        "test_case": 4,
+        "replicate": 4,
+        "user": "What services are supported by donations to the Shrama Vasana Fund?",
+        "bot": "The Shrama Vasana Fund uses donations to support a variety of services that benefit workers.  Here's a breakdown of the six main objectives they focus on:   Objective 1: Health and Empowerment   This objective funds services like:     * Health clinics      * Eye clinics      * Programs designed to empower workers     * Awareness programs to educate workers on important topics  Objective 2: Education and Guidance  This objective helps workers by:      * Providing access to higher education, both professional and tertiary      * Offering guidance programs to support career advancement  Objective 3: Occupational Health and Safety   This objective covers:     * Medical assistance for work-related diseases     * Disaster relief efforts     * Programs promoting workplace safety and health awareness   Objective 4: Legal Aid This objective ensures workers have access to legal support when they need it.   Objective 5: Financial Aid and Scholarships This objective provides: * Financial assistance  * Scholarships to families of workers who died or became permanently disabled due to workplace accidents * Relief and financial aid after natural disasters   Objective 6: Appreciation of Exemplary Service This objective recognizes and shows appreciation for workers with outstanding service, which can include medical aid.   In summary, your donations to the Shrama Vasana Fund contribute to various programs that support workers' well-being, from their health and education to their legal and financial needs. "
+    },
+    {
+        "test_case": 4,
+        "replicate": 4,
+        "user": "What kind of scholarships does the Shrama Vasana Fund provide?",
+        "bot": "The Shrama Vasana Fund offers a scholarship worth Rs. 50,000 to support the education of children who have lost a parent in a work-related accident.   In addition to this scholarship, they also provide a school educational kit valued at Rs. 10,000 to further assist the family. "
+    },
+    {
+        "test_case": 4,
+        "replicate": 4,
+        "user": "How does the Shrama Vasana Fund help workers who lose their jobs without notice?",
+        "bot": "The Shrama Vasana Fund is there to help workers who are unfairly dismissed, even if they weren't given proper notice. Here's what they offer:   Legal Aid: Losing a job suddenly is stressful, and the fund can connect the worker with legal professionals who can help them understand their rights and take action against their former employer.    Financial Assistance:  Legal help can be expensive, so the fund can provide up to Rs. 20,000 to cover these costs, making it easier to get legal support.   However, there are a couple of conditions to keep in mind:   Salary Limit:  This support is available to workers whose basic salary was no more than Rs. 30,000 at the time of dismissal. If their salary, including allowances, was higher, it shouldn't have exceeded Rs. 15,000.   Formal Complaint: The worker needs to have filed a formal complaint about their dismissal with a recognized legal body like the Labour Tribunal, Industrial Court, Labour Compensation Commissioner, or the Service Termination Division of the Labour Department.   "
+    },
+    {
+        "test_case": 4,
+        "replicate": 4,
+        "user": "What legal aid does the Shrama Vasana Fund provide to terminated employees?",
+        "bot": "The Shrama Vasana Fund provides two key types of legal aid to employees who believe they were unfairly terminated:   Connecting you with Legal Representation: The fund can connect you with a lawyer who can help you understand your rights as a worker, file a formal complaint against your former employer, and navigate the legal system. This ensures you have expert guidance during what can be a confusing and stressful time.    Financial Assistance for Legal Costs:  Legal representation can be expensive.  To help with this, the fund can provide up to Rs. 20,000 to cover costs associated with your case, such as lawyer fees.  This financial support helps ensure that you can access legal help even if you're facing financial difficulties after losing your job.   "
+    },
+    {
+        "test_case": 4,
+        "replicate": 4,
+        "user": "How can I contribute to the Shrama Vasana Fund?",
+        "bot": "While the provided passages don't contain information on how to make a donation to the Shrama Vasana Fund, you can contact them directly to inquire about making a contribution. Here's their contact information:   Phone: +94 112 588 936 or +94 112 588 937 Email: info@svf.gov.lk  "
+    },
+    {
+        "test_case": 4,
+        "replicate": 5,
+        "user": "What services are supported by donations to the Shrama Vasana Fund?",
+        "bot": "The Shrama Vasana Fund uses donations to support a wide range of services for workers. These services are organized into six main objectives:  Objective 1: Health and Empowerment  Donations fund health clinics, eye clinics, empowerment programs, and awareness programs to keep workers informed about important issues.  Objective 2: Education and Guidance   This objective focuses on providing access to professional and higher education, along with guidance programs to help workers advance in their careers.  Objective 3: Occupational Health and Safety  This objective covers medical aid for work-related diseases, disaster relief, and programs promoting workplace safety.   Objective 4: Legal Aid  Donations help ensure that workers have access to legal support when they need it.  Objective 5: Financial Aid and Scholarships  This objective provides financial assistance and scholarships to families of workers who died or were disabled due to workplace accidents. It also includes relief and aid after natural disasters.  Objective 6: Appreciation of Exemplary Service   This objective recognizes and rewards workers with outstanding service, potentially including medical aid. In essence, your donations to the Shrama Vasana Fund support a variety of initiatives that improve workers' lives, including their health, education, legal protection, and financial security. "
+    },
+    {
+        "test_case": 4,
+        "replicate": 5,
+        "user": "What kind of scholarships does the Shrama Vasana Fund provide?",
+        "bot": "The Shrama Vasana Fund provides a scholarship of Rs. 50,000 to children whose parent passed away due to a work-related accident.  This scholarship is designed to help support their education.  Additionally, the fund also gives a school educational kit worth Rs. 10,000 to further assist the family. "
+    },
+    {
+        "test_case": 4,
+        "replicate": 5,
+        "user": "How does the Shrama Vasana Fund help workers who lose their jobs without notice?",
+        "bot": "The Shrama Vasana Fund offers support to workers who are let go from their jobs without any notice. Here's how they can help:   Legal Aid: The fund can connect the worker with a lawyer. This lawyer can help them understand if their dismissal was legal and what steps they can take against their former employer.    Financial Assistance: Because legal help can be costly, the fund can provide up to Rs. 20,000 to help cover these expenses. This makes it easier for workers to get legal support when they need it most.   However, there are a couple of important conditions:   Salary Limit: The worker's basic salary shouldn't have been more than Rs. 30,000 when they lost their job. If their salary, including allowances, was higher, it shouldn't have been more than Rs. 15,000.   Formal Complaint: The worker must have filed a formal complaint about their dismissal. This complaint should be filed with a recognized legal body, such as the Labour Tribunal, Industrial Court, Labour Compensation Commissioner, or the Service Termination Division of the Labour Department.   "
+    },
+    {
+        "test_case": 4,
+        "replicate": 5,
+        "user": "What legal aid does the Shrama Vasana Fund provide to terminated employees?",
+        "bot": "The Shrama Vasana Fund offers two main types of legal aid to employees who were let go from their jobs unfairly:   Connecting you with a Lawyer or Legal Representative: The fund can connect you with a legal expert who can help you file a complaint and navigate the legal system. This is especially helpful if you're unsure about your rights or how to proceed with your case.   Financial Assistance for Legal Costs: Since legal representation can be expensive, the fund can provide financial aid up to Rs. 20,000 to help cover costs like lawyer fees. This ensures you can access legal support even if you're facing financial difficulties after losing your job.   "
+    },
+    {
+        "test_case": 4,
+        "replicate": 5,
+        "user": "How can I contribute to the Shrama Vasana Fund?",
+        "bot": "While the provided documents don't explicitly explain how to make a donation, they do include contact information for the Shrama Vasana Fund.  You can reach out to them directly to inquire about making a contribution through the following methods:  Phone:  +94 112 588 936 or +94 112 588 937  Email: info@svf.gov.lk  "
+    },
+    {
+        "Flesch-Kincaid Scores": [
+            45.56,
+            42.82,
+            48.33,
+            38.35,
+            53.21
+        ],
+        "Flesch-Kincaid Mean": 45.654,
+        "Flesch-Kincaid Median": 45.56,
+        "Flesch-Kincaid Min": 38.35,
+        "Flesch-Kincaid Max": 53.21
+    }
+]
