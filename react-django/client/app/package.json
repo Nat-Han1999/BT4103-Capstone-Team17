@@ -18,6 +18,7 @@
     "@react-three/fiber": "8.13.3",
     "@react-three/xr": "^5.7.1",
     "@types/three": "0.152.1",
+    "bootstrap-icons": "^1.11.3",
     "child_process": "^1.0.2",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
