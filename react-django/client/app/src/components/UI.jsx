@@ -1,18 +1,51 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useChat } from "../hooks/useChat";
 import { Canvas } from "@react-three/fiber";
 import { Experience } from "./Experience.jsx";
 import "./Chat_Components.css";
+import { MessageItem } from "./Message_Item.jsx";
 
 export function UI({ hidden, ...props }) {
   const input = useRef();
-  const { chat, loading, message } = useChat();
+  const { chat, loading, message, botReply } = useChat();
+
+  // Create a hook to store all messages in the chat
+  const [uiMessages, setUIMessages] = useState([]);
+
+  // Create a hook to store the typing indictor when the bot is loading
+  const [botTyping, setBotTyping] = useState(false);
+
+  // Create a useEffect to track the state of the messages
+  useEffect(() => {
+    if (!botReply) {
+      console.log("nothing");
+    } else {
+      let botMessage = { text: botReply, isUser: false };
+      setUIMessages((prev) => [...prev, botMessage]);
+      console.log("botreply");
+      console.log(botReply);
+    }
+  }, [botReply]);
+
+  // Create a useEffect hook to track whether the LLM is loading
+  useEffect(() => {
+    if (loading) {
+      setBotTyping(true);
+    } else {
+      setBotTyping(false);
+    }
+  }, [loading]);
 
   const sendMessage = () => {
     const text = input.current.value;
     if (!loading && !message) {
-      chat(text, avatarName);
+      let id = generateUniqueId(); // ID assoc. with message
+      let isUser = true; // Boolean indicating whether message is from bot or user
+      chat(text, avatarName, id, isUser);
       input.current.value = "";
+      // Update all messages recorded in the chat to include the message newly sent by the user
+      let userMessage = { id: id, text: text, isUser: isUser };
+      setUIMessages((prev) => [...prev, userMessage]);
     }
   };
   if (hidden) {
@@ -65,6 +98,11 @@ export function UI({ hidden, ...props }) {
       recognition.start();
       setIsRecording(true);
     }
+  };
+
+  // Functions to handle sending of message
+  const generateUniqueId = () => {
+    return Math.random().toString(36).substr(2, 9);
   };
 
   return (
@@ -131,11 +169,23 @@ export function UI({ hidden, ...props }) {
           </div>
         </div>
 
-        <div className="flex flex-col w-screen h-screen lg:w-2/6 items-center justify-end lg:mt-0 h-1/4 lg:h-auto h-[25vh] m-0 p-4">
-          <div className="flex items-center gap-1 pointer-events-auto max-w-screen-sm w-full mx-auto">
+        <div className="flex flex-col w-screen h-screen lg:w-2/6 items-center justify-end lg:mt-0 h-1/4 lg:h-auto h-[25vh] m-0 p-4 bg-white overflow-auto">
+          <div className="max-w-screen-sm w-full flex flex-col mr-2">
+            {uiMessages.map((msg, idx) => (
+              <MessageItem key={idx} message={msg} />
+            ))}
+            {botTyping && (
+              <div className="typing-indicator">
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+              </div>
+            )}
+          </div>
+          <div className="flex items-center gap-1 pointer-events-auto max-w-screen-sm w-full mx-auto mt-3">
             <textarea
               wrap="soft"
-              className="w-full h-13 placeholder:text-gray-800 placeholder:italic p-4 rounded-md bg-opacity-50 bg-white backdrop-blur-md resize-none overflow-auto"
+              className="w-full h-13 placeholder:text-gray-800 placeholder:italic p-4 rounded-md bg-white-200 backdrop-blur-md resize-none overflow-auto border border-gray-400 focus:border-gray-600"
               placeholder="Type a message..."
               ref={input}
               onKeyDown={(e) => {

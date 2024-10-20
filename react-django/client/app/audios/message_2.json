@@ -1,17 +1,36 @@
 {
   "metadata": {
     "soundFile": "/Users/shanicesng/BT4103-Capstone-Team17/react-django/server/newproject/../../client/app/audios/message_2.wav",
-    "duration": 1.90
+    "duration": 3.29
   },
   "mouthCues": [
-    { "start": 0.00, "end": 0.02, "value": "X" },
-    { "start": 0.02, "end": 0.11, "value": "A" },
-    { "start": 0.11, "end": 0.73, "value": "B" },
-    { "start": 0.73, "end": 0.80, "value": "G" },
-    { "start": 0.80, "end": 0.94, "value": "E" },
-    { "start": 0.94, "end": 1.08, "value": "F" },
-    { "start": 1.08, "end": 1.29, "value": "C" },
-    { "start": 1.29, "end": 1.78, "value": "B" },
-    { "start": 1.78, "end": 1.90, "value": "X" }
+    { "start": 0.00, "end": 0.08, "value": "X" },
+    { "start": 0.08, "end": 0.15, "value": "F" },
+    { "start": 0.15, "end": 0.21, "value": "B" },
+    { "start": 0.21, "end": 0.29, "value": "A" },
+    { "start": 0.29, "end": 0.37, "value": "D" },
+    { "start": 0.37, "end": 0.45, "value": "A" },
+    { "start": 0.45, "end": 0.61, "value": "B" },
+    { "start": 0.61, "end": 0.68, "value": "H" },
+    { "start": 0.68, "end": 0.75, "value": "C" },
+    { "start": 0.75, "end": 0.89, "value": "B" },
+    { "start": 0.89, "end": 1.03, "value": "C" },
+    { "start": 1.03, "end": 1.10, "value": "G" },
+    { "start": 1.10, "end": 1.17, "value": "C" },
+    { "start": 1.17, "end": 1.31, "value": "G" },
+    { "start": 1.31, "end": 1.45, "value": "F" },
+    { "start": 1.45, "end": 1.52, "value": "D" },
+    { "start": 1.52, "end": 1.60, "value": "A" },
+    { "start": 1.60, "end": 1.72, "value": "E" },
+    { "start": 1.72, "end": 1.86, "value": "B" },
+    { "start": 1.86, "end": 2.00, "value": "G" },
+    { "start": 2.00, "end": 2.07, "value": "E" },
+    { "start": 2.07, "end": 2.15, "value": "A" },
+    { "start": 2.15, "end": 2.47, "value": "B" },
+    { "start": 2.47, "end": 2.55, "value": "A" },
+    { "start": 2.55, "end": 2.70, "value": "B" },
+    { "start": 2.70, "end": 2.84, "value": "A" },
+    { "start": 2.84, "end": 3.06, "value": "B" },
+    { "start": 3.06, "end": 3.29, "value": "X" }
   ]
 }

@@ -25,6 +25,7 @@ def hello_world(request):
 async def chat_output(request):
     avatar_selected = request.data.get('avatarName')
     user_message = request.data.get('message')
+    conversation_id = request.data.get('id')
     if not user_message: 
         lipsync_intro_0 = await read_json_transcript("../../client/app/audios/{}_intro_0.json".format(avatar_selected))
         lipsync_intro_1 = await read_json_transcript("../../client/app/audios/{}_intro_1.json".format(avatar_selected))
@@ -32,14 +33,14 @@ async def chat_output(request):
         response = {
             "messages": [ 
                 {
-                    "text": "Hi, I'm {}, your professional AI assistant".format(avatar_selected),
+                    "text": "Hi, I'm {}, your professional AI assistant. ".format(avatar_selected),
                     "audio": convert_wav_base64("../../client/app/audios/{}_intro_0.wav".format(avatar_selected)),
                     "lipsync": lipsync_intro_0,
                     "facialExpression": "smile",
                     "animation": "Bow",
                     },
                 {
-                    "text": "Please enter your question so that I can assist you",
+                    "text": "Please enter your question so that I can assist you.",
                     "audio": convert_wav_base64("../../client/app/audios/{}_intro_1.wav".format(avatar_selected)),
                     "lipsync": lipsync_intro_1,
                     "facialExpression": "default",
@@ -72,6 +73,7 @@ async def chat_output(request):
             "required":["text","facialExpression","animation"]
         },
         }
+        # WARNING: SETTING MAX_OUTPUT_TOKENS CAN RESULT IN INCOMPLETE JSONS AT TIMES, LEADING TO JSON DECODING ERROR
         generation_config = genai.GenerationConfig(temperature=0.5, max_output_tokens=100, response_mime_type='application/json', response_schema=response_schema)
         model_response = gemini_model.generate_content(prompt, generation_config=generation_config)
         # model_response.text outputs a string in the desired JSON format
