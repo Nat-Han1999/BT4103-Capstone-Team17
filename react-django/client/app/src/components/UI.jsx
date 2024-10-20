@@ -194,7 +194,8 @@ export function UI({ hidden, ...props }) {
               placeholder="Type a message..."
               ref={input}
               onKeyDown={(e) => {
-                if (e.key === "Enter") {
+                if (e.key === "Enter" && !e.shiftKey) {
+                  e.preventDefault();
                   sendMessage();
                 }
               }}
