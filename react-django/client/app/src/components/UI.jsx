@@ -169,8 +169,13 @@ export function UI({ hidden, ...props }) {
           </div>
         </div>
 
-        <div className="flex flex-col w-screen h-screen lg:w-2/6 items-center justify-end lg:mt-0 h-1/4 lg:h-auto h-[25vh] m-0 p-4 bg-white overflow-auto">
-          <div className="max-w-screen-sm w-full flex flex-col mr-2">
+        <div className="flex flex-col w-screen h-screen lg:w-2/6 items-center justify-end lg:mt-0 lg:h-auto h-[25vh] m-0 p-4 bg-white">
+          <div
+            className="max-w-screen-sm w-full flex flex-col mr-2 overflow-auto"
+            style={{ maxHeight: "calc(100% - 100px)" }}
+          >
+            {" "}
+            {/* Adjust height based on your layout */}
             {uiMessages.map((msg, idx) => (
               <MessageItem key={idx} message={msg} />
             ))}
