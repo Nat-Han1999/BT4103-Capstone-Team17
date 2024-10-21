@@ -7,7 +7,8 @@ The functions allow you to insert documents, read/query documents, update existi
 
 from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
-from pymongo.errors import PyMongoError
+from pymongo.errors import PyMongoError, ConnectionFailure
+from urllib.parse import quote_plus
 
 
 def get_database(db_name, collection_name, username, password, ca_file):
@@ -26,6 +27,48 @@ def get_database(db_name, collection_name, username, password, ca_file):
         return db[collection_name]
     except PyMongoError as e:
         raise
+
+# def get_database(db_name, collection_name, host, port, username, password, ca_file=None):
+#     """
+#     Use the get_database function to establish a connection to the MongoDB cluster by providing the necessary parameters such as:
+#         db_name: The name of the database.
+#         collection_name: The collection you want to interact with.
+#         host: MongoDB host.
+#         port: MongoDB port.
+#         username: MongoDB username for authentication.
+#         password: MongoDB password for authentication.
+#         ca_file: Optional - Path to the CA file for SSL connection (if required by the server).
+#     """
+#     try:
+#         # Properly encode the username and password
+#         user_encoded = quote_plus(username)
+#         password_encoded = quote_plus(password)
+        
+#         # MongoDB URI (for a non-SRV setup, including host and port)
+#         uri = f"mongodb://{user_encoded}:{password_encoded}@{host}:{port}/{db_name}"
+        
+#         # If CA file is provided for SSL, add it to the connection parameters
+#         client_options = {}
+#         if ca_file:
+#             client_options['tlsCAFile'] = ca_file
+        
+#         # Connect to the MongoDB client
+#         client = MongoClient(uri, **client_options)
+        
+#         # Test the connection by pinging the server
+#         client.admin.command('ping')
+#         print("MongoDB connection successful!")
+        
+#         # Return the specified collection
+#         db = client[db_name]
+#         return db[collection_name]
+        
+#     except ConnectionFailure as e:
+#         print(f"MongoDB connection failed: {e}")
+#         raise
+#     except PyMongoError as e:
+#         print(f"An error occurred with MongoDB: {e}")
+#         raise
 
 
 def insert_one_document(collection, data):

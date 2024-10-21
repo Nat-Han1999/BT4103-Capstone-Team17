@@ -1,5 +1,5 @@
 """
-Pipieline runs every week, checking for changes in the webpage
+Pipeline runs every week, checking for changes in the webpage
 """
 import sys
 import os

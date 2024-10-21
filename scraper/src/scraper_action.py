@@ -3,6 +3,7 @@ Configuration settings like base URLs, headers, timeouts, etc.import requests
 '''
 import requests
 import time
+import os
 
 import pdfplumber
 import pytesseract
@@ -15,7 +16,7 @@ from PIL import Image
 from io import BytesIO
 from urllib.request import Request, urlopen
 from datetime import datetime, timedelta, timezone
-from scraper.backend.mongo_utils import insert_many_documents, update_one_document, insert_one_document
+from scraper.backend.mongo_utils import update_one_document, insert_one_document, find_document_by_query, get_database
 from scraper.src.utils.scraper_utils import save_to_json
 from scraper.src.diff import render_diff
 from selenium.common.exceptions import TimeoutException, WebDriverException
@@ -30,7 +31,6 @@ from bs4 import BeautifulSoup
 from urllib.parse import urljoin, urlparse
 import urllib.robotparser
 import heapq
-from scraper.backend.mongo_utils import insert_many_documents, update_one_document, insert_one_document
 from selenium import webdriver
 from selenium.common.exceptions import TimeoutException, WebDriverException
 from datetime import datetime, timedelta, timezone
@@ -41,11 +41,15 @@ from io import BytesIO
 from PIL import Image
 import pytesseract
 import pdfplumber
+from dotenv import load_dotenv
 
 from lxml import html, etree
 from lxml.html import fromstring, tostring
    
 logger = setup_logging()
+
+# Load environment variables from the .env file
+load_dotenv()
 
 # Set up a robots.txt parser
 def can_fetch(url):
@@ -91,7 +95,17 @@ def hash_content(content):
     """ Create a hash for the page content to avoid duplicates """
     return hashlib.md5(content.encode()).hexdigest()
 
-async def get_all_links(base_url, config, max_depth=2, delay=1):
+def get_all_links(base_url, config, max_depth=2, delay=1):
+
+    logger = logging.getLogger("airflow.task")
+    logger.setLevel(logging.INFO)
+
+    # Global Variables
+    username = os.getenv("MONGO_DB_USERNAME")
+    password = os.getenv("MONGO_DB_PASSWORD")
+    ca_file = os.path.join(os.path.dirname(__file__), 'isrgrootx1.pem')
+
+    collection = get_database("shrama_vasana_fund", "all_domain_links", username, password, ca_file)
 
     # load config and get conditions for website (if any)
     conditions = get_website_conditions(base_url, config)
@@ -102,44 +116,64 @@ async def get_all_links(base_url, config, max_depth=2, delay=1):
     heapq.heappush(priority_queue, (0, base_url))  # (priority, url)
     base_domain = urlparse(base_url).netloc
 
-    async with aiohttp.ClientSession() as session:
-        while priority_queue:
-            depth, current_url = heapq.heappop(priority_queue)
-            normalized_url = normalize_url(current_url)
+    while priority_queue:
+        depth, current_url = heapq.heappop(priority_queue)
+        normalized_url = normalize_url(current_url)
 
-            if normalized_url in visited_links or depth > max_depth or not can_fetch(current_url):
+        if normalized_url in visited_links or depth > max_depth or not can_fetch(current_url):
+            continue
+
+        page_content = fetch_page_with_selenium(current_url)
+
+        print(f"Fetching: {current_url}")
+
+        if page_content:
+            visited_links.add(normalized_url)
+
+            # Avoid duplicate content
+            content_hash = hash_content(page_content)
+            if content_hash in content_hashes:
                 continue
+            content_hashes.add(content_hash)
 
-            page_content = await fetch_page_for_crawler(current_url, session)
-            print(f"Fetching: {current_url}")
-            if page_content:
-                visited_links.add(normalized_url)
+            # Insert or update the URL in MongoDB
+            document = {
+                "url": normalized_url,
+                "scrape_flag": True,
+                "created_dt": datetime.now(timezone.utc),
+                "updated_dt": datetime.now(timezone.utc),
+            }
 
-                # Avoid duplicate content
-                content_hash = hash_content(page_content)
-                if content_hash in content_hashes:
-                    continue
-                content_hashes.add(content_hash)
+            # Check if the URL already exists in the collection
+            existing_doc = find_document_by_query(collection, {"url": normalized_url})
+            if existing_doc:
+                # Update the 'updated_dt' field if the document already exists
+                update_one_document(collection, {"url": normalized_url}, {"updated_dt": datetime.now(timezone.utc)})
+            else:
+                # Insert new document if it doesn't exist
+                insert_one_document(collection, document)
 
-                soup = BeautifulSoup(page_content, 'html.parser')
+            soup = BeautifulSoup(page_content, 'html.parser')
 
-                # Extract all valid webpage links
-                for a_tag in soup.find_all('a', href=True):
-                    full_url = urljoin(base_url, a_tag['href'])
-                    normalized_full_url = normalize_url(full_url)
+            # Extract all valid webpage links
+            for a_tag in soup.find_all('a', href=True):
+                full_url = urljoin(base_url, a_tag['href'])
+                logger.info("FETCHING NEW LINK")
+                logger.info(full_url)
+                normalized_full_url = normalize_url(full_url)
 
-                    if conditions: 
-                        filter_url = conditions.get('filter_url', []) 
+                if conditions: 
+                    filter_url = conditions.get('filter_url', []) 
 
-                        # check if all patterns present in url, skip all urls that not match the url patterns
-                        if not all(pattern in normalized_full_url for pattern in filter_url):
-                                continue
-                    
-                        if normalized_full_url not in visited_links and is_valid_webpage(normalized_full_url, base_domain):
-                            heapq.heappush(priority_queue, (depth + 1, normalized_full_url))  # Increase depth by 1
+                    # check if all patterns present in url, skip all urls that not match the url patterns
+                    if not all(pattern in normalized_full_url for pattern in filter_url):
+                            continue
+                
+                    if normalized_full_url not in visited_links and is_valid_webpage(normalized_full_url, base_domain):
+                        heapq.heappush(priority_queue, (depth + 1, normalized_full_url))  # Increase depth by 1
 
-            # Respect politeness, add delay
-            await asyncio.sleep(delay)
+        # Respect politeness, add delay
+        time.sleep(delay)
 
     return visited_links
 
@@ -489,6 +523,5 @@ def scrape_and_store_data(urls, collection_scraped_data, collection_url_hashed, 
 
         # save_to_json(all_data_selenium, 'scraper/scraped_data/scraped_data.json') # do not remove, used for testing
 
-    # Check if there's any data to insert
     if not all_data_selenium:
         logger.error("No data scraped, nothing to insert.")
