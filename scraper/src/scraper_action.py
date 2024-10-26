@@ -4,6 +4,7 @@ Configuration settings like base URLs, headers, timeouts, etc.import requests
 import requests
 import time
 import os
+import concurrent
 
 import pdfplumber
 import pytesseract
@@ -20,8 +21,8 @@ from scraper.backend.mongo_utils import update_one_document, insert_one_document
 from scraper.src.utils.scraper_utils import save_to_json
 from scraper.src.diff import render_diff
 from selenium.common.exceptions import TimeoutException, WebDriverException
-import concurrent
 from concurrent.futures import ThreadPoolExecutor
+from ratelimit import limits, sleep_and_retry
 
 import aiohttp
 import asyncio
@@ -105,7 +106,7 @@ def get_all_links(base_url, config, max_depth=2, delay=1):
     password = os.getenv("MONGO_DB_PASSWORD")
     ca_file = os.path.join(os.path.dirname(__file__), 'isrgrootx1.pem')
 
-    collection = get_database("shrama_vasana_fund", "all_domain_links", username, password, ca_file)
+    collection = get_database("shrama_vasana_fund", "all_domain_links", username, password)
 
     # load config and get conditions for website (if any)
     conditions = get_website_conditions(base_url, config)
@@ -498,6 +499,17 @@ def fetch_and_process(url, config, base_url):
     text_hash = process_and_hash_text(data)
     return url, text_hash, data
 
+# Define the rate limit (e.g., 10 requests per minute)
+ONE_MINUTE = 2
+MAX_CALLS_PER_MINUTE = 5
+
+# Rate-limited function
+@sleep_and_retry
+@limits(calls=MAX_CALLS_PER_MINUTE, period=ONE_MINUTE)
+def fetch_and_process_limited(url, config, base_url):
+    # This function calls the original fetch_and_process function and respects the rate limit
+    return fetch_and_process(url, config, base_url)
+
 def scrape_and_store_data(urls, collection_scraped_data, collection_url_hashed, config, base_url):
     """
     Fetch content for each URL, process it, and store or update in MongoDB.
@@ -506,7 +518,7 @@ def scrape_and_store_data(urls, collection_scraped_data, collection_url_hashed, 
     all_data_selenium = []
 
     with ThreadPoolExecutor() as executor: 
-        futures = {executor.submit(fetch_and_process, url, config, base_url): url for url in urls}
+        futures = {executor.submit(fetch_and_process_limited, url, config, base_url): url for url in urls}
         
         for future in concurrent.futures.as_completed(futures):
             result = future.result()

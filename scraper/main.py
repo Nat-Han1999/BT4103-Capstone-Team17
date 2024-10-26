@@ -16,7 +16,6 @@ load_dotenv()
 # Global Variables
 username = os.getenv("MONGO_DB_USERNAME")
 password = os.getenv("MONGO_DB_PASSWORD")
-ca_file = os.path.join(os.path.dirname(__file__), './backend/isrgrootx1.pem') 
     
 def main():
     """
@@ -31,7 +30,7 @@ def main():
         config = load_json_file(config_file)
         base_url = "https://www.svf.gov.lk/index.php?lang=en" 
                     
-        collection_all_domain_links = get_database("shrama_vasana_fund", "all_domain_links", username, password, ca_file)
+        collection_all_domain_links = get_database("shrama_vasana_fund", "all_domain_links", username, password)
 
         # Query to find all documents where scrape_flag is True and extract URLs
         urls_with_true_flag = collection_all_domain_links.find(
@@ -62,8 +61,8 @@ def main():
         # ]
 
         # MongoDB setup
-        collection_scraped_data = get_database("shrama_vasana_fund", "scraped_data", username, password, ca_file)
-        collection_url_hashed = get_database("shrama_vasana_fund", "url_hashed", username, password, ca_file)
+        collection_scraped_data = get_database("shrama_vasana_fund", "scraped_data", username, password)
+        collection_url_hashed = get_database("shrama_vasana_fund", "url_hashed", username, password)
 
         # Scrape URLs and store data
         scrape_and_store_data(url_list, collection_scraped_data, collection_url_hashed, config, base_url)

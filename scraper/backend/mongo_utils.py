@@ -9,9 +9,9 @@ from pymongo.mongo_client import MongoClient
 from pymongo.server_api import ServerApi
 from pymongo.errors import PyMongoError, ConnectionFailure
 from urllib.parse import quote_plus
+import certifi
 
-
-def get_database(db_name, collection_name, username, password, ca_file):
+def get_database(db_name, collection_name, username, password):
     """
     Use the get_database function to establish a connection to the MongoDB cluster by providing the necessary parameters such as:
         db_name: The name of the database.
@@ -21,14 +21,14 @@ def get_database(db_name, collection_name, username, password, ca_file):
         ca_file: Path to the CA file for SSL connection.
     """
     try:
-        uri = f"mongodb+srv://{username}:{password}@bt4103.cnngw.mongodb.net/?retryWrites=true&w=majority&appName=BT4103&tlsCAFile={ca_file}"
-        client = MongoClient(uri, server_api=ServerApi("1"), serverSelectionTimeoutMS=5000, connectTimeoutMS=5000)
+        uri = f"mongodb+srv://{username}:{password}@bt4103.cnngw.mongodb.net/?retryWrites=true&w=majority&appName=BT4103"
+        client = MongoClient(uri, server_api=ServerApi("1"), tlsCAfile = certifi.where(), serverSelectionTimeoutMS=5000, connectTimeoutMS=5000)
         db = client[db_name]
         return db[collection_name]
     except PyMongoError as e:
         raise
 
-# def get_database(db_name, collection_name, host, port, username, password, ca_file=None):
+# def get_database_alicloud(db_name, collection_name, host, port, username, password, ca_file=None):
 #     """
 #     Use the get_database function to establish a connection to the MongoDB cluster by providing the necessary parameters such as:
 #         db_name: The name of the database.
