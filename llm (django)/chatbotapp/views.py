@@ -306,4 +306,4 @@ def runserver_test_trigger(sender, **kwargs):
     automated_testing()
 
 # Django signal to trigger the tests on server startup
-request_finished.connect(runserver_test_trigger)
+#request_finished.connect(runserver_test_trigger)
