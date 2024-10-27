@@ -12,8 +12,10 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 
 from pathlib import Path
 import mongoengine
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 import os
+import certifi
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -133,13 +135,16 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Connect to MongoDB
-load_dotenv()
+load_dotenv(find_dotenv())
 MONGODB_URI = os.getenv('MONGODB_URI')
 MONGODB_NAME = os.getenv('MONGODB_NAME')
+MONGODB_PASSWORD = os.getenv("MONGODB_PASSWORD")
+MONGODB_USER = os.getenv("MONGODB_USER")
 
 mongoengine.connect(
-    alias='default',
     db=MONGODB_NAME,
     host=MONGODB_URI,
-    ssl=True,
-)
+    password=MONGODB_PASSWORD,
+    username=MONGODB_USER,
+    tlsCAfile=certifi.where()
+    )

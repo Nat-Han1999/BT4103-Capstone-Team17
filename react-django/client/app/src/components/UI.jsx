@@ -4,6 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { Experience } from "./Experience.jsx";
 import "./Chat_Components.css";
 import { MessageItem } from "./Message_Item.jsx";
+import { v4 as uuidv4 } from 'uuid';
 
 export function UI({ hidden, ...props }) {
   const input = useRef();
@@ -35,11 +36,11 @@ export function UI({ hidden, ...props }) {
       setBotTyping(false);
     }
   }, [loading]);
-
+ 
   const sendMessage = () => {
     const text = input.current.value;
     if (!loading && !message) {
-      let id = generateUniqueId(); // ID assoc. with message
+      let id = generateUniqueUUID(); // ID assoc. with message
       let isUser = true; // Boolean indicating whether message is from bot or user
       chat(text, avatarName, id, isUser);
       input.current.value = "";
@@ -104,6 +105,10 @@ export function UI({ hidden, ...props }) {
   const generateUniqueId = () => {
     return Math.random().toString(36).substr(2, 9);
   };
+
+  const generateUniqueUUID = () => {
+    return uuidv4();
+  }
 
   return (
     <>

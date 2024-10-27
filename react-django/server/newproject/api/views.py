@@ -10,6 +10,9 @@ import base64
 import json
 import aiofiles
 import google.generativeai as genai
+from .models_mongo import ChatSession, Message
+import uuid
+from datetime import datetime, timezone
 
 import textwrap
 import numpy as np
@@ -21,7 +24,7 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 ## LOAD ALL ELEVENLABS VOICE IDS HERE ONCE CHAT FUNCTION IS DONE ##
 
 @api_view(['GET'])
-def hello_world(request):
+def hello_world(request): 
     return JsonResponse("Hello World!",safe=False)
 
 @api_view(['POST'])
@@ -91,9 +94,42 @@ async def chat_output(request):
             current_dict["lipsync"] = await read_json_transcript("../../client/app/audios/message_{}.json".format(index))
         # convert model_response (list of nested dictionaries) into JSON string 
         model_response = {"messages": model_response}
+        
+        # Save to model response and user response to database
+        if conversation_id:
+            # Find the first ChatSession object in the DB with a session_id matching the UUID 
+            chat_session = ChatSession.objects(session_id=uuid.UUID(conversation_id)).first()
+            if not chat_session:
+                # Create a new ChatSession if ChatSession is not found
+                chat_session = ChatSession(session_id=uuid.UUID(conversation_id))
+        else:
+            # Create new ChatSession without session ID
+            chat_session = ChatSession()
+            # Convert newly created session ID to a string and assign it as the session ID
+            conversation_id = str(chat_session.session_id) 
+        
+        # Create user message that will be saved 
+        user_message_obj = Message(
+        sender='User',
+        text=prompt,
+        timestamp=datetime.now(timezone.utc)
+        )
+        chat_session.messages.append(user_message_obj)
+        
+        # Convert bot message to string and save it 
+        stringified_bot_message = convert_json_to_string(model_response)
+        bot_message_obj = Message(
+            sender='Bot',
+            text = stringified_bot_message,
+            timestamp=datetime.now(timezone.utc)
+        )
+        chat_session.messages.append(bot_message_obj)
+        chat_session.save()
         return JsonResponse(model_response)
               
-        
+def convert_json_to_string(model_response):
+    return ' '.join(message['text'] for message in model_response['messages'])
+
 async def read_json_transcript(file_path):
     try:
         async with aiofiles.open(file_path, mode='r') as f:
