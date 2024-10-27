@@ -14,6 +14,7 @@ from .models_mongo import ChatSession, Message
 import uuid
 from datetime import datetime, timezone
 import math
+from rest_framework.response import Response
 
 import textwrap
 import numpy as np
@@ -27,6 +28,30 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 @api_view(['GET'])
 def hello_world(request): 
     return JsonResponse("Hello World!",safe=False)
+ 
+@api_view(['GET'])
+def retrieve_messages(request, user_id): 
+    try:
+        # Find the first ChatSession object in the DB corresponding to the given userID
+        chat_session = ChatSession.objects(session_id=uuid.UUID(str(user_id))).first()
+        if chat_session:
+            messages = [
+            {
+                'id': msg.id,
+                'sender': msg.sender,
+                'text': msg.text,
+                'timestamp': msg.timestamp.isoformat(),
+                'feedback': msg.feedback,  # Include feedback
+            }
+            for msg in chat_session.messages
+        ]
+            return JsonResponse({'messages': messages})
+        else:
+            return Response({'error': 'Conversation not found.'}, status=404)
+    except Exception as e:
+        print(f"Error in retrieve_messages: {e}")
+        return Response({'error': 'An error occurred on the server.'}, status=500)
+        
 
 @api_view(['POST'])
 async def chat_output(request):

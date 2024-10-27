@@ -5,6 +5,7 @@ import { Experience } from "./Experience.jsx";
 import "./Chat_Components.css";
 import { MessageItem } from "./Message_Item.jsx";
 import { v4 as uuidv4 } from "uuid";
+import axios from 'axios';
 
 export function UI({ hidden, ...props }) {
   const input = useRef();
@@ -21,8 +22,21 @@ export function UI({ hidden, ...props }) {
 
   // CHECK WHETHER USERID IS STORED PROPERLY IN LOCAL STORAGE EACH TIME COMPONENT MOUNTS 
   useEffect(() => {
-    console.log("Printing user ID")
-    console.log(userID); // Print the variable's value to the console
+    // ADD FUNCTION TO FETCH MESSAGES FROM DB UPON RELOAD 
+    if (userID) {
+      axios.get(`http://127.0.0.1:8000/api/get-messages/${userID}/`)
+      .then((res) => {
+        console.log("all messages");
+        console.log(res.data.messages);
+        const msgs = res.data.messages.map((msg) => ({
+          id: msg.id,
+          text: msg.text,
+          isUser: msg.sender === 'User',
+          feedbackGiven: msg.feedback? true: false,
+        }));
+        setUIMessages(msgs);
+      })
+    }
   }, []); 
 
   // Create a useEffect to track the state of the messages
