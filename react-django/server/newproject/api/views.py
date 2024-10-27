@@ -36,10 +36,12 @@ def update_avatar_selected(request, user_id, avatar_name):
         if chat_session:
             chat_session.avatarSelected = avatar_name
             chat_session.save()
-            return JsonResponse({'success':True}, status=200)
+            return Response({'success':True}, status=200)
+        else: 
+            return Response({'error': 'No chat session exists for the user'}, status=500)
     except Exception as e:
         print(f"Error in update_avatar_selected: {e}")
-        return JsonResponse({'error': 'An error occurred on the server.'}, status=500)
+        return Response({'error': 'An error occurred on the server.'}, status=500)
 
 @api_view(['GET'])
 def get_avatar_selected(request, user_id):
@@ -48,9 +50,11 @@ def get_avatar_selected(request, user_id):
        if chat_session:
            avatar_selected = chat_session.avatarSelected
            return JsonResponse({ 'avatar_selected': avatar_selected }, status=200)
+       else: 
+            return Response({'error': 'No chat session exists for the user'}, status=500)
     except Exception as e:  
         print(f"Error in retrieve_messages: {e}")
-        return JsonResponse({'error': 'An error occurred on the server.'}, status=500)
+        return Response({'error': 'An error occurred on the server.'}, status=500)
  
 @api_view(['GET'])
 def retrieve_messages(request, user_id): 
@@ -70,7 +74,7 @@ def retrieve_messages(request, user_id):
         ]
             return JsonResponse({'messages': messages})
         else:
-            return JsonResponse({'error': 'Conversation not found.'}, status=404)
+            return Response({'error': 'No chat session exists for the user'}, status=500)
     except Exception as e:
         print(f"Error in retrieve_messages: {e}")
         return JsonResponse({'error': 'An error occurred on the server.'}, status=500)
