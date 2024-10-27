@@ -11,7 +11,7 @@ export const ChatProvider = ({ children }) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ message, avatarName, id, isUser }),
+      body: JSON.stringify({ message, avatarName, id, isUser }), // id refers to userID, not message ID
     });
     const resp = await data.json().then((json) => {
       return json.messages;

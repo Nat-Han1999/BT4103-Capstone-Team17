@@ -13,6 +13,7 @@ import google.generativeai as genai
 from .models_mongo import ChatSession, Message
 import uuid
 from datetime import datetime, timezone
+import math
 
 import textwrap
 import numpy as np
@@ -31,7 +32,7 @@ def hello_world(request):
 async def chat_output(request):
     avatar_selected = request.data.get('avatarName')
     user_message = request.data.get('message')
-    conversation_id = request.data.get('id')
+    user_id = request.data.get('id')
     if not user_message: 
         lipsync_intro_0 = await read_json_transcript("../../client/app/audios/{}_intro_0.json".format(avatar_selected))
         lipsync_intro_1 = await read_json_transcript("../../client/app/audios/{}_intro_1.json".format(avatar_selected))
@@ -77,7 +78,7 @@ async def chat_output(request):
                 "animation":{"type":"STRING"}
             },
             "required":["text","facialExpression","animation"]
-        },
+        }, 
         }
         # WARNING: SETTING MAX_OUTPUT_TOKENS CAN RESULT IN INCOMPLETE JSONS AT TIMES, LEADING TO JSON DECODING ERROR
         generation_config = genai.GenerationConfig(temperature=0.5, max_output_tokens=100, response_mime_type='application/json', response_schema=response_schema)
@@ -96,20 +97,24 @@ async def chat_output(request):
         model_response = {"messages": model_response}
         
         # Save to model response and user response to database
-        if conversation_id:
-            # Find the first ChatSession object in the DB with a session_id matching the UUID 
-            chat_session = ChatSession.objects(session_id=uuid.UUID(conversation_id)).first()
+        if user_id:
+            # Find the first ChatSession object in the DB corresponding to the given userID
+            chat_session = ChatSession.objects(session_id=uuid.UUID(user_id)).first()
             if not chat_session:
-                # Create a new ChatSession if ChatSession is not found
-                chat_session = ChatSession(session_id=uuid.UUID(conversation_id))
+                chat_session = ChatSession(session_id=uuid.UUID(user_id))
         else:
-            # Create new ChatSession without session ID
-            chat_session = ChatSession()
-            # Convert newly created session ID to a string and assign it as the session ID
-            conversation_id = str(chat_session.session_id) 
+            print("There is no user")
+            # Create a user_id 
+            user_id = uuid.uuid4()
+            # Create new ChatSession using the newly generated user ID
+            chat_session = ChatSession(session_id=uuid.UUID(user_id))
         
+        # Find the number of messages so an ID can be assigned to each message
+        total_messages = chat_session.messages.count()
+        num_user_messages = math.floor(total_messages/2)
         # Create user message that will be saved 
         user_message_obj = Message(
+        id=num_user_messages+1,
         sender='User',
         text=prompt,
         timestamp=datetime.now(timezone.utc)
@@ -119,6 +124,7 @@ async def chat_output(request):
         # Convert bot message to string and save it 
         stringified_bot_message = convert_json_to_string(model_response)
         bot_message_obj = Message(
+            id = num_user_messages+1,
             sender='Bot',
             text = stringified_bot_message,
             timestamp=datetime.now(timezone.utc)

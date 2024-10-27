@@ -4,7 +4,7 @@ import { Canvas } from "@react-three/fiber";
 import { Experience } from "./Experience.jsx";
 import "./Chat_Components.css";
 import { MessageItem } from "./Message_Item.jsx";
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from "uuid";
 
 export function UI({ hidden, ...props }) {
   const input = useRef();
@@ -13,18 +13,27 @@ export function UI({ hidden, ...props }) {
   // Create a hook to store all messages in the chat
   const [uiMessages, setUIMessages] = useState([]);
 
+  // Create a hook to store the unique user ID associated with the user's chat session
+  const [userID, setUserID] = useState(localStorage.getItem("userID") || null);
+
   // Create a hook to store the typing indictor when the bot is loading
   const [botTyping, setBotTyping] = useState(false);
+
+  // CHECK WHETHER USERID IS STORED PROPERLY IN LOCAL STORAGE EACH TIME COMPONENT MOUNTS 
+  useEffect(() => {
+    console.log("Printing user ID")
+    console.log(userID); // Print the variable's value to the console
+  }, []); 
 
   // Create a useEffect to track the state of the messages
   useEffect(() => {
     if (!botReply) {
-      console.log("nothing");
+      //console.log("nothing");
     } else {
       let botMessage = { text: botReply, isUser: false };
       setUIMessages((prev) => [...prev, botMessage]);
-      console.log("botreply");
-      console.log(botReply);
+      //console.log("botreply");
+      //console.log(botReply);
     }
   }, [botReply]);
 
@@ -36,16 +45,20 @@ export function UI({ hidden, ...props }) {
       setBotTyping(false);
     }
   }, [loading]);
- 
+
   const sendMessage = () => {
     const text = input.current.value;
+    if (!userID) {
+      let id = generateUniqueUUID(); // ID assoc. with the user, message ID will be generated in backend (views.py)
+      setUserID(id);
+      localStorage.setItem('userID', id) // Store the ID of the current user locally
+    }
     if (!loading && !message) {
-      let id = generateUniqueUUID(); // ID assoc. with message
       let isUser = true; // Boolean indicating whether message is from bot or user
-      chat(text, avatarName, id, isUser);
+      chat(text, avatarName, userID, isUser);
       input.current.value = "";
       // Update all messages recorded in the chat to include the message newly sent by the user
-      let userMessage = { id: id, text: text, isUser: isUser };
+      let userMessage = { id: userID, text: text, isUser: isUser };
       setUIMessages((prev) => [...prev, userMessage]);
     }
   };
@@ -102,13 +115,9 @@ export function UI({ hidden, ...props }) {
   };
 
   // Functions to handle sending of message
-  const generateUniqueId = () => {
-    return Math.random().toString(36).substr(2, 9);
-  };
-
   const generateUniqueUUID = () => {
     return uuidv4();
-  }
+  };
 
   return (
     <>
