@@ -3,67 +3,67 @@
         "test_case": 3,
         "replicate": 1,
         "user": "My work place closed down without prior notice.",
-        "bot": "I understand this is a difficult situation. While I don't have access to specific legal advice or resources for your region, I can provide some general information based on the provided documents.  The \"Shrama Vasana Fund\" seems to offer assistance to workers in Sri Lanka who find themselves in situations like yours. One of the services they provide is \"directing the workers affected by the closure of places of employment without prior notice to professional courses of study and tertiary educational courses\".   This means that if your workplace closed down unexpectedly, the Shrama Vasana Fund might be able to help you find new employment opportunities through professional training and education. They also offer \"professional guidance programs\" for those affected by such closures, including workshops on self-employment and related fields.   I would recommend reaching out to the Shrama Vasana Fund directly for more information on what specific assistance they can offer in your case.  Their contact details, as provided in the text, are:   Address: No 97 Jawatta Road Colombo 05  Phone: +94 112 588 936 / +94 112 588 937  Email: info@svf.gov.lk   Remember, they might have specific requirements and application processes, so contacting them directly will give you the most accurate and helpful guidance for your situation. "
+        "bot": "I understand this is a difficult situation. The Shrama Vasana Fund is designed to help workers in Sri Lanka, especially in cases like yours where a workplace shuts down unexpectedly.  They offer a few different types of support to help workers get back on their feet:  Financial Aid and Support: The fund offers financial help and other assistance to get workers back on their feet after a sudden workplace closure.  Getting Back to Work: This includes: Helping you find new job opportunities Providing professional training  Directing you to tertiary education courses    Professional Guidance: They also have programs like workshops on self-employment to help you develop new skills.  "
     },
     {
         "test_case": 3,
         "replicate": 1,
         "user": "How do I sign up for these courses?",
-        "bot": "The provided documents don't outline a specific signup procedure for the professional courses and tertiary education programs offered by the Shrama Vasana Fund.  However, since they aim to help workers affected by sudden workplace closures, it's best to contact them directly for detailed information on:  Eligibility Criteria: Find out if you qualify for these programs.  Application Process:  Inquire about the application procedure, required documents, and deadlines.  Available Courses: Ask about the types of professional courses and tertiary education programs offered.  You can reach the Shrama Vasana Fund through the following contact details:  Address: No 97 Jawatta Road Colombo 05  Phone: +94 112 588 936 / +94 112 588 937  Email: info@svf.gov.lk  "
+        "bot": "The provided documents don't actually explain how to sign up for Shrama Vasana Fund courses.  However, we know they offer professional courses and tertiary education courses as a way to help workers in Sri Lanka find new job opportunities, especially after a sudden workplace closure.  To learn how to sign up, it's best to contact the Shrama Vasana Fund directly.  They can provide the most up-to-date information.  Here's their contact information:  Address: No 97 Jawatta Road Colombo 05  Phone: +94 112 588 936 / +94 112 588 937  Email: info@svf.gov.lk  "
     },
     {
         "test_case": 3,
         "replicate": 1,
         "user": "Where do I get financial aid?",
-        "bot": "The Shrama Vasana Fund offers financial aid in a few different situations.  Here's what the provided documents say:  If a worker dies from an accident while at work: Financial aid is given to their dependents. If those dependents are students, they can also apply for scholarships and school supply kits. If a worker is permanently disabled due to an accident on the job: They receive financial aid and assistance getting appropriate orthopedic appliances. Their dependents are also eligible for financial aid and scholarships if they are students.  If a worker is affected by natural disasters: The fund provides financial aid and other assistance to help them get back on their feet.  The documents don't detail the application process for financial aid in these situations. For the most accurate information, I recommend reaching out to the Shrama Vasana Fund directly. "
+        "bot": "The Shrama Vasana Fund offers financial aid in a few different situations:  If a worker dies from a work-related accident: Financial aid is given to their dependents. If the dependents are students, they can also apply for scholarships and school supply kits.  If a worker becomes permanently disabled due to a work-related accident: They will receive financial aid and assistance getting appropriate orthopedic appliances. Their dependents are also eligible for financial aid and scholarships if they are students. If a worker is impacted by natural disasters: The fund provides financial aid and other types of assistance to help them get back on their feet.  "
     },
     {
         "test_case": 3,
         "replicate": 2,
         "user": "My work place closed down without prior notice.",
-        "bot": "I understand this is a difficult situation. The Shrama Vasana Fund is designed to help workers like you in Sri Lanka.  One of their services helps workers affected by sudden workplace closures. They can direct you to professional courses and tertiary educational courses. They also offer professional guidance programs, including workshops on self-employment.   Essentially, they can help you get back on your feet with new training and job opportunities.  I would recommend contacting them directly. You can reach them at:  Address: No 97 Jawatta Road Colombo 05  Phone: +94 112 588 936 / +94 112 588 937  Email: info@svf.gov.lk  "
+        "bot": "I understand this is a difficult situation. The Shrama Vasana Fund is designed to help workers in Sri Lanka, especially in cases like yours where a workplace shuts down unexpectedly.  They offer a few different types of support to help workers get back on their feet:  Financial Aid and Support: The fund offers financial help and other assistance to get workers back on their feet after a sudden workplace closure.  Getting Back to Work:  This includes: Helping you find new job opportunities Providing professional training  Directing you to tertiary education courses    Professional Guidance: They also have programs like workshops on self-employment to help you develop new skills.  "
     },
     {
         "test_case": 3,
         "replicate": 2,
         "user": "How do I sign up for these courses?",
-        "bot": "The provided documents don't have a step-by-step signup guide for the Shrama Vasana Fund's professional courses.   Reach out to them directly: Since these programs are meant to help workers like you, the best thing to do is contact the Shrama Vasana Fund. They can give you the most accurate information.   Here's what to ask them when you get in touch:  Eligibility Criteria: Do I qualify for these programs? Application Process: What steps should I take to apply?  What documents do I need, and when are the deadlines? Available Courses: What professional courses and tertiary education programs does the fund offer?  You can contact the Shrama Vasana Fund at:  Address: No 97 Jawatta Road Colombo 05  Phone: +94 112 588 936 / +94 112 588 937  Email: info@svf.gov.lk  "
+        "bot": "The provided documents don't actually explain how to sign up for Shrama Vasana Fund courses.  However, we know they offer professional courses and tertiary education courses as a way to help workers in Sri Lanka find new job opportunities, especially after a sudden workplace closure.  To learn how to sign up, it's best to contact the Shrama Vasana Fund directly.  They can provide the most up-to-date information.  Here's their contact information:  Address: No 97 Jawatta Road Colombo 05  Phone: +94 112 588 936 / +94 112 588 937  Email: info@svf.gov.lk  "
     },
     {
         "test_case": 3,
         "replicate": 2,
         "user": "Where do I get financial aid?",
-        "bot": "The Shrama Vasana Fund offers financial aid in a few different scenarios:   If a worker dies from a work-related accident: Financial aid is given to their dependents.  If the dependents are students, they can also apply for scholarships and school supply kits.    If a worker becomes permanently disabled due to a work-related accident: They will receive financial aid and assistance getting appropriate orthopedic appliances. Their dependents are also eligible for financial aid and scholarships if they are students.   If a worker is impacted by natural disasters: The fund provides financial aid and other types of assistance to help them get back on their feet.  "
+        "bot": "The Shrama Vasana Fund offers financial aid in a few different situations:  If a worker dies from a work-related accident: Financial aid is given to their dependents. If the dependents are students, they can also apply for scholarships and school supply kits.  If a worker becomes permanently disabled due to a work-related accident: They will receive financial aid and assistance getting appropriate orthopedic appliances. Their dependents are also eligible for financial aid and scholarships if they are students. If a worker is impacted by natural disasters: The fund provides financial aid and other types of assistance to help them get back on their feet.  "
     },
     {
         "test_case": 3,
         "replicate": 3,
         "user": "My work place closed down without prior notice.",
-        "bot": "I understand this is a difficult situation, and the Shrama Vasana Fund is here to help workers in Sri Lanka who are going through exactly this.   They offer financial aid and other types of assistance to help workers get back on their feet after a sudden workplace closure.   This includes directing you to new job opportunities, professional training, and tertiary education courses. They even have professional guidance programs, such as workshops on self-employment, to equip you with new skills.  "
+        "bot": "I understand this is a difficult situation. The Shrama Vasana Fund is designed to help workers in Sri Lanka, especially in cases like yours where a workplace shuts down unexpectedly.  They offer a few different types of support to help workers get back on their feet:  Financial Aid and Support: The fund offers financial help and other assistance to get workers back on their feet after a sudden workplace closure.  Getting Back to Work:  This includes: Helping you find new job opportunities Providing professional training  Directing you to tertiary education courses    Professional Guidance: They also have programs like workshops on self-employment to help you develop new skills.  "
     },
     {
         "test_case": 3,
         "replicate": 3,
         "user": "How do I sign up for these courses?",
-        "bot": "The provided documents don't outline a step-by-step signup process for the Shrama Vasana Fund's courses. However, these programs are designed to help workers get back on their feet, especially after a workplace closure.  I highly recommend you contact the Shrama Vasana Fund directly. They can give you the most up-to-date information.  Here are some questions to ask:   Eligibility:  \"Do I qualify for these programs?\" Application: \"What is the application process? What documents are needed, and what are the deadlines?\" Courses: \"What professional courses and tertiary education programs do you offer?\"  Here is their contact information:  Address: No 97 Jawatta Road Colombo 05  Phone: +94 112 588 936 / +94 112 588 937  Email: info@svf.gov.lk  "
+        "bot": "The provided passages don't have information about signing up for courses offered by Shrama Vasana Fund.  However, based on your previous questions, it seems you're dealing with a recent workplace closure. The Shrama Vasana Fund aims to help workers in Sri Lanka, particularly in situations like yours. To learn about their courses and the sign-up process, it's best to reach out to them directly.  They can give you the most up-to-date information. You can contact them through:  Address: No 97 Jawatta Road Colombo 05  Phone: +94 112 588 936 / +94 112 588 937  Email: info@svf.gov.lk  "
     },
     {
         "test_case": 3,
         "replicate": 3,
         "user": "Where do I get financial aid?",
-        "bot": "The Shrama Vasana Fund offers financial aid in a few different situations:   If a worker dies from a work-related accident: Financial aid is given to their dependents.  If the dependents are students, they can also apply for scholarships and school supply kits.    If a worker becomes permanently disabled due to a work-related accident: They will receive financial aid and assistance getting appropriate orthopedic appliances. Their dependents are also eligible for financial aid and scholarships if they are students.   If a worker is impacted by natural disasters: The fund provides financial aid and other types of assistance to help them get back on their feet.   "
+        "bot": "The Shrama Vasana Fund offers financial aid in a few different situations:  If a worker dies from a work-related accident: Financial aid is given to their dependents. If the dependents are students, they can also apply for scholarships and school supply kits.  If a worker becomes permanently disabled due to a work-related accident: They will receive financial aid and assistance getting appropriate orthopedic appliances. Their dependents are also eligible for financial aid and scholarships if they are students. If a worker is impacted by natural disasters: The fund provides financial aid and other types of assistance to help them get back on their feet.  "
     },
     {
         "test_case": 3,
         "replicate": 4,
         "user": "My work place closed down without prior notice.",
-        "bot": "I understand this is a difficult situation. The Shrama Vasana Fund is designed to help workers in Sri Lanka, especially in cases like yours where a workplace shuts down unexpectedly.   Financial Aid and Support: The fund offers financial help and other assistance to get workers back on their feet after a sudden workplace closure.   Getting Back to Work: This includes things like:   Helping you find new job opportunities Providing professional training  Directing you to tertiary education courses     Professional Guidance:  They also have programs like workshops on self-employment to help you develop new skills.   "
+        "bot": "I understand this is a difficult situation. The Shrama Vasana Fund is designed to help workers in Sri Lanka, especially in cases like yours where a workplace shuts down unexpectedly.  They offer a few different types of support to help workers get back on their feet:  Financial Aid and Support: The fund offers financial help and other assistance to get workers back on their feet after a sudden workplace closure.  Getting Back to Work:  This includes: Helping you find new job opportunities Providing professional training  Directing you to tertiary education courses    Professional Guidance: They also have programs like workshops on self-employment to help you develop new skills.  "
     },
     {
         "test_case": 3,
         "replicate": 4,
         "user": "How do I sign up for these courses?",
-        "bot": "The provided documents don't explain how to sign up for courses offered by the Shrama Vasana Fund.  However, we do know they offer these programs to help workers in Sri Lanka get back on their feet, especially after a sudden workplace closure.  To get more information, I recommend contacting the Shrama Vasana Fund directly. They can give you the most current details on signing up for courses.   Here's their contact information:  Address: No 97 Jawatta Road Colombo 05  Phone: +94 112 588 936 / +94 112 588 937  Email: info@svf.gov.lk  "
+        "bot": "The provided text doesn't have specific details about signing up for courses offered by the Shrama Vasana Fund.   However, we understand your workplace closed unexpectedly, and the Shrama Vasana Fund aims to support workers like yourself in Sri Lanka by directing them to professional and tertiary education courses to help them get back on their feet.  To get the most up-to-date information on the courses offered and the registration process, I recommend reaching out to them directly.    You can contact them through:  Address: No 97 Jawatta Road Colombo 05  Phone: +94 112 588 936 / +94 112 588 937  Email: info@svf.gov.lk  "
     },
     {
         "test_case": 3,
@@ -75,13 +75,13 @@
         "test_case": 3,
         "replicate": 5,
         "user": "My work place closed down without prior notice.",
-        "bot": "I understand this is a difficult situation. The Shrama Vasana Fund is designed to help workers in Sri Lanka, especially in cases like yours where a workplace shuts down unexpectedly.  They offer a few different types of support to help workers get back on their feet:   Financial Aid and Support: The fund offers financial help and other assistance to get workers back on their feet after a sudden workplace closure.   Getting Back to Work: This includes things like:   Helping you find new job opportunities Providing professional training  Directing you to tertiary education courses     Professional Guidance: They also have programs like workshops on self-employment to help you develop new skills.   "
+        "bot": "I understand this is a difficult situation. The Shrama Vasana Fund is designed to help workers in Sri Lanka, especially in cases like yours where a workplace shuts down unexpectedly.  They offer a few different types of support to help workers get back on their feet:  Financial Aid and Support: The fund offers financial help and other assistance to get workers back on their feet after a sudden workplace closure.  Getting Back to Work:  This includes: Helping you find new job opportunities Providing professional training  Directing you to tertiary education courses    Professional Guidance: They also have programs like workshops on self-employment to help you develop new skills.  "
     },
     {
         "test_case": 3,
         "replicate": 5,
         "user": "How do I sign up for these courses?",
-        "bot": "The provided documents don't actually explain how to sign up for the Shrama Vasana Fund courses.  However, we know that the fund aims to help workers in Sri Lanka get back on their feet, especially after a sudden workplace closure. They offer professional courses and tertiary education courses to help you find new job opportunities.  To learn how to sign up, it's best to contact the Shrama Vasana Fund directly.  They can provide the most up-to-date information.  Here's their contact information:  Address: No 97 Jawatta Road Colombo 05  Phone: +94 112 588 936 / +94 112 588 937  Email: info@svf.gov.lk  "
+        "bot": "The provided text doesn't specify how to sign up for courses offered by the Shrama Vasana Fund. However, it does mention that the fund helps workers impacted by unexpected workplace closures in Sri Lanka by connecting them with professional and tertiary education courses. This is to help these workers get back on their feet. For detailed information about these courses and how to register, it's best to reach out to the Shrama Vasana Fund directly. You can contact them through:  Address: No 97 Jawatta Road Colombo 05  Phone: +94 112 588 936 / +94 112 588 937  Email: info@svf.gov.lk  "
     },
     {
         "test_case": 3,
@@ -91,15 +91,15 @@
     },
     {
         "Flesch-Kincaid Scores": [
-            42.11,
-            55.64,
-            46.37,
-            42.31,
-            50.36
+            41.29,
+            41.29,
+            50.77,
+            38.76,
+            49.04
         ],
-        "Flesch-Kincaid Mean": 47.358,
-        "Flesch-Kincaid Median": 46.37,
-        "Flesch-Kincaid Min": 42.11,
-        "Flesch-Kincaid Max": 55.64
+        "Flesch-Kincaid Mean": 44.23,
+        "Flesch-Kincaid Median": 41.29,
+        "Flesch-Kincaid Min": 38.76,
+        "Flesch-Kincaid Max": 50.77
     }
 ]
