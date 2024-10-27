@@ -8,9 +8,11 @@ class Message(EmbeddedDocument):
     text = fields.StringField(required=True)
     timestamp = fields.DateTimeField(required=True, default=lambda: datetime.now(timezone.utc))
     feedback = fields.StringField(choices=['like', 'dislike'], null=True)
+    backgroundSelected = fields.StringField(required=True, default="avatar_bg")
 
 class ChatSession(Document):
     session_id = fields.UUIDField(primary_key=True)
     started_at = fields.DateTimeField(required=True, default=lambda: datetime.now(timezone.utc))
     messages = fields.EmbeddedDocumentListField(Message)
+    avatarSelected = fields.StringField(required=True, default="Helen")
     meta = {'collection': 'chat_sessions'}

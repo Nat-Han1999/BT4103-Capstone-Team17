@@ -5,7 +5,7 @@ import { Experience } from "./Experience.jsx";
 import "./Chat_Components.css";
 import { MessageItem } from "./Message_Item.jsx";
 import { v4 as uuidv4 } from "uuid";
-import axios from 'axios';
+import axios from "axios";
 
 export function UI({ hidden, ...props }) {
   const input = useRef();
@@ -20,24 +20,31 @@ export function UI({ hidden, ...props }) {
   // Create a hook to store the typing indictor when the bot is loading
   const [botTyping, setBotTyping] = useState(false);
 
-  // CHECK WHETHER USERID IS STORED PROPERLY IN LOCAL STORAGE EACH TIME COMPONENT MOUNTS 
+  // CHECK WHETHER USERID IS STORED PROPERLY IN LOCAL STORAGE EACH TIME COMPONENT MOUNTS
   useEffect(() => {
-    // ADD FUNCTION TO FETCH MESSAGES FROM DB UPON RELOAD 
+    console.log("userID");
+    console.log(userID);
     if (userID) {
-      axios.get(`http://127.0.0.1:8000/api/get-messages/${userID}/`)
-      .then((res) => {
-        console.log("all messages");
-        console.log(res.data.messages);
-        const msgs = res.data.messages.map((msg) => ({
-          id: msg.id,
-          text: msg.text,
-          isUser: msg.sender === 'User',
-          feedbackGiven: msg.feedback? true: false,
-        }));
-        setUIMessages(msgs);
-      })
+      axios
+        .get(`http://127.0.0.1:8000/api/get-messages/${userID}/`)
+        .then((res) => {
+          const msgs = res.data.messages.map((msg) => ({
+            id: msg.id,
+            text: msg.text,
+            isUser: msg.sender === "User",
+            feedbackGiven: msg.feedback ? true : false,
+          }));
+          setUIMessages(msgs);
+        });
+      // Get avatar selected
+      axios
+        .get(`http://127.0.0.1:8000/api/get-avatar/${userID}/`)
+        .then((res) => {
+          const name = res.data.avatar_selected;
+          setAvatarName(name);
+        });
     }
-  }, []); 
+  }, []);
 
   // Create a useEffect to track the state of the messages
   useEffect(() => {
@@ -65,7 +72,7 @@ export function UI({ hidden, ...props }) {
     if (!userID) {
       let id = generateUniqueUUID(); // ID assoc. with the user, message ID will be generated in backend (views.py)
       setUserID(id);
-      localStorage.setItem('userID', id) // Store the ID of the current user locally
+      localStorage.setItem("userID", id); // Store the ID of the current user locally
     }
     if (!loading && !message) {
       let isUser = true; // Boolean indicating whether message is from bot or user
@@ -82,9 +89,6 @@ export function UI({ hidden, ...props }) {
 
   // Hook that stores avatar name that is being selected
   const [avatarName, setAvatarName] = useState("Helen");
-
-  // Hook for avatar change
-  const [avatarLook, setAvatarLook] = useState("Helen");
 
   // Hook to track voice recording functionality
   const [isRecording, setIsRecording] = useState(false);
@@ -145,7 +149,7 @@ export function UI({ hidden, ...props }) {
           </div>
           <div className="flex-grow w-4/6 h-full flex items-center justify-center">
             <Canvas camera={{ position: [0, 0, 1], fov: 50 }}>
-              <Experience avatarLook={avatarLook} />
+              <Experience avatarLook={avatarName} />
             </Canvas>
           </div>
           <div className="flex-grow w-1/6 h-full flex items-center justify-center">
@@ -160,11 +164,13 @@ export function UI({ hidden, ...props }) {
                     Background
                   </label>
                   <select
+                    // Change this default variable to something changeable
                     defaultValue="avatar_bg"
                     onChange={(e) => {
                       const body = document.querySelector("body");
                       body.classList = "";
                       body.classList.add(e.target.value);
+                      // Update the BG selection in the DB
                     }}
                     className="bg-blue-500 hover:bg-blue-600 text-white text-sm p-2 w-full rounded-md"
                   >
@@ -180,9 +186,24 @@ export function UI({ hidden, ...props }) {
                   </label>
                   <select
                     defaultValue="Helen"
+                    value={avatarName}
                     onChange={(e) => {
-                      setAvatarLook(e.target.value);
+                      // Update avatarName that has been selected in the backend
                       setAvatarName(e.target.value);
+                      // Only update avatar if user has chatted with the bot, otherwise there will be no ChatSession to store the name under
+                      if (userID) {
+                        axios
+                          .patch(
+                            `http://127.0.0.1:8000/api/update-avatar/${userID}/${e.target.value}/`
+                          )
+                          .then((response) => {
+                            if (response.data.success) {
+                              console.log(response.data.message);
+                            } else {
+                              console.error("Error:", response.data.error);
+                            }
+                          });
+                      }
                     }}
                     className="bg-blue-500 hover:bg-blue-600 text-white text-sm p-2 w-full rounded-md"
                   >

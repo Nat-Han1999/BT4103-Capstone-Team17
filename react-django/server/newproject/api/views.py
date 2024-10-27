@@ -28,6 +28,29 @@ GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 @api_view(['GET'])
 def hello_world(request): 
     return JsonResponse("Hello World!",safe=False)
+
+@api_view(['PATCH'])
+def update_avatar_selected(request, user_id, avatar_name):
+    try: 
+        chat_session = ChatSession.objects(session_id=uuid.UUID(str(user_id))).first()
+        if chat_session:
+            chat_session.avatarSelected = avatar_name
+            chat_session.save()
+            return JsonResponse({'success':True}, status=200)
+    except Exception as e:
+        print(f"Error in update_avatar_selected: {e}")
+        return JsonResponse({'error': 'An error occurred on the server.'}, status=500)
+
+@api_view(['GET'])
+def get_avatar_selected(request, user_id):
+    try:
+       chat_session = ChatSession.objects(session_id=uuid.UUID(str(user_id))).first()
+       if chat_session:
+           avatar_selected = chat_session.avatarSelected
+           return JsonResponse({ 'avatar_selected': avatar_selected }, status=200)
+    except Exception as e:  
+        print(f"Error in retrieve_messages: {e}")
+        return JsonResponse({'error': 'An error occurred on the server.'}, status=500)
  
 @api_view(['GET'])
 def retrieve_messages(request, user_id): 
@@ -47,10 +70,10 @@ def retrieve_messages(request, user_id):
         ]
             return JsonResponse({'messages': messages})
         else:
-            return Response({'error': 'Conversation not found.'}, status=404)
+            return JsonResponse({'error': 'Conversation not found.'}, status=404)
     except Exception as e:
         print(f"Error in retrieve_messages: {e}")
-        return Response({'error': 'An error occurred on the server.'}, status=500)
+        return JsonResponse({'error': 'An error occurred on the server.'}, status=500)
         
 
 @api_view(['POST'])
@@ -124,15 +147,15 @@ async def chat_output(request):
         # Save to model response and user response to database
         if user_id:
             # Find the first ChatSession object in the DB corresponding to the given userID
-            chat_session = ChatSession.objects(session_id=uuid.UUID(user_id)).first()
+            chat_session = ChatSession.objects(session_id=uuid.UUID(str(user_id))).first()
             if not chat_session:
-                chat_session = ChatSession(session_id=uuid.UUID(user_id))
+                chat_session = ChatSession(session_id=uuid.UUID(str(user_id)))
         else:
             print("There is no user")
             # Create a user_id 
             user_id = uuid.uuid4()
             # Create new ChatSession using the newly generated user ID
-            chat_session = ChatSession(session_id=uuid.UUID(user_id))
+            chat_session = ChatSession(session_id=uuid.UUID(str(user_id)))
         
         # Find the number of messages so an ID can be assigned to each message
         total_messages = chat_session.messages.count()
