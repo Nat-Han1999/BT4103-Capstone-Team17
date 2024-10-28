@@ -19,21 +19,38 @@ from django.http import HttpRequest
 from django.core.signals import request_finished
 from .test_cases import tests
 
-# Load data during app initialization or as cache
-data_path = '../scraper/scraped_data/scraped_data.json'
+from .mongo_utils import get_database
+from pymongo.mongo_client import MongoClient
+from pymongo.server_api import ServerApi
+import certifi
+from dotenv import load_dotenv
+
+load_dotenv()
+username = os.getenv("MONGO_DB_USERNAME")
+password = os.getenv("MONGO_DB_PASSWORD")
+collection_scraped_data = get_database("shrama_vasana_fund", "scraped_data", username, password)
+
+documents = collection_scraped_data.find()
 genai.configure(api_key=GENERATIVE_AI_KEY)
-with open(data_path, 'r') as file:
-    data = json.load(file)
+
+# Load data during app initialization or as cache
+# data_path = '../scraper/scraped_data/scraped_data.json'
+
+# with open(data_path, 'r') as file:
+#     data = json.load(file)
+
 
 def process_data(data):
     cleaned_data = {}
     for item in data:
-        cleaned_title = ''
-        for (key, value) in item.items():
-            if key == 'title':
-                cleaned_title = value
-                break
-        item['texts'] = item['texts'] + item['image_extracted']
+        if 'title' in item:
+            cleaned_title = item['title']
+        else:
+            cleaned_title = "No Title"
+        if 'image_extracted' in item:
+            item['texts'] = item['texts'] + item['image_extracted']
+        if item['texts'] == '':
+            item['texts'] = 'No text'
         cleaned_data[cleaned_title] = item
 
     # Combine cleaned texts
@@ -82,8 +99,10 @@ def generate_embeddings(training_data):
             item['embedding'] = embed_fn(item['title'], text)
     return training_data
 
-cleaned_training_data = process_data(data)
+
+cleaned_training_data = process_data(documents)
 training_data = generate_embeddings(cleaned_training_data)
+
 
 # Function to escape special characters from passages to be provided as context
 def clean_text(passage):
