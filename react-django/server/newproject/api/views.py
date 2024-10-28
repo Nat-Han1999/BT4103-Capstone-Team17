@@ -113,8 +113,6 @@ async def chat_output(request):
     background_selected = request.data.get('backgroundName')
     user_message = request.data.get('message')
     user_id = request.data.get('id')
-    print("here is the user_id")
-    print(user_id)
     if not user_message: 
         lipsync_intro_0 = await read_json_transcript("../../client/app/audios/{}_intro_0.json".format(avatar_selected))
         lipsync_intro_1 = await read_json_transcript("../../client/app/audios/{}_intro_1.json".format(avatar_selected))
