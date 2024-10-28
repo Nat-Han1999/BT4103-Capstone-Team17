@@ -43,6 +43,20 @@ def update_avatar_selected(request, user_id, avatar_name):
         print(f"Error in update_avatar_selected: {e}")
         return Response({'error': 'An error occurred on the server.'}, status=500)
 
+@api_view(['PATCH'])
+def update_bg_selected(request, user_id, bg_name):
+    try: 
+        chat_session = ChatSession.objects(session_id=uuid.UUID(str(user_id))).first()
+        if chat_session:
+            chat_session.backgroundSelected = bg_name
+            chat_session.save()
+            return Response({'success':True}, status=200)
+        else: 
+            return Response({'error': 'No chat session exists for the user'}, status=500)
+    except Exception as e:
+        print(f"Error in update_bg_selected: {e}")
+        return Response({'error': 'An error occurred on the server.'}, status=500)
+
 @api_view(['GET'])
 def get_avatar_selected(request, user_id):
     try:
@@ -55,7 +69,20 @@ def get_avatar_selected(request, user_id):
     except Exception as e:  
         print(f"Error in retrieve_messages: {e}")
         return Response({'error': 'An error occurred on the server.'}, status=500)
- 
+
+@api_view(['GET'])
+def get_bg_selected(request, user_id):
+    try:
+       chat_session = ChatSession.objects(session_id=uuid.UUID(str(user_id))).first()
+       if chat_session:
+           bg_selected = chat_session.backgroundSelected
+           return JsonResponse({ 'bg_selected': bg_selected }, status=200)
+       else: 
+            return Response({'error': 'No chat session exists for the user'}, status=500)
+    except Exception as e:  
+        print(f"Error in get_bg_selected: {e}")
+        return Response({'error': 'An error occurred on the server.'}, status=500)
+    
 @api_view(['GET'])
 def retrieve_messages(request, user_id): 
     try:
@@ -85,6 +112,8 @@ async def chat_output(request):
     avatar_selected = request.data.get('avatarName')
     user_message = request.data.get('message')
     user_id = request.data.get('id')
+    print("here is the user_id")
+    print(user_id)
     if not user_message: 
         lipsync_intro_0 = await read_json_transcript("../../client/app/audios/{}_intro_0.json".format(avatar_selected))
         lipsync_intro_1 = await read_json_transcript("../../client/app/audios/{}_intro_1.json".format(avatar_selected))

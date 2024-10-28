@@ -1,17 +1,16 @@
 {
   "metadata": {
     "soundFile": "/Users/shanicesng/BT4103-Capstone-Team17/react-django/server/newproject/../../client/app/audios/message_1.wav",
-    "duration": 1.07
+    "duration": 1.14
   },
   "mouthCues": [
-    { "start": 0.00, "end": 0.01, "value": "X" },
-    { "start": 0.01, "end": 0.06, "value": "A" },
-    { "start": 0.06, "end": 0.18, "value": "C" },
-    { "start": 0.18, "end": 0.25, "value": "B" },
-    { "start": 0.25, "end": 0.39, "value": "C" },
-    { "start": 0.39, "end": 0.60, "value": "B" },
-    { "start": 0.60, "end": 0.74, "value": "C" },
-    { "start": 0.74, "end": 0.81, "value": "B" },
-    { "start": 0.81, "end": 1.07, "value": "X" }
+    { "start": 0.00, "end": 0.03, "value": "X" },
+    { "start": 0.03, "end": 0.16, "value": "C" },
+    { "start": 0.16, "end": 0.24, "value": "A" },
+    { "start": 0.24, "end": 0.42, "value": "C" },
+    { "start": 0.42, "end": 0.63, "value": "B" },
+    { "start": 0.63, "end": 0.77, "value": "C" },
+    { "start": 0.77, "end": 0.91, "value": "B" },
+    { "start": 0.91, "end": 1.14, "value": "X" }
   ]
 }

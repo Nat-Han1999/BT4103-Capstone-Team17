@@ -43,6 +43,11 @@ export function UI({ hidden, ...props }) {
           const name = res.data.avatar_selected;
           setAvatarName(name);
         });
+      // Get BG selected
+      axios.get(`http://127.0.0.1:8000/api/get-bg/${userID}/`).then((res) => {
+        const bg = res.data.bg_selected;
+        setBackgroundName(bg);
+      });
     }
   }, []);
 
@@ -69,26 +74,41 @@ export function UI({ hidden, ...props }) {
 
   const sendMessage = () => {
     const text = input.current.value;
+    const isUser = true; 
+
+    // Generate userID if it does not exist
     if (!userID) {
-      let id = generateUniqueUUID(); // ID assoc. with the user, message ID will be generated in backend (views.py)
+      const id = generateUniqueUUID();
       setUserID(id);
-      localStorage.setItem("userID", id); // Store the ID of the current user locally
-    }
-    if (!loading && !message) {
-      let isUser = true; // Boolean indicating whether message is from bot or user
+      localStorage.setItem("userID", id);
+      chat(text, avatarName, id, isUser); 
+    } else if (!loading && text) {
       chat(text, avatarName, userID, isUser);
-      input.current.value = "";
-      // Update all messages recorded in the chat to include the message newly sent by the user
-      let userMessage = { id: userID, text: text, isUser: isUser };
-      setUIMessages((prev) => [...prev, userMessage]);
+    }
+    // Clear input and update messages
+    input.current.value = "";
+    if (text) {
+      setUIMessages((prev) => [...prev, { id: userID, text, isUser }]);
     }
   };
+
   if (hidden) {
     return null;
   }
 
   // Hook that stores avatar name that is being selected
   const [avatarName, setAvatarName] = useState("Helen");
+
+  // Hook that stores background that is being selected
+  const [backgroundName, setBackgroundName] = useState("avatar_bg");
+
+  // Create a mapping of all backgroundNames
+  const backgroundMappings = {
+    avatar_bg: "Default",
+    avatar_bg2: "Seaside",
+    avatar_bg3: "Desert",
+    avatar_bg4: "Space",
+  };
 
   // Hook to track voice recording functionality
   const [isRecording, setIsRecording] = useState(false);
@@ -166,11 +186,26 @@ export function UI({ hidden, ...props }) {
                   <select
                     // Change this default variable to something changeable
                     defaultValue="avatar_bg"
+                    value={backgroundName}
                     onChange={(e) => {
                       const body = document.querySelector("body");
                       body.classList = "";
                       body.classList.add(e.target.value);
+                      setBackgroundName(e.target.value);
                       // Update the BG selection in the DB
+                      if (userID) {
+                        axios
+                          .patch(
+                            `http://127.0.0.1:8000/api/update-bg/${userID}/${e.target.value}/`
+                          )
+                          .then((response) => {
+                            if (response.data.success) {
+                              console.log(response.data.message);
+                            } else {
+                              console.error("Error:", response.data.error);
+                            }
+                          });
+                      }
                     }}
                     className="bg-blue-500 hover:bg-blue-600 text-white text-sm p-2 w-full rounded-md"
                   >
