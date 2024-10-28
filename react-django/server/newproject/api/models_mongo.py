@@ -1,5 +1,5 @@
 import uuid
-from mongoengine import Document, EmbeddedDocument, fields
+from mongoengine import Document, EmbeddedDocument, fields, DynamicDocument
 from datetime import datetime, timezone
 
 class Message(EmbeddedDocument):
@@ -16,3 +16,6 @@ class ChatSession(Document):
     avatarSelected = fields.StringField(required=True, default="Helen")
     backgroundSelected = fields.StringField(required=True, default="avatar_bg")
     meta = {'collection': 'chat_sessions'}
+
+class ScrapedData(DynamicDocument):
+    meta = {'collection':'scraped_data'}
