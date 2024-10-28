@@ -160,14 +160,14 @@ export function UI({ hidden, ...props }) {
   };
 
   useEffect(() => {
-    scrollToBottom(); 
+    scrollToBottom();
     const handleResize = () => {
-      scrollToBottom(); 
+      scrollToBottom();
     };
-    // Ensures that chat scrolls to bottom when page is resized 
-    window.addEventListener("resize", handleResize); 
+    // Ensures that chat scrolls to bottom when page is resized
+    window.addEventListener("resize", handleResize);
     return () => {
-      window.removeEventListener("resize", handleResize); 
+      window.removeEventListener("resize", handleResize);
     };
   }, [uiMessages]);
 
@@ -267,81 +267,69 @@ export function UI({ hidden, ...props }) {
           </div>
         </div>
 
-        <div
-          ref={messageEndRef}
-          className="flex flex-col w-screen h-screen lg:w-2/6 items-center justify-between lg:mt-0 lg:h-auto h-[25vh] m-0 p-1 bg-white overflow-auto"
-        >
+        <div className="flex flex-col w-screen h-screen lg:w-2/6 items-center justify-between lg:mt-0 lg:h-auto h-[25vh] bg-white overflow-auto">
           <div
-            className="max-w-screen-sm w-full flex flex-col h-full bg-blue-200 overflow:auto"
-            style={{ maxHeight: "calc(100% - 150px)" }}
+            ref={messageEndRef}
+            className="max-w-screen-sm w-full flex flex-col h-full flex-grow overflow-auto p-2"
           >
             {uiMessages.map((msg, idx) => (
               <MessageItem key={idx} message={msg} />
             ))}
-            {botTyping && (
-              <div className="typing-indicator">
-                <div className="dot"></div>
-                <div className="dot"></div>
-                <div className="dot"></div>
-              </div>
-            )}
+          </div>
 
-            <div className=""></div>
-
-            <div className="flex items-center gap-2 pointer-events-auto max-w-screen-sm w-full mx-auto mt-3 bg-red-200">
-              <textarea
-                wrap="soft"
-                className="flex-grow h-13 placeholder:text-gray-800 placeholder:italic p-4 rounded-md bg-white-200 backdrop-blur-md resize-none border border-gray-400 focus:border-gray-600"
-                placeholder="Type a message..."
-                ref={input}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" && !e.shiftKey) {
-                    e.preventDefault();
-                    sendMessage();
-                  }
-                }}
-              />
-              <button
-                disabled={loading || message}
-                onClick={sendMessage}
-                className={`bg-blue-500 hover:bg-blue-600 text-white p-2 font-semibold uppercase rounded-md ${
-                  loading || message ? "cursor-not-allowed opacity-30" : ""
-                }`}
-              >
-                Send
-              </button>
-              <button
-                onClick={handleVoiceInput}
-                className={`voice-button ${
-                  isRecording ? "recording" : ""
-                } w-10 h-10 bg-black hover:bg-red-600 rounded-full flex items-center justify-center`}
-              >
-                {!isRecording ? (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="white"
-                    className="bi bi-mic-fill"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0z" />
-                    <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5" />
-                  </svg>
-                ) : (
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    fill="white"
-                    className="bi bi-stop-fill"
-                    viewBox="0 0 16 16"
-                  >
-                    <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5" />
-                  </svg>
-                )}
-              </button>
-            </div>
+          <div className="flex items-center gap-2 pointer-events-auto max-w-screen-sm w-full mx-auto p-2">
+            <textarea
+              wrap="soft"
+              className="flex-grow h-13 placeholder:text-gray-800 placeholder:italic p-4 rounded-md bg-white-200 backdrop-blur-md resize-none border border-gray-400 focus:border-gray-600"
+              placeholder="Type a message..."
+              ref={input}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && !e.shiftKey) {
+                  e.preventDefault();
+                  sendMessage();
+                }
+              }}
+            />
+            <button
+              disabled={loading || message}
+              onClick={sendMessage}
+              className={`bg-blue-500 hover:bg-blue-600 text-white p-2 font-semibold uppercase rounded-md ${
+                loading || message ? "cursor-not-allowed opacity-30" : ""
+              }`}
+            >
+              Send
+            </button>
+            <button
+              onClick={handleVoiceInput}
+              className={`voice-button ${
+                isRecording ? "recording" : ""
+              } w-10 h-10 bg-black hover:bg-red-600 rounded-full flex items-center justify-center`}
+            >
+              {!isRecording ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="white"
+                  className="bi bi-mic-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M5 3a3 3 0 0 1 6 0v5a3 3 0 0 1-6 0z" />
+                  <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5" />
+                </svg>
+              ) : (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20"
+                  fill="white"
+                  className="bi bi-stop-fill"
+                  viewBox="0 0 16 16"
+                >
+                  <path d="M5 3.5h6A1.5 1.5 0 0 1 12.5 5v6a1.5 1.5 0 0 1-1.5 1.5H5A1.5 1.5 0 0 1 3.5 11V5A1.5 1.5 0 0 1 5 3.5" />
+                </svg>
+              )}
+            </button>
           </div>
         </div>
       </div>
