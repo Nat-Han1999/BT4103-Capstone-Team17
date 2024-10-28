@@ -3,7 +3,7 @@ import { createContext, useContext, useEffect, useState } from "react";
 const ChatContext = createContext();
 
 export const ChatProvider = ({ children }) => {
-  const chat = async (message, avatarName, id, isUser) => {
+  const chat = async (message, avatarName, backgroundName, id, isUser) => {
     setLoading(true); 
     // SAVE USER MESSAGE HERE 
     const data = await fetch("http://127.0.0.1:8000/api/chat/", {
@@ -11,7 +11,7 @@ export const ChatProvider = ({ children }) => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ message, avatarName, id, isUser }), // id refers to userID, not message ID
+      body: JSON.stringify({ message, avatarName, backgroundName, id, isUser }), // id refers to userID, not message ID
     });
     const resp = await data.json().then((json) => {
       return json.messages;
@@ -39,10 +39,8 @@ export const ChatProvider = ({ children }) => {
   }, [messages]);
 
   useEffect(() => {
-    // This will only run once when the component mounts
     if (messages.length > 0) {
       setBotReply(messages.map((message) => message.text).join(""));
-      // SAVE BOT REPLY TO DB HERE 
     } else {
       setBotReply(null);
     }

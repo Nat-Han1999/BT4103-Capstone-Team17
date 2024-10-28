@@ -110,6 +110,7 @@ def retrieve_messages(request, user_id):
 @api_view(['POST'])
 async def chat_output(request):
     avatar_selected = request.data.get('avatarName')
+    background_selected = request.data.get('backgroundName')
     user_message = request.data.get('message')
     user_id = request.data.get('id')
     print("here is the user_id")
@@ -211,6 +212,11 @@ async def chat_output(request):
             timestamp=datetime.now(timezone.utc)
         )
         chat_session.messages.append(bot_message_obj)
+        
+        # Save the avatar selected by the user 
+        chat_session.avatarSelected = avatar_selected
+        # Save the background selected by the user 
+        chat_session.backgroundSelected = background_selected
         chat_session.save()
         return JsonResponse(model_response)
               

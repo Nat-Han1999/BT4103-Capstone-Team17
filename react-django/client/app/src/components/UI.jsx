@@ -22,8 +22,6 @@ export function UI({ hidden, ...props }) {
 
   // CHECK WHETHER USERID IS STORED PROPERLY IN LOCAL STORAGE EACH TIME COMPONENT MOUNTS
   useEffect(() => {
-    console.log("userID");
-    console.log(userID);
     if (userID) {
       axios
         .get(`http://127.0.0.1:8000/api/get-messages/${userID}/`)
@@ -46,6 +44,9 @@ export function UI({ hidden, ...props }) {
       // Get BG selected
       axios.get(`http://127.0.0.1:8000/api/get-bg/${userID}/`).then((res) => {
         const bg = res.data.bg_selected;
+        const body = document.querySelector("body");
+        body.classList = "";
+        body.classList.add(bg);
         setBackgroundName(bg);
       });
     }
@@ -74,16 +75,16 @@ export function UI({ hidden, ...props }) {
 
   const sendMessage = () => {
     const text = input.current.value;
-    const isUser = true; 
+    const isUser = true;
 
     // Generate userID if it does not exist
     if (!userID) {
       const id = generateUniqueUUID();
       setUserID(id);
       localStorage.setItem("userID", id);
-      chat(text, avatarName, id, isUser); 
+      chat(text, avatarName, backgroundName, id, isUser);
     } else if (!loading && text) {
-      chat(text, avatarName, userID, isUser);
+      chat(text, avatarName, backgroundName, userID, isUser);
     }
     // Clear input and update messages
     input.current.value = "";
@@ -101,14 +102,6 @@ export function UI({ hidden, ...props }) {
 
   // Hook that stores background that is being selected
   const [backgroundName, setBackgroundName] = useState("avatar_bg");
-
-  // Create a mapping of all backgroundNames
-  const backgroundMappings = {
-    avatar_bg: "Default",
-    avatar_bg2: "Seaside",
-    avatar_bg3: "Desert",
-    avatar_bg4: "Space",
-  };
 
   // Hook to track voice recording functionality
   const [isRecording, setIsRecording] = useState(false);
