@@ -325,12 +325,15 @@ def get_convo_history(user_id):
     # Get convo history 
     chat_session = ChatSession.objects(session_id=uuid.UUID(str(user_id))).first()
     # Retrieve all messages
-    top10_recent_messages = chat_session.messages[-10:]
-    string_array = []
-    for message in top10_recent_messages:
-        string_array.append(f"{message.sender}: {message.text}")
-    convo_history = ". ".join(string_array)
-    return convo_history
+    if chat_session:
+        top10_recent_messages = chat_session.messages[-10:]
+        string_array = []
+        for message in top10_recent_messages:
+            string_array.append(f"{message.sender}: {message.text}")
+        convo_history = ". ".join(string_array)
+        return convo_history
+    else:
+        return ""
 
 # Function to create prompt based on query and relevant passage
 def make_prompt(query, relevant_passages, convo_history):

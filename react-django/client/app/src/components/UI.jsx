@@ -78,7 +78,7 @@ export function UI({ hidden, ...props }) {
     const isUser = true;
 
     // Generate userID if it does not exist
-    if (!userID) {
+    if (!userID && text) {
       const id = generateUniqueUUID();
       setUserID(id);
       localStorage.setItem("userID", id);
