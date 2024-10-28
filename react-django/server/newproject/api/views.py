@@ -15,7 +15,6 @@ import uuid
 from datetime import datetime, timezone
 import math
 from rest_framework.response import Response
-from .mongo_utils import get_database
 
 import textwrap
 import numpy as np
@@ -246,52 +245,9 @@ async def generate_lip_sync(message_index):
     os.system("ffmpeg -y -i ../../client/app/audios/message_{}.mp3 ../../client/app/audios/message_{}.wav".format(message_index, message_index))
     # generate json file of lip movements using rhubarb lip sync
     os.system("../../client/app/rhubarb/rhubarb -f json -o ../../client/app/audios/message_{}.json ../../client/app/audios/message_{}.wav -r phonetic".format(message_index, message_index))
-
-def process_data(data):
-    cleaned_data = {}
-    for item in data:
-        if 'title' in item:
-            cleaned_title = item['title']
-        else:
-            cleaned_title = "No Title"
-        if 'image_extracted' in item:
-            item['texts'] = item['texts'] + item['image_extracted']
-        if item['texts'] == '':
-            item['texts'] = 'No text'
-        cleaned_data[cleaned_title] = item
-
-    # Combine cleaned texts
-    training_data = []
-
-    for page_title, data in cleaned_data.items():
-        training_data.append({
-            'title': page_title,
-            'texts': data['texts'],
-        })
     
-    return training_data
-
-# Embed the cleaned training data
-def generate_embeddings(training_data):
-    for item in training_data:
-        text = item['texts']
-        if len(text) > 9000:
-            # Split large texts and embed each chunk
-            text_chunks = split_text(text)
-            embeddings = [embed_fn(item['title'], chunk) for chunk in text_chunks]
-            item['embedding'] = embeddings  # Store aggregated embedding
-        else:
-            # If the text is small enough, embed directly
-            item['embedding'] = embed_fn(item['title'], text)
-    return training_data
-
-username = os.getenv("MONGO_DB_USERNAME")
-password = os.getenv("MONGO_DB_PASSWORD")
-collection_scraped_data = get_database("shrama_vasana_fund", "scraped_data", username, password)
-
-documents = collection_scraped_data.find()
-cleaned_training_data = process_data(documents)
-training_data = generate_embeddings(cleaned_training_data)
+# NEED TO CHANGE TO FETCH ALL WEB SCRAPED DATA FROM MONGODB
+# training_data = generate_embeddings(cleaned_training_data)
 
 # @api_view(['POST'])
 # async def chat_output(request):
@@ -379,8 +335,7 @@ training_data = generate_embeddings(cleaned_training_data)
         # # convert model_response (list of nested dictionaries) into JSON string 
         # model_response = {"messages": model_response}
         # return JsonResponse(model_response)
-
-
+    
 # Function to split long texts into chunks of up to 9,000 characters
 def split_text(text, max_chars=9000):
     #print(f"Original text length: {len(text)} characters")  # Debug: Print original length
@@ -401,6 +356,19 @@ def embed_fn(title, text):
                                task_type="retrieval_document",
                                title=title)["embedding"]
 
+# Embed the cleaned training data
+def generate_embeddings(training_data):
+    for item in training_data:
+        text = item['texts']
+        if len(text) > 9000:
+            # Split large texts and embed each chunk
+            text_chunks = split_text(text)
+            embeddings = [embed_fn(item['title'], chunk) for chunk in text_chunks]
+            item['embedding'] = embeddings  # Store aggregated embedding
+        else:
+            # If the text is small enough, embed directly
+            item['embedding'] = embed_fn(item['title'], text)
+    return training_data
 
 # Function to escape special characters from passages to be provided as context
 def clean_text(passage):
