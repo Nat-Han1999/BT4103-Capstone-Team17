@@ -3,7 +3,6 @@
 
 # In[3]:
 
-
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, explode, countDistinct
 from pyspark.sql.types import StructType, StructField, StringType, ArrayType
@@ -14,8 +13,9 @@ from pyspark.sql import functions as F
 
 
 import os
+import sys
 from dotenv import load_dotenv
-from mongo_utils import get_database
+from scraper.backend.mongo_utils import get_database
 import json
 from bson import json_util
 import matplotlib.pyplot as plt
@@ -267,21 +267,4 @@ n_grams_chart(pdf_texts, 2, "Top 10 Bi-grams for PDF Texts")
 # Top 10 Frequently Used Word Pairs For Image Texts
 n_grams_chart(image_texts, 2, "Top 10 Bi-grams for Image Texts")
 
-
-# In[62]:
-
-
-def notebook_to_html(notebook_path):
-    # Convert notebook to HTML
-    html_exporter = nbconvert.HTMLExporter()
-    html_exporter.exclude_input = True  
-    body, _ = html_exporter.from_filename(notebook_path)
-
-    # Save the HTML file
-    html_path = notebook_path.replace(".ipynb", ".html")
-    with open(html_path, "w", encoding="utf-8") as f:
-        f.write(body)
-    print(f"HTML file saved at {html_path}")
-
-notebook_to_html("pyspark_eda.ipynb")
 

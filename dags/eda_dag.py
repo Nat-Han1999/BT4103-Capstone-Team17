@@ -2,14 +2,14 @@ from airflow import DAG
 from airflow.operators.bash import BashOperator
 from airflow.operators.python import PythonOperator
 from datetime import datetime
-from weasyprint import HTML
+# from weasyprint import HTML
 
-def convert_html_to_pdf(input, output):
-    HTML(input).write_pdf(output)
+# def convert_html_to_pdf(input, output):
+#     HTML(input).write_pdf(output)
 
 input = "../eda/pyspark_eda.html"
 output = "../eda/pyspark_eda.pdf"
-# Define default arguments
+
 default_args = {
     'owner': 'airflow',
     'depends_on_past': False,
@@ -25,15 +25,16 @@ with DAG(
 ) as dag:
 
     run_pyspark_eda = BashOperator(
-        task_id='run_pyspark_eda',
-        bash_command='spark-submit ../eda/pyspark_eda.py',
-    )
+    task_id='run_pyspark_eda',
+    bash_command='export PYTHONPATH=/Users/user/Desktop/BT4103-Capstone-Team17 && python3 -m eda.pyspark_eda',
+)
 
     # Convert the EDA output to PDF
-    save_eda_as_pdf = PythonOperator(
-        task_id='convert_eda_to_pdf',
-        python_callable=convert_html_to_pdf,
-        op_kwargs={'input_path': input, 'output_path': output}
-    )
+    # save_eda_as_pdf = PythonOperator(
+    #     task_id='convert_eda_to_pdf',
+    #     python_callable=convert_html_to_pdf,
+    #     op_kwargs={'input_path': input, 'output_path': output}
+    # )
 
-run_pyspark_eda >> save_eda_as_pdf
+run_pyspark_eda 
+# >> save_eda_as_pdf
