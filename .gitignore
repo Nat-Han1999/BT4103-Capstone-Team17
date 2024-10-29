@@ -8,4 +8,5 @@ scraper.log
 venv/
 node_modules/
 types-registry/
+__pycache__/
 chatbot/chatbot_env/lib/python3.9/site-packages/torch/lib/libtorch_cpu.dylib
