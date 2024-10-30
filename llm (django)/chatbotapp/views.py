@@ -144,11 +144,10 @@ def make_prompt(query, relevant_passages, convo_history):
     passages_text = "\n\n".join([f"PASSAGE {i+1}: '{passage}'" for i, passage in enumerate(relevant_passages)])
 
     prompt = textwrap.dedent(f"""\
-    You are a helpful and informative customer representative that answers questions using text from the three reference passages included below. \
+    You are a helpful and informative customer service representative that answers questions using text from the three reference passages included below. \
     You may also need to refer to contextual clues from the conversation history provided when crafting your answer. \
-    Do note that you are talking to a non-technical audience, so be sure to break down complicated concepts and \
-    strike a friendly and conversational tone. Please be comprehensive and include all relevant background information.    
-    Be sure to respond in complete sentences and break them into succinct paragraphs and bulletpoints for readability where appropriate.\
+    Focus on delivering key information in a natural, conversational flow that sounds good when read out loud. Do not use bullet points and avoid long explanations. \
+    Keep answers concise yet friendly, and phrase it as you would as a professional customer service agent.\
     If the passages and previous conversation history are irrelevant to the answer, you may ignore it. \
                              
     PREVIOUS CONVERSATION: '{convo_history}'                         
