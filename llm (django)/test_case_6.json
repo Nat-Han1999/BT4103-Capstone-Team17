@@ -1,0 +1,75 @@
+[
+    {
+        "test_case": 6,
+        "replicate": 1,
+        "user": "My mom had to stop working due to a disability, am I eligible for any scholarships?",
+        "bot": "I'm so sorry to hear about your mom's disability.  The Shrama Vasana Fund does offer scholarships, but they are specifically for dependents of workers whose death or permanent disability was a direct result of a workplace accident. If this doesn't apply to your situation, I encourage you to explore other scholarship opportunities."
+    },
+    {
+        "test_case": 6,
+        "replicate": 1,
+        "user": "The doctor informed me that my mom's disability was caused by diabetes, does this affect my eligibility for the scholarship?That's so unfair, my mom couldn't manage her health because of all the stress from her work, and you're telling me that there's no help provided?!",
+        "bot": "I understand this must be incredibly difficult and how unfair this feels.  The Shrama Vasana Fund scholarships are specifically for dependents of workers whose death or permanent disability was a direct result of a workplace accident. Since your mom's disability is due to diabetes, it unfortunately doesn't meet the criteria for this particular scholarship. However, please don't give up. There are many other scholarships available based on financial need or academic merit. I highly recommend exploring those options."
+    },
+    {
+        "test_case": 6,
+        "replicate": 2,
+        "user": "My mom had to stop working due to a disability, am I eligible for any scholarships?",
+        "bot": "I'm so sorry to hear about your mom's disability. The Shrama Vasana Fund does offer scholarships, but they're specifically for dependents of workers whose death or permanent disability was a direct result of a workplace accident. If this doesn't apply to your mom's situation, I encourage you to look into other scholarship opportunities."
+    },
+    {
+        "test_case": 6,
+        "replicate": 2,
+        "user": "The doctor informed me that my mom's disability was caused by diabetes, does this affect my eligibility for the scholarship?That's so unfair, my mom couldn't manage her health because of all the stress from her work, and you're telling me that there's no help provided?!",
+        "bot": "I understand this must be a frustrating and difficult time. The Shrama Vasana Fund scholarships are specifically for dependents of workers whose death or permanent disability resulted directly from a workplace accident.  Since your mother's disability was caused by diabetes, it unfortunately doesn't meet the requirements for this specific scholarship. Even though work stress may have played a role, the direct cause doesn't align with the fund's criteria. I know this isn't what you wanted to hear, but try looking into scholarships based on financial need or academic merit.  There are many other options out there, so I encourage you not to give up."
+    },
+    {
+        "test_case": 6,
+        "replicate": 3,
+        "user": "My mom had to stop working due to a disability, am I eligible for any scholarships?",
+        "bot": "I'm so sorry to hear about your mom's disability.  The Shrama Vasana Fund offers scholarships, but only to dependents of workers who died or became permanently disabled due to a workplace accident. If your mom's situation doesn't fit this criteria, you might want to explore other scholarship options."
+    },
+    {
+        "test_case": 6,
+        "replicate": 3,
+        "user": "The doctor informed me that my mom's disability was caused by diabetes, does this affect my eligibility for the scholarship?That's so unfair, my mom couldn't manage her health because of all the stress from her work, and you're telling me that there's no help provided?!",
+        "bot": "I understand your frustration.  The Shrama Vasana Fund scholarships are specifically for those whose parent died or became permanently disabled due to a workplace accident.  Since your mom's disability resulted from diabetes, even if exacerbated by work stress, it doesn't fall within the Fund's criteria for this specific scholarship.  However, there are other scholarships out there based on financial need and academic merit \u2013 I encourage you to explore those options."
+    },
+    {
+        "test_case": 6,
+        "replicate": 4,
+        "user": "My mom had to stop working due to a disability, am I eligible for any scholarships?",
+        "bot": "I'm so sorry to hear about your mom's disability.  The Shrama Vasana Fund does offer scholarships, but they are intended for dependents of workers who died or were permanently disabled due to a workplace accident.  If your mom's disability wasn't caused by a workplace accident, this particular scholarship won't apply. I encourage you to explore other scholarship options."
+    },
+    {
+        "test_case": 6,
+        "replicate": 4,
+        "user": "The doctor informed me that my mom's disability was caused by diabetes, does this affect my eligibility for the scholarship?That's so unfair, my mom couldn't manage her health because of all the stress from her work, and you're telling me that there's no help provided?!",
+        "bot": "I understand your frustration.  The Shrama Vasana Fund does offer scholarships, but they are specifically for dependents of workers who died or were permanently disabled as a direct result of a workplace accident.  Since your mom's disability is due to diabetes, this unfortunately doesn't meet the criteria.  I know this is disappointing, but I encourage you to explore other scholarships based on financial need or academic merit."
+    },
+    {
+        "test_case": 6,
+        "replicate": 5,
+        "user": "My mom had to stop working due to a disability, am I eligible for any scholarships?",
+        "bot": "I'm so sorry to hear about your mom's disability. The Shrama Vasana Fund does offer scholarships, but they are specifically for dependents of workers who died or were permanently disabled as a result of a workplace accident. If your mom's disability resulted from something else, this particular scholarship won't apply, but there may be other options available to you."
+    },
+    {
+        "test_case": 6,
+        "replicate": 5,
+        "user": "The doctor informed me that my mom's disability was caused by diabetes, does this affect my eligibility for the scholarship?That's so unfair, my mom couldn't manage her health because of all the stress from her work, and you're telling me that there's no help provided?!",
+        "bot": "I understand your frustration.  The Shrama Vasana Fund does offer scholarships, but they are specifically for dependents of workers who died or were permanently disabled as a result of a workplace accident.  Since your mom's disability is due to diabetes, this unfortunately doesn't meet the criteria for this particular scholarship. While I know this isn't what you hoped to hear, I encourage you to look into other scholarships based on financial need or academic merit."
+    },
+    {
+        "Flesch-Kincaid Scores": [
+            39.94,
+            53.81,
+            45.86,
+            47.18,
+            43.63
+        ],
+        "Flesch-Kincaid Mean": 46.084,
+        "Flesch-Kincaid Median": 45.86,
+        "Flesch-Kincaid Min": 39.94,
+        "Flesch-Kincaid Max": 53.81
+    }
+]

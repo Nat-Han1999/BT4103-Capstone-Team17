@@ -1,0 +1,75 @@
+[
+    {
+        "test_case": 5,
+        "replicate": 1,
+        "user": "My dad passed away recently from a workplace accident, am I eligible for any scholarships?",
+        "bot": "I'm so sorry for your loss. If you were studying at the time of your father's passing, the Shrama Vasana Fund offers financial aid, a scholarship worth Rs. 50,000, and an educational kit worth Rs. 10,000.  Please contact them directly to confirm your eligibility and for the most recent application details."
+    },
+    {
+        "test_case": 5,
+        "replicate": 1,
+        "user": "What documents do I need to prepare for the application?",
+        "bot": "My sincere condolences on your loss.  For the Shrama Vasana Fund scholarship, you'll need your father's National Identity Card (or passport/driver's license), birth certificate, death certificate, proof of residence (DS4 form), and a letter from his employer confirming his employment and the accidental death. For your part, you'll need your own identification, birth certificate, proof of current student status, and documentation showing your relationship to your father. If you have a guardian, their information will be required as well.  All documents should be certified by the Grama Niladari and Divisional Secretary.  It's always best to contact the Shrama Vasana Fund directly for the most up-to-date requirements."
+    },
+    {
+        "test_case": 5,
+        "replicate": 2,
+        "user": "My dad passed away recently from a workplace accident, am I eligible for any scholarships?",
+        "bot": "I'm truly sorry for your loss. If you were studying at the time of your father's passing, the Shrama Vasana Fund offers financial aid, a scholarship worth Rs. 50,000, and an educational kit worth Rs. 10,000.  It's important to confirm your eligibility directly with them, as they have the most current application information."
+    },
+    {
+        "test_case": 5,
+        "replicate": 2,
+        "user": "What documents do I need to prepare for the application?",
+        "bot": "My deepest condolences on your loss.  To apply for the Shrama Vasana Fund benefits, you'll need your father's National Identity Card (or passport/driver's license), birth certificate, death certificate, proof of residence (DS4 form), and a letter from his employer confirming his employment and the accidental death. You'll also need your own identification, birth certificate, proof of current student status, and documentation showing your relationship to your father. If you have a guardian, their information will also be needed.  All documents should be certified by the Grama Niladari and Divisional Secretary.  Please confirm all requirements directly with Shrama Vasana Fund for the most up-to-date information."
+    },
+    {
+        "test_case": 5,
+        "replicate": 3,
+        "user": "My dad passed away recently from a workplace accident, am I eligible for any scholarships?",
+        "bot": "I'm so sorry for your loss. If you were studying at the time of your father's passing, the Shrama Vasana Fund offers financial aid, a scholarship worth Rs. 50,000, and an educational kit worth Rs. 10,000.  It's best to contact them directly to confirm your eligibility and learn about the most current application requirements."
+    },
+    {
+        "test_case": 5,
+        "replicate": 3,
+        "user": "What documents do I need to prepare for the application?",
+        "bot": "My sincere condolences on your loss.  To apply for the Shrama Vasana Fund, you'll need your father's National Identity Card (or passport/driver's license), birth certificate, death certificate, proof of residence (DS4 form), and a letter from his employer confirming his employment and the accidental death.  You'll also need your own identification, birth certificate, proof of current student status, and documentation showing your relationship to your father.  If you have a guardian, their information will also be required. All documents should be certified by the Grama Niladari and Divisional Secretary.  Please confirm all requirements with the Shrama Vasana Fund directly for the most updated information."
+    },
+    {
+        "test_case": 5,
+        "replicate": 4,
+        "user": "My dad passed away recently from a workplace accident, am I eligible for any scholarships?",
+        "bot": "I'm so sorry for your loss. If you were studying at the time of your father's passing, the Shrama Vasana Fund offers financial aid, a scholarship worth Rs. 50,000, and an educational kit worth Rs. 10,000.  Please contact the fund directly to confirm your eligibility and the latest application requirements."
+    },
+    {
+        "test_case": 5,
+        "replicate": 4,
+        "user": "What documents do I need to prepare for the application?",
+        "bot": "My deepest condolences on your loss.  For the Shrama Vasana Fund, you'll need your father's National Identity Card (or passport/driver's license), birth certificate, death certificate, proof of residence (DS4 form), and a letter from his employer confirming his employment and the accidental death.  You'll also need your own identification, birth certificate, proof of current student status, and documentation showing your relationship to your father. If you have a guardian, their information will also be required.  All documents should be certified by the Grama Niladari and Divisional Secretary.  It's always best to contact the fund directly to ensure you have the most up-to-date requirements."
+    },
+    {
+        "test_case": 5,
+        "replicate": 5,
+        "user": "My dad passed away recently from a workplace accident, am I eligible for any scholarships?",
+        "bot": "I'm so sorry for your loss. If you were studying at the time of your father's passing, the Shrama Vasana Fund offers financial aid, a scholarship worth Rs. 50,000, and an educational kit worth Rs. 10,000.  I encourage you to contact the fund directly to confirm your eligibility and inquire about the specific application requirements. "
+    },
+    {
+        "test_case": 5,
+        "replicate": 5,
+        "user": "What documents do I need to prepare for the application?",
+        "bot": "My deepest condolences on your loss.  For the Shrama Vasana Fund, you'll need your father's National Identity Card (or passport/driver's license), birth certificate, death certificate, proof of residence (DS4 form), and a letter from his employer confirming his employment and the accidental death.  You'll also need your own identification, birth certificate, proof of current student status, and documentation showing your relationship to your father. If you have a guardian, their information will also be required.  All documents should be certified by the Grama Niladari and Divisional Secretary. It's always best to contact the fund directly to ensure you have the most up-to-date requirements."
+    },
+    {
+        "Flesch-Kincaid Scores": [
+            55.54,
+            47.08,
+            46.98,
+            47.49,
+            46.98
+        ],
+        "Flesch-Kincaid Mean": 48.814,
+        "Flesch-Kincaid Median": 47.08,
+        "Flesch-Kincaid Min": 46.98,
+        "Flesch-Kincaid Max": 55.54
+    }
+]

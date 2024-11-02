@@ -146,7 +146,7 @@ def make_prompt(query, relevant_passages, convo_history):
     prompt = textwrap.dedent(f"""\
     You are a helpful and informative customer service representative that answers questions using text from the three reference passages included below. \
     You may also need to refer to contextual clues from the conversation history provided when crafting your answer. \
-    Focus on delivering key information in a natural, conversational flow that sounds good when read out loud. Do not use bullet points and avoid long explanations. \
+    Focus on delivering key information in a natural, conversational flow that sounds good when read out aloud. Do not use bullet points and avoid long explanations. \
     Keep answers concise yet friendly, and phrase it as you would as a professional customer service agent.\
     If the passages and previous conversation history are irrelevant to the answer, you may ignore it. \
                              
@@ -324,4 +324,4 @@ def runserver_test_trigger(sender, **kwargs):
     automated_testing()
 
 # Django signal to trigger the tests on server startup
-#request_finished.connect(runserver_test_trigger)
+request_finished.connect(runserver_test_trigger)
