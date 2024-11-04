@@ -47,7 +47,7 @@ from dotenv import load_dotenv
 from lxml import html, etree
 from lxml.html import fromstring, tostring
    
-logger = setup_logging()
+logger, log_stream = setup_logging()
 
 # Load environment variables from the .env file
 load_dotenv()
@@ -446,15 +446,14 @@ def update_or_insert_document(collection_url_hashed, collection_scraped_data, ur
             new_text = "\n".join(new_text_list)
             last_text = "\n".join(last_text_content)
 
-            # TODO: need to update scraped_data collection too. Need to render difference and send notification
             diff = render_diff(
                 previous_version_file_contents=last_text, 
                 newest_version_file_contents=new_text,
-                include_equal=False  # Show only differences
+                include_equal=False  # False = do not include equal, show only differences
             )
             
-            print(url, "DIFFERENCE --------------------------")
-            print(diff)
+            logger.info(f"--------------------\nChange detected in {url}. Difference shown below.")
+            logger.info(f"{diff}\n--------------------")
 
             update_hash_data = {
                 "last_updated_at": current_time,
@@ -500,7 +499,7 @@ def fetch_and_process(url, config, base_url):
     return url, text_hash, data
 
 # Define the rate limit (e.g., 10 requests per minute)
-ONE_MINUTE = 2
+ONE_MINUTE = 60
 MAX_CALLS_PER_MINUTE = 5
 
 # Rate-limited function
@@ -517,8 +516,11 @@ def scrape_and_store_data(urls, collection_scraped_data, collection_url_hashed, 
     
     all_data_selenium = []
 
-    with ThreadPoolExecutor() as executor: 
-        futures = {executor.submit(fetch_and_process_limited, url, config, base_url): url for url in urls}
+    with ThreadPoolExecutor() as executor:
+
+        allowed_urls = [url for url in urls if can_fetch(url)]
+
+        futures = {executor.submit(fetch_and_process_limited, url, config, base_url): url for url in allowed_urls}
         
         for future in concurrent.futures.as_completed(futures):
             result = future.result()
@@ -529,11 +531,10 @@ def scrape_and_store_data(urls, collection_scraped_data, collection_url_hashed, 
 
                 # Update or insert the hash and metadata in MongoDB
                 update_or_insert_document(collection_url_hashed, collection_scraped_data, url, text_hash, data)
-                
 
                 all_data_selenium.append(data)
 
         # save_to_json(all_data_selenium, 'scraper/scraped_data/scraped_data.json') # do not remove, used for testing
 
     if not all_data_selenium:
-        logger.error("No data scraped, nothing to insert.")
+        logger.info("No data scraped, nothing to insert.")

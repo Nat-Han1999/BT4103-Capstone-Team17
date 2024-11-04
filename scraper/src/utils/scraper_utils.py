@@ -1,16 +1,26 @@
 import logging
 import json
 import hashlib
+import os
+
+import logging
+from io import StringIO
+
+# Global in-memory log storage
+log_stream = StringIO()
 
 def setup_logging():
-    # Open the file in write mode ('w') to clear it before new logs are written
-    logging.basicConfig(
-        filename='scraper/logs/scraper.log', 
-        level=logging.INFO, 
-        format='%(asctime)s:%(levelname)s:%(message)s',
-        filemode='w'
-    )
-    return logging.getLogger()
+    """
+    Set up logging to capture logs in memory. Only setup once.
+    """
+    logger = logging.getLogger("scraper_logger")
+    if not logger.handlers:  # Ensure we add the handler only once
+        logger.setLevel(logging.INFO)  # Set the default logging level
+        stream_handler = logging.StreamHandler(log_stream)
+        formatter = logging.Formatter("%(asctime)s:%(levelname)s:%(message)s")
+        stream_handler.setFormatter(formatter)
+        logger.addHandler(stream_handler)
+    return logger, log_stream
 
 def save_to_json(data, filename):
     with open(filename, 'w') as f:

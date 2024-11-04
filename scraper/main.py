@@ -1,6 +1,6 @@
 import time
 import os
-import asyncio
+import traceback
 
 from scraper.src.scraper_action import scrape_and_store_data, get_all_links
 from scraper.src.utils.scraper_utils import setup_logging, load_json_file
@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 from datetime import datetime
 from scraper.backend.mongo_utils import get_database
 
-logger = setup_logging()
+logger, log_stream = setup_logging()
 
 # Load environment variables from the .env file
 load_dotenv()
@@ -21,9 +21,11 @@ def main():
     """
     Main function to run the web scraper.
     """
+    logger, log_stream = setup_logging()
+    logger.info("Starting web scraper...")
 
     try:
-        print("Starting web scraper...")
+
         start = time.time()
 
         config_file = 'scraper/config.json'
@@ -40,27 +42,9 @@ def main():
 
         # Extract the URLs into a list
         url_list = [doc['url'] for doc in urls_with_true_flag]
+        url_list = url_list[0:2]
 
-        # Fetch URLs asynchronously
-        # urls = await get_all_links(base_url, config, max_depth, delay=1) 
-        # urls = [
-            # "https://www.svf.gov.lk/index.php?lang=en",  # home
-            # "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=1&Itemid=115&lang=en",  # about us
-            # "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=6&Itemid=109&lang=en",  # contributions
-            # "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=7&Itemid=110&lang=en#promotion-of-the-welfare-of-the-workers",  # services
-            # "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=8&Itemid=111&lang=en",  # downloads
-            # "https://www.svf.gov.lk/index.php?option=com_phocagallery&view=categories&Itemid=137&lang=en",  # gallery (image gallery)
-            # "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=12&Itemid=138&lang=en",  # gallery (video gallery)
-            # "https://www.svf.gov.lk/index.php?option=com_content&view=category&layout=blog&id=8&Itemid=139&lang=en",  # news and events
-            # "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=13&Itemid=140&lang=en",  # donate us
-            # "https://www.svf.gov.lk/index.php?option=com_content&view=category&id=9&Itemid=114&lang=en",  # vacancy
-            # "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=14&Itemid=141&lang=en",  # faq
-            # "https://www.svf.gov.lk/index.php?option=com_contact&view=contact&id=1&Itemid=135&lang=en#",  # contact us (inquiry)
-            # "https://www.svf.gov.lk/index.php?option=com_content&view=article&id=18&Itemid=147&lang=en",  # contact us (contact details)
-            # "https://www.svf.gov.lk/index.php?option=com_xmap&view=html&id=1&Itemid=142&lang=en"  # site map
-        # ]
-
-        # MongoDB setup
+        # MongoDB connection
         collection_scraped_data = get_database("shrama_vasana_fund", "scraped_data", username, password)
         collection_url_hashed = get_database("shrama_vasana_fund", "url_hashed", username, password)
 
@@ -71,7 +55,16 @@ def main():
         print(f"Done with web scraping. Time taken: {end - start}.")
     
     except Exception as e:
-        raise
+        trace_info = traceback.format_exc()
+        logger.error(f"An error occurred: {e}\nTraceback: {trace_info}")
+
+    finally:
+        log_collection = get_database("shrama_vasana_fund", "all_logs", username, password)
+        logs_content = log_stream.getvalue()
+        log_document = {"session_logs": logs_content, "timestamp": datetime.now()}
+        log_collection.insert_one(log_document)
+        log_stream.close()
+
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    main()
